@@ -26,10 +26,15 @@ gulp.task('css',function(){
     .pipe(gulp.dest('./build'));
 });
 
+gulp.task('assets',function(){
+  return gulp.src('./src/assets/*.*')
+    .pipe(gulp.dest('./build/assets'));
+});
+
 gulp.task('serve',function(){
   connect.server({root:['build']});
 })
 
 
 
-gulp.task('default',['browserify','watch','html','css','serve']);
+gulp.task('default',['browserify','watch','html','css','serve','assets']);
