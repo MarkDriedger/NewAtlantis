@@ -1,7 +1,3 @@
-function Card(parameter) {
-  this.parameter=parameter;
-}
-Card.prototype.print= function(){
-  console.log(this.parameter);
-}
-module.exports = Card;
+var button4 = document.getElementById('button4');
+
+button4.innerHTML = 'it works!';
