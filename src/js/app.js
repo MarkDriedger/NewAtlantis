@@ -4,11 +4,8 @@ var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
 var button3 = document.getElementById('button3');
-var button4 = document.getElementById('button4');
+//var button4 = document.getElementById('button4');
 var html = document.querySelector('html');
-
-var activeIndex = 201;
-var activeCardsUp = 0;
 
 //set up the stats field at the top that shows player stats & inventory items
 var statsField = document.getElementById('statsField');
@@ -35,7 +32,7 @@ var diceField = document.getElementById('diceField');
 var dice = [];
 var maxdice = 20;
 var i = 0;
-for (i = 0; i < maxdice; i++) {
+for (i = 0; i < maxdice; i += 1) {
     dice[i] = document.createElement('div');
     dice[i].setAttribute('class', 'diceType diceFace1');
 }
@@ -46,45 +43,51 @@ var cardField = document.getElementById('cardField');
 var display = [];
 var maxcards = 20;
 var i = 0;
-for (i = 0; i < maxcards; i++) {
+for (i = 0; i < maxcards; i += 1) {
     display[i] = document.createElement('div');
     display[i].setAttribute('class', 'displayCard enabledCard');
 }
 
 //set up event listeners for up to 20 displayable cards
-for (i = 0; i < maxcards; i++) {
+var onCardClick = function (event) {
+    if (display[this.displayIndex].className === 'displayCard enabledCard'){
+        board.displayText += `<span class = styleCard>* ${deck[board.activeIndex].buttonInstructions[this.displayIndex]}<br></span>`;
+        board.activeIndex = board.activeCardsUp[this.displayIndex];
+        board.setBoard();
+    }
+};
+
+for (i = 0; i < maxcards; i += 1) {
     display[i].displayIndex = i;
-    display[i].addEventListener('click', function (event) {
-        if (display[this.displayIndex].className === 'displayCard enabledCard'){
-            board.displayText += `<span class = styleCard>* ${deck[activeIndex].buttonInstructions[this.displayIndex]}<br></span>`;
-            activeIndex = activeCardsUp[this.displayIndex];
-            board.setBoard();
-        }
-    });
+    display[i].addEventListener('click', onCardClick);
 }
 
-var objectThatWillBeDeck = {
+var newDeck = {
+    card: []
 };
 
 //board object
 var board = {
-    shownDice: 0,
+//    shownDice: 0,
     displayText: '',
     extra: 0,
+    activeIndex: 201,
+    activeCardsUp: [],
+    activeDice: [],
 
     setBoard() {
-        var oldNumOfCards = activeCardsUp.length,
+        var oldNumOfCards = this.activeCardsUp.length,
         numOfCards = 0;
 
 //remove old cards.
-        for (i = 0; i < oldNumOfCards; i++) {
+        for (i = 0; i < oldNumOfCards; i += 1) {
             cardField.removeChild(display[i]);
         }
         //Create Stats and Inventory & put the text in the story
         score[0].updateInventory();
         score[1].updateStats();
         score[50].updateReputation();
-        this.displayText += deck[activeIndex].cardText();
+        this.displayText += deck[this.activeIndex].cardText();
         if (playerInfo.justDied) {
             playerInfo.justDied = false;
             this.displayText +=`<span class = styleAlert>${cardDescription[99]}<br></span>`;
@@ -96,13 +99,13 @@ var board = {
         storyDisplay.innerHTML = this.displayText;
 
         //append the appropriate number of cards to choose from
-        activeCardsUp = deck[activeIndex].nextCards;
-        numOfCards = activeCardsUp.length;
-        for (i = 0; i < numOfCards; i++) {
+        this.activeCardsUp = deck[this.activeIndex].nextCards;
+        numOfCards = this.activeCardsUp.length;
+        for (i = 0; i < numOfCards; i += 1) {
             cardField.appendChild(display[i]);
-            display[i].innerHTML = `${deck[activeIndex].buttonInstructions[i]}<br>${deck[activeIndex].requirementSentence(activeCardsUp[i])}`;
+            display[i].innerHTML = `${deck[this.activeIndex].buttonInstructions[i]}<br>${deck[this.activeIndex].requirementSentence(this.activeCardsUp[i])}`;
             //disable cards if requirments are not met
-            if (!deck[activeIndex].checkRequirements(activeCardsUp[i])) {
+            if (!deck[this.activeIndex].checkRequirements(this.activeCardsUp[i])) {
                 display[i].setAttribute('class', 'displayCard disabledCard');
             } else {
                 display[i].setAttribute('class', 'displayCard enabledCard');
@@ -307,7 +310,7 @@ PlayerStat.prototype.getLevel = function(){
     var exp = this.quantity,
     level = 1;
 
-    for (level === 1; level <= exp; level++) {
+    for (level === 1; level <= exp; level += 1) {
         exp -= level;
     }
     return [level - 1, exp, level - exp];
@@ -337,37 +340,36 @@ PlayerStat.prototype.roll = function() {
     return diceResults;
 };
 
-PlayerStat.prototype.addDice = function(diceInput) {
-    var diceResults = diceInput,
-    diceTotal = 0,
-    numOfDice = diceResults.length,
+PlayerStat.prototype.addDice = function() {
+    var diceTotal = 0,
+    numOfDice = board.activeDice.length,
     diceIndex = 0;
 
-    for (diceIndex = 0; diceIndex < numOfDice; diceIndex++){
-        diceTotal += diceResults[diceIndex];
+    for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
+        diceTotal += board.activeDice[diceIndex];
     }
     return diceTotal;
 };
 
 PlayerStat.prototype.eraseDice = function(diceInput){
-    var i = 0;
+    var i = 0,
+    shownDice = board.activeDice.length;
 
     //clear the old dice
-    for (i = 0; i < board.shownDice; i++) {
+    for (i = 0; i < shownDice; i += 1) {
         diceField.removeChild(dice[i]);
     }
 };
 
 PlayerStat.prototype.drawDice = function(diceInput){
-    var i = 0;
+    var i = 0,
+    diceIndex = 0,
+    numOfDice = board.activeDice.length;
 
     //draw new dice
-    var diceResults = diceInput,
-    diceIndex = 0;
-
-    board.shownDice = diceResults.length;
-    for (diceIndex = 0; diceIndex < board.shownDice; diceIndex++){
-        switch (diceResults[diceIndex]) {
+//    board.shownDice = diceResults.length;
+    for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
+        switch (diceInput[diceIndex]) {
         case 1:
             dice[diceIndex].setAttribute('class', 'diceType diceFace1');
             diceField.appendChild(dice[diceIndex]);
@@ -403,11 +405,12 @@ PlayerStat.prototype.drawDice = function(diceInput){
 
 PlayerStat.prototype.rollCompare = function(opponent) {
     var opponentRoll = opponent,
-    diceResults = this.roll(),
-    diceTotal = this.addDice(diceResults);
+    diceTotal = 0;
 
     this.eraseDice();
-    this.drawDice(diceResults);
+    board.activeDice = this.roll();
+    this.drawDice(board.activeDice);
+    diceTotal = this.addDice(board.activeDice);
     if (diceTotal >= opponentRoll) {
         return [true,`${this.singularName} roll succeded!`];
     } else {
@@ -446,8 +449,8 @@ score[1].decrement = function(amount) {
     this.quantity -= amount;
     if (this.quantity <= 0){
         this.quantity = 0;
-        activeIndex = 99;
-        deck[activeIndex].updateLocation();
+        board.activeIndex = 99;
+        deck[board.activeIndex].updateLocation();
         playerInfo.alive = false;
         playerInfo.justDied = true;
     }
@@ -459,24 +462,23 @@ score[2].decrement = function(amount) {
     this.quantity -= amount;
     if (this.quantity <= 0){
         this.quantity = 0;
-        activeIndex = 95;
-        deck[activeIndex].updateLocation();
+        board.activeIndex = 95;
+        deck[board.activeIndex].updateLocation();
         playerInfo.sane = false;
         playerInfo.justWentInsane = true;
     }
     this.updateStats();
 };
 
-//create the prototype card object
-function Card(){
-    this.cardProperty = '';
+//create the prototype PlayableCard object
+function PlayableCard(){
     this.rewardItem = [0];
     this.rewardQuantity = [0];
     this.costItem = [0];
     this.costQuantity = [0];
     this.requiredItem = [0];
     this.requiredQuantity = [0];
-    this.nextCards = [1];
+    this.nextCards = [201];
     this.buttonInstructions = [''];
     this.challengeStat = 0;
     this.challengeQuantity = 0;
@@ -493,7 +495,7 @@ function Card(){
 }
 
 //get & set a card's rewards to be given out when clicked
-Card.prototype.setRewards = function(rewardItem,rewardQuantity){
+PlayableCard.prototype.setRewards = function(rewardItem,rewardQuantity){
     if (!Array.isArray(rewardItem)) {
         rewardItem = [rewardItem];
     }
@@ -505,14 +507,14 @@ Card.prototype.setRewards = function(rewardItem,rewardQuantity){
 };
 
 //check to see if this card gave any rewards
-Card.prototype.processRewards = function(givenRewardItem, givenRewardQuantity){
+PlayableCard.prototype.processRewards = function(givenRewardItem, givenRewardQuantity){
     var rewardList = '',
     rewardIndex = 0;
     numOfRewards = 0;
 
     if (givenRewardItem[0] > 0) {
         numOfRewards = givenRewardItem.length;
-        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex++) {
+        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
             score[givenRewardItem[rewardIndex]].increment(givenRewardQuantity[rewardIndex]);
             //add a comment to the story about rewards.
             if (rewardIndex === 0) {
@@ -534,7 +536,7 @@ Card.prototype.processRewards = function(givenRewardItem, givenRewardQuantity){
 };
 
 //get & set a card's costs to be subtracted when clicked
-Card.prototype.setCosts = function(costItem,costQuantity){
+PlayableCard.prototype.setCosts = function(costItem,costQuantity){
     if (!Array.isArray(costItem)) {
         costItem = [costItem];
     }
@@ -549,13 +551,13 @@ Card.prototype.setCosts = function(costItem,costQuantity){
 };
 
 //check to see if this card gave any costs
-Card.prototype.processCosts = function(givenCostItem, givenCostQuantity){
+PlayableCard.prototype.processCosts = function(givenCostItem, givenCostQuantity){
     var costList = '',
     costIndex = 0,
     numOfCosts = 0;
     if (givenCostItem[0] > 0) {
         numOfCosts = givenCostItem.length;
-        for (costIndex = 0; costIndex < numOfCosts; costIndex++) {
+        for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
             score[givenCostItem[costIndex]].decrement(givenCostQuantity[costIndex]);
             //add a comment to the story about costs.
             if (costIndex === 0) {
@@ -577,7 +579,7 @@ Card.prototype.processCosts = function(givenCostItem, givenCostQuantity){
 };
 
 //get & set a card's requirements that must be met in order for a card to be clicked on
-Card.prototype.setRequirements = function(requiredItem,requiredQuantity){
+PlayableCard.prototype.setRequirements = function(requiredItem,requiredQuantity){
     if (!Array.isArray(requiredItem)) {
         this.requiredItem = [requiredItem];
     } else {
@@ -590,7 +592,7 @@ Card.prototype.setRequirements = function(requiredItem,requiredQuantity){
     }
 };
 
-Card.prototype.requirementSentence = function(reqCard){
+PlayableCard.prototype.requirementSentence = function(reqCard){
     var reqList = '',
     req = 0,
     numOfReqs = 0;
@@ -604,7 +606,7 @@ Card.prototype.requirementSentence = function(reqCard){
     }
     else {
         numOfReqs = deck[reqCard].requiredItem.length;
-        for (req = 0; req < numOfReqs; req++) {
+        for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
             if (req === 0) {
                 reqList += '(Requires ';
@@ -625,7 +627,7 @@ Card.prototype.requirementSentence = function(reqCard){
     return reqList;
 };
 
-Card.prototype.checkRequirements = function(reqCard){
+PlayableCard.prototype.checkRequirements = function(reqCard){
     var passReq = true,
     req = 0,
     numOfReqs = 0;
@@ -637,7 +639,7 @@ Card.prototype.checkRequirements = function(reqCard){
         return true;
     } else {
         numOfReqs = deck[reqCard].requiredItem.length;
-        for (req = 0; req < numOfReqs; req++) {
+        for (req = 0; req < numOfReqs; req += 1) {
             //compare score vs card requirements.
             if (score[deck[reqCard].requiredItem[req]].quantity < deck[reqCard].requiredQuantity[req])
             passReq = false;
@@ -647,17 +649,17 @@ Card.prototype.checkRequirements = function(reqCard){
 };
 
 //activate the card and return text describing what happened
-Card.prototype.cardText = function(){
+PlayableCard.prototype.cardText = function(){
     var returnCardText = '';
 
     if (this.firstTime === true) {
-        returnCardText += `<span class = styleDescription>${cardDescription[activeIndex]}<br></span>`;
+        returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
     }
     //update locationBox
     this.updateLocation();
     returnCardText += this.cardScript();
-    if (deck[activeIndex].challengeStat !== 0) {
-        returnCardText += deck[activeIndex].performChallenge();
+    if (deck[board.activeIndex].challengeStat !== 0) {
+        returnCardText += deck[board.activeIndex].performChallenge();
     } else {
         returnCardText += `<em>${this.processRewards(this.rewardItem, this.rewardQuantity)}</em>`;
         returnCardText += `<em>${this.processCosts(this.costItem, this.costQuantity)}</em>`;
@@ -666,7 +668,7 @@ Card.prototype.cardText = function(){
     return returnCardText;
 };
 
-Card.prototype.setChallenge = function(challengeStat, challengeQuantity, successText, successRewardItem, successRewardQuantity, successCostItem, successCostQuantity, failText, failRewardItem, failRewardQuantity, failCostItem, failCostQuantity) {
+PlayableCard.prototype.setChallenge = function(challengeStat, challengeQuantity, successText, successRewardItem, successRewardQuantity, successCostItem, successCostQuantity, failText, failRewardItem, failRewardQuantity, failCostItem, failCostQuantity) {
     this.challengeStat = challengeStat;
     this.challengeQuantity = challengeQuantity;
     this.successText = successText;
@@ -714,7 +716,7 @@ Card.prototype.setChallenge = function(challengeStat, challengeQuantity, success
 };
 
 
-Card.prototype.performChallenge = function() {
+PlayableCard.prototype.performChallenge = function() {
     var result = score[this.challengeStat].rollCompare(this.challengeQuantity),
     numOfRewards = 0,
     rewardIndex = 0,
@@ -744,13 +746,13 @@ Card.prototype.performChallenge = function() {
     }
 };
 
-Card.prototype.cardScript = function(){
+PlayableCard.prototype.cardScript = function(){
     return '';
 };
 
 //create a card whoe primary purpose is navigation
 function MoveCard(locationName, buttonInstructions, nextCards) {
-    Card.call(this);
+    PlayableCard.call(this);
     this.locationName = locationName;
     if (Array.isArray(buttonInstructions)) {
         this.buttonInstructions = buttonInstructions;
@@ -761,14 +763,14 @@ function MoveCard(locationName, buttonInstructions, nextCards) {
     this.firstTime = true;
 }
 
-MoveCard.prototype = new Card();
+MoveCard.prototype = new PlayableCard();
 
 MoveCard.prototype.updateLocation = function(){
-    locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${cardDescription[activeIndex]}`;
+    locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${cardDescription[board.activeIndex]}`;
 };
 
 function StoryCard(storyName, buttonInstructions, nextCards) {
-    Card.call(this);
+    PlayableCard.call(this);
     this.storyName = storyName;
     if (Array.isArray(buttonInstructions)) {
         this.buttonInstructions = buttonInstructions;
@@ -783,7 +785,7 @@ function StoryCard(storyName, buttonInstructions, nextCards) {
     this.firstTime = true;
 }
 
-StoryCard.prototype = new Card();
+StoryCard.prototype = new PlayableCard();
 
 StoryCard.prototype.updateLocation = function(){
     //no text because a StoryCard usually shouldn't change any location information
