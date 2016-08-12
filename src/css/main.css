@@ -14,12 +14,13 @@ html {
 }
 
 div.output {
+    font-size: 18px;
     background-color: black;
     color: white;
     border: 3px solid darkseagreen;
     width: 700px;
     overflow-y:scroll;
-    height: 250px;
+    height: 350px;
     display:inline-block;
 }
 
