@@ -314,8 +314,17 @@ Progress.prototype.decrement = function(amount) {
 //stats
 function PlayerStat(inputName, quantity, icon){
     ScoreType.call(this);
-    this.singularName = inputName[0];
-    this.pluralName = inputName[0];
+    if (Array.isArray(inputName)){
+        this.singularName = inputName[0];
+        if (inputName.length === 1) {
+            this.pluralName = inputName[0]+' points';
+        } else {
+            this.pluralName = inputName[1];
+        }
+    } else {
+        this.singularName = inputName;
+        this.pluralName = inputName+' points';
+    }
     this.setQuantity(quantity);
     this.icon = icon;
     this.diceQuantity = 1;
@@ -499,7 +508,7 @@ scoreData[6] = new PlayerStat(['Eye', 'Eye points'], 0);
 scoreData[7] = new PlayerStat(['Voice', 'Voice points'], 0);
 
 scoreData[50] = new Reputation(['Privateer'], 0);
-scoreData[100] = new Progress('minutes until The Medusa sinks', 0);
+scoreData[100] = new Progress(['minute until The Medusa sinks', 'minutes until The Medusa sinks'], 0);
 scoreData[101] = new Progress('Medusa crew gratitude', 0);
 
 //for testing. remove later
@@ -800,7 +809,7 @@ PlayableCard.prototype.performChallenge = function() {
         returnCardText += `<em>${this.processCosts(this.successCostItem, this.successCostQuantity)}</em>`;
         //give a little experience based on the type of challenge, equal to half of the opponent roll
         successExp = Math.floor(this.challengeQuantity / 2);
-        returnCardText += `You succeeded in this challenge and learned a little.  ${this.processRewards([this.challengeStat],[successExp])}`;
+        returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([this.challengeStat],[successExp])}</span>`;
         return returnCardText+'<br>';
     }
     else {
@@ -809,7 +818,7 @@ PlayableCard.prototype.performChallenge = function() {
         returnCardText += `<em>${this.processCosts(this.failCostItem, this.failCostQuantity)}</em>`;
         //give a more experience based on the type of challenge, equal the opponent roll
         failExp = Math.floor(this.challengeQuantity);
-        returnCardText += `You failed in this challenge but learned a lot.  ${this.processRewards([this.challengeStat],[failExp])}`;
+        returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([this.challengeStat],[failExp])}</span>`;
         return returnCardText+'<br>';
     }
 };
@@ -869,15 +878,58 @@ var deck = {
     setDeck() {
     this.card[1] = new MoveCard('?', ['Wake up'], [2]);
     this.card[2] = new MoveCard('The Medusa', ['Search for the Lantern'], [3]);
-    this.card[3] = new StoryCard('huh?', ['uh oh'], [4]);
+    this.card[3] = new StoryCard('A choatic cabin', ['Grab your belongings', 'Hurry to the door'], [4,5]);
     this.card[3].cardScript = function(){
         scoreData[100].setQuantity(10);
         scoreData[100].updateReputation();
         return `At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops. <br><br>`;
     };
-    this.card[3].setChallenge(6, 4, 'You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, but your light helps another get their own lantern working too. Now you can literally shed light on what’s going on.',[227, 101], [1, 1], [0], [0], 'You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, someone else finds their own lantern and illuminates the scene before you.', [0], [0], [0], [0]);
-    //[227], [1,1], [1], [5]
-    this.card[4] = new StoryCard('4?', ['four'], [5]);
+    this.card[3].setChallenge(6, 4, 'You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, but your light helps another get their own lantern working too. Now you can literally shed light on what’s going on.',[227, 101], [1, 1], 1, 2, 'You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, someone else finds their own lantern and illuminates the scene before you.', 0, 0, 0, 0);
+    this.card[4] = new StoryCard('', ['Hurry to the door'], 5);
+    this.card[4].setCosts(100, 2);
+    this.card[4].setRewards([205,206], [1,117]);
+    this.card[4].setRequirements(0, 0);
+    this.card[5] = new StoryCard('', 'Climb over the bunks', 6);
+    this.card[5].setCosts(100, 1);
+    this.card[5].setRequirements(0, 0);
+    this.card[6] = new StoryCard('', 'Force the door open', 7);
+    this.card[6].setChallenge(4, 4, 'You find a path over some toppled wardrobes that brings you directly to the door. Several others follow your route over the debris.',101, 1, 100, 1, 'You have trouble finding your way through the toppled furniture, cursing when the jagged edge of a broken bedpost scrapes you along the thigh.', 0, 0, [1, 100], [5, 1]);
+    this.card[7] = new StoryCard('', 'Convince the man to leave', 8);
+    this.card[7].setChallenge(3, 4, 'With a squeal of wood on wood, the door flies open under the force of your shoulder. The dark cabin is immediately invaded by the blaze of a lightning strike, as well as a large panicking man in a green nightgown.',[101, 1], [1, 2], 100, 1, 'Your shoulder is displaced more easily than the door. You step back to take another run at it, when the door bursts open inward, propelled by a large man in a green nightgown.', 0, 0, [100, 1], [1, 10]);
+    this.card[8] = new StoryCard('', 'Get the children out first', 9);
+    this.card[8].setChallenge(7, 4, 'You tell the man that he’s as good as dead if he goes in to look for his paintings. Seeing the water filling the room, he realizes that you’re right.', 101, 1, 100, 1, 'You tell the man that he’s as good as dead if he goes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his missing goods.', 0, 0, [100, 1], [1, 5]);
+    this.card[9] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[9].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[10] = new StoryCard('', 'Hurry to the nearest lifeboat', 11);
+    this.card[10].setCosts(100, 1);
+    this.card[10].setRequirements(0, 0);
+    this.card[11] = new StoryCard('', ['Wait for them to let you on', 'Force your way onto the lifeboat', 'Leap from the rigging onto the lifeboat', 'Plead with the sailor emotionally', 'Look for another way onto the lifeboat', 'Lie to the sailor that you are royalty', 'Bribe the sailor'], [12, 13, 14, 15, 16, 17, 18]);
+    this.card[12] = new StoryCard('', 'Re-evaluate your opitons', 11);
+    this.card[12].setCosts(100, 1);
+    this.card[13] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[13].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[14] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[14].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[15] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[15].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[16] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[16].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[17] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[17].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[18] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
+    this.card[18].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
+    this.card[19] = new StoryCard('', 'Uh oh', 21);
+    this.card[19].setCosts([1,100], [10,1]);
+    this.card[20] = new StoryCard('', 'Flounder!', 21);
+    this.card[20].setCosts([1,100], [10,1]);
+    this.card[21] = new StoryCard('', 'Get some distance between yourself and the Medusa', 22);
+
+
+
+
+
+
+
 
     this.card[200] = new MoveCard('Neutral', ['Go to the rec yard'], [201]);
     this.card[200].setCosts(1000,1);

@@ -72,7 +72,7 @@ button {
 .topDisplay {
     background-image: linear-gradient(to bottom, orange, yellow);
     border: 1px solid black;
-    max-width: 300px;
+    width: 150px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
     display:inline-block;
     margin: 5px;
@@ -140,4 +140,8 @@ button {
 
 .styleCard{
     color: deepskyblue;
+}
+
+.styleChallenge{
+    color: yellow;
 }
