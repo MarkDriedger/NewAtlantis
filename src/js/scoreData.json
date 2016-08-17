@@ -1,0 +1,45 @@
+{
+    "player": [
+        {"inputName": "Body", "quantity": 90, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Mind", "quantity": 80, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Brawn", "quantity": 10, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Hand", "quantity": 20, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Heart", "quantity": 30, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Eye", "quantity": 40, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": "Voice", "quantity": 50, "icon": "/assets/pugrunning21.gif"}
+    ],
+
+    "reputation": [
+        {"inputName": "Royal Navy", "quantity": 10, "icon": ""},
+        {"inputName": "Valhalla", "quantity": 10, "icon": ""},
+        {"inputName": "New Foundland Company", "quantity": 10, "icon": ""},
+        {"inputName": "Post", "quantity": 10, "icon": ""},
+        {"inputName": "Aves", "quantity": 10, "icon": ""},
+        {"inputName": "Silk", "quantity": 10, "icon": ""},
+        {"inputName": "Delphinae", "quantity": 10, "icon": ""},
+        {"inputName": "Octopods", "quantity": 10, "icon": ""},
+        {"inputName": "Cursed", "quantity": 10, "icon": ""},
+        {"inputName": "Vulcans", "quantity": 10, "icon": ""},
+        {"inputName": "Sirens", "quantity": 10, "icon": ""},
+        {"inputName": "Amazons", "quantity": 10, "icon": ""},
+        {"inputName": "Thor’s Vikings", "quantity": 10, "icon": ""},
+        {"inputName": "Privateers", "quantity": 10, "icon": ""},
+        {"inputName": "Animate", "quantity": 10, "icon": ""},
+        {"inputName": "Pneumatic Institute", "quantity": 10, "icon": ""},
+        {"inputName": "Librarians", "quantity": 10, "icon": ""},
+        {"inputName": "Gladiators", "quantity": 10, "icon": ""},
+        {"inputName": "Salt Hands", "quantity": 10, "icon": ""},
+        {"inputName": "Sisters of Freya", "quantity": 10, "icon": ""}
+    ],
+
+    "progress": [
+        {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "quantity": 10, "icon": ""},
+        {"inputName": "Medusa crew gratitude", "quantity": 0, "icon": ""}
+    ],
+
+    "hiddenProgress": [
+        {"inputName": "Medusa lifeboat success"},
+        {"inputName": "Medusa lifeboat fail"}
+    ]
+
+}

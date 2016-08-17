@@ -62,11 +62,8 @@ for (i = 0; i < maxcards; i += 1) {
     display[i].addEventListener('click', onCardClick);
 }
 
-
-
 //board object
 var board = {
-//    shownDice: 0,
     displayText: '',
     extra: 0,
     activeIndex: 1,
@@ -195,7 +192,7 @@ function Collectible(inputName, quantity, marcheValue, icon){
     this.icon = icon;
 }
 
-function Progress(inputName, quantity, icon){
+function Progress(inputName, icon){
     ScoreType.call(this);
     if (Array.isArray(inputName)){
         this.singularName = inputName[0];
@@ -208,7 +205,6 @@ function Progress(inputName, quantity, icon){
         this.singularName = inputName;
         this.pluralName = inputName;
     }
-    this.setQuantity(quantity);
     this.icon = icon;
 }
 
@@ -251,7 +247,7 @@ Reputation.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
             reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -263,7 +259,7 @@ Progress.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
             reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -310,30 +306,30 @@ Progress.prototype.decrement = function(amount) {
     this.updateReputation();
 };
 
-function Flag(inputName, icon){
+function HiddenProgress(inputName){
     ScoreType.call(this);
     this.singularName = inputName;
     this.pluralName = inputName;
-    this.icon = icon;
+    this.setQuantity(0);
 }
 
-Flag.prototype = new ScoreType();
+HiddenProgress.prototype = new ScoreType();
 
-Flag.prototype.increment = function(amount) {
+HiddenProgress.prototype.increment = function(amount) {
     this.quantity += amount;
     this.updateReputation();
 };
 
-Flag.prototype.decrement = function(amount) {
+HiddenProgress.prototype.decrement = function(amount) {
     this.quantity -= amount;
     this.updateReputation();
 };
 
-Flag.prototype.updateReputation = function() {
+HiddenProgress.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
             reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -362,6 +358,81 @@ function PlayerStat(inputName, quantity, icon){
 }
 
 PlayerStat.prototype = new ScoreType();
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+function InventoryItem(name, color) {
+	this.name = name;
+  this.color = color;
+}
+
+InventoryItem.prototype.outputItem = function() {
+	alert(this.name + ' are ' + this.color);
+};
+
+/*var fruitText = '[{"name": "apples", "color": "red"},{"name": "grapes", "color": "purple"},{"name": "oranges", "color": "orange"},{"name": "bananas", "color": "yellow"}]';
+
+var fruitData = JSON.parse(fruitText);
+var fruit = [];
+
+fruitData.forEach(function (item) {
+var myItem = new InventoryItem(item.name, item.color);
+myItem.outputItem();
+fruit.push(myItem);
+});*/
+
+var externalScoreData = require('./scoreData.json');
+//var reputationText = require('./scoreData.js');
+
+var scores = [];
+externalScoreData.player.forEach(function (item) {
+    var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
+    scores.push(myItem);
+  });
+
+  function findBody(thisFunc) {
+      return thisFunc.singularName === 'Body';
+  }
+
+button1.innerHTML = scores.find(findBody).quantity;
+
+externalScoreData.reputation.forEach(function (item) {
+    var myItem = new Reputation(item.inputName, item.quantity, item.icon);
+    scores.push(myItem);
+  });
+
+  function findSirens(thisFunc) {
+      return thisFunc.singularName === 'Sirens';
+  }
+
+button2.innerHTML = scores.find(findSirens).quantity;
+
+externalScoreData.progress.forEach(function (item) {
+    var myItem = new Progress(item.inputName, item.quantity, item.icon);
+    scores.push(myItem);
+  });
+
+  function findMinutes(thisFunc) {
+      return thisFunc.singularName === 'minute until The Medusa sinks';
+  }
+
+button3.innerHTML = scores.find(findMinutes).quantity;
+
+externalScoreData.hiddenProgress.forEach(function (item) {
+    var myItem = new HiddenProgress(item.inputName, item.quantity, item.icon);
+    scores.push(myItem);
+  });
+
+  function findBoat(thisFunc) {
+      return thisFunc.singularName === 'Medusa lifeboat success';
+  }
+
+  button4.innerHTML = scores.find(findBoat).quantity;
+
+
+
+////////////////////////////////////////////////////////////////////////////////
 
  //list the player's stats
 PlayerStat.prototype.updateStats = function() {
@@ -522,9 +593,7 @@ scoreData[224] = new Collectible('retort', 0);
 scoreData[225] = new Collectible(['vial of deflogisticated nitrous air', 'vials of deflogisticated nitrous air'], 0);
 scoreData[226] = new Collectible('oiled cambric', 0);
 scoreData[227] = new Collectible('lantern', 0); //continue with voice - hands of salt
-scoreData[228] = new Collectible('', 0);
-scoreData[229] = new Collectible('', 0);
-scoreData[230] = new Collectible('', 0);
+
 
 scoreData[10000] = new Collectible(['Nothingness', 'Nothingnesses'], 0);
 
@@ -536,12 +605,14 @@ scoreData[5] = new PlayerStat(['Heart', 'Heart points'], 0);
 scoreData[6] = new PlayerStat(['Eye', 'Eye points'], 0);
 scoreData[7] = new PlayerStat(['Voice', 'Voice points'], 0);
 
-scoreData[50] = new Reputation(['Privateer'], 0);
-scoreData[100] = new Progress(['minute until The Medusa sinks', 'minutes until The Medusa sinks'], 0);
-scoreData[101] = new Progress('Medusa crew gratitude', 0);
+scoreData[50] = new Reputation(['Privateer'], 10);
+scoreData[51] = new Reputation(['Viking'], 20);
 
-scoreData[1000] = new Flag('Medusa lifeboat success');
-scoreData[1001] = new Flag('Medusa lifeboat fail');
+scoreData[100] = new Progress(['minute until The Medusa sinks', 'minutes until The Medusa sinks']);
+scoreData[101] = new Progress('Medusa crew gratitude');
+
+scoreData[1000] = new HiddenProgress('Medusa lifeboat success');
+scoreData[1001] = new HiddenProgress('Medusa lifeboat fail');
 
 //for testing. remove later
 scoreData[4].diceQuantity = 2;
@@ -594,6 +665,7 @@ function PlayableCard(){
     this.failRewardQuantity = [0];
     this.failCostItem = [0];
     this.failCostQuantity = [0];
+    this.locationDescription = '';
 }
 
 //get & set a card's rewards to be given out when clicked
@@ -710,10 +782,16 @@ PlayableCard.prototype.requirementSentence = function(reqCard){
         numOfReqs = deck.card[reqCard].requiredItem.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
+            //add something here to copy the entire list of reqs, remove all that are NOT HiddenProgress, and use taht list instead
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            reqList += `${deck.card[reqCard].requiredQuantity[req]} ${scoreData[deck.card[reqCard].requiredItem[req]].correctName(deck.card[reqCard].requiredQuantity[req])}`;
+            if (scoreData[deck.card[reqCard].requiredItem[req]] instanceof HiddenProgress) {
+                reqList = ' (No reqs)';
+                req = numOfReqs;
+            } else {
+                reqList += `${deck.card[reqCard].requiredQuantity[req]} ${scoreData[deck.card[reqCard].requiredItem[req]].correctName(deck.card[reqCard].requiredQuantity[req])}`;
+            }
             if (req < numOfReqs - 2) {
                 reqList += ', ';
             }
@@ -753,10 +831,6 @@ PlayableCard.prototype.checkRequirements = function(reqCard){
 //activate the card and return text describing what happened
 PlayableCard.prototype.cardText = function(){
     var returnCardText = '';
-
-    /*if (this.firstTime === true) {
-        returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
-    }*/
     //update locationBox
     this.updateLocation();
     if (deck.card[board.activeIndex].challengeStat !== 0) {
@@ -842,12 +916,6 @@ PlayableCard.prototype.performChallenge = function() {
         //give a little experience based on the type of challenge, equal to half of the opponent roll
         successExp = Math.floor(this.challengeQuantity / 2);
         returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([this.challengeStat],[successExp])}</span>`;
-/*        if (this.shiftDirection !== undefined) {
-            button1.innerHTML = [this.shiftDirection[0]];*/
-            //this.buttonInstructions = deck.card[board.activeIndex].nextCards
-            /*this.setRequirements(0,0);
-            this.nextCards = [this.shiftDirection[0]];
-        }*/
         return returnCardText + '<br>';
     }
     else {
@@ -857,12 +925,6 @@ PlayableCard.prototype.performChallenge = function() {
         //give more experience based on the type of challenge, equal the opponent roll
         failExp = Math.floor(this.challengeQuantity);
         returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([this.challengeStat],[failExp])}</span>`;
-/*        if (this.shiftDirection !== undefined) {
-            button2.innerHTML = [this.shiftDirection[1]];*/
-            //this.buttonInstructions = deck.card[board.activeIndex].nextCards
-            /*this.setRequirements(0,0);
-            this.nextCards = [this.shiftDirection[1]];
-        }*/
         return returnCardText + '<br>';
     }
 };
@@ -891,7 +953,7 @@ function MoveCard(locationName, buttonInstructions, nextCards) {
 MoveCard.prototype = new PlayableCard();
 
 MoveCard.prototype.updateLocation = function(){
-    locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${cardDescription[board.activeIndex]}`;
+    locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${this.locationDescription}`;
 };
 
 function StoryCard(storyName, buttonInstructions, nextCards) {
@@ -1033,6 +1095,7 @@ var deck = {
 
 //var deck = require('./cards.js');
 var cardDescription = require('./cards.js');
+//var playerStatText = require('./scoreData.js');
 //var successCards = require('./cards.js');
 //var failCards = require('./cards.js');
 
