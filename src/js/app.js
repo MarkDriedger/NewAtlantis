@@ -251,7 +251,7 @@ Reputation.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
             reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -263,7 +263,7 @@ Progress.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
             reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -310,6 +310,35 @@ Progress.prototype.decrement = function(amount) {
     this.updateReputation();
 };
 
+function Flag(inputName, icon){
+    ScoreType.call(this);
+    this.singularName = inputName;
+    this.pluralName = inputName;
+    this.icon = icon;
+}
+
+Flag.prototype = new ScoreType();
+
+Flag.prototype.increment = function(amount) {
+    this.quantity += amount;
+    this.updateReputation();
+};
+
+Flag.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+    this.updateReputation();
+};
+
+Flag.prototype.updateReputation = function() {
+    var reputationList = '<b><u>Progress</u></b><br>';
+
+    scoreData.forEach(function (item) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof Flag)) {
+            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        }
+    });
+    reputationDisplay.innerHTML = reputationList;
+};
 
 //stats
 function PlayerStat(inputName, quantity, icon){
@@ -497,7 +526,7 @@ scoreData[228] = new Collectible('', 0);
 scoreData[229] = new Collectible('', 0);
 scoreData[230] = new Collectible('', 0);
 
-scoreData[1000] = new Collectible(['Nothingness', 'Nothingnesses'], 0);
+scoreData[10000] = new Collectible(['Nothingness', 'Nothingnesses'], 0);
 
 scoreData[1] = new PlayerStat(['Body', 'Health points'], 100);
 scoreData[2] = new PlayerStat(['Mind', 'Mind points'], 100);
@@ -510,6 +539,9 @@ scoreData[7] = new PlayerStat(['Voice', 'Voice points'], 0);
 scoreData[50] = new Reputation(['Privateer'], 0);
 scoreData[100] = new Progress(['minute until The Medusa sinks', 'minutes until The Medusa sinks'], 0);
 scoreData[101] = new Progress('Medusa crew gratitude', 0);
+
+scoreData[1000] = new Flag('Medusa lifeboat success');
+scoreData[1001] = new Flag('Medusa lifeboat fail');
 
 //for testing. remove later
 scoreData[4].diceQuantity = 2;
@@ -810,16 +842,28 @@ PlayableCard.prototype.performChallenge = function() {
         //give a little experience based on the type of challenge, equal to half of the opponent roll
         successExp = Math.floor(this.challengeQuantity / 2);
         returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([this.challengeStat],[successExp])}</span>`;
-        return returnCardText+'<br>';
+/*        if (this.shiftDirection !== undefined) {
+            button1.innerHTML = [this.shiftDirection[0]];*/
+            //this.buttonInstructions = deck.card[board.activeIndex].nextCards
+            /*this.setRequirements(0,0);
+            this.nextCards = [this.shiftDirection[0]];
+        }*/
+        return returnCardText + '<br>';
     }
     else {
         returnCardText = `${this.failText}<br>`;
         returnCardText += `<em>${this.processRewards(this.failRewardItem, this.failRewardQuantity)}</em>`;
         returnCardText += `<em>${this.processCosts(this.failCostItem, this.failCostQuantity)}</em>`;
-        //give a more experience based on the type of challenge, equal the opponent roll
+        //give more experience based on the type of challenge, equal the opponent roll
         failExp = Math.floor(this.challengeQuantity);
         returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([this.challengeStat],[failExp])}</span>`;
-        return returnCardText+'<br>';
+/*        if (this.shiftDirection !== undefined) {
+            button2.innerHTML = [this.shiftDirection[1]];*/
+            //this.buttonInstructions = deck.card[board.activeIndex].nextCards
+            /*this.setRequirements(0,0);
+            this.nextCards = [this.shiftDirection[1]];
+        }*/
+        return returnCardText + '<br>';
     }
 };
 
@@ -884,9 +928,9 @@ var deck = {
         scoreData[100].updateReputation();
         return `At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops. <br><br>`;
     };
-    this.card[3].setChallenge(6, 4, 'You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, but your light helps another get their own lantern working too. Now you can literally shed light on what’s going on.',[227, 101], [1, 1], 1, 2, 'You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, someone else finds their own lantern and illuminates the scene before you.', 0, 0, 0, 0);
+    this.card[3].setChallenge(6, 4, 'You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, but your light helps another get their own lantern working too. Now you can literally shed light on what’s going on.', [227, 101], [1, 1], 1, 2, 'You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, someone else finds their own lantern and illuminates the scene before you.', 0, 0, 0, 0);
     this.card[4] = new StoryCard('', ['Hurry to the door'], 5);
-    this.card[4].setCosts(100, 2);
+    this.card[4].setCosts(100, 1);
     this.card[4].setRewards([205,206], [1,117]);
     this.card[4].setRequirements(0, 0);
     this.card[5] = new StoryCard('', 'Climb over the bunks', 6);
@@ -906,23 +950,45 @@ var deck = {
     this.card[11] = new StoryCard('', ['Wait for them to let you on', 'Force your way onto the lifeboat', 'Leap from the rigging onto the lifeboat', 'Plead with the sailor emotionally', 'Look for another way onto the lifeboat', 'Lie to the sailor that you are royalty', 'Bribe the sailor'], [12, 13, 14, 15, 16, 17, 18]);
     this.card[12] = new StoryCard('', 'Re-evaluate your opitons', 11);
     this.card[12].setCosts(100, 1);
-    this.card[13] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[13].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[14] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[14].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[15] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[15].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[16] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[16].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[17] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[17].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[18] = new StoryCard('', ['Hurry to the nearest lifeboat', 'Do a quick search for abandoned valuables'], [11, 10]);
-    this.card[18].setChallenge(5, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 101, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 0, 0, [100, 1], [1, 5]);
-    this.card[19] = new StoryCard('', 'Uh oh', 21);
-    this.card[19].setCosts([1,100], [10,1]);
-    this.card[20] = new StoryCard('', 'Flounder!', 21);
-    this.card[20].setCosts([1,100], [10,1]);
-    this.card[21] = new StoryCard('', 'Get some distance between yourself and the Medusa', 22);
+    this.card[13] = new StoryCard('', 'continue', 19);
+    this.card[13].setChallenge(3, 4, 'With the help of a knee to a chest, you shove your way past the first crewmember, and get on the lifeboat over any objections.', 1000, 1, 100, 1, 'You take a swing at the first crewmember. He dodges, grabs your arm and pins you against the bulwark.<br><br>“You wanna get past me? Fine. Go right ahead!” he says as and another crewmember grabs your other arm and they throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean.', 1001, 1, [100, 1], [1, 20]);
+    this.card[14] = new StoryCard('', 'continue', 19);
+    this.card[14].setChallenge(4, 1, 'You leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, allowing you to drop down into the lifeboat. They are too busy yelling at others to stay back to notice you.', 1000, 1, 100, 1, 'You leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, you attempt to slide along the rope, but it is slick with rain, and you slip off. Your left leg smashes into the bulwark as you fall overboard, landing with a crash into the roiling, icy ocean.', 1001, 1, [100, 1], [1, 20]);
+    this.card[15] = new StoryCard('', 'continue', 19);
+    this.card[15].setChallenge(5, 4, '“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven kids. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You must be a good actor - or just lucky. The alpha of the three sailors says a few expletives and shoves you onto the lifeboat.', 1000, 1, 100, 1, '“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven kids. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You can tell your acting isn’t convincing anyone.<br><br>“We’re all in the same boat here, pal. You wanna get back to them so bad? Swim home!”<br><br>The three sailors decide to make an example of you to the crowd and grab your limbs and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean.', 1001, 1, [100, 1], [1, 20]);
+    this.card[16] = new StoryCard('', 'continue', 19);
+    this.card[16].setChallenge(6, 4, 'You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there is probably one on the other side too, facing the ocean. You step back from the crowd and step around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder. Shortly, your hands are chilled to the bone, but you climb the ladder and enter the back of the lifeboat.', 1000, 1, 100, 1, 'You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there is probably one on the other side too, facing the ocean. You step back from the crowd and step around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder.<br><br>“Oh, no you don’t” says one of the sailors as he realizes what you are doing. Exposed as you are, you can do nothing to defend yourself. He runs over to you and bashes the butt of his sabre into your knuckles, causing you to let go and plummet overboard, landing with a crash into the roiling, icy ocean.', 1001, 1, [100, 1], [1, 20]);
+    this.card[17] = new StoryCard('', 'continue', 19);
+    this.card[17].setChallenge(7, 4, '“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me on board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Maybe twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?” He looks at you skeptically.<br><br>“Me name’s Helmsman Asa from Eelingborough. You make sure you take care of me wife if I don’t make it through this,” he says as he hurries you up the ladder onto the lifeboat.', 1000, 1, 100, 1, '“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me on board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Maybe twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?”He looks at you skeptically.<br><br>“Well, here I outrank you. I’m the bloody Queen,” he says as his buddies grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean.', 1001, 1, [100, 1], [1, 20]);
+    this.card[18] = new StoryCard('', 'continue', 19);
+    this.card[18].setChallenge(7, 4, 'Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.', 1000, 1, 100, 1, 'Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.', 1001, 1, [100, 1], [1, 5]);
+    this.card[19] = new StoryCard('', ['Uh oh', 'uh oh'], [20, 21]);
+    this.card[19].cardScript = function() {
+        if (scoreData[1000].quantity === 1) {
+            return 'One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of his buddies yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.';
+        }
+        else {
+            return 'You flounder, barely managing to get your head above water to take a gasp of air.';
+        }
+    };
+
+    this.card[19].setCosts(100, 1);
+    this.card[19].setRequirements(0, 0);
+    this.card[20] = new MoveCard('In the ocean', 'Flounder!', 22);
+    this.card[20].cardScript = function() {
+        this.setCosts(100, scoreData[100].quantity);
+        return '';
+    };
+    this.card[20].setRequirements(1000, 1);
+    this.card[21] = new MoveCard('In the ocean', 'Flounder!2', 22);
+    this.card[21].cardScript = function() {
+        this.setCosts(100, scoreData[100].quantity);
+        return '';
+    };
+    this.card[21].setRequirements(1001, 1);
+    this.card[22] = new StoryCard('', 'don’t drown', 23);
+    this.card[23] = new StoryCard('', 'continue', 24);
+    this.card[24] = new StoryCard('', 'continue', 25);
 
 
 
@@ -938,15 +1004,7 @@ var deck = {
     this.card[202].setCosts(204,5);
     this.card[202].setRewards([203,205,201,202],[1,1,10,20]);
     this.card[203] = new MoveCard('Barracks', ['Go back to the rec yard','Check out the shiny object in the grass'], [201,209]);
-    this.card[203].cardScript = function(){
-        if (scoreData[202].quantity === 0) {
-            this.nextCards = [201,209];
-            return ['<b>You notice a shiny object in the grass.</b><br>'];
-        } else {
-            this.nextCards = [201];
-            return '';
-        }
-    };
+
     this.card[204] = new MoveCard('Office Building', ['Go back to the rec yard','Enter Warder Quo\'s office'], [201,208]);
     this.card[205] = new MoveCard('Burn Hill', ['Go back to the rec yard','Follow the path to the creches'], [201,206]);
     this.card[205].setCosts(4,10);
@@ -975,6 +1033,8 @@ var deck = {
 
 //var deck = require('./cards.js');
 var cardDescription = require('./cards.js');
+//var successCards = require('./cards.js');
+//var failCards = require('./cards.js');
 
 //var PlayableCard = require('./cards.js');
 
