@@ -361,78 +361,85 @@ PlayerStat.prototype = new ScoreType();
 
 ////////////////////////////////////////////////////////////////////////////////
 
+var externalScoreData = require('./scoreData.json');
 
-function InventoryItem(name, color) {
-	this.name = name;
-  this.color = color;
-}
+//continue with voice - hands of salt
+//lantern and deerskin jacket shoud have buffs
+var scoreManager = {
+    score: [],
+    loadData(data) {
+        // Populate the score array with the provided data
+    },
+    getScore(scoreName) {
 
-InventoryItem.prototype.outputItem = function() {
-	alert(this.name + ' are ' + this.color);
+        /*function isItemNameEqualToScoreName(item) {
+            return item.name === scoreName;
+        }
+
+        this.score.find(isItemNameEqualToScoreName);*/
+
+        return this.score.find(function (item) {
+            return item.singularName === scoreName;
+        });
+
+    }
 };
 
-/*var fruitText = '[{"name": "apples", "color": "red"},{"name": "grapes", "color": "purple"},{"name": "oranges", "color": "orange"},{"name": "bananas", "color": "yellow"}]';
+scoreManager.loadData(externalScoreData);
+var pugScore = scoreManager.getScore('pug');
+//pugScore.increment();
 
-var fruitData = JSON.parse(fruitText);
-var fruit = [];
+    externalScoreData.player.forEach(function (item) {
+        var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
+        scoreManager.score.push(myItem);
+      });
 
-fruitData.forEach(function (item) {
-var myItem = new InventoryItem(item.name, item.color);
-myItem.outputItem();
-fruit.push(myItem);
-});*/
+    externalScoreData.reputation.forEach(function (item) {
+        var myItem = new Reputation(item.inputName, item.quantity, item.icon);
+        scoreManager.score.push(myItem);
+      });
 
-var externalScoreData = require('./scoreData.json');
-//var reputationText = require('./scoreData.js');
+    externalScoreData.progress.forEach(function (item) {
+        var myItem = new Progress(item.inputName, item.icon);
+        scoreManager.score.push(myItem);
+      });
 
-var scores = [];
-externalScoreData.player.forEach(function (item) {
-    var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
-    scores.push(myItem);
-  });
+    externalScoreData.hiddenProgress.forEach(function (item) {
+        var myItem = new HiddenProgress(item.inputName);
+        scoreManager.score.push(myItem);
+      });
 
-  function findBody(thisFunc) {
-      return thisFunc.singularName === 'Body';
-  }
-
-button1.innerHTML = scores.find(findBody).quantity;
-
-externalScoreData.reputation.forEach(function (item) {
-    var myItem = new Reputation(item.inputName, item.quantity, item.icon);
-    scores.push(myItem);
-  });
-
-  function findSirens(thisFunc) {
-      return thisFunc.singularName === 'Sirens';
-  }
-
-button2.innerHTML = scores.find(findSirens).quantity;
-
-externalScoreData.progress.forEach(function (item) {
-    var myItem = new Progress(item.inputName, item.quantity, item.icon);
-    scores.push(myItem);
-  });
-
-  function findMinutes(thisFunc) {
-      return thisFunc.singularName === 'minute until The Medusa sinks';
-  }
-
-button3.innerHTML = scores.find(findMinutes).quantity;
-
-externalScoreData.hiddenProgress.forEach(function (item) {
-    var myItem = new HiddenProgress(item.inputName, item.quantity, item.icon);
-    scores.push(myItem);
-  });
-
-  function findBoat(thisFunc) {
-      return thisFunc.singularName === 'Medusa lifeboat success';
-  }
-
-  button4.innerHTML = scores.find(findBoat).quantity;
+    externalScoreData.collectibles.forEach(function (item) {
+      var myItem = new Collectible(item.inputName, item.quantity, item.value, item.buff, item.icon);
+      scoreManager.score.push(myItem);
+    });
 
 
+// next sections are for testing only, from here...
+function findBody(thisFunc) {
+    return thisFunc.singularName === 'Body';
+}
+button1.innerHTML = scoreManager.score.find(findBody).quantity;
 
-////////////////////////////////////////////////////////////////////////////////
+function findSirens(thisFunc) {
+    return thisFunc.singularName === 'Sirens';
+}
+button2.innerHTML = scoreManager.score.find(findSirens).quantity;
+
+function findMinutes(thisFunc) {
+    return thisFunc.singularName === 'minute until The Medusa sinks';
+}
+button3.innerHTML = scoreManager.score.find(findMinutes).quantity;
+
+function findBoat(thisFunc) {
+    return thisFunc.singularName === 'Medusa lifeboat success';
+}
+
+function findPug(thisFunc) {
+    return thisFunc.singularName === 'pug';
+}
+button4.innerHTML = scoreManager.score.find(findPug).quantity + " " + scoreManager.score.find(findPug).correctName(scoreManager.score.find(findPug).quantity);
+//...until here (testing)
 
  //list the player's stats
 PlayerStat.prototype.updateStats = function() {
