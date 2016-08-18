@@ -128,7 +128,7 @@ var player = {
             this.posessiveWithS = 'this individual’s';
             this.noun = 'person';
             this.politeNoun = 'esteemed individual';
-            this.honorific = 'Your Honour';
+            this.honorific = 'Your Grace';
             break;
         case 1:
             this.nominative = 'she';
@@ -152,226 +152,39 @@ var player = {
     }
 };
 
-//scores (collectibles & stats)
-function ScoreType(){
-    this.singularName = '';
-    this.pluralName = '';
-    this.quantity = 0;
-    this.icon = '';
-}
-
-//return the singular or plural name of the collectible
-ScoreType.prototype.correctName = function(amount){
-    if (amount === 1) {
-        return this.singularName;
-    } else {
-        return this.pluralName;
-    }
-};
-
-//assign the quantity of a collectible
-ScoreType.prototype.setQuantity = function(amount) {
-    this.quantity = amount;
-};
-
-function Collectible(inputName, quantity, marcheValue, icon){
-    ScoreType.call(this);
-    this.marcheValue = marcheValue;
-    if (Array.isArray(inputName)){
-        this.singularName = inputName[0];
-        if (inputName.length === 1) {
-            this.pluralName = inputName[0]+'s';
-        } else {
-            this.pluralName = inputName[1];
-        }
-    } else {
-        this.singularName = inputName;
-        this.pluralName = inputName+'s';
-    }
-    this.setQuantity(quantity);
-    this.icon = icon;
-}
-
-function Progress(inputName, icon){
-    ScoreType.call(this);
-    if (Array.isArray(inputName)){
-        this.singularName = inputName[0];
-        if (inputName.length === 1) {
-            this.pluralName = inputName[0];
-        } else {
-            this.pluralName = inputName[1];
-        }
-    } else {
-        this.singularName = inputName;
-        this.pluralName = inputName;
-    }
-    this.icon = icon;
-}
-
-Progress.prototype = new ScoreType();
-
-function Reputation(inputName, quantity, icon){
-    ScoreType.call(this);
-    if (Array.isArray(inputName)){
-        this.singularName = inputName[0];
-        if (inputName.length === 1) {
-            this.pluralName = inputName[0]+'s';
-        } else {
-            this.pluralName = inputName[1];
-        }
-    } else {
-        this.singularName = inputName;
-        this.pluralName = inputName+'s';
-    }
-    this.setQuantity(quantity);
-    this.icon = icon;
-}
-
-Reputation.prototype = new ScoreType();
-Collectible.prototype = new ScoreType();
-
-//list the inventory
-Collectible.prototype.updateInventory = function() {
-    var inventoryList = '<b><u>Inventory</u></b><br>';
-
-    scoreData.forEach(function (item) {
-        if (item.quantity > 0 && item instanceof Collectible) {
-            inventoryList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
-        }
-    });
-    inventoryDisplay.innerHTML = inventoryList;
-};
-
-//list the reputation
-Reputation.prototype.updateReputation = function() {
-    var reputationList = '<b><u>Progress</u></b><br>';
-
-    scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
-        }
-    });
-    reputationDisplay.innerHTML = reputationList;
-};
-
-//list the progress
-Progress.prototype.updateReputation = function() {
-    var reputationList = '<b><u>Progress</u></b><br>';
-
-    scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
-        }
-    });
-    reputationDisplay.innerHTML = reputationList;
-};
-
-//increment the quantity of a collectible
-Collectible.prototype.increment = function(amount) {
-    this.quantity += amount;
-    this.updateInventory();
-};
-
-//decrement the quantity of a collectible
-Collectible.prototype.decrement = function(amount) {
-    this.quantity -= amount;
-    if (this.quantity < 0) {
-        this.quantity = 0;
-    }
-    this.updateInventory();
-};
-
-//increment &decrement the quantity of progress
-Progress.prototype.increment = function(amount) {
-    this.quantity += amount;
-    this.updateReputation();
-};
-
-Progress.prototype.decrement = function(amount) {
-    this.quantity -= amount;
-    if (this.quantity < 0) {
-        this.quantity = 0;
-    }
-    this.updateReputation();
-};
-
-//increment &decrement the quantity of a reputation
-Progress.prototype.increment = function(amount) {
-    this.quantity += amount;
-    this.updateReputation();
-};
-
-Progress.prototype.decrement = function(amount) {
-    this.quantity -= amount;
-    this.updateReputation();
-};
-
-function HiddenProgress(inputName){
-    ScoreType.call(this);
-    this.singularName = inputName;
-    this.pluralName = inputName;
-    this.setQuantity(0);
-}
-
-HiddenProgress.prototype = new ScoreType();
-
-HiddenProgress.prototype.increment = function(amount) {
-    this.quantity += amount;
-    this.updateReputation();
-};
-
-HiddenProgress.prototype.decrement = function(amount) {
-    this.quantity -= amount;
-    this.updateReputation();
-};
-
-HiddenProgress.prototype.updateReputation = function() {
-    var reputationList = '<b><u>Progress</u></b><br>';
-
-    scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
-        }
-    });
-    reputationDisplay.innerHTML = reputationList;
-};
-
-//stats
-function PlayerStat(inputName, quantity, icon){
-    ScoreType.call(this);
-    if (Array.isArray(inputName)){
-        this.singularName = inputName[0];
-        if (inputName.length === 1) {
-            this.pluralName = inputName[0]+' points';
-        } else {
-            this.pluralName = inputName[1];
-        }
-    } else {
-        this.singularName = inputName;
-        this.pluralName = inputName+' points';
-    }
-    this.setQuantity(quantity);
-    this.icon = icon;
-    this.diceQuantity = 1;
-    this.experience = 0;
-    this.level = 0;
-}
-
-PlayerStat.prototype = new ScoreType();
-
 ////////////////////////////////////////////////////////////////////////////////
 
 var externalScoreData = require('./scoreData.json');
+//FIX continue collectibles with voice - hands of salt
+//FIX lantern and deerskin jacket shoud have buffs
 
-//continue with voice - hands of salt
-//lantern and deerskin jacket shoud have buffs
-var scoreManager = {
+var stats = {
     score: [],
     loadData(data) {
         // Populate the score array with the provided data
+        data.player.forEach(function (item) {
+            var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
+            this.score.push(myItem);
+        });
+        data.reputation.forEach(function (item) {
+            var myItem = new Reputation(item.inputName, item.quantity, item.icon);
+            this.score.push(myItem);
+        });
+        data.progress.forEach(function (item) {
+            var myItem = new Progress(item.inputName, item.icon);
+            this.score.push(myItem);
+        });
+        data.hiddenProgress.forEach(function (item) {
+            var myItem = new HiddenProgress(item.inputName);
+            this.score.push(myItem);
+        });
+        data.collectibles.forEach(function (item) {
+            var myItem = new Collectible(item.inputName, item.quantity, item.value, item.buff, item.icon);
+            this.score.push(myItem);
+        });
     },
     getScore(scoreName) {
-
+        //12345
         /*function isItemNameEqualToScoreName(item) {
             return item.name === scoreName;
         }
@@ -385,51 +198,24 @@ var scoreManager = {
     }
 };
 
-scoreManager.loadData(externalScoreData);
-var pugScore = scoreManager.getScore('pug');
-//pugScore.increment();
-
-    externalScoreData.player.forEach(function (item) {
-        var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
-        scoreManager.score.push(myItem);
-      });
-
-    externalScoreData.reputation.forEach(function (item) {
-        var myItem = new Reputation(item.inputName, item.quantity, item.icon);
-        scoreManager.score.push(myItem);
-      });
-
-    externalScoreData.progress.forEach(function (item) {
-        var myItem = new Progress(item.inputName, item.icon);
-        scoreManager.score.push(myItem);
-      });
-
-    externalScoreData.hiddenProgress.forEach(function (item) {
-        var myItem = new HiddenProgress(item.inputName);
-        scoreManager.score.push(myItem);
-      });
-
-    externalScoreData.collectibles.forEach(function (item) {
-      var myItem = new Collectible(item.inputName, item.quantity, item.value, item.buff, item.icon);
-      scoreManager.score.push(myItem);
-    });
-
+stats.loadData(externalScoreData);
+var pugScore = stats.getScore('pug');
 
 // next sections are for testing only, from here...
 function findBody(thisFunc) {
     return thisFunc.singularName === 'Body';
 }
-button1.innerHTML = scoreManager.score.find(findBody).quantity;
+button1.innerHTML = stats.score.find(findBody).quantity;
 
 function findSirens(thisFunc) {
     return thisFunc.singularName === 'Sirens';
 }
-button2.innerHTML = scoreManager.score.find(findSirens).quantity;
+button2.innerHTML = stats.score.find(findSirens).quantity;
 
 function findMinutes(thisFunc) {
     return thisFunc.singularName === 'minute until The Medusa sinks';
 }
-button3.innerHTML = scoreManager.score.find(findMinutes).quantity;
+button3.innerHTML = stats.score.find(findMinutes).quantity;
 
 function findBoat(thisFunc) {
     return thisFunc.singularName === 'Medusa lifeboat success';
@@ -438,19 +224,262 @@ function findBoat(thisFunc) {
 function findPug(thisFunc) {
     return thisFunc.singularName === 'pug';
 }
-button4.innerHTML = scoreManager.score.find(findPug).quantity + " " + scoreManager.score.find(findPug).correctName(scoreManager.score.find(findPug).quantity);
+button4.innerHTML = stats.score.find(findPug).quantity + " " + stats.score.find(findPug).correctName(stats.score.find(findPug).quantity);
 //...until here (testing)
 
- //list the player's stats
+
+//ScoreType is the prototype for all types of stats
+function ScoreType(){
+//    this.singularName = ''; DELETE
+//    this.pluralName = ''; DELETE
+    this.quantity = 0;
+    this.icon = '';
+}
+
+//return the singular or plural name of the score, based upon a quantity
+ScoreType.prototype.correctName = function(amount){
+    if (amount === 1) {
+        return this.singularName;
+    } else {
+        return this.pluralName;
+    }
+};
+
+//assign the quantity of a score
+ScoreType.prototype.setQuantity = function(amount) {
+    this.quantity = amount;
+};
+
+//PlayerStats are ScoreType objects that track a player's abilities
+function PlayerStat(inputName, quantity, icon){
+    ScoreType.call(this);
+    //by unless a pluralized name has been specified, assume that the pluralName to be singularName + points
+    this.singularName = inputName[0];
+    if (inputName.length === 1) {
+        this.pluralName = inputName[0]+'points';
+    } else {
+        this.pluralName = inputName[1];
+    }
+    this.setQuantity(quantity);
+    //stats may have a maximum value. FIX this so some stats have no maxQuantity
+    this.maxQuantity = 100;
+    this.icon = icon;
+    //since dice can be rolled for PlayerStats, the number of dice is needed
+    this.diceQuantity = 1;
+    //PlayerStats can be leveled up
+    this.experience = 0;
+    this.level = 0;
+}
+
+//Reputations are ScoreType objects that indicate a faction's relationship with the player. They can go negative.
+function Reputation(inputName, quantity, icon){
+    ScoreType.call(this);
+    this.singularName = inputName[0];
+    if (inputName.length === 1) {
+        this.pluralName = inputName[0]+'s';
+    } else {
+        this.pluralName = inputName[1];
+    }
+    this.setQuantity(quantity);
+    this.icon = icon;
+    //since dice can be rolled for Reputation, the number of dice is needed. FIX
+    this.diceQuantity = 1;
+    //Reputation can be leveled up. FIX
+    this.experience = 0;
+    this.level = 0;
+}
+
+//Progresses are ScoreType objects that are a generic catch-all, indicating the progress the player has made in some aspect. The player is made aware of these. They start at zero, and generally simply increment when moving through a story.
+function Progress(inputName, icon){
+    ScoreType.call(this);
+    //by unless a pluralized name has been specified, assume that the pluralName to be singularName + s
+    this.singularName = inputName[0];
+    if (inputName.length === 1) {
+        this.pluralName = inputName[0]+'s';
+    } else {
+        this.pluralName = inputName[1];
+    }
+    this.icon = icon;
+}
+
+//HiddenProgresses are ScoreType objects that behave like regular Progress, but they are not shared with the player.
+function HiddenProgress(inputName){
+    ScoreType.call(this);
+    this.singularName = inputName;
+    this.pluralName = inputName;
+}
+
+//Collectibles are ScoreType objects that the player can acquire into their inventory
+function Collectible(inputName, quantity, marketValue, buff, icon){
+    ScoreType.call(this);
+    this.singularName = inputName[0];
+    if (inputName.length === 1) {
+        this.pluralName = inputName[0]+'s';
+    } else {
+        this.pluralName = inputName[1];
+    }
+    this.setQuantity(quantity);
+    //Collectibles are the only ScoreType objects that can be sold or equipped, so they need marketValues and buffs
+    this.marketValue = value;
+    this.buff = buff;
+    this.icon = icon;
+}
+
+//establish that ScoreType is the prototype of all 5.
+PlayerStat.prototype = new ScoreType();
+Reputation.prototype = new ScoreType();
+Progress.prototype = new ScoreType();
+HiddenProgress.prototype = new ScoreType();
+Collectible.prototype = new ScoreType();
+
+//increment the different types of scores, and update the appropriate DOM element. PlayerStat is the only score that can have a maximum value
+PlayerStat.prototype.increment = function(amount) {
+    this.quantity += amount;
+    //prevent the quantity from going above it's maximum
+    if (this.quantity < this.maxQuantity) {
+        this.quantity = this.maxQuantity;
+    }
+    this.updateStats();
+};
+
+Collectible.prototype.increment = function(amount) {
+    this.quantity += amount;
+    this.updateInventory();
+};
+
+Reputation.prototype.increment = function(amount) {
+    this.quantity += amount;
+    this.updateReputation();
+};
+
+Progress.prototype.increment = function(amount) {
+    this.quantity += amount;
+    this.updateReputation();
+};
+
+HiddenProgress.prototype.increment = function(amount) {
+    this.quantity += amount;
+};
+
+//decrement the quantity of a stat. All stats can go below zero except for PlayerStat and Collectible.
+PlayerStat.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+    //prevent the quantity from going below zero
+    if (this.quantity < 0) {
+        this.quantity = 0;
+        if (this.singularName === 'Body') {
+            //player has died
+            board.activeIndex = 99;
+            deck.card[board.activeIndex].updateLocation();
+            player.alive = false;
+            player.justDied = true;
+        }
+        if (this.singularName === 'Mind') {
+            //player has gone insane
+            board.activeIndex = 99;
+            deck.card[board.activeIndex].updateLocation();
+            player.alive = false;
+            player.justDied = true;
+        }
+    }
+    this.updateStats();
+};
+
+stats.getscore('Body').decrement = function(amount) {
+    this.quantity -= amount;
+    //if Body goes below zero, the player has died
+    if (this.quantity < 0) {
+        this.quantity = 0;
+        board.activeIndex = 99;
+        deck.card[board.activeIndex].updateLocation();
+        player.alive = false;
+        player.justDied = true;
+    }
+    this.updateStats();
+};
+
+stats.getscore('Mind').decrement = function(amount) {
+    this.quantity -= amount;
+    //if Body goes below zero, the player has died
+    if (this.quantity < 0) {
+        this.quantity = 0;
+        board.activeIndex = 95;
+        deck.card[board.activeIndex].updateLocation();
+        player.sane = false;
+        player.justWentInsane = true;
+    }
+    this.updateStats();
+};
+
+Reputation.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+    this.updateReputation();
+};
+
+Progress.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+    this.updateReputation();
+};
+
+HiddenProgress.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+};
+
+Collectible.prototype.decrement = function(amount) {
+    this.quantity -= amount;
+    if (this.quantity < 0) {
+        this.quantity = 0;
+    }
+    this.updateInventory();
+};
+
+
+//update the DOM elements for Collectibles, Reputation/Progress, & PlayerStat
+Collectible.prototype.updateInventory = function() {
+    var inventoryList = '<b><u>Inventory</u></b><br>';
+
+    stats.score.forEach(function (item) {
+        if (item.quantity > 0 && item instanceof Collectible) {
+            inventoryList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        }
+    });
+    inventoryDisplay.innerHTML = inventoryList;
+};
+
+//list the reputation
+Reputation.prototype.updateReputation = function() {
+    var reputationList = '<b><u>Progress</u></b><br>';
+
+    stats.score.forEach(function (item) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
+            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        }
+    });
+    reputationDisplay.innerHTML = reputationList;
+};
+
+//list the progress
+Progress.prototype.updateReputation = function() {
+    var reputationList = '<b><u>Progress</u></b><br>';
+
+    stats.score.forEach(function (item) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
+            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        }
+    });
+    reputationDisplay.innerHTML = reputationList;
+};
+
+//list the player's stats
 PlayerStat.prototype.updateStats = function() {
     var statList = '<b><u>Health</u></b><br>',
     levelArray = 0;
 
-    statList += `•  ${scoreData[1].singularName}: ${scoreData[1].quantity}<br>`;
-    statList += `•  ${scoreData[2].singularName}: ${scoreData[2].quantity}<br><br>`;
+    statList += `•  Body: ${stats.getScore('Body').quantity}<br>`;
+    statList += `•  Mind: ${stats.getScore('Mind').quantity}<br><br>`;
     statList += '<b><u>Stats</u></b><br>';
-    scoreData.forEach(function (item) {
-    if ((item.singularName !== "Body") && (item.singularName !== "Mind") && (item.quantity > 0) && (item instanceof PlayerStat)) {
+    stats.score.forEach(function (item) {
+    if ((item.singularName !== 'Body') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
         statList += `•  ${item.singularName}: Level:${levelArray[0]}, Points:${item.quantity}, Exp:${levelArray[1]}, Next:${levelArray[2]}<br>`;
         }
@@ -458,30 +487,29 @@ PlayerStat.prototype.updateStats = function() {
     playerStatsDisplay.innerHTML = statList;
 };
 
+/* DELETE. Should not be needed
+HiddenProgress.prototype.updateReputation = function() {
+    var reputationList = '<b><u>Progress</u></b><br>';
+
+    scoreData.forEach(function (item) {
+        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
+            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        }
+    });
+    reputationDisplay.innerHTML = reputationList;
+};*/
+
+//function that uses the player's stat quantity to return the level, experience in that level, and experience to the next level
 PlayerStat.prototype.getLevel = function(){
     var exp = this.quantity,
     level = 1;
-
     for (level === 1; level <= exp; level += 1) {
         exp -= level;
     }
     return [level - 1, exp, level - exp];
 };
 
-PlayerStat.prototype.increment = function(amount) {
-    this.quantity += amount;
-    this.updateStats();
-};
-
-//decrement the quantity of a stat
-PlayerStat.prototype.decrement = function(amount) {
-    this.quantity -= amount;
-    if (this.quantity < 0) {
-        this.quantity = 0;
-    }
-    this.updateStats();
-};
-
+//roll an appropriate number of dice for a stat and return the results in an array
 PlayerStat.prototype.roll = function() {
     var diceIndex = 0,
     diceResults = [];
@@ -492,6 +520,7 @@ PlayerStat.prototype.roll = function() {
     return diceResults;
 };
 
+//add up the total of the rolled dice
 PlayerStat.prototype.addDice = function() {
     var diceTotal = 0,
     numOfDice = board.activeDice.length,
@@ -503,6 +532,7 @@ PlayerStat.prototype.addDice = function() {
     return diceTotal;
 };
 
+//erase the old dice form the screen
 PlayerStat.prototype.eraseDice = function(diceInput){
     var i = 0,
     shownDice = board.activeDice.length;
@@ -513,13 +543,13 @@ PlayerStat.prototype.eraseDice = function(diceInput){
     }
 };
 
+//draw new dice on the screen
 PlayerStat.prototype.drawDice = function(diceInput){
     var i = 0,
     diceIndex = 0,
     numOfDice = board.activeDice.length;
 
     //draw new dice
-//    board.shownDice = diceResults.length;
     for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
         switch (diceInput[diceIndex]) {
         case 1:
@@ -555,6 +585,7 @@ PlayerStat.prototype.drawDice = function(diceInput){
     }
 };
 
+//remove the old dice from the board, roll new dice, and draw those new dice.
 PlayerStat.prototype.rollCompare = function(opponent) {
     var opponentRoll = opponent,
     diceTotal = 0;
@@ -563,6 +594,7 @@ PlayerStat.prototype.rollCompare = function(opponent) {
     board.activeDice = this.roll();
     this.drawDice(board.activeDice);
     diceTotal = this.addDice(board.activeDice);
+    //return whether or not this dice roll succeeded
     if (diceTotal >= opponentRoll) {
         return [true,`${this.singularName} roll succeded!`];
     } else {
@@ -570,7 +602,7 @@ PlayerStat.prototype.rollCompare = function(opponent) {
     }
 };
 
-//create an array of the game's score items 1234
+/*create an array of the game's score items DELETE this
 var scoreData = [];
 scoreData[0] = new Collectible(['nothing', 'nothings'], 0);
 scoreData[201] = new Collectible('candlenut', 0);
@@ -600,10 +632,7 @@ scoreData[224] = new Collectible('retort', 0);
 scoreData[225] = new Collectible(['vial of deflogisticated nitrous air', 'vials of deflogisticated nitrous air'], 0);
 scoreData[226] = new Collectible('oiled cambric', 0);
 scoreData[227] = new Collectible('lantern', 0); //continue with voice - hands of salt
-
-
 scoreData[10000] = new Collectible(['Nothingness', 'Nothingnesses'], 0);
-
 scoreData[1] = new PlayerStat(['Body', 'Health points'], 100);
 scoreData[2] = new PlayerStat(['Mind', 'Mind points'], 100);
 scoreData[3] = new PlayerStat(['Brawn', 'Brawn points'], 0);
@@ -611,13 +640,10 @@ scoreData[4] = new PlayerStat(['Hand', 'Hand points'], 0);
 scoreData[5] = new PlayerStat(['Heart', 'Heart points'], 0);
 scoreData[6] = new PlayerStat(['Eye', 'Eye points'], 0);
 scoreData[7] = new PlayerStat(['Voice', 'Voice points'], 0);
-
 scoreData[50] = new Reputation(['Privateer'], 10);
 scoreData[51] = new Reputation(['Viking'], 20);
-
 scoreData[100] = new Progress(['minute until The Medusa sinks', 'minutes until The Medusa sinks']);
 scoreData[101] = new Progress('Medusa crew gratitude');
-
 scoreData[1000] = new HiddenProgress('Medusa lifeboat success');
 scoreData[1001] = new HiddenProgress('Medusa lifeboat fail');
 
@@ -648,7 +674,7 @@ scoreData[2].decrement = function(amount) {
         player.justWentInsane = true;
     }
     this.updateStats();
-};
+};*/
 
 //create the prototype PlayableCard object
 function PlayableCard(){
