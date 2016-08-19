@@ -245,11 +245,6 @@ ScoreType.prototype.correctName = function(amount){
     }
 };
 
-//assign the quantity of a score
-ScoreType.prototype.setQuantity = function(amount) {
-    this.quantity = amount;
-};
-
 //PlayerStats are ScoreType objects that track a player's abilities
 function PlayerStat(inputName, quantity, icon){
     ScoreType.call(this);
@@ -260,7 +255,7 @@ function PlayerStat(inputName, quantity, icon){
     } else {
         this.pluralName = inputName[1];
     }
-    this.setQuantity(quantity);
+    this.quantity = quantity;
     //stats may have a maximum value. FIX this so some stats have no maxQuantity
     this.maxQuantity = 100;
     this.icon = icon;
@@ -280,7 +275,7 @@ function Reputation(inputName, quantity, icon){
     } else {
         this.pluralName = inputName[1];
     }
-    this.setQuantity(quantity);
+    this.quantity = quantity;
     this.icon = icon;
     //since dice can be rolled for Reputation, the number of dice is needed. FIX
     this.diceQuantity = 1;
@@ -318,7 +313,7 @@ function Collectible(inputName, quantity, marketValue, buff, icon){
     } else {
         this.pluralName = inputName[1];
     }
-    this.setQuantity(quantity);
+    this.quantity = quantity;
     //Collectibles are the only ScoreType objects that can be sold or equipped, so they need marketValues and buffs
     this.marketValue = value;
     this.buff = buff;
@@ -1019,7 +1014,7 @@ var deck = {
     this.card[2] = new MoveCard('The Medusa', ['Search for the Lantern'], [3]);
     this.card[3] = new StoryCard('A choatic cabin', ['Grab your belongings', 'Hurry to the door'], [4,5]);
     this.card[3].cardScript = function(){
-        scoreData[100].setQuantity(10);
+        scoreData[100].quantity = 10;
         scoreData[100].updateReputation();
         return `At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops. <br><br>`;
     };
