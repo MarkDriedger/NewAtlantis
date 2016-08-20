@@ -1,19 +1,17 @@
 {
-    "location": [
-        {"locationName": "?", "locationDescription": "", "actionCost": 0, "addedText": ""}
-        {"inputName": ["Mind"], "quantity": 80, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Brawn"], "quantity": 10, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Hand"], "quantity": 20, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Heart"], "quantity": 30, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Eye"], "quantity": 40, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Voice"], "quantity": 50, "icon": "/assets/pugrunning21.gif"}
+    "locations": [
+        {"cardID": "Windpepper0", "locationName": "Windpepper island",
+            "addedText": "You wake up.",
+            "nextCardsID": ["Action0"]}
     ],
 
-    "action": [
-
+    "actions": [
+        {"cardID": "Windpepper0", "locationName": "Windpepper island",
+            "addedText": "You wake up.",
+            "nextCardsID": ["Windpepper0"]}
     ],
 
-    "story": [
+    "stories": [
         {"cardID": "Medusa0", "locationName": "?",
             "addedText": "You dream of darkness<br>You dream of the cold<br>You dream of screams<br>",
             "nextCardsID": ["Medusa1"]},

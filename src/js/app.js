@@ -179,7 +179,7 @@ var stats = {
             this.score.push(myItem);
         });
         data.collectibles.forEach(function (item) {
-            var myItem = new Collectible(item.inputName, item.quantity, item.value, item.buff, item.icon);
+            var myItem = new Collectible(item.inputName, item.quantity, item.marketValue, item.buff, item.icon);
             this.score.push(myItem);
         });
     },
@@ -237,6 +237,16 @@ function ScoreType(){
 }
 
 //return the singular or plural name of the score, based upon a quantity
+ScoreType.prototype.setNames = function(){
+    this.singularName = this.inputName[0];
+    if (this.inputName.length === 1) {
+        this.pluralName = this.inputName[0]+'s';
+    } else {
+        this.pluralName = this.inputName[1];
+    }
+};
+
+//return the singular or plural name of the score, based upon a quantity
 ScoreType.prototype.correctName = function(amount){
     if (amount === 1) {
         return this.singularName;
@@ -249,7 +259,7 @@ ScoreType.prototype.correctName = function(amount){
 function PlayerStat(inputName, quantity, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + points
-    this.singularName = inputName[0];
+    this.inputName = inputName;
     if (inputName.length === 1) {
         this.pluralName = inputName[0]+'points';
     } else {
@@ -269,12 +279,8 @@ function PlayerStat(inputName, quantity, icon){
 //Reputations are ScoreType objects that indicate a faction's relationship with the player. They can go negative.
 function Reputation(inputName, quantity, icon){
     ScoreType.call(this);
-    this.singularName = inputName[0];
-    if (inputName.length === 1) {
-        this.pluralName = inputName[0]+'s';
-    } else {
-        this.pluralName = inputName[1];
-    }
+    this.inputName = inputName;
+    this.setNames();
     this.quantity = quantity;
     this.icon = icon;
     //since dice can be rolled for Reputation, the number of dice is needed. FIX
@@ -288,18 +294,15 @@ function Reputation(inputName, quantity, icon){
 function Progress(inputName, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + s
-    this.singularName = inputName[0];
-    if (inputName.length === 1) {
-        this.pluralName = inputName[0]+'s';
-    } else {
-        this.pluralName = inputName[1];
-    }
+    this.inputName = inputName;
+    this.setNames();
     this.icon = icon;
 }
 
 //HiddenProgresses are ScoreType objects that behave like regular Progress, but they are not shared with the player.
 function HiddenProgress(inputName){
     ScoreType.call(this);
+    this.inputName = inputName;
     this.singularName = inputName;
     this.pluralName = inputName;
 }
@@ -307,15 +310,11 @@ function HiddenProgress(inputName){
 //Collectibles are ScoreType objects that the player can acquire into their inventory
 function Collectible(inputName, quantity, marketValue, buff, icon){
     ScoreType.call(this);
-    this.singularName = inputName[0];
-    if (inputName.length === 1) {
-        this.pluralName = inputName[0]+'s';
-    } else {
-        this.pluralName = inputName[1];
-    }
+    this.inputName = inputName;
+    this.setNames();
     this.quantity = quantity;
     //Collectibles are the only ScoreType objects that can be sold or equipped, so they need marketValues and buffs
-    this.marketValue = value;
+    this.marketValue = marketValue;
     this.buff = buff;
     this.icon = icon;
 }
@@ -671,33 +670,63 @@ scoreData[2].decrement = function(amount) {
     this.updateStats();
 };*/
 
+var externalCardData = require('./cardData.json');
+
+var deck = {
+    card: [],
+    loadData(data) {
+        // Populate the score array with the provided data
+        data.locations.forEach(function (item) {
+            var myItem = new LocationCard(item.cardID, item.locationName, item.addedText, item.nextCardsID);
+            this.card.push(myItem);
+        });
+        data.actions.forEach(function (item) {
+            var myItem = new ActionCard(item.cardID, item.quantity, item.icon);
+            this.card.push(myItem);
+        });
+        data.stories.forEach(function (item) {
+            var myItem = new StoryCard(item.cardID, item.locationName, item.cardText, item.challengeStat, item.challengeSuccessRewards, item.challengeSuccessCards, item.challengeSuccessText, item.challengeFailRewards, item.challengeFailCards, item.challengeFailText, item.addedText, item.rewards, item.nextCardsID);
+
+            this.card.push(myItem);
+        });
+    },
+    getCard(cardName) {
+        //12345
+        /*function isItemNameEqualToScoreName(item) {
+            return item.name === scoreName;
+        }
+
+        this.score.find(isItemNameEqualToScoreName);*/
+
+        return this.card.find(function (item) {
+            return item.inputName === scoreName;
+        });
+
+    }
+};
+
+deck.loadData(externalCardData);
+//var pugScore = stats.getScore('pug');
+
 //create the prototype PlayableCard object
 function PlayableCard(){
-    this.rewardItem = [0];
-    this.rewardQuantity = [0];
-    this.costItem = [0];
-    this.costQuantity = [0];
-    this.requiredItem = [0];
-    this.requiredQuantity = [0];
-    this.nextCards = [201];
-    this.buttonInstructions = [''];
-    this.challengeStat = 0;
-    this.challengeQuantity = 0;
-    this.successText = '';
-    this.successRewardItem = [0];
-    this.successRewardQuantity = [0];
-    this.successCostItem = [0];
-    this.successCostQuantity = [0];
-    this.failText = '';
-    this.failRewardItem = [0];
-    this.failRewardQuantity = [0];
-    this.failCostItem = [0];
-    this.failCostQuantity = [0];
-    this.locationDescription = '';
+    var cardID = '';
+    var locationName = '';
+    var cardText = '';
+    var challengeStat = '';
+    var challengeSuccessRewards = [''];
+    var challengeSuccessCards = [''];
+    var challengeSuccessText = '';
+    var challengeFailRewards = [''];
+    var challengeFailCards = [''];
+    var challengeFailText = '';
+    var addedText = '';
+    var rewards = [''];
+    var nextCardsID = [''];
 }
 
-//get & set a card's rewards to be given out when clicked
-PlayableCard.prototype.setRewards = function(rewardItem,rewardQuantity){
+//get & set a card's rewards to be given out when clicked DELETE
+/*PlayableCard.prototype.setRewards = function(rewardItem,rewardQuantity){
     if (!Array.isArray(rewardItem)) {
         rewardItem = [rewardItem];
     }
@@ -706,13 +735,42 @@ PlayableCard.prototype.setRewards = function(rewardItem,rewardQuantity){
     }
     this.rewardItem = rewardItem;
     this.rewardQuantity = rewardQuantity;
-};
+};*/
 
 //check to see if this card gave any rewards
-PlayableCard.prototype.processRewards = function(givenRewardItem, givenRewardQuantity){
-    var rewardList = '',
-    rewardIndex = 0;
-    numOfRewards = 0;
+PlayableCard.prototype.processRewards = function(){
+    var rewardArray = [],
+    rewardList = '',
+    rewardIndex = 0,
+    numOfRewards = 0,
+    costArray = [],
+    costList = '',
+    costIndex = 0,
+    numOfCosts = 0,
+    totalArray = this.rewards,
+    totalIndex = 0,
+    numofTotal = this.rewards.length;
+
+    for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 2) {
+        if (totalArray[totalIndex + 1] > 0) {
+            rewardArray.push(totalArray[totalIndex]);
+            rewardArray.push(totalArray[totalIndex + 1]);
+            numOfRewards += 1;
+        } else if (totalArray[totalIndex + 1] < 0) {
+            costArray.push(totalArray[totalIndex]);
+            costArray.push(totalArray[totalIndex + 1]);
+            numOfCosts += 1;
+        }
+    }
+
+    if (numOfRewards > 0) {
+        rewardList = `<span class=styleReward>↑You gained `;
+        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 2) {
+            rewardList += `${rewardArray[rewardIndex+1]} ${rewardArray[rewardIndex]}`; //this will not be pluralized. FIX
+        }
+    }
+
+
 
     if (givenRewardItem[0] > 0) {
         numOfRewards = givenRewardItem.length;
@@ -879,53 +937,20 @@ PlayableCard.prototype.cardText = function(){
     return returnCardText;
 };
 
-PlayableCard.prototype.setChallenge = function(challengeStat, challengeQuantity, successText, successRewardItem, successRewardQuantity, successCostItem, successCostQuantity, failText, failRewardItem, failRewardQuantity, failCostItem, failCostQuantity) {
+/* DELETE PlayableCard.prototype.setChallenge = function(challengeStat, challengeQuantity, successText, successRewardItem, successRewardQuantity, successCostItem, successCostQuantity, failText, failRewardItem, failRewardQuantity, failCostItem, failCostQuantity) {
     this.challengeStat = challengeStat;
     this.challengeQuantity = challengeQuantity;
     this.successText = successText;
-    if (!Array.isArray(successRewardItem)) {
-        this.successRewardItem = [successRewardItem];
-    } else {
-        this.successRewardItem = successRewardItem;
-    }
-    if (!Array.isArray(successRewardQuantity)) {
-        this.successRewardQuantity = [successRewardQuantity];
-    } else {
-        this.successRewardQuantity = successRewardQuantity;
-    }
-    if (!Array.isArray(successCostItem)) {
-        this.successCostItem = [successCostItem];
-    } else {
-        this.successCostItem = successCostItem;
-    }
-    if (!Array.isArray(successCostQuantity)) {
-        this.successCostQuantity = [successCostQuantity];
-    } else {
-        this.successCostQuantity = successCostQuantity;
-    }
+    this.successRewardItem = successRewardItem;
+    this.successRewardQuantity = successRewardQuantity;
+    this.successCostItem = successCostItem;
+    this.successCostQuantity = successCostQuantity;
     this.failText = failText;
-    if (!Array.isArray(failRewardItem)) {
-        this.failRewardItem = [failRewardItem];
-    } else {
-        this.failRewardItem = failRewardItem;
-    }
-    if (!Array.isArray(failRewardQuantity)) {
-        this.failRewardQuantity = [failRewardQuantity];
-    } else {
-        this.failRewardQuantity = failRewardQuantity;
-    }
-    if (!Array.isArray(failCostItem)) {
-        this.failCostItem = [failCostItem];
-    } else {
-        this.failCostItem = failCostItem;
-    }
-    if (!Array.isArray(failCostQuantity)) {
-        this.failCostQuantity = [failCostQuantity];
-    } else {
-        this.failCostQuantity = failCostQuantity;
-    }
-};
-
+    this.failRewardItem = failRewardItem;
+    this.failRewardQuantity = failRewardQuantity;
+    this.failCostItem = failCostItem;
+    this.failCostQuantity = failCostQuantity;
+};*/
 
 PlayableCard.prototype.performChallenge = function() {
     var result = scoreData[this.challengeStat].rollCompare(this.challengeQuantity),
@@ -961,51 +986,56 @@ PlayableCard.prototype.cardScript = function(){
     return '';
 };
 
-//create a card whoe primary purpose is navigation
-function MoveCard(locationName, buttonInstructions, nextCards) {
-    PlayableCard.call(this);
-    this.locationName = locationName;
-    if (Array.isArray(buttonInstructions)) {
-        this.buttonInstructions = buttonInstructions;
-    } else {
-        this.buttonInstructions = [buttonInstructions];
-    }
-    if (Array.isArray(nextCards)) {
-        this.nextCards = nextCards;
-    } else {
-        this.nextCards = [nextCards];
-    }
-    this.firstTime = true;
-}
-
-MoveCard.prototype = new PlayableCard();
-
-MoveCard.prototype.updateLocation = function(){
+PlayableCard.prototype.updateLocation = function(){
     locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${this.locationDescription}`;
 };
 
-function StoryCard(storyName, buttonInstructions, nextCards) {
+//create a card whoe primary purpose is navigation
+function LocationCard(locationName, buttonInstructions, nextCards) {
+    PlayableCard.call(this);
+    this.locationName = locationName;
+    this.buttonInstructions = buttonInstructions;
+    this.nextCards = nextCards;
+    this.firstTime = true;
+}
+
+LocationCard.prototype = new PlayableCard();
+
+function ActionCard(storyName, buttonInstructions, nextCards) {
     PlayableCard.call(this);
     this.storyName = storyName;
-    if (Array.isArray(buttonInstructions)) {
-        this.buttonInstructions = buttonInstructions;
-    } else {
-        this.buttonInstructions = [buttonInstructions];
-    }
-    if (Array.isArray(nextCards)) {
-        this.nextCards = nextCards;
-    } else {
-        this.nextCards = [nextCards];
-    }
+    this.buttonInstructions = buttonInstructions;
+    this.nextCards = nextCards;
+    this.firstTime = true;
+}
+
+ActionCard.prototype = new PlayableCard();
+
+function StoryCard(cardID, locationName, cardText, challengeStat, challengeSuccessRewards, challengeSuccessCards, challengeSuccessText, challengeFailRewards, challengeFailCards, challengeFailText, addedText, rewards, nextCardsID) {
+    PlayableCard.call(this);
+    this.cardID = cardID;
+    this.locaitonName = locaitonName;
+    this.cardText = cardText;
+    this.challengeStat = challengeStat;
+    this.challengeSuccessRewards = challengeSuccessRewards;
+    this.challengeSuccessCards = challengeSuccessCards;
+    this.challengeSuccessText = challengeSuccessText;
+    this.challengeFailRewards = challengeFailRewards;
+    this.challengeFailCards = challengeFailCards;
+    this.challengeFailText = challengeFailText;
+    this.addedText = addedText;
+    this.rewards = rewards;
+    this.nextCardsID = nextCardsID;
     this.firstTime = true;
 }
 
 StoryCard.prototype = new PlayableCard();
 
-StoryCard.prototype.updateLocation = function(){
-    //no text because a StoryCard usually shouldn't change any location information
-};
 
+//Initialize the board & set listeners for button pushes.
+board.setBoard();
+
+/*
 var deck = {
     card: [],
 
@@ -1119,20 +1149,15 @@ var deck = {
     this.card[99] = new MoveCard('Death.', ['Return to the living.'], [201]);
     this.card[95] = new MoveCard('Insanity.', ['Return to sanity.'], [201]);
     }
-};
+};*/
 
 //var deck = require('./cards.js');
-var cardDescription = require('./cards.js');
+//var cardDescription = require('./cards.js');
 //var playerStatText = require('./scoreData.js');
 //var successCards = require('./cards.js');
 //var failCards = require('./cards.js');
 
 //var PlayableCard = require('./cards.js');
 
-//Initialize the board & set listeners for button pushes.
-deck.setDeck();
-board.setBoard();
 
-//start the Medusa storyline
-//split up stuff into different js modules
-//
+//deck.setDeck();
