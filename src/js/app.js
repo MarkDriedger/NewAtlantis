@@ -365,7 +365,7 @@ PlayerStat.prototype.decrement = function(amount) {
     this.updateStats();
 };
 
-stats.getscore('Health').decrement = function(amount) {
+stats.getScore('Health').decrement = function(amount) {
     this.quantity += amount;
     //if Health goes below zero, the player has died
     if (this.quantity < 0) {
@@ -378,7 +378,7 @@ stats.getscore('Health').decrement = function(amount) {
     this.updateStats();
 };
 
-stats.getscore('Mind').decrement = function(amount) {
+stats.getScore('Mind').decrement = function(amount) {
     this.quantity += amount;
     //if Mind goes below zero, the player has gone insane
     if (this.quantity < 0) {
@@ -828,8 +828,8 @@ PlayableCard.prototype.requirementSentence = function(reqCard){
     var reqList = '',
     req = 0,
     numOfReqs = 0,
-    challengeStat = deck.card.getcard(reqCard).challengeStat,
-    challengeRoll = deck.card.getcard(reqCard).challengeRoll;
+    challengeStat = deck.card.getCard(reqCard).challengeStat,
+    challengeRoll = deck.card.getCard(reqCard).challengeRoll;
 
     //check to see if the card has a roll challenge too
     if (challengeStat !== 0) {
@@ -894,21 +894,23 @@ PlayableCard.prototype.cardText = function(){
     var returnCardText = '';
     //update locationBox
     this.updateLocation();
-    if (deck.card[board.activeIndex].challengeStat !== 0) {
-        returnCardText += deck.card[board.activeIndex].performChallenge();
+    if (this.challengeStat !== 0) {
+        returnCardText += this.performChallenge();
         returnCardText += this.cardScript();
-        if (this.firstTime === true) {
-            returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
-        }
+        // if (this.firstTime === true) {
+        //     returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
+        // }
     } else {
         returnCardText += this.cardScript();
-        if (this.firstTime === true) {
-            returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
+        if (this.firstTime === false && this instanceof LocationCard) {
+        } else {
+            returnCardText += `<span class = styleDescription>${this.addedText}<br></span>`;
         }
-        returnCardText += `<em>${this.processRewards(this.rewardItem, this.rewardQuantity)}</em>`;
-        returnCardText += `<em>${this.processCosts(this.costItem, this.costQuantity)}</em>`;
+        returnCardText += `<em>${this.processRewards(this.rewards)}</em>`;
     }
-    this.firstTime = false;
+    if (this instanceof LocationCard) {
+        this.firstTime = false;
+    }
     return returnCardText;
 };
 
@@ -989,7 +991,7 @@ ActionCard.prototype = new PlayableCard();
 // function StoryCard(cardID, locationName, cardText, challengeStat, challengeSuccessRewards, challengeSuccessCards, challengeSuccessText, challengeFailRewards, challengeFailCards, challengeFailText, addedText, rewards, nextCardsID) {
 //     PlayableCard.call(this);
 //     this.cardID = cardID;
-//     this.locaitonName = locaitonName;
+//     this.locationName = locationName;
 //     this.cardText = cardText;
 //     this.challengeStat = challengeStat;
 //     this.challengeSuccessRewards = challengeSuccessRewards;
@@ -1025,7 +1027,6 @@ StoryCard.prototype.loadFromData = function (data) {
     this.addedText = data.addedText;
     this.rewards = data.rewards;
     this.nextCardsID = data.nextCardsID;
-    this.firstTime = data.true;
     if (this.rewards !== undefined){
         this.rewards = undefined;
     }
