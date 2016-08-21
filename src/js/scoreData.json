@@ -72,6 +72,6 @@
         {"inputName": ["retort"], "quantity": 0, "marketValue": 40, "buff": "", "icon": ""},
         {"inputName": ["vial of deflogisticated nitrous air", "vials of deflogisticated nitrous air"], "quantity": 0, "marketValue": 120, "buff": "", "icon": ""},
         {"inputName": ["oiled cambric"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""},
-        {"inputName": ["lantern"], "quantity": 0, "marketValue": 30, "buff": "", "icon": ""},
+        {"inputName": ["lantern"], "quantity": 0, "marketValue": 30, "buff": "", "icon": ""}
     ]
 }

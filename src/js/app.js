@@ -357,31 +357,17 @@ HiddenProgress.prototype.increment = function(amount) {
 
 //decrement the quantity of a stat. All stats can go below zero except for PlayerStat and Collectible.
 PlayerStat.prototype.decrement = function(amount) {
-    this.quantity -= amount;
+    this.quantity += amount;
     //prevent the quantity from going below zero
     if (this.quantity < 0) {
         this.quantity = 0;
-        if (this.singularName === 'Body') {
-            //player has died
-            board.activeIndex = 99;
-            deck.card[board.activeIndex].updateLocation();
-            player.alive = false;
-            player.justDied = true;
-        }
-        if (this.singularName === 'Mind') {
-            //player has gone insane
-            board.activeIndex = 99;
-            deck.card[board.activeIndex].updateLocation();
-            player.alive = false;
-            player.justDied = true;
-        }
     }
     this.updateStats();
 };
 
-stats.getscore('Body').decrement = function(amount) {
-    this.quantity -= amount;
-    //if Body goes below zero, the player has died
+stats.getscore('Health').decrement = function(amount) {
+    this.quantity += amount;
+    //if Health goes below zero, the player has died
     if (this.quantity < 0) {
         this.quantity = 0;
         board.activeIndex = 99;
@@ -393,8 +379,8 @@ stats.getscore('Body').decrement = function(amount) {
 };
 
 stats.getscore('Mind').decrement = function(amount) {
-    this.quantity -= amount;
-    //if Body goes below zero, the player has died
+    this.quantity += amount;
+    //if Mind goes below zero, the player has gone insane
     if (this.quantity < 0) {
         this.quantity = 0;
         board.activeIndex = 95;
@@ -406,21 +392,21 @@ stats.getscore('Mind').decrement = function(amount) {
 };
 
 Reputation.prototype.decrement = function(amount) {
-    this.quantity -= amount;
+    this.quantity += amount;
     this.updateReputation();
 };
 
 Progress.prototype.decrement = function(amount) {
-    this.quantity -= amount;
+    this.quantity += amount;
     this.updateReputation();
 };
 
 HiddenProgress.prototype.decrement = function(amount) {
-    this.quantity -= amount;
+    this.quantity += amount;
 };
 
 Collectible.prototype.decrement = function(amount) {
-    this.quantity -= amount;
+    this.quantity += amount;
     if (this.quantity < 0) {
         this.quantity = 0;
     }
@@ -684,9 +670,14 @@ var deck = {
             var myItem = new ActionCard(item.cardID, item.quantity, item.icon);
             this.card.push(myItem);
         });
+        // data.stories.forEach(function (item) {
+        //     var myItem = new StoryCard(item.cardID, item.locationName, item.cardText, item.challengeStat, item.challengeSuccessRewards, item.challengeSuccessCards, item.challengeSuccessText, item.challengeFailRewards, item.challengeFailCards, item.challengeFailText, item.addedText, item.rewards, item.nextCardsID);
+        //
+        //     this.card.push(myItem);
+        // });
         data.stories.forEach(function (item) {
-            var myItem = new StoryCard(item.cardID, item.locationName, item.cardText, item.challengeStat, item.challengeSuccessRewards, item.challengeSuccessCards, item.challengeSuccessText, item.challengeFailRewards, item.challengeFailCards, item.challengeFailText, item.addedText, item.rewards, item.nextCardsID);
-
+            var myItem = new StoryCard();
+            myItem.loadFromData(item);
             this.card.push(myItem);
         });
     },
@@ -710,77 +701,40 @@ deck.loadData(externalCardData);
 
 //create the prototype PlayableCard object
 function PlayableCard(){
-    var cardID = '';
-    var locationName = '';
-    var cardText = '';
-    var challengeStat = '';
-    var challengeSuccessRewards = [''];
-    var challengeSuccessCards = [''];
-    var challengeSuccessText = '';
-    var challengeFailRewards = [''];
-    var challengeFailCards = [''];
-    var challengeFailText = '';
-    var addedText = '';
-    var rewards = [''];
-    var nextCardsID = [''];
 }
 
-//get & set a card's rewards to be given out when clicked DELETE
-/*PlayableCard.prototype.setRewards = function(rewardItem,rewardQuantity){
-    if (!Array.isArray(rewardItem)) {
-        rewardItem = [rewardItem];
-    }
-    if (!Array.isArray(rewardQuantity)) {
-        rewardQuantity = [rewardQuantity];
-    }
-    this.rewardItem = rewardItem;
-    this.rewardQuantity = rewardQuantity;
-};*/
-
 //check to see if this card gave any rewards
-PlayableCard.prototype.processRewards = function(){
-    var rewardArray = [],
+PlayableCard.prototype.processRewards = function(totalArray){
+    var rewardNameArray = [],
+    rewardQuantityArray = [],
     rewardList = '',
-    rewardIndex = 0,
-    numOfRewards = 0,
-    costArray = [],
+    rewardIndex,
+    numOfRewards,
+    costNameArray = [],
+    costQuantityArray = [],
     costList = '',
-    costIndex = 0,
-    numOfCosts = 0,
-    totalArray = this.rewards,
-    totalIndex = 0,
-    numofTotal = this.rewards.length;
+    costIndex,
+    numOfCosts,
+    totalIndex,
+    numofTotal = totalArray.length;
 
-    for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 2) {
-        if (totalArray[totalIndex + 1] > 0) {
+    for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 1) {
+        if (totalArray[totalIndex].rewardQuantity > 0) {
+            stats.getScore(totalArray[totalIndex].rewardName).increment(totalArray[totalIndex].rewardQuantity);
             rewardArray.push(totalArray[totalIndex]);
-            rewardArray.push(totalArray[totalIndex + 1]);
-            numOfRewards += 1;
-        } else if (totalArray[totalIndex + 1] < 0) {
+            rewardArray.push(totalArray[totalIndex]);
+        } else if (totalArray[totalIndex].rewardQuantity < 0) {
+            stats.getScore(totalArray[totalIndex].rewardName).decrement(totalArray[totalIndex].rewardQuantity);
             costArray.push(totalArray[totalIndex]);
-            costArray.push(totalArray[totalIndex + 1]);
-            numOfCosts += 1;
+            costArray.push(totalArray[totalIndex]);
         }
     }
 
+    numOfRewards = rewardArray.length;
     if (numOfRewards > 0) {
         rewardList = `<span class=styleReward>↑You gained `;
-        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 2) {
-            rewardList += `${rewardArray[rewardIndex+1]} ${rewardArray[rewardIndex]}`; //this will not be pluralized. FIX
-        }
-    }
-
-
-
-    if (givenRewardItem[0] > 0) {
-        numOfRewards = givenRewardItem.length;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
-            scoreData[givenRewardItem[rewardIndex]].increment(givenRewardQuantity[rewardIndex]);
-            //add a comment to the story about rewards.
-            if (rewardIndex === 0) {
-                rewardList += `<span class=styleReward>↑You gained `;
-            }
-            rewardList += `${givenRewardQuantity[rewardIndex]} ${scoreData[givenRewardItem[rewardIndex]].correctName(givenRewardQuantity[rewardIndex])}`;
+            rewardList += `${rewardArray[costIndex].rewardQuantity} ${rewardArray[costIndex].rewardName}`; //this will not be pluralized. FIX
             if (rewardIndex < numOfRewards - 2) {
                 rewardList += ', ';
             }
@@ -792,38 +746,12 @@ PlayableCard.prototype.processRewards = function(){
             }
         }
     }
-    return rewardList;
-};
 
-//get & set a card's costs to be subtracted when clicked
-PlayableCard.prototype.setCosts = function(costItem,costQuantity){
-    if (!Array.isArray(costItem)) {
-        costItem = [costItem];
-    }
-    if (!Array.isArray(costQuantity)) {
-        costQuantity = [costQuantity];
-    }
-    this.costItem = costItem;
-    this.costQuantity = costQuantity;
-    //if a card has costs, then those also must be requirements too
-    this.requiredItem = costItem;
-    this.requiredQuantity = costQuantity;
-};
-
-//check to see if this card gave any costs
-PlayableCard.prototype.processCosts = function(givenCostItem, givenCostQuantity){
-    var costList = '',
-    costIndex = 0,
-    numOfCosts = 0;
-    if (givenCostItem[0] > 0) {
-        numOfCosts = givenCostItem.length;
+    numOfCosts = costArray.length;
+    if (numOfCosts > 0) {
+        costList = `<span class=styleCost>↓You lost `;
         for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
-            scoreData[givenCostItem[costIndex]].decrement(givenCostQuantity[costIndex]);
-            //add a comment to the story about costs.
-            if (costIndex === 0) {
-                costList += `<span class=styleCost>↓You lost `;
-            }
-            costList += `${givenCostQuantity[costIndex]} ${scoreData[givenCostItem[costIndex]].correctName(givenCostQuantity[costIndex])}`;
+            costList += `${costArray[costIndex].rewardQuantity} ${costArray[costIndex].rewardName}`; //this will not be pluralized. FIX
             if (costIndex < numOfCosts - 2) {
                 costList += ', ';
             }
@@ -835,49 +763,89 @@ PlayableCard.prototype.processCosts = function(givenCostItem, givenCostQuantity)
             }
         }
     }
-    return costList;
+
+    return rewardList;
 };
 
-//get & set a card's requirements that must be met in order for a card to be clicked on
-PlayableCard.prototype.setRequirements = function(requiredItem,requiredQuantity){
-    if (!Array.isArray(requiredItem)) {
-        this.requiredItem = [requiredItem];
-    } else {
-        this.requiredItem = requiredItem;
-    }
-    if (!Array.isArray(requiredQuantity)) {
-        this.requiredQuantity = [requiredQuantity];
-    } else {
-        this.requiredQuantity = requiredQuantity;
-    }
-};
+// //get & set a card's costs to be subtracted when clicked DELETE
+// PlayableCard.prototype.setCosts = function(costItem,costQuantity){
+//     if (!Array.isArray(costItem)) {
+//         costItem = [costItem];
+//     }
+//     if (!Array.isArray(costQuantity)) {
+//         costQuantity = [costQuantity];
+//     }
+//     this.costItem = costItem;
+//     this.costQuantity = costQuantity;
+//     //if a card has costs, then those also must be requirements too
+//     this.requiredItem = costItem;
+//     this.requiredQuantity = costQuantity;
+// };
+
+// //check to see if this card gave any costs
+// PlayableCard.prototype.processCosts = function(givenCostItem, givenCostQuantity){
+//     var costList = '',
+//     costIndex = 0,
+//     numOfCosts = 0;
+//     if (givenCostItem[0] > 0) {
+//         numOfCosts = givenCostItem.length;
+//         for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
+//             scoreData[givenCostItem[costIndex]].decrement(givenCostQuantity[costIndex]);
+//             //add a comment to the story about costs.
+//             if (costIndex === 0) {
+//                 costList += `<span class=styleCost>↓You lost `;
+//             }
+//             costList += `${givenCostQuantity[costIndex]} ${scoreData[givenCostItem[costIndex]].correctName(givenCostQuantity[costIndex])}`;
+//             if (costIndex < numOfCosts - 2) {
+//                 costList += ', ';
+//             }
+//             if (costIndex === numOfCosts - 2) {
+//                 costList += ', and ';
+//             }
+//             if (costIndex === numOfCosts - 1) {
+//                 costList += '.<br></span>';
+//             }
+//         }
+//     }
+//     return costList;
+// };
+
+// //get & set a card's requirements that must be met in order for a card to be clicked on
+// PlayableCard.prototype.setRequirements = function(requiredItem,requiredQuantity){
+//     if (!Array.isArray(requiredItem)) {
+//         this.requiredItem = [requiredItem];
+//     } else {
+//         this.requiredItem = requiredItem;
+//     }
+//     if (!Array.isArray(requiredQuantity)) {
+//         this.requiredQuantity = [requiredQuantity];
+//     } else {
+//         this.requiredQuantity = requiredQuantity;
+//     }
+// };
 
 PlayableCard.prototype.requirementSentence = function(reqCard){
     var reqList = '',
     req = 0,
-    numOfReqs = 0;
+    numOfReqs = 0,
+    challengeStat = deck.card.getcard(reqCard).challengeStat,
+    challengeRoll = deck.card.getcard(reqCard).challengeRoll;
 
     //check to see if the card has a roll challenge too
-    if (deck.card[reqCard].challengeStat !== 0) {
-        reqList += `<br>Challenge: roll ${deck.card[reqCard].challengeQuantity} ${scoreData[deck.card[reqCard].challengeStat].singularName}.`;
+    if (challengeStat !== 0) {
+        reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
-    if (deck.card[reqCard].requiredItem[0] === 0) {
+    if (deck.card.getCard(reqCard).requiredItem === undefined) {
         reqList += ' (No reqs)';
     }
     else {
-        numOfReqs = deck.card[reqCard].requiredItem.length;
+        numOfReqs = deck.card.getCard(reqCard).requiredItem.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
-            //add something here to copy the entire list of reqs, remove all that are NOT HiddenProgress, and use taht list instead
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            if (scoreData[deck.card[reqCard].requiredItem[req]] instanceof HiddenProgress) {
-                reqList = ' (No reqs)';
-                req = numOfReqs;
-            } else {
-                reqList += `${deck.card[reqCard].requiredQuantity[req]} ${scoreData[deck.card[reqCard].requiredItem[req]].correctName(deck.card[reqCard].requiredQuantity[req])}`;
-            }
+            reqList += `${deck.card.getCard(reqCard).requirements[req].requiredQuantity} ${deck.card.getCard(reqCard).requirements[req].requiredName}`; //this will not pluralize names FIX
             if (req < numOfReqs - 2) {
                 reqList += ', ';
             }
@@ -888,27 +856,34 @@ PlayableCard.prototype.requirementSentence = function(reqCard){
                 reqList += `)`;
             }
         }
-
     }
     return reqList;
 };
 
 PlayableCard.prototype.checkRequirements = function(reqCard){
     var passReq = true,
-    req = 0,
-    numOfReqs = 0;
+    req,
+    numOfReqs,
+    challengeStat = deck.card.getCard(reqCard).challengeStat,
+    challengeRoll = deck.card.getCard(reqCard).challengeRoll,
+    diceQuantity = stats.score.getScore(challengeStat).diceQuantity,
+    requiredItem = deck.card.getCard(reqCard).requirements.requiredName,
+    requiredQuantity = deck.card.getCard(reqCard).requirements.requiredQuantity;
 
-    if (deck.card[reqCard].challengeStat !== 0 && scoreData[deck.card[reqCard].challengeStat].diceQuantity < deck.card[reqCard].challengeQuantity/6) {
+    //if the player doesn't have enough dice to possibly meet the card's challenge, then they fail the requirements
+    if (challengeStat !== undefined && (challengeRoll > diceQuantity * 6)) {
         return false;
     }
-    if (deck.card[reqCard].requiredItem[0] === 0) {
+    //if the card has no requirements, then the player passes
+    if (requiredItem === undefined) {
         return true;
-    } else {
-        numOfReqs = deck.card[reqCard].requiredItem.length;
+    } else { //if the player fails any one requirement, then they fail
+        numOfReqs = requiredItem.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //compare score vs card requirements.
-            if (scoreData[deck.card[reqCard].requiredItem[req]].quantity < deck.card[reqCard].requiredQuantity[req])
-            passReq = false;
+            if (stats.score.getScore(requiredItem[req]).quantity < deck.card.getCard(reqCard).requirements.requiredQuantity) {
+                passReq = false;
+            }
         }
         return passReq;
     }
@@ -1011,23 +986,50 @@ function ActionCard(storyName, buttonInstructions, nextCards) {
 
 ActionCard.prototype = new PlayableCard();
 
-function StoryCard(cardID, locationName, cardText, challengeStat, challengeSuccessRewards, challengeSuccessCards, challengeSuccessText, challengeFailRewards, challengeFailCards, challengeFailText, addedText, rewards, nextCardsID) {
+// function StoryCard(cardID, locationName, cardText, challengeStat, challengeSuccessRewards, challengeSuccessCards, challengeSuccessText, challengeFailRewards, challengeFailCards, challengeFailText, addedText, rewards, nextCardsID) {
+//     PlayableCard.call(this);
+//     this.cardID = cardID;
+//     this.locaitonName = locaitonName;
+//     this.cardText = cardText;
+//     this.challengeStat = challengeStat;
+//     this.challengeSuccessRewards = challengeSuccessRewards;
+//     this.challengeSuccessCards = challengeSuccessCards;
+//     this.challengeSuccessText = challengeSuccessText;
+//     this.challengeFailRewards = challengeFailRewards;
+//     this.challengeFailCards = challengeFailCards;
+//     this.challengeFailText = challengeFailText;
+//     this.addedText = addedText;
+//     this.rewards = rewards;
+//     this.nextCardsID = nextCardsID;
+//     this.firstTime = true;
+// }
+
+
+function StoryCard(cardID) {
     PlayableCard.call(this);
     this.cardID = cardID;
-    this.locaitonName = locaitonName;
-    this.cardText = cardText;
-    this.challengeStat = challengeStat;
-    this.challengeSuccessRewards = challengeSuccessRewards;
-    this.challengeSuccessCards = challengeSuccessCards;
-    this.challengeSuccessText = challengeSuccessText;
-    this.challengeFailRewards = challengeFailRewards;
-    this.challengeFailCards = challengeFailCards;
-    this.challengeFailText = challengeFailText;
-    this.addedText = addedText;
-    this.rewards = rewards;
-    this.nextCardsID = nextCardsID;
-    this.firstTime = true;
 }
+
+StoryCard.prototype.loadFromData = function (data) {
+    this.cardID = data.cardID;
+    this.locationName = data.locationName;
+    this.cardText = data.cardText;
+    this.challengeStat = data.challengeStat;
+    this.challengeRoll = data.challengeRoll;
+    this.challengeSuccessRewards = data.challengeSuccessRewards;
+    this.challengeSuccessCards = data.challengeSuccessCards;
+    this.challengeSuccessText = data.challengeSuccessText;
+    this.challengeFailRewards = data.challengeFailRewards;
+    this.challengeFailCards = data.challengeFailCards;
+    this.challengeFailText = data.challengeFailText;
+    this.addedText = data.addedText;
+    this.rewards = data.rewards;
+    this.nextCardsID = data.nextCardsID;
+    this.firstTime = data.true;
+    if (this.rewards !== undefined){
+        this.rewards = undefined;
+    }
+};
 
 StoryCard.prototype = new PlayableCard();
 
