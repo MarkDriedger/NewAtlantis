@@ -7,6 +7,22 @@
             "nextCardsID": [
                 "Action0"
             ]
+        },
+        {
+            "cardID": "Death",
+            "locationName": "?",
+            "addedText": "Oops, you seem to have died.",
+            "nextCardsID": [
+                "Windpepper0"
+            ]
+        },
+        {
+            "cardID": "Insanity",
+            "locationName": "?",
+            "addedText": "Oh dear. The pressures of the world seem to have driven you over the brink of insanity.",
+            "nextCardsID": [
+                "Windpepper0"
+            ]
         }
     ],
     "actions": [
@@ -49,7 +65,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
             ],
             "challengeSuccessCards": [
@@ -58,7 +74,7 @@
             ],
             "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, and your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on.",
             "challengeFailRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
             ],
             "challengeFailCards": [
@@ -79,7 +95,7 @@
                 "rewardQuantity": 117},
                 {"rewardName": "inkpot",
                 "rewardQuantity": 1},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [
@@ -91,7 +107,7 @@
             "cardText": "Hurry to the door",
             "addedText": "You head toward the door. Amidst all the chaos, that is easier said than done. A few bunks have toppled over and are blocking your path.",
             "rewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [
@@ -106,7 +122,7 @@
             "challengeSuccessRewards": [
                 {"rewardName": "Medusa crew gratitude",
                 "rewardQuantity": 1},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -116,7 +132,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -135,7 +151,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
 
@@ -146,7 +162,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -10},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -163,7 +179,7 @@
             "challengeSuccessRewards": [
                 {"rewardName": "Medusa crew gratitude",
                 "rewardQuantity": 1},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -173,7 +189,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -192,7 +208,7 @@
                 "rewardQuantity": 2},
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -205,7 +221,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Health",
                 "rewardQuantity": -10},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -220,7 +236,7 @@
             "cardText": "Quickly search for abandoned valuables",
             "addedText": "Anything that isn’t nailed down has gone overboard. Even some things that were nailed down have gone overboard. You really need to get to that lifeboat.",
             "rewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [
@@ -232,7 +248,7 @@
             "cardText": "Hurry to the nearest lifeboat",
             "addedText": "There are three men in crew uniforms and brandishing sabres, standing in front of the lifeboat. “The lifeboat is for children and the elderly only!” one yells. “The ship is leaning, but is remaining afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their buddies and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
             "rewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [
@@ -250,11 +266,11 @@
             "cardText": "Wait for the crew to let you on",
             "addedText": "The three sabre-weilding crewmembers are not letting anyone on the lifeboat, even though there are no children or elderly waiting to get on. Another sail tears loose as a strong wave hits the ship. The three crew start yelling at their mates to come over to the lifeboat. It is clear that the lifeboat isn’t going to be around much longer - the ship may not be either. You really need to get onto that lifeboat.",
             "rewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "requirements": [
-                {"requiredName": "minute until Medusa sinks",
+                {"requiredName": "minute until The Medusa sinks",
                 "requiredQuantity": -1}
             ],
             "nextCardsID": [
@@ -273,7 +289,7 @@
             "challengeStat": "Brawn",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -283,7 +299,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -297,7 +313,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -307,7 +323,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -321,7 +337,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -331,7 +347,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -345,7 +361,7 @@
             "challengeStat": "Eye",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -355,7 +371,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -369,7 +385,7 @@
             "challengeStat": "Voice",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -379,7 +395,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -396,7 +412,7 @@
                 "rewardQuantity": -117},
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "requirements": [
@@ -414,7 +430,7 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
-                {"rewardName": "minute until Medusa sinks",
+                {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [

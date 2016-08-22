@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-
+//12
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -51,8 +51,8 @@ for (i = 0; i < maxcards; i += 1) {
 //set up event listeners for up to 20 displayable cards
 var onCardClick = function (event) {
     if (display[this.displayIndex].className === 'displayCard enabledCard'){
-        board.displayText += `<span class = styleCard>* ${deck.card[board.activeIndex].buttonInstructions[this.displayIndex]}<br></span>`;
-        board.activeIndex = board.activeCardsUp[this.displayIndex];
+        player.displayText += `<span class = styleCard>* ${deck.getCard(player.activeCardsShown[this.displayIndex]).cardText}<br></span>`;
+        player.activeCard = player.activeCardsShown[this.displayIndex];
         board.setBoard();
     }
 };
@@ -62,58 +62,19 @@ for (i = 0; i < maxcards; i += 1) {
     display[i].addEventListener('click', onCardClick);
 }
 
-//board object
-var board = {
-    displayText: '',
-    extra: 0,
-    activeIndex: 1,
-    activeCardsUp: [],
-    activeDice: [],
 
-    setBoard() {
-        var oldNumOfCards = this.activeCardsUp.length,
-        numOfCards = 0;
-
-//remove old cards.
-        for (i = 0; i < oldNumOfCards; i += 1) {
-            cardField.removeChild(display[i]);
-        }
-        //Create Stats and Inventory & put the text in the story
-        scoreData[0].updateInventory();
-        scoreData[1].updateStats();
-        scoreData[50].updateReputation();
-        this.displayText += deck.card[this.activeIndex].cardText();
-        if (player.justDied) {
-            player.justDied = false;
-            this.displayText +=`<span class = styleAlert>${cardDescription[99]}<br></span>`;
-        }
-        if (player.justWentInsane) {
-            player.justWentInsane = false;
-            this.displayText +=`<span class = styleAlert>${cardDescription[95]}<br></span>`;
-        }
-        storyDisplay.innerHTML = this.displayText;
-
-        //append the appropriate number of cards to choose from
-        this.activeCardsUp = deck.card[this.activeIndex].nextCards;
-        numOfCards = this.activeCardsUp.length;
-        for (i = 0; i < numOfCards; i += 1) {
-            cardField.appendChild(display[i]);
-            display[i].innerHTML = `${deck.card[this.activeIndex].buttonInstructions[i]}<br>${deck.card[this.activeIndex].requirementSentence(this.activeCardsUp[i])}`;
-            //disable cards if requirments are not met
-            if (!deck.card[this.activeIndex].checkRequirements(this.activeCardsUp[i])) {
-                display[i].setAttribute('class', 'displayCard disabledCard');
-            } else {
-                display[i].setAttribute('class', 'displayCard enabledCard');
-            }
-        }
-    }
-};
 
 var player = {
+    displayText: '',
+    activeCard: 'Medusa0',
+    activeCardsShown: [],
+    activeDice: [],
     alive: true,
     sane: true,
     justDied: false,
     justWentInsane: false,
+    justWon: false,
+    justFailed: false,
     gender: 0,
     name: 'Cecil Palmer',
 
@@ -154,78 +115,7 @@ var player = {
 
 ////////////////////////////////////////////////////////////////////////////////
 
-var externalScoreData = require('./scoreData.json');
-//FIX continue collectibles with voice - hands of salt
-//FIX lantern and deerskin jacket shoud have buffs
 
-var stats = {
-    score: [],
-    loadData(data) {
-        // Populate the score array with the provided data
-        data.player.forEach(function (item) {
-            var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
-            this.score.push(myItem);
-        });
-        data.reputation.forEach(function (item) {
-            var myItem = new Reputation(item.inputName, item.quantity, item.icon);
-            this.score.push(myItem);
-        });
-        data.progress.forEach(function (item) {
-            var myItem = new Progress(item.inputName, item.icon);
-            this.score.push(myItem);
-        });
-        data.hiddenProgress.forEach(function (item) {
-            var myItem = new HiddenProgress(item.inputName);
-            this.score.push(myItem);
-        });
-        data.collectibles.forEach(function (item) {
-            var myItem = new Collectible(item.inputName, item.quantity, item.marketValue, item.buff, item.icon);
-            this.score.push(myItem);
-        });
-    },
-    getScore(scoreName) {
-        //12345
-        /*function isItemNameEqualToScoreName(item) {
-            return item.name === scoreName;
-        }
-
-        this.score.find(isItemNameEqualToScoreName);*/
-
-        return this.score.find(function (item) {
-            return item.singularName === scoreName;
-        });
-
-    }
-};
-
-stats.loadData(externalScoreData);
-var pugScore = stats.getScore('pug');
-
-// next sections are for testing only, from here...
-function findBody(thisFunc) {
-    return thisFunc.singularName === 'Body';
-}
-button1.innerHTML = stats.score.find(findBody).quantity;
-
-function findSirens(thisFunc) {
-    return thisFunc.singularName === 'Sirens';
-}
-button2.innerHTML = stats.score.find(findSirens).quantity;
-
-function findMinutes(thisFunc) {
-    return thisFunc.singularName === 'minute until The Medusa sinks';
-}
-button3.innerHTML = stats.score.find(findMinutes).quantity;
-
-function findBoat(thisFunc) {
-    return thisFunc.singularName === 'Medusa lifeboat success';
-}
-
-function findPug(thisFunc) {
-    return thisFunc.singularName === 'pug';
-}
-button4.innerHTML = stats.score.find(findPug).quantity + " " + stats.score.find(findPug).correctName(stats.score.find(findPug).quantity);
-//...until here (testing)
 
 
 //ScoreType is the prototype for all types of stats
@@ -260,8 +150,9 @@ function PlayerStat(inputName, quantity, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + points
     this.inputName = inputName;
+    this.singularName = inputName[0];
     if (inputName.length === 1) {
-        this.pluralName = inputName[0]+'points';
+        this.pluralName = inputName[0]+' points';
     } else {
         this.pluralName = inputName[1];
     }
@@ -275,12 +166,14 @@ function PlayerStat(inputName, quantity, icon){
     this.experience = 0;
     this.level = 0;
 }
+PlayerStat.prototype = new ScoreType();
 
 //Reputations are ScoreType objects that indicate a faction's relationship with the player. They can go negative.
 function Reputation(inputName, quantity, icon){
     ScoreType.call(this);
     this.inputName = inputName;
-    this.setNames();
+    this.singularName = inputName[0];
+    this.pluralName = inputName[0];
     this.quantity = quantity;
     this.icon = icon;
     //since dice can be rolled for Reputation, the number of dice is needed. FIX
@@ -289,6 +182,7 @@ function Reputation(inputName, quantity, icon){
     this.experience = 0;
     this.level = 0;
 }
+Reputation.prototype = new ScoreType();
 
 //Progresses are ScoreType objects that are a generic catch-all, indicating the progress the player has made in some aspect. The player is made aware of these. They start at zero, and generally simply increment when moving through a story.
 function Progress(inputName, icon){
@@ -298,6 +192,7 @@ function Progress(inputName, icon){
     this.setNames();
     this.icon = icon;
 }
+Progress.prototype = new ScoreType();
 
 //HiddenProgresses are ScoreType objects that behave like regular Progress, but they are not shared with the player.
 function HiddenProgress(inputName){
@@ -306,6 +201,7 @@ function HiddenProgress(inputName){
     this.singularName = inputName;
     this.pluralName = inputName;
 }
+HiddenProgress.prototype = new ScoreType();
 
 //Collectibles are ScoreType objects that the player can acquire into their inventory
 function Collectible(inputName, quantity, marketValue, buff, icon){
@@ -320,10 +216,6 @@ function Collectible(inputName, quantity, marketValue, buff, icon){
 }
 
 //establish that ScoreType is the prototype of all 5.
-PlayerStat.prototype = new ScoreType();
-Reputation.prototype = new ScoreType();
-Progress.prototype = new ScoreType();
-HiddenProgress.prototype = new ScoreType();
 Collectible.prototype = new ScoreType();
 
 //increment the different types of scores, and update the appropriate DOM element. PlayerStat is the only score that can have a maximum value
@@ -333,7 +225,7 @@ PlayerStat.prototype.increment = function(amount) {
     if (this.quantity < this.maxQuantity) {
         this.quantity = this.maxQuantity;
     }
-    this.updateStats();
+    this.updateStatus();
 };
 
 Collectible.prototype.increment = function(amount) {
@@ -358,37 +250,28 @@ HiddenProgress.prototype.increment = function(amount) {
 //decrement the quantity of a stat. All stats can go below zero except for PlayerStat and Collectible.
 PlayerStat.prototype.decrement = function(amount) {
     this.quantity += amount;
+    //if Health goes below zero, the player has died
+    if (this.quantity < 0 && (this.inputName === 'Health')) {
+        this.quantity = 0;
+        player.activeCard = 'Death';
+        deck.getCard(player.activeCard).updateLocation();
+        player.alive = false;
+        player.justDied = true;
+    }
+    //if Mind goes below zero, the player has gone insane
+    if (this.quantity < 0 && (this.inputName === 'Mind')) {
+        this.quantity = 0;
+        player.activeCard = 'Insanity';
+        deck.getCard(player.activeCard).updateLocation();
+        player.sane = false;
+        player.justWentInsane = true;
+    }
     //prevent the quantity from going below zero
     if (this.quantity < 0) {
         this.quantity = 0;
     }
-    this.updateStats();
-};
 
-stats.getScore('Health').decrement = function(amount) {
-    this.quantity += amount;
-    //if Health goes below zero, the player has died
-    if (this.quantity < 0) {
-        this.quantity = 0;
-        board.activeIndex = 99;
-        deck.card[board.activeIndex].updateLocation();
-        player.alive = false;
-        player.justDied = true;
-    }
-    this.updateStats();
-};
-
-stats.getScore('Mind').decrement = function(amount) {
-    this.quantity += amount;
-    //if Mind goes below zero, the player has gone insane
-    if (this.quantity < 0) {
-        this.quantity = 0;
-        board.activeIndex = 95;
-        deck.card[board.activeIndex].updateLocation();
-        player.sane = false;
-        player.justWentInsane = true;
-    }
-    this.updateStats();
+    this.updateStatus();
 };
 
 Reputation.prototype.decrement = function(amount) {
@@ -451,15 +334,15 @@ Progress.prototype.updateReputation = function() {
 };
 
 //list the player's stats
-PlayerStat.prototype.updateStats = function() {
-    var statList = '<b><u>Health</u></b><br>',
+PlayerStat.prototype.updateStatus = function() {
+    var statList = '<b><u>Status</u></b><br>',
     levelArray = 0;
 
-    statList += `•  Body: ${stats.getScore('Body').quantity}<br>`;
+    statList += `•  Health: ${stats.getScore('Health').quantity}<br>`;
     statList += `•  Mind: ${stats.getScore('Mind').quantity}<br><br>`;
     statList += '<b><u>Stats</u></b><br>';
     stats.score.forEach(function (item) {
-    if ((item.singularName !== 'Body') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
+    if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
         statList += `•  ${item.singularName}: Level:${levelArray[0]}, Points:${item.quantity}, Exp:${levelArray[1]}, Next:${levelArray[2]}<br>`;
         }
@@ -503,11 +386,11 @@ PlayerStat.prototype.roll = function() {
 //add up the total of the rolled dice
 PlayerStat.prototype.addDice = function() {
     var diceTotal = 0,
-    numOfDice = board.activeDice.length,
+    numOfDice = player.activeDice.length,
     diceIndex = 0;
 
     for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
-        diceTotal += board.activeDice[diceIndex];
+        diceTotal += player.activeDice[diceIndex];
     }
     return diceTotal;
 };
@@ -515,7 +398,7 @@ PlayerStat.prototype.addDice = function() {
 //erase the old dice form the screen
 PlayerStat.prototype.eraseDice = function(diceInput){
     var i = 0,
-    shownDice = board.activeDice.length;
+    shownDice = player.activeDice.length;
 
     //clear the old dice
     for (i = 0; i < shownDice; i += 1) {
@@ -527,7 +410,7 @@ PlayerStat.prototype.eraseDice = function(diceInput){
 PlayerStat.prototype.drawDice = function(diceInput){
     var i = 0,
     diceIndex = 0,
-    numOfDice = board.activeDice.length;
+    numOfDice = player.activeDice.length;
 
     //draw new dice
     for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
@@ -567,20 +450,68 @@ PlayerStat.prototype.drawDice = function(diceInput){
 
 //remove the old dice from the board, roll new dice, and draw those new dice.
 PlayerStat.prototype.rollCompare = function(opponent) {
-    var opponentRoll = opponent,
-    diceTotal = 0;
+    var diceTotal = 0;
 
     this.eraseDice();
-    board.activeDice = this.roll();
-    this.drawDice(board.activeDice);
-    diceTotal = this.addDice(board.activeDice);
+    player.activeDice = this.roll();
+    this.drawDice(player.activeDice);
+    diceTotal = this.addDice(player.activeDice);
     //return whether or not this dice roll succeeded
-    if (diceTotal >= opponentRoll) {
+    if (diceTotal >= opponent) {
         return [true,`${this.singularName} roll succeded!`];
     } else {
         return [false,`${this.singularName} roll failed!`];
     }
 };
+
+var externalScoreData = require('./scoreData.json');
+//FIX continue collectibles with voice - hands of salt
+//FIX lantern and deerskin jacket shoud have buffs
+
+var stats = {
+    score: [],
+    loadData(data) {
+        var me = this;
+        // Populate the score array with the provided data
+        data.player.forEach(function (item) {
+            var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
+            me.score.push(myItem);
+        });
+        data.reputation.forEach(function (item) {
+            var myItem = new Reputation(item.inputName, item.quantity, item.icon);
+            me.score.push(myItem);
+        });
+        data.progress.forEach(function (item) {
+            var myItem = new Progress(item.inputName, item.icon);
+            me.score.push(myItem);
+        });
+        data.hiddenProgress.forEach(function (item) {
+            var myItem = new HiddenProgress(item.inputName);
+            me.score.push(myItem);
+        });
+        data.collectibles.forEach(function (item) {
+            var myItem = new Collectible(item.inputName, item.quantity, item.marketValue, item.buff, item.icon);
+            me.score.push(myItem);
+        });
+    },
+    getScore(scoreName) {
+        //12345
+        /*function isItemNameEqualToScoreName(item) {
+            return item.name === scoreName;
+        }
+
+        this.score.find(isItemNameEqualToScoreName);*/
+
+        return this.score.find(function (item) {
+            return item.singularName === scoreName;
+        });
+
+    }
+};
+
+stats.loadData(externalScoreData);
+//var pugScore = stats.getScore('pug');
+
 
 /*create an array of the game's score items DELETE this
 var scoreData = [];
@@ -635,8 +566,8 @@ scoreData[1].decrement = function(amount) {
     this.quantity -= amount;
     if (this.quantity <= 0){
         this.quantity = 0;
-        board.activeIndex = 99;
-        deck.card[board.activeIndex].updateLocation();
+        board.activeCard = 99;
+        deck.card[board.activeCard].updateLocation();
         player.alive = false;
         player.justDied = true;
     }
@@ -648,93 +579,51 @@ scoreData[2].decrement = function(amount) {
     this.quantity -= amount;
     if (this.quantity <= 0){
         this.quantity = 0;
-        board.activeIndex = 95;
-        deck.card[board.activeIndex].updateLocation();
+        board.activeCard = 95;
+        deck.card[board.activeCard].updateLocation();
         player.sane = false;
         player.justWentInsane = true;
     }
     this.updateStats();
 };*/
 
-var externalCardData = require('./cardData.json');
-
-var deck = {
-    card: [],
-    loadData(data) {
-        // Populate the score array with the provided data
-        data.locations.forEach(function (item) {
-            var myItem = new LocationCard(item.cardID, item.locationName, item.addedText, item.nextCardsID);
-            this.card.push(myItem);
-        });
-        data.actions.forEach(function (item) {
-            var myItem = new ActionCard(item.cardID, item.quantity, item.icon);
-            this.card.push(myItem);
-        });
-        // data.stories.forEach(function (item) {
-        //     var myItem = new StoryCard(item.cardID, item.locationName, item.cardText, item.challengeStat, item.challengeSuccessRewards, item.challengeSuccessCards, item.challengeSuccessText, item.challengeFailRewards, item.challengeFailCards, item.challengeFailText, item.addedText, item.rewards, item.nextCardsID);
-        //
-        //     this.card.push(myItem);
-        // });
-        data.stories.forEach(function (item) {
-            var myItem = new StoryCard();
-            myItem.loadFromData(item);
-            this.card.push(myItem);
-        });
-    },
-    getCard(cardName) {
-        //12345
-        /*function isItemNameEqualToScoreName(item) {
-            return item.name === scoreName;
-        }
-
-        this.score.find(isItemNameEqualToScoreName);*/
-
-        return this.card.find(function (item) {
-            return item.inputName === scoreName;
-        });
-
-    }
-};
-
-deck.loadData(externalCardData);
-//var pugScore = stats.getScore('pug');
 
 //create the prototype PlayableCard object
 function PlayableCard(){
+//    this.rewards = [];
 }
 
 //check to see if this card gave any rewards
 PlayableCard.prototype.processRewards = function(totalArray){
-    var rewardNameArray = [],
-    rewardQuantityArray = [],
+    var rewardArray = [],
     rewardList = '',
     rewardIndex,
     numOfRewards,
-    costNameArray = [],
-    costQuantityArray = [],
+    costArray = [],
     costList = '',
     costIndex,
     numOfCosts,
     totalIndex,
+    x =0;
     numofTotal = totalArray.length;
 
     for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 1) {
         if (totalArray[totalIndex].rewardQuantity > 0) {
             stats.getScore(totalArray[totalIndex].rewardName).increment(totalArray[totalIndex].rewardQuantity);
             rewardArray.push(totalArray[totalIndex]);
-            rewardArray.push(totalArray[totalIndex]);
+            x +=1;
         } else if (totalArray[totalIndex].rewardQuantity < 0) {
             stats.getScore(totalArray[totalIndex].rewardName).decrement(totalArray[totalIndex].rewardQuantity);
-            costArray.push(totalArray[totalIndex]);
             costArray.push(totalArray[totalIndex]);
         }
     }
 
     numOfRewards = rewardArray.length;
+    locationTitleBox.innerHTML = x;
     if (numOfRewards > 0) {
         rewardList = `<span class=styleReward>↑You gained `;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
-            rewardList += `${rewardArray[costIndex].rewardQuantity} ${rewardArray[costIndex].rewardName}`; //this will not be pluralized. FIX
+            rewardList += `${rewardArray[rewardIndex].rewardQuantity} ${rewardArray[rewardIndex].rewardName}`; //this will not be pluralized. FIX
             if (rewardIndex < numOfRewards - 2) {
                 rewardList += ', ';
             }
@@ -764,7 +653,7 @@ PlayableCard.prototype.processRewards = function(totalArray){
         }
     }
 
-    return rewardList;
+    return `${rewardList}<br>${costList}`;
 };
 
 // //get & set a card's costs to be subtracted when clicked DELETE
@@ -828,24 +717,24 @@ PlayableCard.prototype.requirementSentence = function(reqCard){
     var reqList = '',
     req = 0,
     numOfReqs = 0,
-    challengeStat = deck.card.getCard(reqCard).challengeStat,
-    challengeRoll = deck.card.getCard(reqCard).challengeRoll;
+    challengeStat = deck.getCard(reqCard).challengeStat,
+    challengeRoll = deck.getCard(reqCard).challengeRoll;
 
     //check to see if the card has a roll challenge too
-    if (challengeStat !== 0) {
+    if (challengeStat !== undefined) {
         reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
-    if (deck.card.getCard(reqCard).requiredItem === undefined) {
+    if (deck.getCard(reqCard).requiredItem === undefined) {
         reqList += ' (No reqs)';
     }
     else {
-        numOfReqs = deck.card.getCard(reqCard).requiredItem.length;
+        numOfReqs = deck.getCard(reqCard).requiredItem.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            reqList += `${deck.card.getCard(reqCard).requirements[req].requiredQuantity} ${deck.card.getCard(reqCard).requirements[req].requiredName}`; //this will not pluralize names FIX
+            reqList += `${deck.getCard(reqCard).requirements[req].requiredQuantity} ${deck.getCard(reqCard).requirements[req].requiredName}`; //this will not pluralize names FIX
             if (req < numOfReqs - 2) {
                 reqList += ', ';
             }
@@ -864,11 +753,11 @@ PlayableCard.prototype.checkRequirements = function(reqCard){
     var passReq = true,
     req,
     numOfReqs,
-    challengeStat = deck.card.getCard(reqCard).challengeStat,
-    challengeRoll = deck.card.getCard(reqCard).challengeRoll,
-    diceQuantity = stats.score.getScore(challengeStat).diceQuantity,
-    requiredItem = deck.card.getCard(reqCard).requirements.requiredName,
-    requiredQuantity = deck.card.getCard(reqCard).requirements.requiredQuantity;
+    challengeStat = deck.getCard(reqCard).challengeStat,
+    challengeRoll = deck.getCard(reqCard).challengeRoll,
+    diceQuantity = stats.getScore(challengeStat).diceQuantity,
+    requiredItem = deck.getCard(reqCard).requirements.requiredName,
+    requiredQuantity = deck.getCard(reqCard).requirements.requiredQuantity;
 
     //if the player doesn't have enough dice to possibly meet the card's challenge, then they fail the requirements
     if (challengeStat !== undefined && (challengeRoll > diceQuantity * 6)) {
@@ -881,7 +770,7 @@ PlayableCard.prototype.checkRequirements = function(reqCard){
         numOfReqs = requiredItem.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //compare score vs card requirements.
-            if (stats.score.getScore(requiredItem[req]).quantity < deck.card.getCard(reqCard).requirements.requiredQuantity) {
+            if (stats.getScore(requiredItem[req]).quantity < deck.getCard(reqCard).requirements.requiredQuantity) {
                 passReq = false;
             }
         }
@@ -890,23 +779,21 @@ PlayableCard.prototype.checkRequirements = function(reqCard){
 };
 
 //activate the card and return text describing what happened
-PlayableCard.prototype.cardText = function(){
+PlayableCard.prototype.performCard = function(){
     var returnCardText = '';
     //update locationBox
     this.updateLocation();
-    if (this.challengeStat !== 0) {
+    if (this.challengeStat !== undefined) {
         returnCardText += this.performChallenge();
         returnCardText += this.cardScript();
-        // if (this.firstTime === true) {
-        //     returnCardText += `<span class = styleDescription>${cardDescription[board.activeIndex]}<br></span>`;
-        // }
     } else {
         returnCardText += this.cardScript();
-        if (this.firstTime === false && this instanceof LocationCard) {
-        } else {
-            returnCardText += `<span class = styleDescription>${this.addedText}<br></span>`;
+        // if (this.firstTime === false && this instanceof LocationCard) {
+        // } else {
+        returnCardText += `<span class = styleDescription>${this.addedText}<br></span>`;
+        if (this.rewards !== undefined) {
+            returnCardText += `<em>${this.processRewards(this.rewards)}</em>`;
         }
-        returnCardText += `<em>${this.processRewards(this.rewards)}</em>`;
     }
     if (this instanceof LocationCard) {
         this.firstTime = false;
@@ -930,31 +817,27 @@ PlayableCard.prototype.cardText = function(){
 };*/
 
 PlayableCard.prototype.performChallenge = function() {
-    var result = scoreData[this.challengeStat].rollCompare(this.challengeQuantity),
-    numOfRewards = 0,
-    rewardIndex = 0,
-    costIndex = 0,
-    numOfCosts = 0,
+    var result = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
     returnCardText = '',
-    successExp = 0,
-    failExp = 0;
+    successExp,
+    failExp;
 
     if (result[0]) {
-        returnCardText = `${this.successText}<br>`;
-        returnCardText += `<em>${this.processRewards(this.successRewardItem, this.successRewardQuantity)}</em>`;
-        returnCardText += `<em>${this.processCosts(this.successCostItem, this.successCostQuantity)}</em>`;
+        returnCardText = `${this.challengeSuccessText}<br>`;
+        returnCardText += `<em>${this.processRewards(this.challengeSuccessRewards)}</em>`;
         //give a little experience based on the type of challenge, equal to half of the opponent roll
-        successExp = Math.floor(this.challengeQuantity / 2);
-        returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([this.challengeStat],[successExp])}</span>`;
+        successExp = Math.floor(this.challengeRoll / 2);
+        returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards({"rewardName": this.challengeStat, "rewardQuantity": successExp})}</span>`;
+        player.justWon = true;
         return returnCardText + '<br>';
     }
     else {
-        returnCardText = `${this.failText}<br>`;
-        returnCardText += `<em>${this.processRewards(this.failRewardItem, this.failRewardQuantity)}</em>`;
-        returnCardText += `<em>${this.processCosts(this.failCostItem, this.failCostQuantity)}</em>`;
+        returnCardText = `${this.challengeFailText}<br>`;
+        returnCardText += `<em>${this.processRewards(this.challengeFailRewards)}</em>`;
         //give more experience based on the type of challenge, equal the opponent roll
-        failExp = Math.floor(this.challengeQuantity);
-        returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([this.challengeStat],[failExp])}</span>`;
+        failExp = Math.floor(this.challengeRoll);
+        returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards({"rewardName": this.challengeStat, "rewardQuantity": failExp})}</span>`;
+        player.justFailed = true;
         return returnCardText + '<br>';
     }
 };
@@ -968,49 +851,58 @@ PlayableCard.prototype.updateLocation = function(){
 };
 
 //create a card whoe primary purpose is navigation
-function LocationCard(locationName, buttonInstructions, nextCards) {
+function LocationCard(cardID) {
     PlayableCard.call(this);
-    this.locationName = locationName;
-    this.buttonInstructions = buttonInstructions;
-    this.nextCards = nextCards;
-    this.firstTime = true;
+    this.cardID = cardID;
 }
-
 LocationCard.prototype = new PlayableCard();
 
-function ActionCard(storyName, buttonInstructions, nextCards) {
-    PlayableCard.call(this);
-    this.storyName = storyName;
-    this.buttonInstructions = buttonInstructions;
-    this.nextCards = nextCards;
+LocationCard.prototype.loadFromData = function (data) {
+    this.cardID = data.cardID;
+    this.locationName = data.locationName;
+    this.cardText = data.cardText;
+    this.challengeStat = data.challengeStat;
+    this.challengeRoll = data.challengeRoll;
+    this.challengeSuccessRewards = data.challengeSuccessRewards;
+    this.challengeSuccessCards = data.challengeSuccessCards;
+    this.challengeSuccessText = data.challengeSuccessText;
+    this.challengeFailRewards = data.challengeFailRewards;
+    this.challengeFailCards = data.challengeFailCards;
+    this.challengeFailText = data.challengeFailText;
+    this.addedText = data.addedText;
+    this.rewards = data.rewards;
+    this.nextCardsID = data.nextCardsID;
     this.firstTime = true;
-}
+};
 
+function ActionCard(cardID) {
+    PlayableCard.call(this);
+    this.cardID = cardID;
+}
 ActionCard.prototype = new PlayableCard();
 
-// function StoryCard(cardID, locationName, cardText, challengeStat, challengeSuccessRewards, challengeSuccessCards, challengeSuccessText, challengeFailRewards, challengeFailCards, challengeFailText, addedText, rewards, nextCardsID) {
-//     PlayableCard.call(this);
-//     this.cardID = cardID;
-//     this.locationName = locationName;
-//     this.cardText = cardText;
-//     this.challengeStat = challengeStat;
-//     this.challengeSuccessRewards = challengeSuccessRewards;
-//     this.challengeSuccessCards = challengeSuccessCards;
-//     this.challengeSuccessText = challengeSuccessText;
-//     this.challengeFailRewards = challengeFailRewards;
-//     this.challengeFailCards = challengeFailCards;
-//     this.challengeFailText = challengeFailText;
-//     this.addedText = addedText;
-//     this.rewards = rewards;
-//     this.nextCardsID = nextCardsID;
-//     this.firstTime = true;
-// }
-
+ActionCard.prototype.loadFromData = function (data) {
+    this.cardID = data.cardID;
+    this.locationName = data.locationName;
+    this.cardText = data.cardText;
+    this.challengeStat = data.challengeStat;
+    this.challengeRoll = data.challengeRoll;
+    this.challengeSuccessRewards = data.challengeSuccessRewards;
+    this.challengeSuccessCards = data.challengeSuccessCards;
+    this.challengeSuccessText = data.challengeSuccessText;
+    this.challengeFailRewards = data.challengeFailRewards;
+    this.challengeFailCards = data.challengeFailCards;
+    this.challengeFailText = data.challengeFailText;
+    this.addedText = data.addedText;
+    this.rewards = data.rewards;
+    this.nextCardsID = data.nextCardsID;
+};
 
 function StoryCard(cardID) {
     PlayableCard.call(this);
     this.cardID = cardID;
 }
+StoryCard.prototype = new PlayableCard();
 
 StoryCard.prototype.loadFromData = function (data) {
     this.cardID = data.cardID;
@@ -1027,16 +919,146 @@ StoryCard.prototype.loadFromData = function (data) {
     this.addedText = data.addedText;
     this.rewards = data.rewards;
     this.nextCardsID = data.nextCardsID;
-    if (this.rewards !== undefined){
-        this.rewards = undefined;
+    // if (this.rewards !== undefined){
+    //     this.rewards = undefined;
+    // }
+};
+
+
+var externalCardData = require('./cardData.json');
+
+var deck = {
+    card: [],
+    loadData(data) {
+        me = this;
+        // Populate the score array with the provided data
+        data.locations.forEach(function (item) {
+            var myItem = new LocationCard();
+            myItem.loadFromData(item);
+            me.card.push(myItem);
+        });
+        data.actions.forEach(function (item) {
+            var myItem = new ActionCard();
+            myItem.loadFromData(item);
+            me.card.push(myItem);
+        });
+        data.stories.forEach(function (item) {
+            var myItem = new StoryCard();
+            myItem.loadFromData(item);
+            me.card.push(myItem);
+        });
+    },
+    getCard(cardName) {
+        //12345
+        /*function isItemNameEqualToScoreName(item) {
+            return item.name === scoreName;
+        }
+
+        this.score.find(isItemNameEqualToScoreName);*/
+
+        return this.card.find(function (item) {
+            return item.cardID === cardName;
+        });
+
     }
 };
 
-StoryCard.prototype = new PlayableCard();
+deck.loadData(externalCardData);
+//var pugScore = stats.getScore('pug');
 
+//board object
+var board = {
+    // activeCard: 'Medusa0',
+    // displayText: '',
+    // activeCardsShown: [],
+    // activeDice: [],
+
+    setBoard() {
+        var oldNumOfCards = player.activeCardsShown.length,
+        numOfCards = 0;
+
+//remove old cards.
+        for (i = 0; i < oldNumOfCards; i += 1) {
+            cardField.removeChild(display[i]);
+        }
+        //Create Stats and Inventory & put the text in the story
+        // stats.Collectible.updateInventory();
+        // stats.PlayerStat.updateStats();
+        // stats.Reputation.updateReputation();
+        player.displayText += `${deck.getCard(player.activeCard).addedText}<br>`;
+        player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+        deck.getCard(player.activeCard).performCard();
+
+
+        if (player.justDied) {
+            player.justDied = false;
+            player.activeCard = 'Dead';
+            player.displayText +=`<span class = styleAlert>${deck.getCard(player.activeCard).addedText}<br></span>`;
+            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+        }
+        if (player.justWentInsane) {
+            player.justWentInsane = false;
+            player.activeCard = 'Insane';
+            player.displayText +=`<span class = styleAlert>${deck.getCard(player.activeCard).addedText}<br></span>`;
+            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+        }
+        if (player.justWon) {
+            player.justWon = false;
+            player.displayText +=`<span class = styleReward>${deck.getCard(player.activeCard).challengeSuccessText}<br></span>`;
+            player.activeCardsShown = deck.getCard(player.activeCard).challengeSuccessCards;
+        }
+        if (player.justFailed) {
+            player.justFailed = false;
+            player.displayText +=`<span class = styleCost>${deck.getCard(player.activeCard).challengeFailText}<br></span>`;
+            player.activeCardsShown = deck.getCard(player.activeCard).challengeFailCards;
+        }
+
+        numOfCards = player.activeCardsShown.length;
+        storyDisplay.innerHTML = player.displayText;
+
+        //append the appropriate number of cards to choose from
+        for (i = 0; i < numOfCards; i += 1) {
+            cardField.appendChild(display[i]);
+            display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence(player.activeCardsShown[i])}`;
+            //disable cards if requirments are not met
+            if (!deck.getCard(player.activeCardsShown[i]).checkRequirements) {
+                display[i].setAttribute('class', 'displayCard disabledCard');
+            } else {
+                display[i].setAttribute('class', 'displayCard enabledCard');
+            }
+        }
+    }
+};
 
 //Initialize the board & set listeners for button pushes.
 board.setBoard();
+
+
+// // next sections are for testing only, from here...
+// function findBody(thisFunc) {
+//     return thisFunc.singularName === 'Body';
+// }
+// button1.innerHTML = stats.score.find(findBody).quantity;
+//
+// function findSirens(thisFunc) {
+//     return thisFunc.singularName === 'Sirens';
+// }
+// button2.innerHTML = stats.score.find(findSirens).quantity;
+//
+// function findMinutes(thisFunc) {
+//     return thisFunc.singularName === 'minute until The Medusa sinks';
+// }
+// button3.innerHTML = stats.score.find(findMinutes).quantity;
+//
+// function findBoat(thisFunc) {
+//     return thisFunc.singularName === 'Medusa lifeboat success';
+// }
+//
+// function findPug(thisFunc) {
+//     return thisFunc.singularName === 'pug';
+// }
+// button4.innerHTML = stats.score.find(findPug).quantity + " " + stats.score.find(findPug).correctName(stats.score.find(findPug).quantity);
+//...until here (testing)
 
 /*
 var deck = {
