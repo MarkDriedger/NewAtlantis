@@ -1,8 +1,8 @@
 {
     "locations": [
         {
-            "cardID": "Windpepper0",
-            "locationName": "Windpepper island",
+            "cardID": "Bifröst0",
+            "locationName": "Bifröst island",
             "addedText": "You wake up.",
             "nextCardsID": [
                 "Action0"
@@ -13,7 +13,7 @@
             "locationName": "?",
             "addedText": "Oops, you seem to have died.",
             "nextCardsID": [
-                "Windpepper0"
+                "Bifröst0"
             ]
         },
         {
@@ -21,17 +21,17 @@
             "locationName": "?",
             "addedText": "Oh dear. The pressures of the world seem to have driven you over the brink of insanity.",
             "nextCardsID": [
-                "Windpepper0"
+                "Bifröst0"
             ]
         }
     ],
     "actions": [
         {
-            "cardID": "Windpepper0",
-            "locationName": "Windpepper island",
+            "cardID": "Bifröst0",
+            "locationName": "Bifröst island",
             "addedText": "You wake up.",
             "nextCardsID": [
-                "Windpepper0"
+                "Bifröst0"
             ]
         }
     ],
@@ -39,6 +39,7 @@
         {
             "cardID": "Medusa0",
             "locationName": "?",
+            "locationDescription": "",
             "addedText": "You dream of darkness<br>You dream of the cold<br>You dream of screams<br>",
             "nextCardsID": [
                 "Medusa1"
@@ -47,8 +48,13 @@
         {
             "cardID": "Medusa1",
             "locationName": "The Medusa",
+            "locationDescription": "Inside a choatic cabin",
             "cardText": "Wake Up",
             "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the noise, you remember there was a lantern near your bunk.",
+            "requirements": [
+                {"requiredName": "Royal shilling",
+                "requiredQuantity": 1117}
+            ],
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -63,8 +69,6 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Medusa crew gratitude",
                 "rewardQuantity": 1},
-                {"rewardName": "Health",
-                "rewardQuantity": -5},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
             ],
@@ -72,7 +76,7 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. The hot metal lightly singes your fingers, and your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on.",
+            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you oen the shutter. Your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on.",
             "challengeFailRewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
@@ -233,6 +237,7 @@
         },
         {
             "cardID": "Medusa9",
+            "locationDescription": "A ferocious storm threatens the lilting ship",
             "cardText": "Quickly search for abandoned valuables",
             "addedText": "Anything that isn’t nailed down has gone overboard. Even some things that were nailed down have gone overboard. You really need to get to that lifeboat.",
             "rewards": [
@@ -271,7 +276,7 @@
             ],
             "requirements": [
                 {"requiredName": "minute until The Medusa sinks",
-                "requiredQuantity": -1}
+                "requiredQuantity": 1}
             ],
             "nextCardsID": [
                 "Medusa11",
@@ -408,7 +413,7 @@
             "cardText": "Bribe the sailor",
             "addedText": "“Thanks for the cash mate, but my life's worth more than a few shillings”. The sailor grins as his buddies help grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean.",
             "rewards": [
-                {"rewardName": "Royal shillings",
+                {"rewardName": "Royal shilling",
                 "rewardQuantity": -117},
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -416,8 +421,8 @@
                 "rewardQuantity": -1}
             ],
             "requirements": [
-                {"requiredName": "Royal shillings",
-                "requiredQuantity": -117}
+                {"requiredName": "Royal shilling",
+                "requiredQuantity": 1117}
             ],
             "nextCardsID": [
                 "Medusa19"
@@ -439,6 +444,7 @@
         },
         {
             "cardID": "Medusa19",
+            "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
             "cardText": "Flounder",
             "addedText": "You flounder, barely managing to get your head above water to take a gasp of air. You look up and see the lifeboat swinging precariously above you. Some commotion ensues on the deck of the ship. A rope snaps. The bow of the lifeboat falls, and it does a nosedive into the ocean, spilling out all who thought they had found relative safety. Screaming people are doing their best to stay afloat, but you can barely hear them over the storm - and one other noise. You don’t know what the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart.",
             "nextCardsID": [
@@ -448,6 +454,7 @@
         {
             "cardID": "Medusa20",
             "cardText": "Uh oh",
+            "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
             "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds as if it were a paper ship designed to compactly fit inside of a bottle. The masts and sails slap the sea as if the ship is still trying to fight back. The wave engulfs you next, and when you come up for air again, there is no ship to be seen. You pull yourself up onto a piece of debris, and remember little else for the next several hours.",
             "nextCardsID": [
                 "Medusa21"
@@ -456,6 +463,7 @@
         {
             "cardID": "Medusa21",
             "cardText": "continue",
+            "locationDescription": "?",
             "addedText": "You dream of darkness again<br><br>You dream of the cold again<br><BR>You dream of screams again.",
             "nextCardsID": [
                 "Medusa22"
@@ -464,18 +472,162 @@
         {
             "cardID": "Medusa22",
             "cardText": "continue",
-            "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the slimy arms of an octopus, wrapping around your body, dragging you down.<br><br>You dream of a jaguar in the night bearing its teeth and leaning in to get a good smell of you.",
+            "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the slimy arms of an octopus, wrapping around your body, dragging you down.<br><br>You dream of a jaguar in the night bearing its teeth and leaning in to get a good sniff of you.",
             "nextCardsID": [
-                "Medusa23"
+                "BifröstShore0"
             ]
         },
         {
-            "cardID": "Medusa23",
-            "cardText": "continue",
-            "addedText": "The sun blinds your eyes as you wake up.",
+            "cardID": "BifröstShore0",
+            "cardText": "Wake up",
+            "locationName": "?",
+            "locationDescription": "",
+            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on some sea water. You get up onto your hands and knees and you cough the salty sea water out and you wipe your wet face with your wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl over to a close, relatively dry one and throw yourself down on it. You close your eyes. First you try to take account of your own status. You feel pain and wet all over, but you still seem to be in one piece. You feel like crap though.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -50}
+            ],
             "nextCardsID": [
-                "Windpepper0"
+                "BifröstShore1"
             ]
-        }
+        },
+        {
+            "cardID": "BifröstShore1",
+            "cardText": "Close your eyes",
+            "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. In one direction is the ocean, vast, yet relatively calm. The sky is ridiculously blue, as if to call you a liar. You imagine a nervous cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself.",
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -50}
+            ],
+            "nextCardsID": [
+                "BifröstShore2"
+            ]
+        },
+        {
+            "cardID": "BifröstShore2",
+            "cardText": "Look around",
+            "locationDescription": "Some rocky, desolate shore",
+            "addedText": "The whole coast is made of this same black rock. Inland the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Or is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown AND JACKET YOU MANAGED TO SAVE, and you are alone, as far as you know.<br><br>Oh, and you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -5}
+                {"rewardName": "lantern",
+                "rewardQuantity": -1}
+                {"rewardName": "inkwell",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+                "BifröstShore3a",
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ]
+        },
+        {
+            "cardID": "BifröstShore3a",
+            "cardText": "Search debris",
+            "requirements": "top hat === 0",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "top hat",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeSuccessText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. After a fair bit of searching, you find a worn top hat that is waterlogged, but it will serve to keep the sun off your head. The parrot is still sitting there, watching you.",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstShore3a",
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeFailText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you."
+        },
+        {
+            "cardID": "BifröstShore3b",
+            "cardText": "Search debris",
+            "requirements": "top hat === 1 && nails === 0",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "nails",
+                "rewardQuantity": 7}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeSuccessText": "You find a soggy chunk of wood with several strong nails in it. The wood falls apart easily, freeing the nails. Perhaps you can use these somehow to help you survive. The parrot is still sitting there, watching you.",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeFailText": "You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you."
+        },
+        {
+            "cardID": "BifröstShore4",
+            "cardText": "Talk to parrot",
+            "challengeStat": "Voice",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -5}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore6"
+            ],
+            "challengeSuccessText": "Although you are already a little worried about your remaining sanity, talking to a parrot couldn’t really hurt, could it?<br><br>“Hello, by any chance, are you a trained parrot? Is there someone nearby who keeps you as a pet? Hello? Hello?”br><br>The parrot cocks its head and looks at you - certainly a bizarre curiosity. Only when it does a couple of hops onto a different rock, do you realize that the parrot wasn’t sitting on a rock at all, but rather a huge piece of debris from the shipwreck. The debris isn’t just a piece of the hull though - it’s more ornate. You walk over to inspect it.",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstShore3a",
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeFailText": "You try to produce sound, but your hoarse throat cracks and you you just cough up a little more seawater."
+        },
+        {
+            "cardID": "BifröstShore5",
+            "cardText": "Try to catch parrot",
+            "challengeStat": "Hand",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore6"
+            ],
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeFailRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5},
+            ],
+            "challengeFailCards": [
+                "BifröstShore3a",
+                "BifröstShore3b",
+                "BifröstShore4",
+                "BifröstShore5"
+            ],
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+        },
+        {
+            "cardID": "BifröstShore6",
+            "cardText": "Investigate the debris",
+            "addedText": "As you get closer to the debris, you realize it isn’t debris - it’s a crate, and a sturdy one at that. Metal plating and rivets keep it all held together solidly, but the one long hinge in the back seems to have been damaged quite badly by the waves and rocks. Although it weighs more than you do, you manage to shift the chest so that it is upright, causing water to flow out. The crate must have been damaged enough for the seal to have been broken.",
+            "nextCardsID": [
+                "BifröstShore7",
+                "BifröstShore8",
+                "BifröstShore9"
+            ]
+        },
     ]
 }

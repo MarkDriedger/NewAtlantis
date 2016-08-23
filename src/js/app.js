@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//12
+//15
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -51,7 +51,7 @@ for (i = 0; i < maxcards; i += 1) {
 //set up event listeners for up to 20 displayable cards
 var onCardClick = function (event) {
     if (display[this.displayIndex].className === 'displayCard enabledCard'){
-        player.displayText += `<span class = styleCard>* ${deck.getCard(player.activeCardsShown[this.displayIndex]).cardText}<br></span>`;
+        player.displayText += `<br><span class = styleCard>* ${deck.getCard(player.activeCardsShown[this.displayIndex]).cardText}<br></span>`;
         player.activeCard = player.activeCardsShown[this.displayIndex];
         board.setBoard();
     }
@@ -222,7 +222,7 @@ Collectible.prototype = new ScoreType();
 PlayerStat.prototype.increment = function(amount) {
     this.quantity += amount;
     //prevent the quantity from going above it's maximum
-    if (this.quantity < this.maxQuantity) {
+    if (this.quantity > this.maxQuantity) {
         this.quantity = this.maxQuantity;
     }
     this.updateStatus();
@@ -458,9 +458,9 @@ PlayerStat.prototype.rollCompare = function(opponent) {
     diceTotal = this.addDice(player.activeDice);
     //return whether or not this dice roll succeeded
     if (diceTotal >= opponent) {
-        return [true,`${this.singularName} roll succeded!`];
+        return true;
     } else {
-        return [false,`${this.singularName} roll failed!`];
+        return false;
     }
 };
 
@@ -604,14 +604,12 @@ PlayableCard.prototype.processRewards = function(totalArray){
     costIndex,
     numOfCosts,
     totalIndex,
-    x =0;
     numofTotal = totalArray.length;
 
     for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 1) {
         if (totalArray[totalIndex].rewardQuantity > 0) {
             stats.getScore(totalArray[totalIndex].rewardName).increment(totalArray[totalIndex].rewardQuantity);
             rewardArray.push(totalArray[totalIndex]);
-            x +=1;
         } else if (totalArray[totalIndex].rewardQuantity < 0) {
             stats.getScore(totalArray[totalIndex].rewardName).decrement(totalArray[totalIndex].rewardQuantity);
             costArray.push(totalArray[totalIndex]);
@@ -619,11 +617,10 @@ PlayableCard.prototype.processRewards = function(totalArray){
     }
 
     numOfRewards = rewardArray.length;
-    locationTitleBox.innerHTML = x;
     if (numOfRewards > 0) {
         rewardList = `<span class=styleReward>↑You gained `;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
-            rewardList += `${rewardArray[rewardIndex].rewardQuantity} ${rewardArray[rewardIndex].rewardName}`; //this will not be pluralized. FIX
+            rewardList += `${rewardArray[rewardIndex].rewardQuantity} ${stats.getScore(rewardArray[rewardIndex].rewardName).correctName(rewardArray[rewardIndex].rewardQuantity)}`;
             if (rewardIndex < numOfRewards - 2) {
                 rewardList += ', ';
             }
@@ -631,7 +628,7 @@ PlayableCard.prototype.processRewards = function(totalArray){
                 rewardList += ', and ';
             }
             if (rewardIndex === numOfRewards - 1) {
-                rewardList += '.<br></span>';
+                rewardList += '.</span>';
             }
         }
     }
@@ -640,7 +637,7 @@ PlayableCard.prototype.processRewards = function(totalArray){
     if (numOfCosts > 0) {
         costList = `<span class=styleCost>↓You lost `;
         for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
-            costList += `${costArray[costIndex].rewardQuantity} ${costArray[costIndex].rewardName}`; //this will not be pluralized. FIX
+            costList += `${costArray[costIndex].rewardQuantity} ${stats.getScore(costArray[costIndex].rewardName).correctName(costArray[costIndex].rewardQuantity)}`;
             if (costIndex < numOfCosts - 2) {
                 costList += ', ';
             }
@@ -648,12 +645,12 @@ PlayableCard.prototype.processRewards = function(totalArray){
                 costList += ', and ';
             }
             if (costIndex === numOfCosts - 1) {
-                costList += '.<br></span>';
+                costList += '.</span>';
             }
         }
     }
 
-    return `${rewardList}<br>${costList}`;
+    return `${rewardList}<br>${costList}<br>`;
 };
 
 // //get & set a card's costs to be subtracted when clicked DELETE
@@ -713,28 +710,28 @@ PlayableCard.prototype.processRewards = function(totalArray){
 //     }
 // };
 
-PlayableCard.prototype.requirementSentence = function(reqCard){
+PlayableCard.prototype.requirementSentence = function(){
     var reqList = '',
-    req = 0,
-    numOfReqs = 0,
-    challengeStat = deck.getCard(reqCard).challengeStat,
-    challengeRoll = deck.getCard(reqCard).challengeRoll;
+    req,
+    numOfReqs,
+    challengeStat = this.challengeStat,
+    challengeRoll = this.challengeRoll;
 
     //check to see if the card has a roll challenge too
     if (challengeStat !== undefined) {
         reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
-    if (deck.getCard(reqCard).requiredItem === undefined) {
+    if (this.requirements === undefined) {
         reqList += ' (No reqs)';
     }
     else {
-        numOfReqs = deck.getCard(reqCard).requiredItem.length;
+        numOfReqs = this.requirements.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            reqList += `${deck.getCard(reqCard).requirements[req].requiredQuantity} ${deck.getCard(reqCard).requirements[req].requiredName}`; //this will not pluralize names FIX
+            reqList += `${this.requirements[req].requiredQuantity} ${stats.getScore(this.requirements[req].requiredName).correctName(this.requirements[req].requiredQuantity)}`; //this will not pluralize names FIX
             if (req < numOfReqs - 2) {
                 reqList += ', ';
             }
@@ -749,28 +746,31 @@ PlayableCard.prototype.requirementSentence = function(reqCard){
     return reqList;
 };
 
-PlayableCard.prototype.checkRequirements = function(reqCard){
+PlayableCard.prototype.checkRequirements = function(){
     var passReq = true,
     req,
     numOfReqs,
-    challengeStat = deck.getCard(reqCard).challengeStat,
-    challengeRoll = deck.getCard(reqCard).challengeRoll,
+    challengeStat = this.challengeStat,
+    challengeRoll = this.challengeRoll,
     diceQuantity = stats.getScore(challengeStat).diceQuantity,
-    requiredItem = deck.getCard(reqCard).requirements.requiredName,
-    requiredQuantity = deck.getCard(reqCard).requirements.requiredQuantity;
+    requirements = this.requirements;
+    // requiredItem = deck.getCard(reqCard).requirements.requiredName,
+    // requiredQuantity = deck.getCard(reqCard).requirements.requiredQuantity;
+    alert('poop');
 
     //if the player doesn't have enough dice to possibly meet the card's challenge, then they fail the requirements
     if (challengeStat !== undefined && (challengeRoll > diceQuantity * 6)) {
         return false;
     }
     //if the card has no requirements, then the player passes
-    if (requiredItem === undefined) {
+    if (requirements[0] === undefined) {
         return true;
     } else { //if the player fails any one requirement, then they fail
-        numOfReqs = requiredItem.length;
+        numOfReqs = requirements.length;
+        player.displayText = requirements;
         for (req = 0; req < numOfReqs; req += 1) {
             //compare score vs card requirements.
-            if (stats.getScore(requiredItem[req]).quantity < deck.getCard(reqCard).requirements.requiredQuantity) {
+            if (stats.getScore(requirements[req].requiredName).quantity < requirements[req].requiredQuantity) {
                 passReq = false;
             }
         }
@@ -785,12 +785,11 @@ PlayableCard.prototype.performCard = function(){
     this.updateLocation();
     if (this.challengeStat !== undefined) {
         returnCardText += this.performChallenge();
-        returnCardText += this.cardScript();
     } else {
         returnCardText += this.cardScript();
         // if (this.firstTime === false && this instanceof LocationCard) {
         // } else {
-        returnCardText += `<span class = styleDescription>${this.addedText}<br></span>`;
+        returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         if (this.rewards !== undefined) {
             returnCardText += `<em>${this.processRewards(this.rewards)}</em>`;
         }
@@ -817,37 +816,48 @@ PlayableCard.prototype.performCard = function(){
 };*/
 
 PlayableCard.prototype.performChallenge = function() {
-    var result = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
+    var wonTheRoll = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
     returnCardText = '',
     successExp,
     failExp;
 
-    if (result[0]) {
-        returnCardText = `${this.challengeSuccessText}<br>`;
+    if (wonTheRoll) {
+        successExp = Math.floor(this.challengeRoll / 2);
+        returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": successExp}])}</span>`;
+        returnCardText += `<span class = styleStory>${this.challengeSuccessText}</span>`;
+        returnCardText += `${this.cardScript()}`;
+        returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         returnCardText += `<em>${this.processRewards(this.challengeSuccessRewards)}</em>`;
         //give a little experience based on the type of challenge, equal to half of the opponent roll
-        successExp = Math.floor(this.challengeRoll / 2);
-        returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards({"rewardName": this.challengeStat, "rewardQuantity": successExp})}</span>`;
         player.justWon = true;
-        return returnCardText + '<br>';
     }
     else {
-        returnCardText = `${this.challengeFailText}<br>`;
+        failExp = this.challengeRoll;
+        returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": failExp}])}</span>`;
+        returnCardText += `<span class = styleStory>${this.challengeFailText}</span>`;
+        returnCardText += `${this.cardScript()}`;
+        returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         returnCardText += `<em>${this.processRewards(this.challengeFailRewards)}</em>`;
         //give more experience based on the type of challenge, equal the opponent roll
-        failExp = Math.floor(this.challengeRoll);
-        returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards({"rewardName": this.challengeStat, "rewardQuantity": failExp})}</span>`;
         player.justFailed = true;
-        return returnCardText + '<br>';
     }
+    return returnCardText + '<br>';
 };
 
 PlayableCard.prototype.cardScript = function(){
+    //any PlayableCard that has a cardScript needs to include its own <br>
     return '';
 };
 
 PlayableCard.prototype.updateLocation = function(){
-    locationTitleBox.innerHTML = `<b>Location: ${this.locationName}</b><br>${this.locationDescription}`;
+    var locationText = '';
+    if (this.locationName) {
+        board.locationName = this.locationName;
+    }
+    if (this.locationDescription) {
+        board.locationDescription = this.locationDescription;
+    }
+    locationTitleBox.innerHTML = `<b>Location: ${board.locationName}</b><br>${board.locationDescription}`;
 };
 
 //create a card whoe primary purpose is navigation
@@ -860,6 +870,7 @@ LocationCard.prototype = new PlayableCard();
 LocationCard.prototype.loadFromData = function (data) {
     this.cardID = data.cardID;
     this.locationName = data.locationName;
+    this.locationDescription = data.locationDescription;
     this.cardText = data.cardText;
     this.challengeStat = data.challengeStat;
     this.challengeRoll = data.challengeRoll;
@@ -871,6 +882,7 @@ LocationCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
+    this.requirements = data.requirements;
     this.nextCardsID = data.nextCardsID;
     this.firstTime = true;
 };
@@ -884,6 +896,7 @@ ActionCard.prototype = new PlayableCard();
 ActionCard.prototype.loadFromData = function (data) {
     this.cardID = data.cardID;
     this.locationName = data.locationName;
+    this.locationDescription = data.locationDescription;
     this.cardText = data.cardText;
     this.challengeStat = data.challengeStat;
     this.challengeRoll = data.challengeRoll;
@@ -895,6 +908,7 @@ ActionCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
+    this.requirements = data.requirements;
     this.nextCardsID = data.nextCardsID;
 };
 
@@ -907,6 +921,7 @@ StoryCard.prototype = new PlayableCard();
 StoryCard.prototype.loadFromData = function (data) {
     this.cardID = data.cardID;
     this.locationName = data.locationName;
+    this.locationDescription = data.locationDescription;
     this.cardText = data.cardText;
     this.challengeStat = data.challengeStat;
     this.challengeRoll = data.challengeRoll;
@@ -918,6 +933,7 @@ StoryCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
+    this.requirements = data.requirements;
     this.nextCardsID = data.nextCardsID;
     // if (this.rewards !== undefined){
     //     this.rewards = undefined;
@@ -972,6 +988,7 @@ var board = {
     // displayText: '',
     // activeCardsShown: [],
     // activeDice: [],
+    locationName: '?',
 
     setBoard() {
         var oldNumOfCards = player.activeCardsShown.length,
@@ -985,9 +1002,9 @@ var board = {
         // stats.Collectible.updateInventory();
         // stats.PlayerStat.updateStats();
         // stats.Reputation.updateReputation();
-        player.displayText += `${deck.getCard(player.activeCard).addedText}<br>`;
+        player.displayText += deck.getCard(player.activeCard).performCard();
+        //player.displayText += `${deck.getCard(player.activeCard).addedText}<br>`;
         player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
-        deck.getCard(player.activeCard).performCard();
 
 
         if (player.justDied) {
@@ -1004,12 +1021,12 @@ var board = {
         }
         if (player.justWon) {
             player.justWon = false;
-            player.displayText +=`<span class = styleReward>${deck.getCard(player.activeCard).challengeSuccessText}<br></span>`;
+            //player.displayText +=`<span class = styleReward>${deck.getCard(player.activeCard).challengeSuccessText}<br></span>`;
             player.activeCardsShown = deck.getCard(player.activeCard).challengeSuccessCards;
         }
         if (player.justFailed) {
             player.justFailed = false;
-            player.displayText +=`<span class = styleCost>${deck.getCard(player.activeCard).challengeFailText}<br></span>`;
+            //player.displayText +=`<span class = styleCost>${deck.getCard(player.activeCard).challengeFailText}<br></span>`;
             player.activeCardsShown = deck.getCard(player.activeCard).challengeFailCards;
         }
 
@@ -1019,12 +1036,12 @@ var board = {
         //append the appropriate number of cards to choose from
         for (i = 0; i < numOfCards; i += 1) {
             cardField.appendChild(display[i]);
-            display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence(player.activeCardsShown[i])}`;
-            //disable cards if requirments are not met
-            if (!deck.getCard(player.activeCardsShown[i]).checkRequirements) {
-                display[i].setAttribute('class', 'displayCard disabledCard');
-            } else {
+            display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence()}`;
+            //disable cards if requirements are not met
+            if (deck.getCard(player.activeCardsShown[i]).checkRequirements()) {
                 display[i].setAttribute('class', 'displayCard enabledCard');
+            } else {
+                display[i].setAttribute('class', 'displayCard disabledCard');
             }
         }
     }

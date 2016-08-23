@@ -48,7 +48,7 @@
         {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["inkpot"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["deerskin jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
-        {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
+        {"inputName": ["Royal shilling"], "quantity": 1, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Royal pound"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["Valhalan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
@@ -73,5 +73,7 @@
         {"inputName": ["vial of deflogisticated nitrous air", "vials of deflogisticated nitrous air"], "quantity": 0, "marketValue": 120, "buff": "", "icon": ""},
         {"inputName": ["oiled cambric"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""},
         {"inputName": ["lantern"], "quantity": 0, "marketValue": 30, "buff": "", "icon": ""}
+        {"inputName": ["worn top hat"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""}
+        {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""}
     ]
 }
