@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//15
+//23
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -637,7 +637,7 @@ PlayableCard.prototype.processRewards = function(totalArray){
     if (numOfCosts > 0) {
         costList = `<span class=styleCost>↓You lost `;
         for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
-            costList += `${costArray[costIndex].rewardQuantity} ${stats.getScore(costArray[costIndex].rewardName).correctName(costArray[costIndex].rewardQuantity)}`;
+            costList += `${Math.abs(costArray[costIndex].rewardQuantity)} ${stats.getScore(costArray[costIndex].rewardName).correctName(Math.abs(costArray[costIndex].rewardQuantity))}`;
             if (costIndex < numOfCosts - 2) {
                 costList += ', ';
             }
@@ -721,17 +721,23 @@ PlayableCard.prototype.requirementSentence = function(){
     if (challengeStat !== undefined) {
         reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
-    if (this.requirements === undefined) {
+    if (this.reqs === undefined) {
         reqList += ' (No reqs)';
     }
     else {
-        numOfReqs = this.requirements.length;
+        numOfReqs = this.reqs.length;
         for (req = 0; req < numOfReqs; req += 1) {
             //prepare a statement about card requirements.
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            reqList += `${this.requirements[req].requiredQuantity} ${stats.getScore(this.requirements[req].requiredName).correctName(this.requirements[req].requiredQuantity)}`; //this will not pluralize names FIX
+            if (this.reqs[req].reqRule === '>=') {
+                reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            } else if (this.reqs[req].reqRule === '<') {
+                reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            } else if (this.reqs[req].reqRule === '=') {
+                reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            }
             if (req < numOfReqs - 2) {
                 reqList += ', ';
             }
@@ -739,7 +745,7 @@ PlayableCard.prototype.requirementSentence = function(){
                 reqList += ', and ';
             }
             if (req === numOfReqs - 1) {
-                reqList += `)`;
+                reqList += `)${stats.getScore(this.reqs[req].reqName).quantity}`;
             }
         }
     }
@@ -748,34 +754,38 @@ PlayableCard.prototype.requirementSentence = function(){
 
 PlayableCard.prototype.checkRequirements = function(){
     var passReq = true,
-    req,
+    index,
+    playerQuantity,
+    neededQuantity,
     numOfReqs,
-    challengeStat = this.challengeStat,
-    challengeRoll = this.challengeRoll,
-    diceQuantity = stats.getScore(challengeStat).diceQuantity,
-    requirements = this.requirements;
-    // requiredItem = deck.getCard(reqCard).requirements.requiredName,
-    // requiredQuantity = deck.getCard(reqCard).requirements.requiredQuantity;
-    alert('poop');
+    diceQuantity;
 
     //if the player doesn't have enough dice to possibly meet the card's challenge, then they fail the requirements
-    if (challengeStat !== undefined && (challengeRoll > diceQuantity * 6)) {
-        return false;
-    }
-    //if the card has no requirements, then the player passes
-    if (requirements[0] === undefined) {
-        return true;
-    } else { //if the player fails any one requirement, then they fail
-        numOfReqs = requirements.length;
-        player.displayText = requirements;
-        for (req = 0; req < numOfReqs; req += 1) {
+    //REMOVE? Because you still might want to try a challenge to learn even if you are guaranteed to fail?
+    // if (this.challengeStat !== undefined) {
+    //     diceQuantity = stats.getScore(this.challengeStat).diceQuantity;
+    //     if (this.challengeRoll > diceQuantity * 6) {
+    //         passReq = false;
+    //     }
+    // }
+
+    //if the player fails any one requirement, then they fail
+    if (this.reqs !== undefined) {
+        numOfReqs = this.reqs.length;
+        for (index = 0; index < numOfReqs; index += 1) {
             //compare score vs card requirements.
-            if (stats.getScore(requirements[req].requiredName).quantity < requirements[req].requiredQuantity) {
+            playerQuantity = stats.getScore(this.reqs[index].reqName).quantity;
+            neededQuantity = this.reqs[index].reqQuantity;
+            if ((this.reqs[index].reqRule === '>=') && (playerQuantity < neededQuantity)) {
+                passReq = false;
+            } else if ((this.reqs[index].reqRule === '<') && (playerQuantity >= neededQuantity)) {
+                passReq = false;
+            } else if ((this.reqs[index].reqRule === '=') && (playerQuantity !== neededQuantity)) {
                 passReq = false;
             }
         }
-        return passReq;
     }
+    return passReq;
 };
 
 //activate the card and return text describing what happened
@@ -882,7 +892,7 @@ LocationCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
-    this.requirements = data.requirements;
+    this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
     this.firstTime = true;
 };
@@ -908,7 +918,7 @@ ActionCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
-    this.requirements = data.requirements;
+    this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
 };
 
@@ -933,7 +943,7 @@ StoryCard.prototype.loadFromData = function (data) {
     this.challengeFailText = data.challengeFailText;
     this.addedText = data.addedText;
     this.rewards = data.rewards;
-    this.requirements = data.requirements;
+    this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
     // if (this.rewards !== undefined){
     //     this.rewards = undefined;

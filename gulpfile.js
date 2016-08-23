@@ -33,7 +33,7 @@ gulp.task('assets',function(){
 
 gulp.task('serve',function(){
   connect.server({root:['build']});
-})
+});
 
 
 

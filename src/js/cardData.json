@@ -5,7 +5,7 @@
             "locationName": "Bifröst island",
             "addedText": "You wake up.",
             "nextCardsID": [
-                "Action0"
+                "Death"
             ]
         },
         {
@@ -27,7 +27,7 @@
     ],
     "actions": [
         {
-            "cardID": "Bifröst0",
+            "cardID": "Island",
             "locationName": "Bifröst island",
             "addedText": "You wake up.",
             "nextCardsID": [
@@ -46,14 +46,38 @@
             ]
         },
         {
+            "cardID": "MedusaA",
+            "locationName": "A",
+            "locationDescription": "AA",
+            "addedText": "MedusaA",
+            "nextCardsID": [
+                "Medusa2"
+            ]
+        },
+        {
+            "cardID": "MedusaB",
+            "locationName": "B",
+            "locationDescription": "BB",
+            "addedText": "MedusaB",
+            "reqs": [
+                {"reqName": "Royal shilling",
+                "reqRule": ">=",
+                "reqQuantity": 3}
+            ],
+            "nextCardsID": [
+                "Medusa2"
+            ]
+        },
+        {
             "cardID": "Medusa1",
             "locationName": "The Medusa",
             "locationDescription": "Inside a choatic cabin",
             "cardText": "Wake Up",
             "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the noise, you remember there was a lantern near your bunk.",
-            "requirements": [
-                {"requiredName": "Royal shilling",
-                "requiredQuantity": 1117}
+            "reqs": [
+                {"reqName": "Royal shilling",
+                "reqRule": ">=",
+                "reqQuantity": 4}
             ],
             "nextCardsID": [
                 "Medusa2"
@@ -63,7 +87,7 @@
             "cardID": "Medusa2",
             "cardText": "Search for the Lantern",
             "challengeStat": "Eye",
-            "challengeRoll": 4,
+            "challengeRoll": 8,
             "challengeSuccessRewards": [
                 {"rewardName": "lantern",
                 "rewardQuantity": 1},
@@ -274,9 +298,10 @@
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
-            "requirements": [
-                {"requiredName": "minute until The Medusa sinks",
-                "requiredQuantity": 1}
+            "reqs": [
+                {"reqName": "minute until The Medusa sinks",
+                "reqRule": ">=",
+                "reqQuantity": 1}
             ],
             "nextCardsID": [
                 "Medusa11",
@@ -420,9 +445,10 @@
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
-            "requirements": [
-                {"requiredName": "Royal shilling",
-                "requiredQuantity": 1117}
+            "reqs": [
+                {"reqName": "Royal shilling",
+                "reqRule": ">=",
+                "reqQuantity": 1117}
             ],
             "nextCardsID": [
                 "Medusa19"
@@ -510,9 +536,9 @@
             "addedText": "The whole coast is made of this same black rock. Inland the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Or is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown AND JACKET YOU MANAGED TO SAVE, and you are alone, as far as you know.<br><br>Oh, and you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
             "rewards": [
                 {"rewardName": "Mind",
-                "rewardQuantity": -5}
+                "rewardQuantity": -5},
                 {"rewardName": "lantern",
-                "rewardQuantity": -1}
+                "rewardQuantity": -1},
                 {"rewardName": "inkwell",
                 "rewardQuantity": -1}
             ],
@@ -526,7 +552,11 @@
         {
             "cardID": "BifröstShore3a",
             "cardText": "Search debris",
-            "requirements": "top hat === 0",
+            "reqs": [
+                {"reqName": "top hat",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
@@ -552,7 +582,14 @@
         {
             "cardID": "BifröstShore3b",
             "cardText": "Search debris",
-            "requirements": "top hat === 1 && nails === 0",
+            "reqs": [
+                {"reqName": "top hat",
+                "reqRule": "=",
+                "reqQuantity": 1},
+                {"reqName": "iron nail",
+                "reqRule": ">",
+                "reqQuantity": 0}
+            ],
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
@@ -609,7 +646,7 @@
             "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
             "challengeFailRewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": -5},
+                "rewardQuantity": -5}
             ],
             "challengeFailCards": [
                 "BifröstShore3a",
@@ -625,9 +662,115 @@
             "addedText": "As you get closer to the debris, you realize it isn’t debris - it’s a crate, and a sturdy one at that. Metal plating and rivets keep it all held together solidly, but the one long hinge in the back seems to have been damaged quite badly by the waves and rocks. Although it weighs more than you do, you manage to shift the chest so that it is upright, causing water to flow out. The crate must have been damaged enough for the seal to have been broken.",
             "nextCardsID": [
                 "BifröstShore7",
-                "BifröstShore8",
+                "BifröstShore8a",
+                "BifröstShore8b",
                 "BifröstShore9"
             ]
         },
+        {
+            "cardID": "BifröstShore7",
+            "cardText": "Smash it with a rock",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore10"
+            ],
+            "challengeSuccessText": "There is no shortage of sharp heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate.",
+            "challengeFailRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeFailCards": [
+                "BifröstShore7",
+                "BifröstShore8a",
+                "BifröstShore8b",
+                "BifröstShore9"
+            ],
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+        },
+        {
+            "cardID": "BifröstShore8a",
+            "cardText": "Pick the lock",
+            "challengeStat": "Hand",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore10"
+            ],
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeFailRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeFailCards": [
+                "BifröstShore7",
+                "BifröstShore8a",
+                "BifröstShore8b",
+                "BifröstShore9"
+            ],
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+        },
+        {
+            "cardID": "BifröstShore8b",
+            "cardText": "Pick the lock",
+            "challengeStat": "Hand",
+            "challengeRoll": 3,
+            "reqs": [
+                {"reqName": "iron nail",
+                "reqRule": ">=",
+                "reqQuantity": 1}
+            ],
+            "challengeSuccessRewards": [
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore6"
+            ],
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeFailRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeFailCards": [
+                "BifröstShore7",
+                "BifröstShore8a",
+                "BifröstShore8b",
+                "BifröstShore9"
+            ],
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+        },
+        {
+            "cardID": "BifröstShore9",
+            "cardText": "Search for a leak",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore10"
+            ],
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeFailRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeFailCards": [
+                "BifröstShore7",
+                "BifröstShore8a",
+                "BifröstShore8b",
+                "BifröstShore9"
+            ],
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+        },
+        {
+            "cardID": "BifröstShore10",
+            "cardText": "Open the crate",
+            "addedText": "As you get closer to the debris, you realize it isn’t debris - it’s a crate, and a sturdy one at that. Metal plating and rivets keep it all held together solidly, but the one long hinge in the back seems to have been damaged quite badly by the waves and rocks. Although it weighs more than you do, you manage to shift the chest so that it is upright, causing water to flow out. The crate must have been damaged enough for the seal to have been broken.",
+            "nextCardsID": [
+                "BifröstShore11"
+            ]
+        }
     ]
 }
