@@ -50,6 +50,11 @@
             "locationName": "A",
             "locationDescription": "AA",
             "addedText": "MedusaA",
+            "reqs": [
+                {"reqName": "Royal shilling",
+                "reqRule": "=",
+                "reqQuantity": 10}
+            ],
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -59,11 +64,6 @@
             "locationName": "B",
             "locationDescription": "BB",
             "addedText": "MedusaB",
-            "reqs": [
-                {"reqName": "Royal shilling",
-                "reqRule": ">=",
-                "reqQuantity": 3}
-            ],
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -74,11 +74,6 @@
             "locationDescription": "Inside a choatic cabin",
             "cardText": "Wake Up",
             "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the noise, you remember there was a lantern near your bunk.",
-            "reqs": [
-                {"reqName": "Royal shilling",
-                "reqRule": ">=",
-                "reqQuantity": 4}
-            ],
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -87,7 +82,7 @@
             "cardID": "Medusa2",
             "cardText": "Search for the Lantern",
             "challengeStat": "Eye",
-            "challengeRoll": 8,
+            "challengeRoll": 4,
             "challengeSuccessRewards": [
                 {"rewardName": "lantern",
                 "rewardQuantity": 1},
@@ -100,7 +95,7 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you oen the shutter. Your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on.",
+            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you oen the shutter. Your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on. ",
             "challengeFailRewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
@@ -109,7 +104,7 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, another passenger finds their own lantern and illuminates the scene before you.",
+            "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, another passenger finds their own lantern and illuminates the scene before you. ",
             "addedText": "You are surrounded by other lost souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. Perhaps it wasn’t wise to travel on a ship named the Medusa?<br><br>“Remain calm!” Orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks spring loose from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water. (for the time being). At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
         },
         {
@@ -121,7 +116,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Royal shilling",
                 "rewardQuantity": 117},
-                {"rewardName": "inkpot",
+                {"rewardName": "inkwell",
                 "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -156,7 +151,7 @@
             "challengeSuccessCards": [
                 "Medusa6"
             ],
-            "challengeSuccessText": "You find a path over some toppled wardrobes that brings you directly to the door. Several others follow your route over the debris.",
+            "challengeSuccessText": "You find a path over some toppled wardrobes that brings you directly to the door. Several others follow your route over the debris. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
@@ -166,7 +161,7 @@
             "challengeFailCards": [
                 "Medusa6"
             ],
-            "challengeFailText": "You have trouble finding your way through the toppled furniture, cursing when the jagged edge of a broken bedpost scrapes you along the thigh.",
+            "challengeFailText": "You have trouble finding your way through the toppled furniture, cursing when the jagged edge of a broken bedpost scrapes you along the thigh. ",
             "addedText": "The door of the cabin is jammed shut. The tiny glimmer of light peeking through the cracks show that in some areas the frame is pulled away from the door, and in others, it is pressed tight. The ship’s tilting must be putting enormous strain on the walls. That is not a good sign."
         },
         {
@@ -186,7 +181,7 @@
             "challengeSuccessCards": [
                 "Medusa7"
             ],
-            "challengeSuccessText": "With a squeal of wood on wood, the door flies open under the force of your shoulder. The dark cabin is immediately invaded by the blaze of a lightning strike, as well as a large panicking man in a green nightgown.",
+            "challengeSuccessText": "With a squeal of wood on wood, the door flies open under the force of your shoulder. The dark cabin is immediately invaded by the blaze of a lightning strike, as well as a large panicking man in a green nightgown. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -10},
@@ -196,8 +191,8 @@
             "challengeFailCards": [
                 "Medusa7"
             ],
-            "challengeFailText": "Your shoulder is displaced more easily than the door. You step back to take another run at it, when the door bursts open inward, propelled by a large man in a green nightgown.",
-            "addedText": "“My paintings! My paintings! Where are my masterpieces!” the man in the green nightgown yells, shoving past people to go backwards away from the door."
+            "challengeFailText": "Your shoulder is displaced more easily than the door. You step back to take another run at it, when the door bursts open inward, propelled by a large man in a green nightgown. ",
+            "addedText": "“My paintings! My paintings! Where are my masterpieces!” the man in the green nightgown yells, shoving past people to get into the room."
         },
         {
             "cardID": "Medusa7",
@@ -213,7 +208,7 @@
             "challengeSuccessCards": [
                 "Medusa8"
             ],
-            "challengeSuccessText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Seeing the water filling the room, he realizes that his safety is more important than his valuables.",
+            "challengeSuccessText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Seeing the water filling the room, he realizes that his safety is more important than his valuables. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
@@ -223,7 +218,7 @@
             "challengeFailCards": [
                 "Medusa8"
             ],
-            "challengeFailText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his possessions.",
+            "challengeFailText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his possessions. ",
             "addedText": "There are two children here in this cabin - they really should be the first to escape."
         },
         {
@@ -243,7 +238,7 @@
                 "Medusa9",
                 "Medusa10"
             ],
-            "challengeSuccessText": "Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else.",
+            "challengeSuccessText": "Using your words as much your own body, you manage to hold back several men and women, insisting that the children leave before anyone else. ",
             "challengeFailRewards": [
                 {"rewardName": "Medusa crew gratitude",
                 "rewardQuantity": 1},
@@ -256,14 +251,14 @@
                 "Medusa9",
                 "Medusa10"
             ],
-            "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first.",
-            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying hard, but they cannot take command of the flailing mainsail. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is not far from you, but it is very quickly filling up with people."
+            "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first. ",
+            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying hard, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is not far from you, but it is very quickly filling up with people."
         },
         {
             "cardID": "Medusa9",
             "locationDescription": "A ferocious storm threatens the lilting ship",
             "cardText": "Quickly search for abandoned valuables",
-            "addedText": "Anything that isn’t nailed down has gone overboard. Even some things that were nailed down have gone overboard. You really need to get to that lifeboat.",
+            "addedText": "Anything that isn’t nailed down has gone overboard. Even some things that were nailed down have gone overboard. You really need to get into that lifeboat.",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -275,7 +270,7 @@
         {
             "cardID": "Medusa10",
             "cardText": "Hurry to the nearest lifeboat",
-            "addedText": "There are three men in crew uniforms and brandishing sabres, standing in front of the lifeboat. “The lifeboat is for children and the elderly only!” one yells. “The ship is leaning, but is remaining afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their buddies and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
+            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their buddies and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -293,14 +288,14 @@
         {
             "cardID": "Medusa11",
             "cardText": "Wait for the crew to let you on",
-            "addedText": "The three sabre-weilding crewmembers are not letting anyone on the lifeboat, even though there are no children or elderly waiting to get on. Another sail tears loose as a strong wave hits the ship. The three crew start yelling at their mates to come over to the lifeboat. It is clear that the lifeboat isn’t going to be around much longer - the ship may not be either. You really need to get onto that lifeboat.",
+            "addedText": "The three sabre-weilding crewmembers are not letting anyone on the lifeboat, even though there are no children or elderly waiting to get on. Another sail tears loose as a strong wave hits the ship. The three crew start yelling at their mates to come over to the lifeboat. It is clear that the lifeboat isn’t going to be around much longer - the ship may not be either. You really need to get into that lifeboat.",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
             "reqs": [
                 {"reqName": "minute until The Medusa sinks",
-                "reqRule": ">=",
+                "reqRule": ">",
                 "reqQuantity": 1}
             ],
             "nextCardsID": [
@@ -325,7 +320,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "With a punch to the throat and a knee to a chest, you shove your way past the first crewmember.<br><br>“Fine, you just get on then,” one of the others says, “but no one else!”",
+            "challengeSuccessText": "With a punch to the throat and a knee to a chest, you shove your way past the first crewmember.<br><br>“Fine, you just get on then,” one of the others says, “but no one else!” ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -335,7 +330,7 @@
             "challengeFailCards": [
                 "Medusa19"
             ],
-            "challengeFailText": "You take a swing at the first crewmember. He dodges, grabs your arm and pins you against the bulwark.<br><br>“You wanna get past me? Fine. Go right ahead!” he says as and another crewmember grabs your other arm and they throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean."
+            "challengeFailText": "You take a swing at the first crewmember. He dodges, grabs your arm and pins you against the bulwark.<br><br>“You wanna get past me? Fine. Go right ahead!” he says as and another crewmember grabs your other arm and they throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean. "
         },
         {
             "cardID": "Medusa13",
@@ -349,7 +344,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "You double back and leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, allowing you to drop down into the lifeboat. They are too busy yelling at the passengers to notice you",
+            "challengeSuccessText": "You double back and leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, allowing you to drop down into the lifeboat. They are too busy yelling at the passengers to notice you. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -359,7 +354,7 @@
             "challengeFailCards": [
                 "Medusa19"
             ],
-            "challengeFailText": "You leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, you attempt to slide along the rope, but it is slick with rain and your grip fails you. You fall, smashing your left leg into the bulwark as you tumble overboard, landing with a crash into the roiling, icy ocean."
+            "challengeFailText": "You leap onto a cabin roof, made easier by the fact that the walls are no longer quite vertical. You shimmy up a pole, where you cross over to a rope that passes over the heads of the crewmembers, you attempt to slide along the rope, but it is slick with rain and your grip fails you. You fall, smashing your left leg into the bulwark as you tumble overboard, landing with a crash into the roiling, icy ocean. "
         },
         {
             "cardID": "Medusa14",
@@ -373,7 +368,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You must be a good actor - or just lucky. The leader of the three sailors says a few expletives and shoves you onto the lifeboat",
+            "challengeSuccessText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You must be a good actor - or just lucky. The leader of the three sailors says a few expletives and shoves you onto the lifeboat. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -383,7 +378,7 @@
             "challengeFailCards": [
                 "Medusa19"
             ],
-            "challengeFailText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>“We’re all in the same boat here, pal. You wanna get back to them so bad? We'll lend you a hand!”<br><br>The three sailors decide to make an example of you to the crowd and grab your limbs and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean."
+            "challengeFailText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>“We’re all in the same boat here, pal. You wanna get back to them so bad? We'll lend you a hand!”<br><br>The three sailors decide to make an example of you to the crowd and grab your limbs and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean. "
         },
         {
             "cardID": "Medusa15",
@@ -397,7 +392,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there must be one on the other side too, facing the ocean. You step back from the crowd and rush around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder. The rain chills your hands to the bone, but you manage to climb the other ladder and discretely enter the back of the lifeboat",
+            "challengeSuccessText": "You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there must be one on the other side too, facing the ocean. You step back from the crowd and rush around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder. The rain chills your hands to the bone, but you manage to climb the other ladder and discretely enter the back of the lifeboat. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -407,7 +402,7 @@
             "challengeFailCards": [
                 "Medusa19"
             ],
-            "challengeFailText": "You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there must be one on the other side too, facing the ocean. You step back from the crowd and rush around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder.<br><br>“Oh, no you don’t” says one of the sailors as he realizes what you are doing. Exposed as you are, you can do nothing to defend yourself. He runs over to you and bashes the butt of his sabre into your knuckles. Your hands give way and you plummet overboard, landing with a crash into the roiling, icy ocean."
+            "challengeFailText": "You realize that since there is a ladder on this side of the lifeboat, and it appears to be symmetrical, there must be one on the other side too, facing the ocean. You step back from the crowd and rush around to the stern of the lifeboat. Gingerly, you leap over the edge of the ship, carefully still holding on. You cross hand over hand, holding onto the railing, making your way to the lifeboat’s other ladder.<br><br>“Oh, no you don’t” says one of the sailors as he realizes what you are doing. Exposed as you are, you can do nothing to defend yourself. He runs over to you and bashes the butt of his sabre into your knuckles. Your hands give way and you plummet overboard, landing with a crash into the roiling, icy ocean. "
         },
         {
             "cardID": "Medusa16",
@@ -421,7 +416,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me on board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Perhaps twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?” He looks at you skeptically. “You’re probably lying, but just in case, you should know my name’s Helmsman Asa from Eelingborough. You make sure you take care of my wife if I don’t make it through this,” he says as he hurries you up the ladder onto the lifeboat.",
+            "challengeSuccessText": "“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Perhaps twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?” He looks at you skeptically. “You’re probably lying, but just in case, you should know my name’s Helmsman Asa from Eelingborough. You make sure you take care of my wife if I don’t make it through this,” he says as he hurries you up the ladder onto the lifeboat. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -431,12 +426,12 @@
             "challengeFailCards": [
                 "Medusa19"
             ],
-            "challengeFailText": "“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me on board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Perhaps twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?” He looks at you skeptically.<br><br>“Well, I outrank you, cuz I’m the bloody Queen,” he grins as his buddies help grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean."
+            "challengeFailText": "“My good sir, I will have you know that I am the cousin of the Crown Prince,” you lie, “eighth in line to the throne of the Royal Empire, and I am on a secret mission of utmost importance to the colonies. I implore you to let me board that lifeboat. My family shall owe you a great debt.”<br><br>The sailor looks at you, eyes narrowed. For a moment you wonder if you should have made up a higher station. Eighth? Maybe fourth would place your life at a higher value. Perhaps twelfth would have sounded more plausible.<br><br>“Cousin to the Crown Prince, you say?” He looks at you skeptically.<br><br>“Well, I outrank you, cuz I’m the bloody Queen,” he grins as his buddies help grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean. "
         },
         {
             "cardID": "Medusa17",
             "cardText": "Bribe the sailor",
-            "addedText": "“Thanks for the cash mate, but my life's worth more than a few shillings”. The sailor grins as his buddies help grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean.",
+            "addedText": "“Thanks for the cash mate, but my life's worth more than a few shillings”. The sailor grins as his buddies help grab your arms from behind and throw you over the edge of the ship. You go tumbling through the air and land with a crash into the roiling, icy ocean. ",
             "rewards": [
                 {"rewardName": "Royal shilling",
                 "rewardQuantity": -117},
@@ -448,7 +443,7 @@
             "reqs": [
                 {"reqName": "Royal shilling",
                 "reqRule": ">=",
-                "reqQuantity": 1117}
+                "reqQuantity": 117}
             ],
             "nextCardsID": [
                 "Medusa19"
@@ -457,7 +452,7 @@
         {
             "cardID": "Medusa18",
             "cardText": "Wait for the lifeboat to be launched",
-            "addedText": "One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of his buddies yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.",
+            "addedText": "One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of his buddies yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.<br><br>You flounder, barely managing to get your head above water to take a gasp of air. Screaming passengers and crew are doing their best to stay afloat, but you can barely hear them over the storm - and one other noise. You don’t know what the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -497,7 +492,7 @@
         },
         {
             "cardID": "Medusa22",
-            "cardText": "continue",
+            "cardText": "dream",
             "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the slimy arms of an octopus, wrapping around your body, dragging you down.<br><br>You dream of a jaguar in the night bearing its teeth and leaning in to get a good sniff of you.",
             "nextCardsID": [
                 "BifröstShore0"
@@ -511,7 +506,7 @@
             "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on some sea water. You get up onto your hands and knees and you cough the salty sea water out and you wipe your wet face with your wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl over to a close, relatively dry one and throw yourself down on it. You close your eyes. First you try to take account of your own status. You feel pain and wet all over, but you still seem to be in one piece. You feel like crap though.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": -50}
+                "rewardQuantity": -30}
             ],
             "nextCardsID": [
                 "BifröstShore1"
@@ -520,10 +515,10 @@
         {
             "cardID": "BifröstShore1",
             "cardText": "Close your eyes",
-            "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. In one direction is the ocean, vast, yet relatively calm. The sky is ridiculously blue, as if to call you a liar. You imagine a nervous cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself.",
+            "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. In one direction is the ocean, vast, yet relatively calm. The sky is ridiculously blue, as if to call you a liar. You imagine a nervous cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself, causing you to wonder about your own sanity.",
             "rewards": [
                 {"rewardName": "Mind",
-                "rewardQuantity": -50}
+                "rewardQuantity": -30}
             ],
             "nextCardsID": [
                 "BifröstShore2"
@@ -533,7 +528,7 @@
             "cardID": "BifröstShore2",
             "cardText": "Look around",
             "locationDescription": "Some rocky, desolate shore",
-            "addedText": "The whole coast is made of this same black rock. Inland the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Or is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown AND JACKET YOU MANAGED TO SAVE, and you are alone, as far as you know.<br><br>Oh, and you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
+            "addedText": "The whole coast is made of this same black rock. Inland the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Or is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have barely any clothes, and you are alone, as far as you know.<br><br>Oh, and you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
             "rewards": [
                 {"rewardName": "Mind",
                 "rewardQuantity": -5},
@@ -553,14 +548,14 @@
             "cardID": "BifröstShore3a",
             "cardText": "Search debris",
             "reqs": [
-                {"reqName": "top hat",
+                {"reqName": "worn top hat",
                 "reqRule": "=",
                 "reqQuantity": 0}
             ],
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "top hat",
+                {"rewardName": "worn top hat",
                 "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
@@ -568,7 +563,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeSuccessText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. After a fair bit of searching, you find a worn top hat that is waterlogged, but it will serve to keep the sun off your head. The parrot is still sitting there, watching you.",
+            "challengeSuccessText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. After a fair bit of searching, you find a worn top hat that is waterlogged, but it will serve to keep the sun off your head. The parrot is still sitting there, watching you. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
@@ -577,30 +572,30 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you."
+            "challengeFailText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you. "
         },
         {
             "cardID": "BifröstShore3b",
             "cardText": "Search debris",
             "reqs": [
-                {"reqName": "top hat",
+                {"reqName": "worn top hat",
                 "reqRule": "=",
                 "reqQuantity": 1},
                 {"reqName": "iron nail",
-                "reqRule": ">",
-                "reqQuantity": 0}
+                "reqRule": "<",
+                "reqQuantity": 1}
             ],
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "nails",
+                {"rewardName": "iron nail",
                 "rewardQuantity": 7}
             ],
             "challengeSuccessCards": [
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeSuccessText": "You find a soggy chunk of wood with several strong nails in it. The wood falls apart easily, freeing the nails. Perhaps you can use these somehow to help you survive. The parrot is still sitting there, watching you.",
+            "challengeSuccessText": "You find a soggy chunk of wood with several strong nails in it. The wood falls apart easily, freeing the nails. Perhaps you can use these somehow to help you survive. The parrot is still sitting there, watching you. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
@@ -608,7 +603,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you."
+            "challengeFailText": "You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you. "
         },
         {
             "cardID": "BifröstShore4",
@@ -622,7 +617,7 @@
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
-            "challengeSuccessText": "Although you are already a little worried about your remaining sanity, talking to a parrot couldn’t really hurt, could it?<br><br>“Hello, by any chance, are you a trained parrot? Is there someone nearby who keeps you as a pet? Hello? Hello?”br><br>The parrot cocks its head and looks at you - certainly a bizarre curiosity. Only when it does a couple of hops onto a different rock, do you realize that the parrot wasn’t sitting on a rock at all, but rather a huge piece of debris from the shipwreck. The debris isn’t just a piece of the hull though - it’s more ornate. You walk over to inspect it.",
+            "challengeSuccessText": "Although you are already a little worried about your remaining sanity, talking to a parrot couldn’t really hurt, could it?<br><br>“Hello, by any chance, are you a trained parrot? Is there someone nearby who keeps you as a pet? Hello? Hello?”<br><br>The parrot cocks its head and looks at you - certainly a bizarre curiosity. Only when it does a couple of hops onto a different rock, do you realize that the parrot wasn’t sitting on a rock at all, but rather a huge piece of debris from the shipwreck. The debris isn’t just a piece of the hull though - it’s more ornate. You walk over to inspect it. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
@@ -631,7 +626,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You try to produce sound, but your hoarse throat cracks and you you just cough up a little more seawater."
+            "challengeFailText": "You try to produce sound, but your hoarse throat cracks and you you just cough up a little more seawater. "
         },
         {
             "cardID": "BifröstShore5",
@@ -643,7 +638,7 @@
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
-            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
@@ -654,7 +649,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin. "
         },
         {
             "cardID": "BifröstShore6",
@@ -677,7 +672,7 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "There is no shortage of sharp heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate.",
+            "challengeSuccessText": "There is no shortage of sharp, heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate. The hinge snaps under the force of the rock. With that broken, it doesn’t matter that the lock is still in place, you are able to wiggle the lid off the crate.",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
@@ -688,11 +683,16 @@
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+            "challengeFailText": "here is no shortage of sharp, heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate. Even though the ocean started this process already, the crate is sturdier than you thought. The rock bounces off the crate and grazes your shin. "
         },
         {
             "cardID": "BifröstShore8a",
             "cardText": "Pick the lock",
+            "reqs": [
+                {"reqName": "iron nail",
+                "reqRule": "<",
+                "reqQuantity": 1}
+            ],
             "challengeStat": "Hand",
             "challengeRoll": 6,
             "challengeSuccessRewards": [
@@ -700,9 +700,9 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeSuccessText": "You pick up a small deciduous tree needle that had washed up on a rock and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the crate opens. ",
             "challengeFailRewards": [
-                {"rewardName": "Health",
+                {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
             "challengeFailCards": [
@@ -711,7 +711,7 @@
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+            "challengeFailText": "You pick up a small deciduous tree needle that had washed up on a rock and attempt to use it to pick the lock. Maybe it’s because you aren’t using proper lock-picking tools, or maybe it’s because sand got in the lock mechanism, but you can’t seem to get it to budge. You are getting very frustrated. "
         },
         {
             "cardID": "BifröstShore8b",
@@ -728,9 +728,9 @@
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
-            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeSuccessText": "You take one of the nails that you picked up earlier and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the crate opens. ",
             "challengeFailRewards": [
-                {"rewardName": "Health",
+                {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
             "challengeFailCards": [
@@ -739,7 +739,7 @@
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+            "challengeFailText": "You take one of the nails that you picked up earlier and attempt to use it to pick the lock. Maybe it’s because you aren’t using proper lock-picking tools, or maybe it’s because sand got in the lock mechanism, but you can’t seem to get it to budge. You are getting very frustrated. "
         },
         {
             "cardID": "BifröstShore9",
@@ -751,7 +751,7 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further.",
+            "challengeSuccessText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come loose from the metal and you are able to get at the inside of the safe. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
@@ -762,12 +762,12 @@
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin."
+            "challengeFailText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You find a joint that seems to have some flexibility. You try to pry it apart, but your only reward is a massive splinter. "
         },
         {
             "cardID": "BifröstShore10",
             "cardText": "Open the crate",
-            "addedText": "As you get closer to the debris, you realize it isn’t debris - it’s a crate, and a sturdy one at that. Metal plating and rivets keep it all held together solidly, but the one long hinge in the back seems to have been damaged quite badly by the waves and rocks. Although it weighs more than you do, you manage to shift the chest so that it is upright, causing water to flow out. The crate must have been damaged enough for the seal to have been broken.",
+            "addedText": "Inside the crate is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around in the straw, you pull out a lockbox, about the size of a large book.",
             "nextCardsID": [
                 "BifröstShore11"
             ]

@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//23
+//31
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -340,27 +340,15 @@ PlayerStat.prototype.updateStatus = function() {
 
     statList += `•  Health: ${stats.getScore('Health').quantity}<br>`;
     statList += `•  Mind: ${stats.getScore('Mind').quantity}<br><br>`;
-    statList += '<b><u>Stats</u></b><br>';
+    statList += '<b><u>Bonuses</u></b><br>';
     stats.score.forEach(function (item) {
     if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
-        statList += `•  ${item.singularName}: Level:${levelArray[0]}, Points:${item.quantity}, Exp:${levelArray[1]}, Next:${levelArray[2]}<br>`;
+        statList += `•  ${item.singularName}: ${levelArray[0]}%, ${item.quantity}(${levelArray[1]})<br>`;
         }
     });
     playerStatsDisplay.innerHTML = statList;
 };
-
-/* DELETE. Should not be needed
-HiddenProgress.prototype.updateReputation = function() {
-    var reputationList = '<b><u>Progress</u></b><br>';
-
-    scoreData.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation || item instanceof HiddenProgress)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
-        }
-    });
-    reputationDisplay.innerHTML = reputationList;
-};*/
 
 //function that uses the player's stat quantity to return the level, experience in that level, and experience to the next level
 PlayerStat.prototype.getLevel = function(){
@@ -590,7 +578,7 @@ scoreData[2].decrement = function(amount) {
 
 //create the prototype PlayableCard object
 function PlayableCard(){
-//    this.rewards = [];
+    this.addedText = '';
 }
 
 //check to see if this card gave any rewards
@@ -733,8 +721,12 @@ PlayableCard.prototype.requirementSentence = function(){
             }
             if (this.reqs[req].reqRule === '>=') {
                 reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            } else if (this.reqs[req].reqRule === '>') {
+                reqList += `more than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
             } else if (this.reqs[req].reqRule === '<') {
                 reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            } else if (this.reqs[req].reqRule === '<=') {
+                reqList += `at most ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
             } else if (this.reqs[req].reqRule === '=') {
                 reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
             }
@@ -762,12 +754,12 @@ PlayableCard.prototype.checkRequirements = function(){
 
     //if the player doesn't have enough dice to possibly meet the card's challenge, then they fail the requirements
     //REMOVE? Because you still might want to try a challenge to learn even if you are guaranteed to fail?
-    // if (this.challengeStat !== undefined) {
-    //     diceQuantity = stats.getScore(this.challengeStat).diceQuantity;
-    //     if (this.challengeRoll > diceQuantity * 6) {
-    //         passReq = false;
-    //     }
-    // }
+    if (this.challengeStat !== undefined) {
+        diceQuantity = stats.getScore(this.challengeStat).diceQuantity;
+        if (this.challengeRoll > diceQuantity * 6) {
+            passReq = false;
+        }
+    }
 
     //if the player fails any one requirement, then they fail
     if (this.reqs !== undefined) {
@@ -778,7 +770,11 @@ PlayableCard.prototype.checkRequirements = function(){
             neededQuantity = this.reqs[index].reqQuantity;
             if ((this.reqs[index].reqRule === '>=') && (playerQuantity < neededQuantity)) {
                 passReq = false;
+            } else if ((this.reqs[index].reqRule === '>') && (playerQuantity <= neededQuantity)) {
+                passReq = false;
             } else if ((this.reqs[index].reqRule === '<') && (playerQuantity >= neededQuantity)) {
+                passReq = false;
+            } else if ((this.reqs[index].reqRule === '<=') && (playerQuantity > neededQuantity)) {
                 passReq = false;
             } else if ((this.reqs[index].reqRule === '=') && (playerQuantity !== neededQuantity)) {
                 passReq = false;
@@ -836,7 +832,9 @@ PlayableCard.prototype.performChallenge = function() {
         returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": successExp}])}</span>`;
         returnCardText += `<span class = styleStory>${this.challengeSuccessText}</span>`;
         returnCardText += `${this.cardScript()}`;
-        returnCardText += `<span class = styleStory>${this.addedText}</span>`;
+        if (this.addedText !== undefined) {
+            returnCardText += `<span class = styleStory>${this.addedText}</span>`;
+        }
         returnCardText += `<em>${this.processRewards(this.challengeSuccessRewards)}</em>`;
         //give a little experience based on the type of challenge, equal to half of the opponent roll
         player.justWon = true;
@@ -846,7 +844,9 @@ PlayableCard.prototype.performChallenge = function() {
         returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": failExp}])}</span>`;
         returnCardText += `<span class = styleStory>${this.challengeFailText}</span>`;
         returnCardText += `${this.cardScript()}`;
-        returnCardText += `<span class = styleStory>${this.addedText}</span>`;
+        if (this.addedText !== undefined) {
+            returnCardText += `<span class = styleStory>${this.addedText}</span>`;
+        }
         returnCardText += `<em>${this.processRewards(this.challengeFailRewards)}</em>`;
         //give more experience based on the type of challenge, equal the opponent roll
         player.justFailed = true;
@@ -990,6 +990,17 @@ var deck = {
 };
 
 deck.loadData(externalCardData);
+// deck.getCard('Medusa1').cardScript = function() { //DEMONSTRATION OF cards with cardScript. DELETE
+//         stats.getScore('lantern').increment(100);
+//         return `<span class=styleReward>↓You got 100 lanterns!.`;
+// };
+deck.getCard('BifröstShore2').cardScript = function() {
+    if (stats.getScore('lantern').quantity > 0) {
+        stats.getScore('lantern').decrement(stats.getScore('lantern').quantity);
+        stats.getScore('inkwell').decrement(stats.getScore('inkwell').quantity);
+        return `<span class=styleReward>↓You lost 1 lantern, and 1 inkwell.`;
+    }
+};
 //var pugScore = stats.getScore('pug');
 
 //board object

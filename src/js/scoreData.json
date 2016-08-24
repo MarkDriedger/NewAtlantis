@@ -34,7 +34,7 @@
 
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "icon": ""},
-        {"inputName": ["Medusa crew gratitude"], "icon": ""}
+        {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""}
     ],
 
     "hiddenProgress": [
@@ -48,7 +48,7 @@
         {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["inkwell"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["deerskin jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
-        {"inputName": ["Royal shilling"], "quantity": 10, "marketValue": 1, "buff": "", "icon": ""},
+        {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Royal pound"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["Valhalan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
