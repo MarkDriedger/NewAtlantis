@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//31
+//37
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -158,7 +158,7 @@ function PlayerStat(inputName, quantity, icon){
     }
     this.quantity = quantity;
     //stats may have a maximum value. FIX this so some stats have no maxQuantity
-    this.maxQuantity = 100;
+    //this.maxQuantity = 100;
     this.icon = icon;
     //since dice can be rolled for PlayerStats, the number of dice is needed
     this.diceQuantity = 1;
@@ -403,6 +403,7 @@ PlayerStat.prototype.drawDice = function(diceInput){
     //draw new dice
     for (diceIndex = 0; diceIndex < numOfDice; diceIndex += 1){
         switch (diceInput[diceIndex]) {
+        default:
         case 1:
             dice[diceIndex].setAttribute('class', 'diceType diceFace1');
             diceField.appendChild(dice[diceIndex]);
@@ -427,28 +428,63 @@ PlayerStat.prototype.drawDice = function(diceInput){
             dice[diceIndex].setAttribute('class', 'diceType diceFace6');
             diceField.appendChild(dice[diceIndex]);
             break;
-        default:
         case 7:
             dice[diceIndex].setAttribute('class', 'diceType diceFace7');
             diceField.appendChild(dice[diceIndex]);
             break;
+        case 8:
+            dice[diceIndex].setAttribute('class', 'diceType diceFace8');
+            diceField.appendChild(dice[diceIndex]);
+            break;
+        case 9:
+            dice[diceIndex].setAttribute('class', 'diceType diceFace9');
+            diceField.appendChild(dice[diceIndex]);
+            break;
+        case 10:
+            dice[diceIndex].setAttribute('class', 'diceType diceFace10');
+            diceField.appendChild(dice[diceIndex]);
+            break;
+
         }
     }
 };
 
 //remove the old dice from the board, roll new dice, and draw those new dice.
-PlayerStat.prototype.rollCompare = function(opponent) {
-    var diceTotal = 0;
+PlayerStat.prototype.rollCompare= function(opponent) {
+    var diceTotal = 0,
+    bonusResults;
 
     this.eraseDice();
     player.activeDice = this.roll();
+    bonusResults = this.applySkills();
+    player.activeDice[0] += bonusResults.bonusAmount;
     this.drawDice(player.activeDice);
     diceTotal = this.addDice(player.activeDice);
     //return whether or not this dice roll succeeded
     if (diceTotal >= opponent) {
-        return true;
+        return {'wonTheRoll': true, 'bonusAmount': bonusResults.bonusAmount, 'bonusText': bonusResults.bonusText};
     } else {
-        return false;
+        return {'wonTheRoll': false, 'bonusAmount': bonusResults.bonusAmount, 'bonusText': bonusResults.bonusText};
+    }
+};
+
+PlayerStat.prototype.applySkills = function() {
+    var levelMatrix = this.getLevel(),
+    level = levelMatrix[0],
+    bonus = 0,
+    index = 0;
+
+    for (level; level >= 100; level -= 100) {
+        bonus += 1;
+    }
+    if (Math.floor(Math.random() * 100) < level) {
+        bonus += 1;
+    }
+
+    if (bonus > 0) {
+        return {'bonusAmount': bonus, 'bonusText': `<span class=styleBonus>Your ${this.singularName} skill increased your dice roll from ${player.activeDice[0]} to ${player.activeDice[0]+bonus}. </span>`};
+    } else {
+        return {'bonusAmount': 0, 'bonusText': ''};
     }
 };
 
@@ -462,7 +498,7 @@ var stats = {
         var me = this;
         // Populate the score array with the provided data
         data.player.forEach(function (item) {
-            var myItem = new PlayerStat(item.inputName, item.quantity, item.icon);
+            var myItem = new PlayerStat(item.inputName, item.quantity, item.maxQuantity, item.icon);
             me.score.push(myItem);
         });
         data.reputation.forEach(function (item) {
@@ -579,6 +615,7 @@ scoreData[2].decrement = function(amount) {
 //create the prototype PlayableCard object
 function PlayableCard(){
     this.addedText = '';
+    this.hiddenIfReqsFail = false;
 }
 
 //check to see if this card gave any rewards
@@ -737,7 +774,7 @@ PlayableCard.prototype.requirementSentence = function(){
                 reqList += ', and ';
             }
             if (req === numOfReqs - 1) {
-                reqList += `)${stats.getScore(this.reqs[req].reqName).quantity}`;
+                reqList += `)`;
             }
         }
     }
@@ -822,12 +859,13 @@ PlayableCard.prototype.performCard = function(){
 };*/
 
 PlayableCard.prototype.performChallenge = function() {
-    var wonTheRoll = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
+    var rollResults = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
     returnCardText = '',
     successExp,
     failExp;
 
-    if (wonTheRoll) {
+    returnCardText += rollResults.bonusText;
+    if (rollResults.wonTheRoll) {
         successExp = Math.floor(this.challengeRoll / 2);
         returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": successExp}])}</span>`;
         returnCardText += `<span class = styleStory>${this.challengeSuccessText}</span>`;
@@ -894,6 +932,7 @@ LocationCard.prototype.loadFromData = function (data) {
     this.rewards = data.rewards;
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
+    this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.firstTime = true;
 };
 
@@ -920,6 +959,7 @@ ActionCard.prototype.loadFromData = function (data) {
     this.rewards = data.rewards;
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
+    this.hiddenIfReqsFail = data.hiddenIfReqsFail;
 };
 
 function StoryCard(cardID) {
@@ -945,6 +985,7 @@ StoryCard.prototype.loadFromData = function (data) {
     this.rewards = data.rewards;
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
+    this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     // if (this.rewards !== undefined){
     //     this.rewards = undefined;
     // }
@@ -1027,7 +1068,6 @@ var board = {
         //player.displayText += `${deck.getCard(player.activeCard).addedText}<br>`;
         player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
 
-
         if (player.justDied) {
             player.justDied = false;
             player.activeCard = 'Dead';
@@ -1049,6 +1089,15 @@ var board = {
             player.justFailed = false;
             //player.displayText +=`<span class = styleCost>${deck.getCard(player.activeCard).challengeFailText}<br></span>`;
             player.activeCardsShown = deck.getCard(player.activeCard).challengeFailCards;
+        }
+
+        numOfCards = player.activeCardsShown.length;
+        for(var i = numOfCards - 1; i >= 0; i -= 1) {
+            var x = deck.getCard(player.activeCardsShown[i]).checkRequirements();
+            if(deck.getCard(player.activeCardsShown[i]).hiddenIfReqsFail && (!x)) {
+                player.activeCardsShown.splice(i, 1);
+
+            }
         }
 
         numOfCards = player.activeCardsShown.length;

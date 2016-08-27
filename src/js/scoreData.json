@@ -1,12 +1,12 @@
 {
     "player": [
-        {"inputName": ["Health"], "quantity": 100, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Mind"], "quantity": 100, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Brawn"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Hand"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Heart"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Eye"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Voice"], "quantity": 0, "icon": "/assets/pugrunning21.gif"}
+        {"inputName": ["Health"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Mind"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Brawn"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Hand"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Heart"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Eye"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Voice"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"}
     ],
 
     "reputation": [

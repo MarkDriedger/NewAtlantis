@@ -42,19 +42,22 @@
             "locationDescription": "",
             "addedText": "You dream of darkness<br>You dream of the cold<br>You dream of screams<br>",
             "nextCardsID": [
-                "Medusa1"
+                "Medusa1",
+                "MedusaA"
             ]
         },
         {
             "cardID": "MedusaA",
             "locationName": "A",
             "locationDescription": "AA",
+            "cardText": "MedusaA",
             "addedText": "MedusaA",
             "reqs": [
                 {"reqName": "Royal shilling",
                 "reqRule": "=",
                 "reqQuantity": 10}
             ],
+            "hiddenIfReqsFail": true,
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -63,6 +66,7 @@
             "cardID": "MedusaB",
             "locationName": "B",
             "locationDescription": "BB",
+            "cardText": "MedusaB",
             "addedText": "MedusaB",
             "nextCardsID": [
                 "Medusa2"
@@ -289,6 +293,7 @@
             "cardID": "Medusa11",
             "cardText": "Wait for the crew to let you on",
             "addedText": "The three sabre-weilding crewmembers are not letting anyone on the lifeboat, even though there are no children or elderly waiting to get on. Another sail tears loose as a strong wave hits the ship. The three crew start yelling at their mates to come over to the lifeboat. It is clear that the lifeboat isn’t going to be around much longer - the ship may not be either. You really need to get into that lifeboat.",
+            "hiddenIfReqsFail": true,
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -547,6 +552,7 @@
         {
             "cardID": "BifröstShore3a",
             "cardText": "Search debris",
+            "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
@@ -577,6 +583,7 @@
         {
             "cardID": "BifröstShore3b",
             "cardText": "Search debris",
+            "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
@@ -688,6 +695,7 @@
         {
             "cardID": "BifröstShore8a",
             "cardText": "Pick the lock",
+            "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "iron nail",
                 "reqRule": "<",
@@ -716,6 +724,7 @@
         {
             "cardID": "BifröstShore8b",
             "cardText": "Pick the lock",
+            "hiddenIfReqsFail": true,
             "challengeStat": "Hand",
             "challengeRoll": 3,
             "reqs": [

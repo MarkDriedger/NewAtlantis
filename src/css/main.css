@@ -123,6 +123,16 @@ button {
     background-image: url(assets/120px-Dice-7.svg.png);
     }
 
+.diceFace8{
+    background-image: url(assets/120px-Dice-8a.svg.png);
+    }
+.diceFace9{
+    background-image: url(assets/120px-Dice-9a.svg.png);
+    }
+.diceFace10{
+    background-image: url(assets/120px-Dice-10.svg.png);
+    }
+
 .styleAlert{
     color: red;
 }
@@ -149,4 +159,8 @@ button {
 
 .styleChallenge{
     color: yellow;
+}
+
+.styleBonus{
+    color: hotpink;
 }
