@@ -553,6 +553,7 @@
             "cardID": "BifröstShore3a",
             "cardText": "Search debris",
             "hiddenIfReqsFail": true,
+            "hideReqs": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
@@ -584,6 +585,7 @@
             "cardID": "BifröstShore3b",
             "cardText": "Search debris",
             "hiddenIfReqsFail": true,
+            "hideReqs": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
@@ -621,6 +623,12 @@
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
+            "reqs": [
+                {"reqName": "Mind",
+                "reqRule": ">",
+                "reqQuantity": 5}
+            ],
+            "hideReqs": true,
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
@@ -650,6 +658,12 @@
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
             ],
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 5}
+            ],
+            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore3a",
                 "BifröstShore3b",
@@ -684,6 +698,12 @@
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
             ],
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 5}
+            ],
+            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
@@ -696,10 +716,14 @@
             "cardID": "BifröstShore8a",
             "cardText": "Pick the lock",
             "hiddenIfReqsFail": true,
+            "hideReqs": true,
             "reqs": [
                 {"reqName": "iron nail",
                 "reqRule": "<",
-                "reqQuantity": 1}
+                "reqQuantity": 1},
+                {"reqName": "Mind",
+                "reqRule": ">",
+                "reqQuantity": 5}
             ],
             "challengeStat": "Hand",
             "challengeRoll": 6,
@@ -730,7 +754,10 @@
             "reqs": [
                 {"reqName": "iron nail",
                 "reqRule": ">=",
-                "reqQuantity": 1}
+                "reqQuantity": 1},
+                {"reqName": "Mind",
+                "reqRule": ">",
+                "reqQuantity": 5}
             ],
             "challengeSuccessRewards": [
             ],
@@ -742,6 +769,7 @@
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
+            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
@@ -761,24 +789,99 @@
                 "BifröstShore10"
             ],
             "challengeSuccessText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come loose from the metal and you are able to get at the inside of the safe. ",
-            "challengeFailRewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5}
-            ],
+            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You find a joint that seems to have some flexibility. You try to pry it apart, but your only reward is a massive splinter. "
+            "challengeFailText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You find a joint that seems to have some flexibility. You try to pry it apart, but nothing budges. "
         },
         {
             "cardID": "BifröstShore10",
             "cardText": "Open the crate",
-            "addedText": "Inside the crate is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around in the straw, you pull out a lockbox, about the size of a large book.",
+            "addedText": "Inside the crate is a bunch of wet, soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around, you pull out a lockbox, about the size of a large book.",
             "nextCardsID": [
                 "BifröstShore11"
+            ]
+        },
+        {
+            "cardID": "BifröstShore11",
+            "cardText": "Open the lockbox",
+            "addedText": "The lockbox is quite secure, locked with a four digit code. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems to be sealed. By its weight, you can tell there is something inside, some large solid thing. The lockbox is solid, built out of some kind of light grey metal. The only decorations on the container are some script on the side, written in a language you are unfamiliar with, as well as an outline of a hand.",
+            "nextCardsID": [
+                "BifröstShore12"
+            ]
+        },
+        {
+            "cardID": "BifröstShore12",
+            "cardText": "Place your hand over the outline",
+            "addedText": "You line your hand up with the outline on the lockbox. The cool metal sends a shiver through your wet body.<br><br>Your parrot friend also seems interested as he flies back over to you and starts investigating the straw you pulled out of the crate. It’s probably looking for food - that same food you’re going to need if you want to survive on this island.",
+            "openQuest": {"questID": "OpenLockbox", "questTitle": "Open the Medusa Lockbox", "questDescription": "In the wreckage of the Medusa, you found a sturdy lockbox contained in a safe. What could be inside of it?"},
+            "nextCardsID": [
+                "BifröstShore13"
+            ]
+        },
+        {
+            "cardID": "BifröstShore13",
+            "cardText": "Shoo the bird away",
+            "addedText": "You shoo it away, yelling at it. There could still be more valuables in the crate, and you don’t want some bird carrying away any food or supplies. The bird squawks loudly and angrily at you.<br><br>“Go away!” you yell.<br><br>“Go away! Go away!” The parrot yells back at you, as it leaps up into the air and flyies into the trees “Go away! Go away!”<br><br>“I’m not going anywhere, featherhead,”<br><br>“Hey, don’t talk to the birds like that.”<br><br>“I’ll talk to the damn birds how I want,” you realize that the voices are coming from two men on the edge of the jungle.<br><br>“You’re new here, you’ll learn,” says a third voice, a woman.",
+            "nextCardsID": [
+                "BifröstShore14a",
+                "BifröstShore14b"
+            ]
+        },
+        {
+            "cardID": "BifröstShore14a",
+            "cardText": "Hide",
+            "addedText": "You duck down low among the rocks. Even though you will soon be starving, you have no idea who these people are or whether they can be trusted.<br><br>“Enrique! I saw something move over there!”<br><br>You curse under your breath as half a dozen individuals rapidly converge on your location. They don’t look happy to see you.",
+            "nextCardsID": [
+                "BifröstShore15"
+            ]
+        },
+        {
+            "cardID": "BifröstShore14b",
+            "cardText": "Get their attention",
+            "addedText": "You wave your hands and shout “Hey! Over here!”<br><br>You start to wonder how wise that was as the three individuals you heard speaking are joined by four more who all converge on your location. They don’t look happy to see you.",
+            "rewards": [
+                {"rewardName": "convicts gratitude",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstShore15"
+            ]
+        },
+        {
+            "cardID": "BifröstShore15",
+            "cardText": "Too exhausted to flee",
+            "addedText": "Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who the hell are you?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think it should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. “You got a lockbox. What’s in it?” he asks as he greedily grabs at you<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks.",
+            "nextCardsID": [
+                "BifröstShore16"
+            ]
+        },
+        {
+            "cardID": "BifröstShore16",
+            "cardText": "I’m not sure what you mean",
+            "addedText": "“No, I’m not sure what you mean,” you respond.<br><br>“Exactly what a Snoop would say,” mumbles another one of the convicts under her breath.<br><br>“It’s not up to you to decide,” Headmost Convict Claudia states. “You three, keep on checking the debris. We'll bring this one to the Warder.”<br><br>Unarmed and marooned in this strange land, you really have no choice but to go along.<br><br>It isn't long before your physical and mental state overtakes you. You pass out.",
+            "nextCardsID": [
+                "BifröstShore17"
+            ]
+        },
+        {
+            "cardID": "BifröstShore17",
+            "locationName": "?",
+            "locationDescription": "Inside a bunkhouse",
+            "cardText": "Wake up",
+            "addedText": "“Awake now, are you?” A voice asks. As your eyes open, you look around the room and see that you are in a small cabin. It seems to be a different time of day from when you met the convicts on the beach - possibly even a different day altogether.<br><br>The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Work Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages over the spots on your legs, arms, and torso where you were scraped by the rocks.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 100},
+                {"rewardName": "Mind",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstShore17"
             ]
         }
     ]

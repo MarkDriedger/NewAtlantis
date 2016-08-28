@@ -34,7 +34,8 @@
 
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "icon": ""},
-        {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""}
+        {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""},
+        {"inputName": ["convicts gratitude", "convicts gratitude"], "icon": ""}
     ],
 
     "hiddenProgress": [

@@ -746,7 +746,7 @@ PlayableCard.prototype.requirementSentence = function(){
     if (challengeStat !== undefined) {
         reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
-    if (this.reqs === undefined) {
+    if (this.reqs === undefined || this.hideReqs) {
         reqList += ' (No reqs)';
     }
     else {
@@ -933,7 +933,9 @@ LocationCard.prototype.loadFromData = function (data) {
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
+    this.hideReqs = data.hideReqs;
     this.firstTime = true;
+    this.openQuest = data.openQuest;
 };
 
 function ActionCard(cardID) {
@@ -960,6 +962,8 @@ ActionCard.prototype.loadFromData = function (data) {
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
+    this.hideReqs = data.hideReqs;
+    this.openQuest = data.openQuest;
 };
 
 function StoryCard(cardID) {
@@ -986,6 +990,8 @@ StoryCard.prototype.loadFromData = function (data) {
     this.reqs = data.reqs;
     this.nextCardsID = data.nextCardsID;
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
+    this.hideReqs = data.hideReqs;
+    this.openQuest = data.openQuest;
     // if (this.rewards !== undefined){
     //     this.rewards = undefined;
     // }
