@@ -62,11 +62,9 @@ for (i = 0; i < maxcards; i += 1) {
     display[i].addEventListener('click', onCardClick);
 }
 
-
-
 var player = {
     displayText: '',
-    activeCard: 'Medusa0',
+    activeCard: 'BifröstShore0',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -114,8 +112,6 @@ var player = {
 };
 
 ////////////////////////////////////////////////////////////////////////////////
-
-
 
 
 //ScoreType is the prototype for all types of stats

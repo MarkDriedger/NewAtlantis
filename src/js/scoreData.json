@@ -2,11 +2,11 @@
     "player": [
         {"inputName": ["Health"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
         {"inputName": ["Mind"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Brawn"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Hand"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Heart"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Eye"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Voice"], "quantity": 1000, "icon": "/assets/pugrunning21.gif"}
+        {"inputName": ["Brawn"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Hand"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Heart"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Eye"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Voice"], "quantity": 0, "icon": "/assets/pugrunning21.gif"}
     ],
 
     "reputation": [
@@ -35,7 +35,8 @@
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "icon": ""},
         {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""},
-        {"inputName": ["convicts gratitude", "convicts gratitude"], "icon": ""}
+        {"inputName": ["convicts’ respect", "convicts’ respect"], "icon": ""},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "icon": ""}
     ],
 
     "hiddenProgress": [
@@ -75,6 +76,9 @@
         {"inputName": ["oiled cambric"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""},
         {"inputName": ["lantern"], "quantity": 0, "marketValue": 30, "buff": "", "icon": ""},
         {"inputName": ["worn top hat"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["Quo’s Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["Opponent’s Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""}
     ]
 }

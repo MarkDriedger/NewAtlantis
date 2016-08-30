@@ -845,7 +845,7 @@
             "cardText": "Get their attention",
             "addedText": "You wave your hands and shout “Hey! Over here!”<br><br>You start to wonder how wise that was as the three individuals you heard speaking are joined by four more who all converge on your location. They don’t look happy to see you.",
             "rewards": [
-                {"rewardName": "convicts gratitude",
+                {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1}
             ],
             "nextCardsID": [
@@ -855,7 +855,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who the hell are you?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think it should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. “You got a lockbox. What’s in it?” he asks as he greedily grabs at you<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks.",
+            "addedText": "“Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think it should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. “You got a lockbox. What’s in it?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -873,15 +873,141 @@
             "locationName": "?",
             "locationDescription": "Inside a bunkhouse",
             "cardText": "Wake up",
-            "addedText": "“Awake now, are you?” A voice asks. As your eyes open, you look around the room and see that you are in a small cabin. It seems to be a different time of day from when you met the convicts on the beach - possibly even a different day altogether.<br><br>The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Work Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages over the spots on your legs, arms, and torso where you were scraped by the rocks.",
+            "addedText": "“Awake now, are you?” A voice asks. As your eyes open, you look around the room and see that you are in a small cabin. It seems to be a different time of day from when you met the convicts on the beach - possibly even a different day altogether.<br><br>“The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages over the spots on your legs, arms, and torso where you were scraped by the rocks.<br><br>“Mind telling me a bit about yourself over some dinner?” he asks, pushing a plate of veggies and fruit toward you.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": 100},
+                "rewardQuantity": 70},
                 {"rewardName": "Mind",
-                "rewardQuantity": 100}
+                "rewardQuantity": 70}
             ],
             "nextCardsID": [
-                "BifröstShore17"
+                "BifröstShore18"
+            ]
+        },
+        {
+            "cardID": "BifröstShore18",
+            "locationName": "Bifröst Prison Camp",
+            "cardText": "EAT!",
+            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the shipwreck that left you stranded here.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. No, nuthin like you and yer box there…” he gestures off to your lockbox, sitting on your bedside table. It appears to still be intact.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 5},
+                {"rewardName": "Mind",
+                "rewardQuantity": 5}
+            ],
+            "nextCardsID": [
+                "BifröstShore19"
+            ]
+        },
+        {
+            "cardID": "BifröstShore19",
+            "cardText": "check your lockbox",
+            "addedText": "“Don’t worry, no one here would have any reason to take it. I mean, yeah, we got theives here, but not a man nor woman on this island is allowed to own property until they’ve finished their sentences. Most people here are good folk - I know, I know. You might not want to believe that at first - convicts, all of ‘em. Why I myself am a convict too, and I run the place. The guards don't make themselves seen much around ‘ere. We were all sentenced to Transportation, so we’re here working for Her Majesty. It’s her great plan to remove the less desirable elements from society - her society - and send us over here to the New World. Personally, I don’t mind. I didn’t care much for the Olden Worlde, myself.”<br><br>“You probably wanna head to someplace more interestin than our humble little island, I imagine. New Atlantis, I imagine. You know much about this part of the New World?”",
+            "nextCardsID": [
+                "BifröstShore20"
+            ]
+        },
+        {
+            "cardID": "BifröstShore20",
+            "cardText": "No. What's New Atlantis?",
+            "addedText": "“Well, you’ll probably want to be headin to X, on the island of New Atlantis. I know - strange name for a city. They had to name it that since no one could ever agree on who owned it. The Royal Empire says their colony of Mayfair was there first. But right across the bay, those Viking zealots from Valhalla established their colony of Njordheim. Then for the past century or two the island changed hands between Mayfair ruling Njordheim for one decade, then Njordheim ruling Mayfair for the next. It was all based on who was gettin beatin up on back in the Olden Worlde, the Royal Empire versus Valhalla.”<br><br>“This ‘ere camp, Bifröst, is kinda like X in that way. It was started by Valhalla as a prison camp. That’s why we got the Norse name and all. But in the last big war, the Royals won and Valhalla had to give up a bunch of their territories here in the New World. Of course, the Royals just wanted this place for our resources. Some of the old fellas here were Norse Transports, from back in the day, but most of us were Transported here by Her Majesty.”",
+            "nextCardsID": [
+                "BifröstShore21"
+            ]
+        },
+        {
+            "cardID": "BifröstShore21",
+            "cardText": "Where are you from?",
+            "addedText": "“I'm an Empiricist myself, born and raised there, so you know where my loyalties lie, but in truth no one knows who set up their colony on the island of New Atlantis first. Both cities grew large, taking up both sides of the bay, and then the cliffside between. They grew into each other, and trade, and intermingle, so much that they operate more like one giant city now. Some still call the whole big mess Njordheim or Mayfair, but that’s mostly just old-school Valhallans, or Empiricists. Most folks don’t want to ruffle those feathers, and just keep referring to the city the way it had always been marked on maps - with the letter X. In fact, in the last War of Piety, even though the Empire and Valhalla were on opposing sides, X stayed out of the fighting.”",
+            "nextCardsID": [
+                "BifröstShore22"
+            ]
+        },
+        {
+            "cardID": "BifröstShore22",
+            "cardText": "So I should head to New Atlantis?",
+            "addedText": "“Yep, you gotta see it. It’s a beaut of a city. All those years of competition between the Royal Empire and Valhalla meant both nations sent a lot of citizens to colonize the area. And they’ve had a couple hundred years to take advantage of all the local resources. I doubt if any place in the Olden Worlde is as impressive as X - long, busy streets, a market so big you could buy anythin you please, a gladiator’s arena, talkin cats, libraries, you name it - they got it all. I’ve served my sentence workin all over these islands, but there isn’t no city out there like X.”<br><br>“I tell ya what, I’m not supposed to give away any supplies, and we’ve already used good bandages on you. The Humboldt is scheduled to be here in 3 days to pick up our goods for the Empire, and she’ll be headin to New Atlantis. So, I can give you room and board and medicine until the X-bound ship comes by if yer willin to do some honest labour around here until then. Deal?”",
+            "nextCardsID": [
+                "BifröstShore23"
+            ]
+        },
+        {
+            "cardID": "BifröstShore23",
+            "cardText": "It’s a deal.",
+            "addedText": "“Good to hear. No shame in an honest day’s work. Chores are about done for the day though. Dinner’ll be served soon. Up for a game of Life or Death?”",
+            "rewards": [
+                {"rewardName": "day until the Humboldt arrives",
+                "rewardQuantity": 3}
+            ],
+            "openQuest": {"questID": "GoToNewAtlantis", "questTitle": "Travel to New Atlantis", "questDescription": "The city of X, on the island of New Atlantis seems to be the hub of civilization in this part of the New World. In order to go there though, you'll need to find some way of getting off of the Bifröst Island Prison Camp"},
+            "nextCardsID": [
+                "BifröstShore24"
+            ]
+        },
+        {
+            "cardID": "BifröstShore24",
+            "cardText": "It’s got to be better than it sounds.",
+            "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this game is pretty popular here in the New World. There are five main strategies that you can use in this game. Lust like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off not too skilled with all of these strategies, but you can improve them all with practice. Lemme show you,” Quo says, pushing a red piece forward.",
+            "rewards": [
+                {"rewardName": "Life or Death peices",
+                "rewardQuantity": 16},
+                {"rewardName": "Quo’s Life or Death peices",
+                "rewardQuantity": 16}
+            ],
+            "nextCardsID": [
+                "BifröstShore25"
+            ]
+        },
+        {
+            "cardID": "BifröstShore25",
+            "cardText": "OK",
+            "addedText": "“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers. You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. Even the Post and the New Foundland Company use a lot of Brawn. They all rely on strength and power. Now the downfall of brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t any turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one to take out my Soldier.”",
+            "nextCardsID": [
+                "BifröstShore26"
+            ]
+        },
+        {
+            "cardID": "BifröstShore26",
+            "cardText": "Take out red Soldier with blue Viking",
+            "challengeStat": "Brawn",
+            "challengeRoll": 5,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death peices",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore27"
+            ],
+            "challengeSuccessText": "“Good job, attacking my Soldier diagonally. You took out my piece and your Viking is safe,” Quo says as he moves another piece into play. ",
+            "hideReqs": true,
+            "challengeFailRewards": [
+                {"rewardName": "Quo’s Life or Death peices",
+                "rewardQuantity": 1},
+                {"rewardName": "Life or Death peices",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore27"
+            ],
+            "challengeFailText": "“You attacked my Soldier head on. You took out my piece but your Viking is at risk,” Quo says as he captures your Viking.” ",
+            "addedText": "After a couple more moves, no further pieces are captured.<br><br>“Ok, now here’s a perfect situation to teach you something new. Brawn is just one strategy, some would say the most effective strategy, some would disagree. This is a time when Brawn will let you down though.”"
+        },
+        {
+            "cardID": "BifröstShore27",
+            "cardText": "keep playing",
+            "addedText": "Inside the crate is a bunch of wet, soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around, you pull out a lockbox, about the size of a large book.",
+            "nextCardsID": [
+                "BifröstShore11"
+            ]
+        },
+        {
+            "cardID": "BifröstShore26",
+            "cardText": "It’s a deal.",
+            "addedText": "“Good to hear. No shame in an honest day’s work. Chores are about done for the day though. Dinner’ll be served soon. Up for a game of Life or Death?”",
+            "nextCardsID": [
+                "BifröstShore27"
             ]
         }
     ]
