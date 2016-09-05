@@ -142,7 +142,7 @@ ScoreType.prototype.correctName = function(amount){
 };
 
 //PlayerStats are ScoreType objects that track a player's abilities
-function PlayerStat(inputName, quantity, icon){
+function PlayerStat(inputName, quantity, maxQuantity, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + points
     this.inputName = inputName;
@@ -154,7 +154,7 @@ function PlayerStat(inputName, quantity, icon){
     }
     this.quantity = quantity;
     //stats may have a maximum value. FIX this so some stats have no maxQuantity
-    //this.maxQuantity = 100;
+    this.maxQuantity = maxQuantity;
     this.icon = icon;
     //since dice can be rolled for PlayerStats, the number of dice is needed
     this.diceQuantity = 1;
@@ -334,8 +334,8 @@ PlayerStat.prototype.updateStatus = function() {
     var statList = '<b><u>Status</u></b><br>',
     levelArray = 0;
 
-    statList += `•  Health: ${stats.getScore('Health').quantity}<br>`;
-    statList += `•  Mind: ${stats.getScore('Mind').quantity}<br><br>`;
+    statList += `•  Health: ${stats.getScore('Health').quantity}/${stats.getScore('Health').maxQuantity}<br>`;
+    statList += `•  Mind: ${stats.getScore('Mind').quantity}/${stats.getScore('Health').maxQuantity}<br><br>`;
     statList += '<b><u>Bonuses</u></b><br>';
     stats.score.forEach(function (item) {
     if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
@@ -488,6 +488,7 @@ var externalScoreData = require('./scoreData.json');
 //FIX continue collectibles with voice - hands of salt
 //FIX lantern and deerskin jacket shoud have buffs
 
+
 var stats = {
     score: [],
     loadData(data) {
@@ -534,14 +535,7 @@ stats.loadData(externalScoreData);
 
 
 /*create an array of the game's score items DELETE this
-var scoreData = [];
-scoreData[0] = new Collectible(['nothing', 'nothings'], 0);
-scoreData[201] = new Collectible('candlenut', 0);
-scoreData[202] = new Collectible(['Quo\'s office key'], 0);
-scoreData[203] = new Collectible('pug', 0);
-scoreData[204] = new Collectible('inkpot', 0);
-scoreData[205] = new Collectible('deerskin jacket', 0);
-scoreData[206] = new Collectible('Royal shilling', 0);
+
 scoreData[207] = new Collectible('Royal pound', 0);
 scoreData[208] = new Collectible('Valhalan mark', 0);
 scoreData[209] = new Collectible('New Foundland scrip', 0);
@@ -988,9 +982,6 @@ StoryCard.prototype.loadFromData = function (data) {
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
-    // if (this.rewards !== undefined){
-    //     this.rewards = undefined;
-    // }
 };
 
 
@@ -1039,12 +1030,13 @@ deck.loadData(externalCardData);
 // };
 deck.getCard('BifröstShore2').cardScript = function() {
     if (stats.getScore('lantern').quantity > 0) {
-        stats.getScore('lantern').decrement(stats.getScore('lantern').quantity);
-        stats.getScore('inkwell').decrement(stats.getScore('inkwell').quantity);
-        return `<span class=styleReward>↓You lost 1 lantern, and 1 inkwell.`;
+        stats.getScore('lantern').decrement(-1 * stats.getScore('lantern').quantity);
+        stats.getScore('inkwell').decrement(-1 * stats.getScore('inkwell').quantity);
+        return `<span class=styleCost>↓You lost 1 lantern, and 1 inkwell.</span><br>`;
+    } else {
+        return '';
     }
 };
-//var pugScore = stats.getScore('pug');
 
 //board object
 var board = {
@@ -1063,11 +1055,7 @@ var board = {
             cardField.removeChild(display[i]);
         }
         //Create Stats and Inventory & put the text in the story
-        // stats.Collectible.updateInventory();
-        // stats.PlayerStat.updateStats();
-        // stats.Reputation.updateReputation();
         player.displayText += deck.getCard(player.activeCard).performCard();
-        //player.displayText += `${deck.getCard(player.activeCard).addedText}<br>`;
         player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
 
         if (player.justDied) {
