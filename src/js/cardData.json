@@ -917,7 +917,7 @@
         {
             "cardID": "BifröstShore20",
             "cardText": "No. What's New Atlantis?",
-            "addedText": "“Well, you’ll probably want to be headin to X, on the island of New Atlantis. I know - strange name for a city. They had to name it that since no one could ever agree on who owned it. The Royal Empire says their colony of Mayfair was there first. But right across the bay, those Viking zealots from Valhalla established their colony of Njordheim. Then for the past century or two the island changed hands between Mayfair rulin Njordheim for one decade, then Njordheim rulin Mayfair for the next. It was all based on who was gettin beatin up on back in the Olden Worlde, the Royal Empire versus Valhalla.”<br><br>“This ‘ere camp, Bifröst, is kinda like X in that way. It was started by Valhalla as a prison camp. That’s why we got the Norse name and all. But in the last big war, the Royals won and Valhalla had to give up a bunch of their territories here in the New World. Of course, the Royals just wanted this place for our resources. Some of the old fellas here were Norse Transports, from back in the day, but most of us were Transported here by Her Majesty.”",
+            "addedText": "“Well, you’ll probably want to be headin to X, on the island of New Atlantis. I know - strange name for a city. They had to name it that since no one could ever agree on who owned it. The Royal Empire says their colony of Mayfair was there first. But right across the harbour, those Norse zealots from Valhalla established their colony of Njordheim. Then for the past century or two the island changed hands between Mayfair rulin Njordheim for one decade, then Njordheim rulin Mayfair for the next. It was all based on who was gettin beaten up on back in the Olden Worlde, the Royal Empire versus Valhalla.”<br><br>“This ‘ere camp, Bifröst, is kinda like X in that way. It was started by Valhalla as a prison camp. That’s why we got the Norse name and all. But the Royals won the last big war, and Valhalla had to give up a bunch of their territories here in the New World. Of course, the Royals just wanted this place for our resources. Some of the old fellas here were Norse Transports, from back in the day, but most of us were Transported here by Her Majesty.”",
             "nextCardsID": [
                 "BifröstShore21"
             ]
@@ -925,7 +925,7 @@
         {
             "cardID": "BifröstShore21",
             "cardText": "Where are you from?",
-            "addedText": "“I'm an Empiricist myself, born and raised there, so you know where my loyalties lie, but in truth no one knows who set up their colony on the island of New Atlantis first. Both cities grew large, takin up both sides of the bay, and then the cliffside between. They grew into each other, and trade, and intermingle, so much that they operate more like one giant city now. Some still call the whole big mess Njordheim or Mayfair, but that’s mostly just old-school Valhallans, or Empiricists. Most folks don’t want to ruffle those feathers, and just keep referrin to the city the way it had always been marked on maps - with the letter X. In fact, in the last War of Piety, even though the Empire and Valhalla were on opposin sides, X stayed out of the fightin.”",
+            "addedText": "“I'm Imperial myself, born and raised there, so you know where my loyalties lie, but in truth no one knows who set up their colony on the island of New Atlantis first. Both cities grew large, takin up both sides of the bay, and then the cliffside between. They grew into each other, and trade with each other, and intermingle so much that they operate more like one giant city now. Some still call the whole big mess Njordheim or Mayfair, but that’s mostly just old-school Valhallans, or Imperials. Most folks don’t want to ruffle those feathers, and just keep referrin to the city the way it had always been marked on maps - with the letter X. In fact, in the last War of Piety, even though the Empire and Valhalla were on opposin sides, X stayed out of the fightin.”",
             "nextCardsID": [
                 "BifröstShore22"
             ]
@@ -933,7 +933,7 @@
         {
             "cardID": "BifröstShore22",
             "cardText": "So I should head to New Atlantis?",
-            "addedText": "“Yep, you gotta see it. It’s a beaut of a city. All those years of competition between the Royal Empire and Valhalla meant both nations sent a lot of citizens to colonize the area. And they’ve had a couple hundred years to take advantage of all the local resources. I doubt if any place in the Olden Worlde is as impressive as X - long, busy streets, a market so big you could buy anythin you please, a gladiator’s arena, talkin cats, libraries, you name it - they got it all. I’ve served my sentence workin all over these islands, but there isn’t no city out there like X.”<br><br>“I tell ya what, I’m not supposed to give away any supplies, and we’ve already used good bandages on you. The Humboldt is scheduled to be here in 3 days to pick up our goods for the Empire, and she’ll be headin to New Atlantis. So, I can give you room and board and medicine until the X-bound ship comes by if yer willin to do some honest labour around here until then. Deal?”",
+            "addedText": "“Yep, you gotta see it. It’s a beaut of a city. All those years of competition between the Royal Empire and Valhalla meant both nations sent a lot of citizens to colonize the area. And they’ve had a couple hundred years to take advantage of all the local resources. I doubt if any place in the Olden Worlde is as impressive as X - long, busy streets, a market so big you could buy anythin you please, a gladiator’s arena, talkin cats, libraries, you name it - they got it all. I’ve served my sentence workin all over these islands, but there ain't no city out there like X.”<br><br>“I tell ya what, by regulation, I’m not supposed to give away any supplies, and we’ve already used good bandages on you. The HMNS Humboldt is scheduled to dock here in 3 days to pick up our goods for the Empire, and she’ll be headin to New Atlantis. So, I can give you room and board and medicine until the X-bound ship comes by if yer willin to do some honest labour around here until then. Deal?”",
             "nextCardsID": [
                 "BifröstShore23"
             ]
@@ -954,11 +954,11 @@
         {
             "cardID": "BifröstShore24",
             "cardText": "It’s got to be better than it sounds.",
-            "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this game is pretty popular here in the New World. There are five main strategies that you can use in this game. Lust like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off not too skilled with all of these strategies, but you can improve them all with practice. Lemme show you,” Quo says, pushing a red piece forward.<br><br>“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers.",
+            "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this'll help you here in the New World. There are five main strategies that you can use in this game. Just like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off with no skills with all of these strategies, but you can improve them with practice. Lemme show you,” Quo says, pushing a red piece forward.<br><br>“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers.",
             "rewards": [
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": 16},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": 16}
             ],
             "nextCardsID": [
@@ -968,7 +968,7 @@
         {
             "cardID": "BifröstShore25",
             "cardText": "Ask about Brawn",
-            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn. They all rely on strength and power. Now the downfall of brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one to take out my Soldier.”",
+            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
             "nextCardsID": [
                 "BifröstShore26"
             ]
@@ -981,7 +981,7 @@
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -990,21 +990,20 @@
             "challengeSuccessText": "“Good job, attackin my Soldier diagonally. You took out my piece and your Viking is safe,” Quo says as he moves another piece into play. ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
-                "rewardQuantity": 1},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1},
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
                 "BifröstShore27"
             ],
-            "challengeFailText": "“You attacked my Soldier head on. You took out my piece but your Viking is at risk,” Quo says as he captures your Viking.” ",
-            "addedText": "After a couple more moves, no further pieces are captured.<br><br>“Ok, now here’s a perfect situation to teach you somethin new. Brawn is just one strategy, some would say the most effective strategy, some would disagree. This is a time when Brawn will let you down though.”"
+            "challengeFailText": "“You attacked my Soldier head on. You took out my piece but your Viking is at risk,” Quo says as he captures your Viking.” "
         },
         {
             "cardID": "BifröstShore27",
             "cardText": "keep playing",
-            "addedText": "“See my red Viking? Since you’re new at this, I’ll let you know that she’s gonna mess you up in short order. But if you take her head on, my Gladiator will make short work of you. You’d be better off usin a more round-about strategy of takin out my Gladiator first, then my Viking. You need a more flexible piece that has less power, but longer range than the Viking, like your Cat or Dog. We call this a Hand move. Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a thief. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflagin with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
+            "addedText": "After a couple more moves, no further pieces are captured.<br><br>“Ok, now here’s a perfect situation to teach you somethin new. Brawn is just one strategy, some would say the most effective strategy, some would disagree. This is a time when Brawn will let you down though. See my red Viking? Since you’re new at this, I’ll let you know that she’s gonna mess you up in short order. But if you take her head on, my Gladiator will make short work of you. You’d be better off usin a more round-about strategy of takin out my Gladiator first, then my Viking. You need a more flexible piece that has less power, but longer range than the Viking, like your Cat or Dog. We call this a Hand move. Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a spy. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflagin with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now, note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
             "nextCardsID": [
                 "BifröstShore28a",
                 "BifröstShore28b"
@@ -1018,9 +1017,9 @@
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1029,9 +1028,9 @@
             "challengeSuccessText": "“Good job, You took out two of my powerful pieces with back to back moves. Sure you lost yer own in the process, but overall it worked out well.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1047,7 +1046,7 @@
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeSuccessCards": [
@@ -1056,9 +1055,9 @@
             "challengeSuccessText": "“Good job, You took out two of my powerful pieces with back to back moves. And dammit, your Dog is safe too. Well played.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1069,7 +1068,7 @@
         {
             "cardID": "BifröstShore29",
             "cardText": "Keep playing",
-            "addedText": "You play a few more moves, and then Quo dramatically places one of his pieces forward.<br><br>“See that? My Monk is right in line to take your Queen. You know what happens when the Queen is gone? Game over! Defend your Queen right now or you lose the game. So you know what that means? Any strategy you were plannin before is out the window. You’ve got to throw out everything, rush home and defend your Queen. There’s a name for this strategy too: Heart. Heart relies on those gut instincts. Heart does the right thing, and defends what is most important. No matter what machinations you had in mind, that doesn’t matter any more. Heart is what you need now.”",
+            "addedText": "You play a few more moves, when Quo dramatically places one of his pieces forward.<br><br>“See that? My Monk is right in line to take your Queen. You know what happens when the Queen is gone? Call to Claim! Game over! Defend your Queen right now or you lose the game. So you know what that means? Any strategy you were plannin before is out the window. You’ve got to abandon everything, rush home and defend your Queen. There’s a name for this strategy too: Heart. Heart relies on those gut instincts. Heart does the right thing, and defends what is most important. No matter what machinations you had in mind, that doesn’t matter any more. Heart is what you need now.”",
             "nextCardsID": [
                 "BifröstShore30"
             ]
@@ -1077,7 +1076,7 @@
         {
             "cardID": "BifröstShore30",
             "cardText": "Ask about Heart",
-            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick ‘em back to the Olden Worlde! They went with their gut, their traditions, their culture that they’d been developin for millennia. Heart is all about emotion. Some say it can be the most powerful strategy, but you gotta be careful with Hearth - it can be foolhardy and blind to logic.”",
+            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick their behinds to the Olden Worlde! They went with their gut, their culture that they’d been developin for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Hearth - it can be foolhardy and blind to logic.”",
             "nextCardsID": [
                 "BifröstShore31a",
                 "BifröstShore31b"
@@ -1091,9 +1090,9 @@
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1102,9 +1101,9 @@
             "challengeSuccessText": "“Nice. My Monk is outta the picture. As is your Mermaid, but it was the price you had to pay to stay in the game. Your Queen is safe… for now.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1114,26 +1113,26 @@
         },
         {
             "cardID": "BifröstShore31b",
-            "cardText": "Defend blue Queen with blue Wraith",
+            "cardText": "Defend your blue Queen with blue Wraith",
             "challengeStat": "Heart",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
                 "BifröstShore32"
             ],
-            "challengeSuccessText": "“Hmmm, I didn’t think you would see that move! Damn, you took my Monk, saved your Queen. I got to take your Wraith, but in this placement, my Soldier is helpless.” ",
+            "challengeSuccessText": "“Damn, I didn’t think you would see that move! You took my Monk and saved your Queen. I got to take your Wraith, but in this placement, my Soldier is helpless.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1144,7 +1143,7 @@
         {
             "cardID": "BifröstShore32",
             "cardText": "Keep playing",
-            "addedText": "“You pick up these strategies well, but now I’ve somethin a little different for you to try,” Resolute Warder Quo says after a few more moves. “I want you to try an Eye strategy.”<br><br>“Eye is all about bein watchful and observant. The Eye pauses to look for weak points that can be exploited and predicts the future by evaluatin the present. Some would say that an Eye strategy is too passive - too inactive, and it lacks the power or flexibility to obtain benefit in the short-term; the Eye’s strategy is long-term. There are times when that’s appropriate, and times when it’s not.”",
+            "addedText": "“You pick up these strategies well, but now I got somethin a little different for you to try,” Resolute Warder Quo says after a few more moves. “I want you to try an Eye strategy.”<br><br>“Eye is all about bein watchful and observant. The Eye pauses to look for weak points that can be exploited and predicts the future by evaluatin the present. Some would say that an Eye strategy is too passive - too inactive, and it lacks the power or flexibility to obtain benefit in the short-term; the Eye’s strategy is long-term. There are times when that’s appropriate, and times when it’s not.”",
             "nextCardsID": [
                 "BifröstShore33"
             ]
@@ -1152,7 +1151,7 @@
         {
             "cardID": "BifröstShore33",
             "cardText": "Ask about Eye",
-            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When a the Privateers or Thor’s Vikings use a sloop to capture a big ol’ Imperial galleon, that show’s eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They use their powers of observation to learn and invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to stop me in my tracks.”",
+            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ Imperial galleon, that show’s skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
             "nextCardsID": [
                 "BifröstShore34"
                 ]
@@ -1172,9 +1171,9 @@
             "challengeSuccessText": "You move your blue Wraith into position to block Quo’s red Dog.<br><br>“Ah, you figured me out! I thought my Dog would be able to sneak in there and eliminate both your Mermaid and your Monk.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1185,7 +1184,7 @@
         {
             "cardID": "BifröstShore35",
             "cardText": "Keep playing",
-            "addedText": "“There’s just one more strategy that that this game relies on: Voice. It’s what you’d think it is. The ability to communicate well, in such a way that you can convince people of your point of view. Some would say that Voice is a sneakier skill, since it can be used to confuse or manipulate others. But if someone’s gonna try to get me to see things their way, I’d rather they try an’ convince me with Voice than bash me on the head with Brawn!”",
+            "addedText": "“There’s just one more strategy that that this game relies on: Voice. It’s what you’d think it is. The ability to communicate well, in such a way that you can convince people of your point of view. Some would say that Voice is a sneakier skill, since it can be used to confuse or manipulate folks. But if someone’s gonna force me to see things their way, I’d rather they try an’ convince me with Voice than bash me on the head with Brawn!”",
             "nextCardsID": [
                 "BifröstShore36"
             ]
@@ -1193,7 +1192,7 @@
         {
             "cardID": "BifröstShore36",
             "cardText": "Ask about Voice",
-            "addedText": "“Of course, the Gladiators use Voice a lot. But watch it if you go to their gamblin houses - their Voice skill will rob you of all your money! The Sisters of Freya too. Through the confessions they receive, they have gained quite a lot of information about the sins of New Atlantans - and I hear they put that knowledge to good use. The medics workin for the Salt Hearts of course use the Voice strategy too, to learn and train in how to fix people up. You know who really uses a Voice strategy a lot - too much maybe, is those subversive Librarians! It’s ironic that you can’t shush a Librarian once they get started…”<br><br>“Voice strategies aren’t always verbal though. Try to use Voice here to mislead me. At some point in the next few moves, try to throw me off. Make a move that implies a you’re gonna use one strategy, when you actually plan to use another, in order to convince me to misstep.”",
+            "addedText": "“Of course, the Gladiators use Voice a lot. But watch it if you go to their gamblin houses - their Voice skill will rob you of all your money! The Sisters of Freya too. Through the confessions they receive, they’ve gained quite a lot of information about the sins of New Atlantans - and I hear they put that knowledge to good use. The medics workin for the Salt Hearts of course use the Voice strategy too, to learn and train in how to fix people up. You know who really uses a Voice strategy a lot - too much maybe, is those subversive Librarians! It’s ironic that you can’t shush a Librarian once they get started…”<br><br>“Voice strategies aren’t always verbal though. Try to use Voice here to mislead me. At some point in the next few moves, try to throw me off. Make a move that implies a you’re gonna use one strategy, when you actually plan to use another, in order to convince me to misstep.”",
             "nextCardsID": [
                 "BifröstShore37"
                 ]
@@ -1206,7 +1205,7 @@
             "challengeSuccessRewards": [
                 {"rewardName": "convicts’ respect",
                 "rewardQuantity": 1},
-                {"rewardName": "Quo’s Life or Death peices",
+                {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1215,7 +1214,7 @@
             "challengeSuccessText": "After making a couple moves that shore up your defences, you advance a Gladiator and a Librarian. Quo chooses to defend against the Librarian. He fell for it! You march your Gladiator in to capture his own Librarian, and threaten his Queen.<br><br>“Uh oh, you’re gettin dangerously close to my Queen! She’ll be able to save herself, but you fooled me well with that false Librarian.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death peices",
+                {"rewardName": "your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [

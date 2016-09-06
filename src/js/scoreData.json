@@ -76,9 +76,9 @@
         {"inputName": ["oiled cambric"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""},
         {"inputName": ["lantern"], "quantity": 0, "marketValue": 30, "buff": "", "icon": ""},
         {"inputName": ["worn top hat"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
-        {"inputName": ["Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
-        {"inputName": ["Quo’s Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
-        {"inputName": ["Opponent’s Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["your Life or Death peices"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["Quo’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
+        {"inputName": ["Opponent’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""}
     ]
 }
