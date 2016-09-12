@@ -956,7 +956,7 @@
             "cardText": "It’s got to be better than it sounds.",
             "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this'll help you here in the New World. There are five main strategies that you can use in this game. Just like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off with no skills with all of these strategies, but you can improve them with practice. Lemme show you,” Quo says, pushing a red piece forward.<br><br>“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers.",
             "rewards": [
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": 16},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": 16}
@@ -992,7 +992,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1019,7 +1019,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1030,7 +1030,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1057,7 +1057,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1092,7 +1092,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1103,7 +1103,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1121,7 +1121,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1132,7 +1132,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1173,7 +1173,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1214,7 +1214,7 @@
             "challengeSuccessText": "After making a couple moves that shore up your defences, you advance a Gladiator and a Librarian. Quo chooses to defend against the Librarian. He fell for it! You march your Gladiator in to capture his own Librarian, and threaten his Queen.<br><br>“Uh oh, you’re gettin dangerously close to my Queen! She’ll be able to save herself, but you fooled me well with that false Librarian.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "your Life or Death piece",
+                {"rewardName": "Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1239,7 +1239,232 @@
                 "BifröstShore40Hand",
                 "BifröstShore40Heart",
                 "BifröstShore40Eye",
-                "BifröstShore40Voice"
+                "BifröstShore40Voice",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
+                ]
+        },
+        {
+            "cardID": "BifröstShore40Brawn",
+            "cardText": "Use Brawn strategy",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
+            "randomTerms": ["Viking,Gladiator", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore39"
+            ],
+            "challengeSuccessText": "In a bold move, you use one of your remaining blue {0}s to take out one of Quo’s red {1}s. ",
+            "hideReqs": true,
+            "hiddenIfReqsFail": true,
+            "challengeFailRewards": [
+                {"rewardName": "Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore39"
+            ],
+            "challengeFailText": "You try to forcefully advance one of your remaining blue {0}s, but Quo takes it out with his red {1}. "
+        },
+        {
+            "cardID": "BifröstShore40Hand",
+            "cardText": "Use Hand strategy",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
+            "randomTerms": ["Cat,Wraith", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore39"
+            ],
+            "challengeSuccessText": "You sneakily move your blue {0} into position. Quo didn’t see it coming, and he is forced to lose his one of his {1}s. ",
+            "hideReqs": true,
+            "hiddenIfReqsFail": true,
+            "challengeFailRewards": [
+                {"rewardName": "Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore39"
+            ],
+            "challengeFailText": "You try to sneak up on Quo with a {0} but he figures out your strategy, and knocks it off the board with his red {1}. "
+        },
+        {
+            "cardID": "BifröstShore40Heart",
+            "cardText": "Use Heart strategy",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
+            "randomTerms": ["Soldier,Dog", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore39"
+            ],
+            "challengeSuccessText": "You take a stab directly at Quo’s Queen with your blue {0}. He defends, but is flustered and makes a poor move. His {1} is yours. ",
+            "hideReqs": true,
+            "hiddenIfReqsFail": true,
+            "challengeFailRewards": [
+                {"rewardName": "Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore39"
+            ],
+            "challengeFailText": "You strike right at Quo’s Queen with your blue {0}, but he defends easily with a {1} and your {0} is lost. "
+        },
+        {
+            "cardID": "BifröstShore40Eye",
+            "cardText": "Use Eye strategy",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
+            "randomTerms": ["Gladiator,Librarian", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore39"
+            ],
+            "challengeSuccessText": "It looks like Quo is trying to place his {1} within striking distance of your Queen. You position your {0}, so that when he tries, you are able to capture his {1} handily. ",
+            "hideReqs": true,
+            "hiddenIfReqsFail": true,
+            "challengeFailRewards": [
+                {"rewardName": "Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore39"
+            ],
+            "challengeFailText": "It appears that Quo is setting up his {1} for an attack on your Queen. You pre-empt him by blocking him with your {0}, but it turns out that was just a ploy. With your {0} out in the open, he easily captures it. "
+        },
+        {
+            "cardID": "BifröstShore40Voice",
+            "cardText": "Use Voice strategy",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
+            "randomTerms": ["Viking,Gladiator,Cat,Wraith,Soldier,Dog,Gladiator,Librarian", "Mermaid,Monk", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "convicts’ respect",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstShore39"
+            ],
+            "challengeSuccessText": "You try to throw Quo off. You advance your {0}, as if you are making a move on his Queen. He tries to defend though, and in doing so he leaves his {2} wide open. It’s easy to swoop in with your {1} as you had planned all along. ",
+            "hideReqs": true,
+            "hiddenIfReqsFail": true,
+            "challengeFailRewards": [
+                {"rewardName": "Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstShore39"
+            ],
+            "challengeFailText": "You try to throw Quo off his game. You advance your {0}, as if you are about to make a move on his Queen, but your real plan is to draw out one of his pieces and capture it with your {1}. He realizes that you wouldn’t be so careless to go for his Queen at this point though, and doesn’t respond to your feint. Instead he uses a move that you hadn’t seen coming at all, and with his {2} he captures your {0} while at the same time blocks your {1} from retaliating. Damn. "
+        },
+        {
+            "cardID": "BifröstShore41Won",
+            "cardText": "Call to Claim",
+            "reqs": [
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": "<=",
+                "reqQuantity": 3}
+            ],
+            "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I’ll get that prize for you tomorrow - you earned it! I’ll bring it to you then and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "nextCardsID": [
+                "BifröstShore42"
+                ]
+        },
+        {
+            "cardID": "BifröstShore41Lost",
+            "cardText": "You lose",
+            "reqs": [
+                {"reqName": "Life or Death piece",
+                "reqRule": "<=",
+                "reqQuantity": 3}
+            ],
+            "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I got a prize I’ll give you regardless - maybe it’ll help you win next game. I’ll bring it to you tomorrow and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "nextCardsID": [
+                "BifröstShore42"
+                ]
+        },
+        {
+            "cardID": "BifröstShore42",
+            "cardText": "continue",
+            "setScore": [
+                {"setName": "Life or Death piece",
+                "setQuantity": 0},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 0}
+            ],
+            "addedText": "“As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, probably due to the fact that you haven’t eaten in days. You soon fall asleep, alone in your room except for the peculiar lockbox that you found on the beach, sitting on a table at your bedside, still locked.",
+            "nextCardsID": [
+                "BifröstShore43"
+                ]
+        },
+        {
+            "cardID": "BifröstShore43",
+            "cardText": "continueto43",
+            "addedText": "43",
+            "nextCardsID": [
+                "BifröstShore44"
                 ]
         }
     ]

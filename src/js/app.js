@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//37
+//45
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -64,7 +64,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore0',
+    activeCard: 'BifröstShore24',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -73,6 +73,7 @@ var player = {
     justWentInsane: false,
     justWon: false,
     justFailed: false,
+    timeOfDay: 'morning',
     gender: 0,
     name: 'Cecil Palmer',
 
@@ -618,6 +619,9 @@ PlayableCard.prototype.processRewards = function(totalArray){
     costList = '',
     costIndex,
     numOfCosts,
+    setList = '',
+    setIndex,
+    numOfSets,
     totalIndex,
     numofTotal = totalArray.length;
 
@@ -665,7 +669,28 @@ PlayableCard.prototype.processRewards = function(totalArray){
         }
     }
 
-    return `${rewardList}<br>${costList}<br>`;
+    if (this.setScore !== undefined) {
+        numOfSets = this.setScore.length;
+        setList = `<span class=styleChallenge>→You now have `;
+        for (setIndex = 0; setIndex < numOfSets; setIndex += 1) {
+            stats.getScore(this.setScore[setIndex].setName).quantity = this.setScore[setIndex].setQuantity;
+            setList += `${this.setScore[setIndex].setQuantity} ${stats.getScore(this.setScore[setIndex].setName).correctName(this.setScore[setIndex].setQuantity)}`;
+            if (setIndex < numOfSets - 2) {
+                setList += ', ';
+            }
+            if (setIndex === numOfSets - 2) {
+                setList += ', and ';
+            }
+            if (setIndex === numOfSets - 1) {
+                setList += '.</span>';
+            }
+        }
+    }
+    //this is awkward since it references specific objects. FIX
+    stats.getScore('Health').updateStatus();
+    stats.getScore('candlenut').updateInventory();
+    stats.getScore('Royal Navy').updateReputation();
+    return `${rewardList}<br>${costList}<br>${setList}<br>`;
 };
 
 // //get & set a card's costs to be subtracted when clicked DELETE
@@ -820,11 +845,11 @@ PlayableCard.prototype.performCard = function(){
         returnCardText += this.performChallenge();
     } else {
         returnCardText += this.cardScript();
-        // if (this.firstTime === false && this instanceof LocationCard) {
-        // } else {
         returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         if (this.rewards !== undefined) {
             returnCardText += `<em>${this.processRewards(this.rewards)}</em>`;
+        } else if (this.setScore !== undefined) {
+            returnCardText += `<em>${this.processRewards([])}</em>`;
         }
     }
     if (this instanceof LocationCard) {
@@ -856,30 +881,57 @@ PlayableCard.prototype.performChallenge = function() {
 
     returnCardText += rollResults.bonusText;
     if (rollResults.wonTheRoll) {
+        player.justWon = true;
         successExp = Math.floor(this.challengeRoll / 2);
         returnCardText += `<span class = styleChallenge>You succeeded in this challenge and learned a little.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": successExp}])}</span>`;
-        returnCardText += `<span class = styleStory>${this.challengeSuccessText}</span>`;
+        if (this.randomTerms !== undefined) {
+            returnCardText += `<span class = styleStory>${this.randomTextGenerator(this.challengeSuccessText)}</span>`;
+        } else {
+            returnCardText += `<span class = styleStory>${this.challengeSuccessText}</span>`;
+        }
         returnCardText += `${this.cardScript()}`;
         if (this.addedText !== undefined) {
             returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         }
         returnCardText += `<em>${this.processRewards(this.challengeSuccessRewards)}</em>`;
         //give a little experience based on the type of challenge, equal to half of the opponent roll
-        player.justWon = true;
     }
     else {
+        player.justFailed = true;
         failExp = this.challengeRoll;
         returnCardText += `<span class = styleChallenge>You failed in this challenge but learned a lot.  ${this.processRewards([{"rewardName": this.challengeStat, "rewardQuantity": failExp}])}</span>`;
-        returnCardText += `<span class = styleStory>${this.challengeFailText}</span>`;
+        if (this.randomTerms !== undefined) {
+            returnCardText += `<span class = styleStory>${this.randomTextGenerator(this.challengeFailText)}</span>`;
+        } else {
+            returnCardText += `<span class = styleStory>${this.challengeFailText}</span>`;
+        }
         returnCardText += `${this.cardScript()}`;
         if (this.addedText !== undefined) {
             returnCardText += `<span class = styleStory>${this.addedText}</span>`;
         }
         returnCardText += `<em>${this.processRewards(this.challengeFailRewards)}</em>`;
         //give more experience based on the type of challenge, equal the opponent roll
-        player.justFailed = true;
     }
     return returnCardText + '<br>';
+};
+
+PlayableCard.prototype.randomTextGenerator = function(modifyText) {
+    var choiceIndex,
+    returnRandom = [],
+    randomTermsArray,
+    randomValue,
+    regEx,
+    maxChoices = this.randomTerms.length;
+
+    for (choiceIndex = 0; choiceIndex < maxChoices; choiceIndex += 1) {
+        randomTermsArray = this.randomTerms[choiceIndex].split(',');
+        randomValue = Math.floor(randomTermsArray.length * Math.random());
+        returnRandom[choiceIndex] = randomTermsArray[randomValue];
+        regEx = new RegExp('\\{' + choiceIndex + '\\}', 'g');
+        modifyText = modifyText.replace(regEx, returnRandom[choiceIndex]);
+    }
+
+    return modifyText;
 };
 
 PlayableCard.prototype.cardScript = function(){
@@ -926,6 +978,8 @@ LocationCard.prototype.loadFromData = function (data) {
     this.hideReqs = data.hideReqs;
     this.firstTime = true;
     this.openQuest = data.openQuest;
+    this.randomTerms = data.randomTerms;
+    this.setScore = data.setScore;
 };
 
 function ActionCard(cardID) {
@@ -954,6 +1008,8 @@ ActionCard.prototype.loadFromData = function (data) {
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
+    this.randomTerms = data.randomTerms;
+    this.setScore = data.setScore;
 };
 
 function StoryCard(cardID) {
@@ -982,6 +1038,8 @@ StoryCard.prototype.loadFromData = function (data) {
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
+    this.randomTerms = data.randomTerms;
+    this.setScore = data.setScore;
 };
 
 
@@ -1024,10 +1082,7 @@ var deck = {
 };
 
 deck.loadData(externalCardData);
-// deck.getCard('Medusa1').cardScript = function() { //DEMONSTRATION OF cards with cardScript. DELETE
-//         stats.getScore('lantern').increment(100);
-//         return `<span class=styleReward>↓You got 100 lanterns!.`;
-// };
+
 deck.getCard('BifröstShore2').cardScript = function() {
     if (stats.getScore('lantern').quantity > 0) {
         stats.getScore('lantern').decrement(-1 * stats.getScore('lantern').quantity);
