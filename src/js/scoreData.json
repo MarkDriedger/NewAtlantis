@@ -13,7 +13,7 @@
         {"inputName": ["Royal Navy"], "quantity": 0, "icon": ""},
         {"inputName": ["Valhalla"], "quantity": 0, "icon": ""},
         {"inputName": ["New Foundland Company"], "quantity": 0, "icon": ""},
-        {"inputName": ["Post"], "quantity": 0, "icon": ""},
+        {"inputName": ["Aeronautic Post"], "quantity": 0, "icon": ""},
         {"inputName": ["Aves"], "quantity": 0, "icon": ""},
         {"inputName": ["Silk"], "quantity": 0, "icon": ""},
         {"inputName": ["Delphinae"], "quantity": 0, "icon": ""},
@@ -51,11 +51,11 @@
         {"inputName": ["inkwell"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["deerskin jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
         {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
-        {"inputName": ["Royal pound"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
-        {"inputName": ["Valhalan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
+        {"inputName": ["Royal sterling"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
+        {"inputName": ["Valhallan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
-        {"inputName": ["Post regular stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
-        {"inputName": ["Post special stamp"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
+        {"inputName": ["Aero stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
+        {"inputName": ["Aero special stamp"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["fig"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["flamingo feather"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""},
         {"inputName": ["flamingo egg"], "quantity": 0, "marketValue": 300, "buff": "", "icon": ""},
@@ -79,6 +79,7 @@
         {"inputName": ["Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["Quo’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["Opponent’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
-        {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""}
+        {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""},
+        {"inputName": ["satchel"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""}
     ]
 }

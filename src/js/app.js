@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//45
+//48
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -64,7 +64,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore24',
+    activeCard: 'BifröstShore42',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -623,18 +623,35 @@ PlayableCard.prototype.processRewards = function(totalArray){
     setIndex,
     numOfSets,
     totalIndex,
-    numofTotal = totalArray.length;
+    numofTotal = totalArray.length,
+    randomValue,
+    newValue;
 
     for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 1) {
+        //if any of the rewardNames have multiple random possibilities, determine which one to use
+        if (Array.isArray(totalArray[totalIndex].rewardName) ) {
+            randomValue = Math.floor(totalArray[totalIndex].rewardName.length * Math.random());
+            newValue = totalArray[totalIndex].rewardName[randomValue];
+            totalArray[totalIndex].rewardName = newValue;
+        }
+        //if any of the rewardQuantities have a random range of possibilities, determine which one to use
+        if (totalArray[totalIndex].rewardRange > 0 ) {
+            randomValue = Math.floor(totalArray[totalIndex].rewardRange * 2 * Math.random()) - totalArray[totalIndex].rewardRange;
+            newValue = totalArray[totalIndex].rewardQuantity + randomValue;
+            totalArray[totalIndex].rewardQuantity = newValue;
+        }
+        //create an array of only the positive rewards
         if (totalArray[totalIndex].rewardQuantity > 0) {
             stats.getScore(totalArray[totalIndex].rewardName).increment(totalArray[totalIndex].rewardQuantity);
             rewardArray.push(totalArray[totalIndex]);
+        //create an array of only the negative costs
         } else if (totalArray[totalIndex].rewardQuantity < 0) {
             stats.getScore(totalArray[totalIndex].rewardName).decrement(totalArray[totalIndex].rewardQuantity);
             costArray.push(totalArray[totalIndex]);
         }
     }
 
+    //actually process the rewards
     numOfRewards = rewardArray.length;
     if (numOfRewards > 0) {
         rewardList = `<span class=styleReward>↑You gained `;

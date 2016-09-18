@@ -113,9 +113,11 @@
         },
         {
             "cardID": "Medusa3",
-            "cardText": "Grab your belongings",
-            "addedText": "You spend some time searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your jacket though, which contains a few useful possessions. You rush toward the door.",
+            "cardText": "Search for your belongings",
+            "addedText": "You spend some time searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your jacket and satchel though, which contains a few useful possessions. You rush toward the door.",
             "rewards": [
+                {"rewardName": "satchel",
+                "rewardQuantity": 1},
                 {"rewardName": "deerskin jacket",
                 "rewardQuantity": 1},
                 {"rewardName": "Royal shilling",
@@ -131,9 +133,11 @@
         },
         {
             "cardID": "Medusa4",
-            "cardText": "Hurry to the door",
-            "addedText": "You head toward the door. Amidst all the chaos, that is easier said than done. A few bunks have toppled over and are blocking your path.",
+            "cardText": "Grab your jacket and hurry to the door",
+            "addedText": "You grab the nearest of your clothes and rush toward the door. Amidst all the chaos, that is easier said than done. A few bunks have toppled over and are blocking your path.",
             "rewards": [
+                {"rewardName": "deerskin jacket",
+                "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
@@ -508,7 +512,7 @@
             "cardText": "Wake up",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.",
+            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.<br><br>Your stomach rumbles and you remember that you had some beef leather in your pocket leftover from dinner. But upon doing a closer inspection of yourself, you realize that the jacket you are wearing is not your own. You must have grabbed a strangers clothes when fleeing the sinking Medusa.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -30}
@@ -797,7 +801,7 @@
         {
             "cardID": "BifröstShore10",
             "cardText": "Open the crate",
-            "addedText": "Inside the crate is a bunch of wet, soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But with some groping around you pull out a lockbox, looking as good as new, about the size of a large book.",
+            "addedText": "Inside the crate is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around in the straw, you pull out a lockbox, about the size of a large book. In fact, it is decorated like a book too, decorated with symbol that could be triangles, or wings, surrounded by the text of a language you are unfamiliar with. The lockbox is sturdy, built out of some kind of lightweight grey metal.",
             "nextCardsID": [
                 "BifröstShore11"
             ]
@@ -805,15 +809,15 @@
         {
             "cardID": "BifröstShore11",
             "cardText": "Open the lockbox",
-            "addedText": "The lockbox is quite secure, locked with a four digit code. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems to be sealed. By its weight, you can tell there is something inside, some large solid thing. The lockbox is sturdy, built out of some kind of light grey metal. The only decorations are some script on the side, written in a language you are unfamiliar with, as well as an outline of a hand.",
+            "addedText": "The lockbox is quite secure, locked with a four digit code. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems to be sealed. By its weight, you can tell there is something inside, some large solid thing.<br><br>Your parrot friend also seems interested as he flies back over to you and starts investigating the straw you pulled out of the crate. It’s probably looking for food - the same food that you are going to need if you want to survive on this island.",
             "nextCardsID": [
-                "BifröstShore12"
+                "BifröstShore13"
             ]
         },
         {
             "cardID": "BifröstShore12",
             "cardText": "Place your hand over the outline",
-            "addedText": "You line your hand up with the outline on the lockbox. The cool metal sends a shiver through your wet body.<br><br>Your parrot friend also seems interested as he flies back over to you and starts investigating the straw you pulled out of the crate. It’s probably looking for food - the same food that you are going to need if you want to survive on this island.",
+            "addedText": "DELETEYou line your hand up with the outline on the lockbox. The cool metal sends a shiver through your wet body.",
             "openQuest": {"questID": "OpenLockbox", "questTitle": "Open the Medusa Lockbox", "questDescription": "In the wreckage of the Medusa, you found a sturdy lockbox contained in a safe. What could be inside of it?"},
             "nextCardsID": [
                 "BifröstShore13"
@@ -851,7 +855,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "“Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. “You got a lockbox. What’s in it?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks you.",
+            "addedText": "“Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. What's this crate you got 'ere'?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks you.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -901,7 +905,7 @@
             "cardID": "BifröstShore18",
             "locationName": "Bifröst Prison Camp",
             "cardText": "EAT!",
-            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. No, nuthin like you and yer box there…” he gestures off to your lockbox, sitting on your bedside table. It appears to still be intact.",
+            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. No, nuthin like you and yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” You realize that this jacket you accidentally gabbed form the sinking Medusa, certainly not your own, has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
             "nextCardsID": [
                 "BifröstShore19"
             ]
@@ -1457,8 +1461,34 @@
             "addedText": "“As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, probably due to the fact that you haven’t eaten in days. You soon fall asleep, alone in your room except for the peculiar lockbox that you found on the beach, sitting on a table at your bedside, still locked.",
             "nextCardsID": [
                 "BifröstShore43"
-                ]
+            ],
+            "rewards": [
+                {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero stamp"],
+                "rewardQuantity": 100,
+                "rewardRange": 50}
+            ]
         },
+        {
+            "cardID": "BifröstShore43",
+            "cardText": "continueto43",
+            "addedText": "44",
+            "rewards": [
+                {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero stamp"],
+                "rewardQuantity": 100,
+                "rewardRange": 20}
+            ],
+            "nextCardsID": [
+                "BifröstShore43"
+                ]
+            },
+        {
+            "cardID": "BifröstShore45",
+            "cardText": "continueto45",
+            "addedText": "45",
+            "nextCardsID": [
+                "BifröstShore46"
+                ]
+            },
         {
             "cardID": "BifröstShore43",
             "cardText": "continueto43",
