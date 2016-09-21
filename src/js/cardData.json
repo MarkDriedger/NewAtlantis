@@ -1463,9 +1463,9 @@
                 "BifröstShore43"
             ],
             "rewards": [
-                {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero stamp"],
-                "rewardQuantity": 100,
-                "rewardRange": 50}
+                {"rewardName": ["Royal sterling"],
+                "rewardQuantity": [100],
+                "rewardRange": [10]}
             ]
         },
         {
@@ -1474,8 +1474,11 @@
             "addedText": "44",
             "rewards": [
                 {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero stamp"],
-                "rewardQuantity": 100,
-                "rewardRange": 20}
+                "rewardQuantity": [10, 10, 10, 10],
+                "rewardRange": [20, 20, 20, 20]},
+                {"rewardName": ["fig", "kumquat"],
+                "rewardQuantity": [5, 1000],
+                "rewardRange": [2, 2]},
             ],
             "nextCardsID": [
                 "BifröstShore43"

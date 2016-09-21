@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//48
+//51
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -62,9 +62,10 @@ for (i = 0; i < maxcards; i += 1) {
     display[i].addEventListener('click', onCardClick);
 }
 
+
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore42',
+    activeCard: 'BifröstShore43',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -222,22 +223,22 @@ PlayerStat.prototype.increment = function(amount) {
     if (this.quantity > this.maxQuantity) {
         this.quantity = this.maxQuantity;
     }
-    this.updateStatus();
+//    this.updateStatus();
 };
 
 Collectible.prototype.increment = function(amount) {
     this.quantity += amount;
-    this.updateInventory();
+//    this.updateInventory();
 };
 
 Reputation.prototype.increment = function(amount) {
     this.quantity += amount;
-    this.updateReputation();
+//    this.updateReputation();
 };
 
 Progress.prototype.increment = function(amount) {
     this.quantity += amount;
-    this.updateReputation();
+//    this.updateReputation();
 };
 
 HiddenProgress.prototype.increment = function(amount) {
@@ -611,43 +612,65 @@ function PlayableCard(){
 
 //check to see if this card gave any rewards
 PlayableCard.prototype.processRewards = function(totalArray){
+
+
+/*
+
+   // For each reward in the passedInArray r,
+   //    Check the 'type' of the reward
+   //    If it has no type
+   //        processReward(r);
+   //    If it has a type of random
+   //       select one of the 'options', o randomly
+   //       processReward(o);
+
+   passedInArray.forEach( (item) => {
+      if (item.type === 'random') {
+
+      } else {
+
+      }
+   });
+*/
+
     var rewardArray = [],
     rewardList = '',
     rewardIndex,
     numOfRewards,
     costArray = [],
     costList = '',
-    costIndex,
-    numOfCosts,
     setList = '',
-    setIndex,
-    numOfSets,
-    totalIndex,
+    processedName = '',
+    processedQuantity = 0,
+    randomNameIndex,
+    totalIndex = 0,
     numofTotal = totalArray.length,
-    randomValue,
-    newValue;
+    randomValue = 0;
 
     for (totalIndex = 0; totalIndex < numofTotal; totalIndex += 1) {
         //if any of the rewardNames have multiple random possibilities, determine which one to use
         if (Array.isArray(totalArray[totalIndex].rewardName) ) {
-            randomValue = Math.floor(totalArray[totalIndex].rewardName.length * Math.random());
-            newValue = totalArray[totalIndex].rewardName[randomValue];
-            totalArray[totalIndex].rewardName = newValue;
+            randomNameIndex = Math.floor(totalArray[totalIndex].rewardName.length * Math.random());
+            processedName = totalArray[totalIndex].rewardName[randomNameIndex];
+        } else {
+            processedName = totalArray[totalIndex].rewardName;
         }
         //if any of the rewardQuantities have a random range of possibilities, determine which one to use
-        if (totalArray[totalIndex].rewardRange > 0 ) {
-            randomValue = Math.floor(totalArray[totalIndex].rewardRange * 2 * Math.random()) - totalArray[totalIndex].rewardRange;
-            newValue = totalArray[totalIndex].rewardQuantity + randomValue;
-            totalArray[totalIndex].rewardQuantity = newValue;
+        if (totalArray[totalIndex].rewardRange !== undefined ) {
+            randomValue = Math.floor((totalArray[totalIndex].rewardRange[randomNameIndex] * 2 + 1) * Math.random() - totalArray[totalIndex].rewardRange[randomNameIndex]);
+            processedQuantity = totalArray[totalIndex].rewardQuantity[randomNameIndex] + randomValue;
+        } else {
+            processedQuantity = totalArray[totalIndex].rewardQuantity;
         }
+
         //create an array of only the positive rewards
-        if (totalArray[totalIndex].rewardQuantity > 0) {
-            stats.getScore(totalArray[totalIndex].rewardName).increment(totalArray[totalIndex].rewardQuantity);
-            rewardArray.push(totalArray[totalIndex]);
+        if (processedQuantity > 0) {
+            stats.getScore(processedName).increment(processedQuantity);
+            rewardArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
         //create an array of only the negative costs
-        } else if (totalArray[totalIndex].rewardQuantity < 0) {
-            stats.getScore(totalArray[totalIndex].rewardName).decrement(totalArray[totalIndex].rewardQuantity);
-            costArray.push(totalArray[totalIndex]);
+        } else if (processedQuantity < 0) {
+            stats.getScore(processedName).decrement(processedQuantity);
+            costArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
         }
     }
 
@@ -664,42 +687,42 @@ PlayableCard.prototype.processRewards = function(totalArray){
                 rewardList += ', and ';
             }
             if (rewardIndex === numOfRewards - 1) {
-                rewardList += '.</span>';
+                rewardList += '.</span><br>';
             }
         }
     }
 
-    numOfCosts = costArray.length;
-    if (numOfCosts > 0) {
+    numOfRewards = costArray.length;
+    if (numOfRewards > 0) {
         costList = `<span class=styleCost>↓You lost `;
-        for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
-            costList += `${Math.abs(costArray[costIndex].rewardQuantity)} ${stats.getScore(costArray[costIndex].rewardName).correctName(Math.abs(costArray[costIndex].rewardQuantity))}`;
-            if (costIndex < numOfCosts - 2) {
+        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
+            costList += `${Math.abs(costArray[rewardIndex].rewardQuantity)} ${stats.getScore(costArray[rewardIndex].rewardName).correctName(Math.abs(costArray[rewardIndex].rewardQuantity))}`;
+            if (rewardIndex < numOfRewards - 2) {
                 costList += ', ';
             }
-            if (costIndex === numOfCosts - 2) {
+            if (rewardIndex === numOfRewards - 2) {
                 costList += ', and ';
             }
-            if (costIndex === numOfCosts - 1) {
-                costList += '.</span>';
+            if (rewardIndex === numOfRewards - 1) {
+                costList += '.</span><br>';
             }
         }
     }
 
     if (this.setScore !== undefined) {
-        numOfSets = this.setScore.length;
+        numOfRewards = this.setScore.length;
         setList = `<span class=styleChallenge>→You now have `;
-        for (setIndex = 0; setIndex < numOfSets; setIndex += 1) {
-            stats.getScore(this.setScore[setIndex].setName).quantity = this.setScore[setIndex].setQuantity;
-            setList += `${this.setScore[setIndex].setQuantity} ${stats.getScore(this.setScore[setIndex].setName).correctName(this.setScore[setIndex].setQuantity)}`;
-            if (setIndex < numOfSets - 2) {
+        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
+            stats.getScore(this.setScore[rewardIndex].setName).quantity = this.setScore[rewardIndex].setQuantity;
+            setList += `${this.setScore[rewardIndex].setQuantity} ${stats.getScore(this.setScore[rewardIndex].setName).correctName(this.setScore[rewardIndex].setQuantity)}`;
+            if (rewardIndex < numOfRewards - 2) {
                 setList += ', ';
             }
-            if (setIndex === numOfSets - 2) {
+            if (rewardIndex === numOfRewards - 2) {
                 setList += ', and ';
             }
-            if (setIndex === numOfSets - 1) {
-                setList += '.</span>';
+            if (rewardIndex === numOfRewards - 1) {
+                setList += '.</span><br>';
             }
         }
     }
@@ -707,65 +730,8 @@ PlayableCard.prototype.processRewards = function(totalArray){
     stats.getScore('Health').updateStatus();
     stats.getScore('candlenut').updateInventory();
     stats.getScore('Royal Navy').updateReputation();
-    return `${rewardList}<br>${costList}<br>${setList}<br>`;
+    return `<br>${rewardList}${costList}${setList}`;
 };
-
-// //get & set a card's costs to be subtracted when clicked DELETE
-// PlayableCard.prototype.setCosts = function(costItem,costQuantity){
-//     if (!Array.isArray(costItem)) {
-//         costItem = [costItem];
-//     }
-//     if (!Array.isArray(costQuantity)) {
-//         costQuantity = [costQuantity];
-//     }
-//     this.costItem = costItem;
-//     this.costQuantity = costQuantity;
-//     //if a card has costs, then those also must be requirements too
-//     this.requiredItem = costItem;
-//     this.requiredQuantity = costQuantity;
-// };
-
-// //check to see if this card gave any costs
-// PlayableCard.prototype.processCosts = function(givenCostItem, givenCostQuantity){
-//     var costList = '',
-//     costIndex = 0,
-//     numOfCosts = 0;
-//     if (givenCostItem[0] > 0) {
-//         numOfCosts = givenCostItem.length;
-//         for (costIndex = 0; costIndex < numOfCosts; costIndex += 1) {
-//             scoreData[givenCostItem[costIndex]].decrement(givenCostQuantity[costIndex]);
-//             //add a comment to the story about costs.
-//             if (costIndex === 0) {
-//                 costList += `<span class=styleCost>↓You lost `;
-//             }
-//             costList += `${givenCostQuantity[costIndex]} ${scoreData[givenCostItem[costIndex]].correctName(givenCostQuantity[costIndex])}`;
-//             if (costIndex < numOfCosts - 2) {
-//                 costList += ', ';
-//             }
-//             if (costIndex === numOfCosts - 2) {
-//                 costList += ', and ';
-//             }
-//             if (costIndex === numOfCosts - 1) {
-//                 costList += '.<br></span>';
-//             }
-//         }
-//     }
-//     return costList;
-// };
-
-// //get & set a card's requirements that must be met in order for a card to be clicked on
-// PlayableCard.prototype.setRequirements = function(requiredItem,requiredQuantity){
-//     if (!Array.isArray(requiredItem)) {
-//         this.requiredItem = [requiredItem];
-//     } else {
-//         this.requiredItem = requiredItem;
-//     }
-//     if (!Array.isArray(requiredQuantity)) {
-//         this.requiredQuantity = [requiredQuantity];
-//     } else {
-//         this.requiredQuantity = requiredQuantity;
-//     }
-// };
 
 PlayableCard.prototype.requirementSentence = function(){
     var reqList = '',
@@ -995,7 +961,6 @@ LocationCard.prototype.loadFromData = function (data) {
     this.hideReqs = data.hideReqs;
     this.firstTime = true;
     this.openQuest = data.openQuest;
-    this.randomTerms = data.randomTerms;
     this.setScore = data.setScore;
 };
 
@@ -1025,7 +990,6 @@ ActionCard.prototype.loadFromData = function (data) {
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
-    this.randomTerms = data.randomTerms;
     this.setScore = data.setScore;
 };
 
@@ -1055,7 +1019,6 @@ StoryCard.prototype.loadFromData = function (data) {
     this.hiddenIfReqsFail = data.hiddenIfReqsFail;
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
-    this.randomTerms = data.randomTerms;
     this.setScore = data.setScore;
 };
 
