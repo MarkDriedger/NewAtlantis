@@ -36,12 +36,14 @@
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "icon": ""},
         {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""},
         {"inputName": ["convicts’ respect", "convicts’ respect"], "icon": ""},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "icon": ""}
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "icon": ""},
+        {"inputName": ["Voynich character"], "icon": ""}
     ],
 
     "hiddenProgress": [
         {"inputName": ["Medusa lifeboat success"]},
-        {"inputName": ["Medusa lifeboat fail"]}
+        {"inputName": ["Medusa lifeboat fail"]},
+        {"inputName": ["Voynich code"], "quantity": ""}
     ],
 
     "collectibles": [
@@ -49,12 +51,12 @@
         {"inputName": ["Quo’s office key"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["inkwell"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
-        {"inputName": ["deerskin jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
+        {"inputName": ["travel jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
         {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Royal sterling"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["Valhallan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
-        {"inputName": ["Aero stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
+        {"inputName": ["Poste stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
         {"inputName": ["Aero special stamp"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["fig"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["flamingo feather"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""},
@@ -80,6 +82,14 @@
         {"inputName": ["Quo’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["Opponent’s Life or Death piece"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["iron nail"], "quantity": 0, "marketValue": 5, "buff": "", "icon": ""},
-        {"inputName": ["satchel"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""}
+        {"inputName": ["satchel"], "quantity": 0, "marketValue": 60, "buff": "", "icon": ""},
+        {"inputName": ["wing-symbol envelope"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
+        {"inputName": ["wing-symbol lens", "wing-symbol lenses"], "quantity": 0, "marketValue": 300, "buff": "", "icon": ""},
+        {"inputName": ["Voynich lens", "Voynich lenses"], "quantity": 0, "marketValue": 300, "buff": "", "icon": ""},
+        {"inputName": ["mysterious journal"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["journal tome"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["mysterious lockbox", "mysterious lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["Voynich lockbox", "Voynich lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+
     ]
 }

@@ -198,6 +198,8 @@ function HiddenProgress(inputName){
     this.inputName = inputName;
     this.singularName = inputName;
     this.pluralName = inputName;
+    this.quantity = 0;
+
 }
 HiddenProgress.prototype = new ScoreType();
 

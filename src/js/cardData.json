@@ -118,7 +118,7 @@
             "rewards": [
                 {"rewardName": "satchel",
                 "rewardQuantity": 1},
-                {"rewardName": "deerskin jacket",
+                {"rewardName": "travel jacket",
                 "rewardQuantity": 1},
                 {"rewardName": "Royal shilling",
                 "rewardQuantity": 117},
@@ -136,7 +136,7 @@
             "cardText": "Grab your jacket and hurry to the door",
             "addedText": "You grab the nearest of your clothes and rush toward the door. Amidst all the chaos, that is easier said than done. A few bunks have toppled over and are blocking your path.",
             "rewards": [
-                {"rewardName": "deerskin jacket",
+                {"rewardName": "travel jacket",
                 "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -893,9 +893,9 @@
             "addedText": "“Awake now, are you?” A voice asks. You groggily look around the room and see that you are in a small cabin. It seems to be a different time of day than when you met the convicts on the beach - possibly even a different day altogether.<br><br>“The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages over the spots on your legs, arms, and torso where you were scraped by the rocks.<br><br>“Mind tellin me a bit about yourself over some dinner?” he asks, pushing a plate of veggies and fruit toward you.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": 100},
+                "rewardQuantity": 50},
                 {"rewardName": "Mind",
-                "rewardQuantity": 100}
+                "rewardQuantity": 50}
             ],
             "nextCardsID": [
                 "BifröstShore18"
@@ -1432,6 +1432,18 @@
                 "reqQuantity": 3}
             ],
             "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I’ll get that prize for you tomorrow - you earned it! I’ll bring it to you then and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "setScore": [
+                {"setName": "Life or Death piece",
+                "setQuantity": 0},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 0}
+            ],
+
+            "rewards": [
+                {"rewardName": ["convicts’ respect"],
+                "rewardQuantity": [3],
+                "rewardRange": [1]}
+            ],
             "nextCardsID": [
                 "BifröstShore42"
                 ]
@@ -1445,6 +1457,17 @@
                 "reqQuantity": 3}
             ],
             "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I got a prize I’ll give you regardless - maybe it’ll help you win next game. I’ll bring it to you tomorrow and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "setScore": [
+                {"setName": "Life or Death piece",
+                "setQuantity": 0},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 0}
+            ],
+            "rewards": [
+                {"rewardName": ["convicts’ respect"],
+                "rewardQuantity": [2],
+                "rewardRange": [1]}
+            ],
             "nextCardsID": [
                 "BifröstShore42"
                 ]
@@ -1452,24 +1475,24 @@
         {
             "cardID": "BifröstShore42",
             "cardText": "continue",
-            "setScore": [
-                {"setName": "Life or Death piece",
-                "setQuantity": 0},
-                {"setName": "Quo’s Life or Death piece",
-                "setQuantity": 0}
-            ],
-            "addedText": "“As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, probably due to the fact that you haven’t eaten in days. You soon fall asleep, alone in your room except for the peculiar lockbox that you found on the beach, sitting on a table at your bedside, still locked.",
+            "addedText": "As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, probably due to the fact that you haven’t eaten in days. Out of the corner of your eye, you see your lockbox. Or at least, you now think of it as yours. After all, it’s more yours than anyone else’s since the original owner of this lockbox and matching jacket must have perished in the shipwreck.",
             "nextCardsID": [
                 "BifröstShore43"
             ],
             "rewards": [
-                {"rewardName": ["Royal sterling"],
-                "rewardQuantity": [100],
-                "rewardRange": [10]}
+                {"rewardName": "Health",
+                "rewardQuantity": 5},
+                {"rewardName": "Mind",
+                "rewardQuantity": 5},
+                {"rewardName": "mysterious lockbox",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstShore43"
             ]
         },
         {
-            "cardID": "BifröstShore43",
+            "cardID": "BifröstShore43TestingRandomnessDELETE",
             "cardText": "continueto43",
             "addedText": "44",
             "rewards": [
@@ -1479,26 +1502,326 @@
                 {"rewardName": ["fig", "kumquat"],
                 "rewardQuantity": [5, 1000],
                 "rewardRange": [2, 2]},
+            ]
+        },
+        {
+            "cardID": "BifröstShore43",
+            "cardText": "Continue to inspect the lockbox",
+            "addedText": "The sturdy, lockbox sits on the table before you. The three numbered dials of the locking mechanism continue to hinder your access.",
+            "nextCardsID": [
+                "BifröstShore44Open",
+                "BifröstShore44Unlock",
+                "BifröstShore44Front",
+                "BifröstShore44Spine",
+                "BifröstShore44Mechanism",
+                "BifröstShore44Jacket",
+                "BifröstShore44Envelope",
+                "BifröstShore44Monocle",
+                "BifröstShore45Monocle",
+                "BifröstShore45Front",
+                "BifröstShore45Unlock",
+                "BifröstShore45Mechanism",
+                "BifröstShore45Jacket",
+                ]
+            },
+        {
+            "cardID": "BifröstShore44Open",
+            "cardText": "Try opening the box",
+            "addedText": "You hope it might just happen to be unlocked, but no, this isn’t going to be that easy.",
+            "reqs": [
+                {"reqName": "Voynich code",
+                "reqRule": "=",
+                "reqQuantity": ""}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Front",
+            "cardText": "Inspect the front of the box",
+            "addedText": "The lockbox is decorated to resemble a book. Strange script flows all around it. The letters do not resemble any language you are familiar with. The symbol that adorns the front of your jacket is similar, but this one is more detailed. You can see that it appears to be a triangle, perhaps made of bird wings. There is a series of what appear to be letters, positioned just above the wing-symbol. Judging by how intricate the workmanship is, this must be of fairly high quality.",
+            "reqs": [
+                {"reqName": "wing-symbol lens",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Unlock",
+            "cardText": "Try to unlock the box",
+            "addedText": "The dials are numbered from 1 to 60. You have no idea what combination to try. You try a few random guesses but that doesn’t work.",
+            "reqs": [
+                {"reqName": "Voynich code",
+                "reqRule": "=",
+                "reqQuantity": ""}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Spine",
+            "cardText": "Inspect the spine of the box",
+            "addedText": "Since the lockbox resembles a book, it has a spine. The same strange script appears here as on the rest of the box. The hinges must be on the inside of the lockbox, and there do not seem to be any visible weaknesses or seams that you can exploit to pry the box open, and you certainly don’t want to risk damaging whatever is inside of it.",
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Mechanism",
+            "cardText": "Inspect the locking mechanism",
+            "addedText": "The dials are sturdy and don’t offer any hints as to what the code is. There is a very tiny scratch above each dial that must indicate the home position of the dial. You notice it is strange that whereas all three dials look identical, the scratches above them each look slightly different, This seems odd on a lockbox of such high craftsmanship.",
+            "reqs": [
+                {"reqName": "wing-symbol lens",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Jacket",
+            "cardText": "Inspect your jacket",
+            "addedText": "The symbol on the jacket and text above it certainly match those of the lockbox, only in less detail on the deerskin leather, indicating that whoever owned this jacket probably also owned this lockbox too… until you stole it… accidentally, of course.",
+            "reqs": [
+                {"reqName": "Voynich characters",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore44Pocket"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Pocket",
+            "cardText": "Inspect the jacket pockets",
+            "addedText": "Upon turning out the pockets, you find an assortment of useful items. There are some coins of different currencies, as well as an envelope. The coins are all ones you recognize originating in the Olden Worlde, from the Royal Empire and Valhalla, as well as stamps for the Poste, and some paper currency for the New Foundland Company, the organization that deals with much of the trade and exploration of the New Worlde.",
+            "rewards": [
+                {"rewardName": "wing-symbol envelope",
+                "rewardQuantity": 1},
+                {"rewardName": "Royal shilling",
+                "rewardQuantity": 78},
+                {"rewardName": "Valhallan mark",
+                "rewardQuantity": 3},
+                {"rewardName": "Poste stamp",
+                "rewardQuantity": 8},
+                {"rewardName": "New Foundland scrip",
+                "rewardQuantity": 50}
             ],
             "nextCardsID": [
                 "BifröstShore43"
-                ]
-            },
+            ]
+        },
         {
-            "cardID": "BifröstShore45",
-            "cardText": "continueto45",
-            "addedText": "45",
+            "cardID": "BifröstShore44Envelope",
+            "cardText": "Open the wing-symbol envelope",
+            "addedText": "The envelope has no writing on it, but is sealed. The same wing-symbol is embossed in the corner of the paper, where a stamp would normally be. You tear it open and withdraw a letter inside as well as a small object wrapped in white silk. The letter is short and written, once again, in this language you are not familiar with - perhaps it is the same one that decorates the lockbox? Upon unwrapping it, the silk appears to be a handkerchief used to protect a monocle. The glass lens is polished smooth, housed in a gold frame. The frame’s holder features the same wing symbol. You gaze through the lens and see a slightly green-ish version of the room you are in.",
+            "reqs": [
+                {"reqName": "wing-symbol envelope",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "rewards": [
+                {"rewardName": "wing-symbol lens",
+                "rewardQuantity": 1},
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Monocle",
+            "cardText": "Inspect the monocle",
+            "addedText": "The green tinted glass of the monocle is exceedingly smooth, so you decide to keep it protected in the handkerchief when not using it. The gold rim has a fob with which to hold the monocle. This handle features the wing-symbol, and some mysterious text above.",
+            "reqs": [
+                {"reqName": "wing-symbol lens",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore45Monocle",
+            "cardText": "Inspect the monocle",
+            "addedText": "The green tinted glass of the monocle is exceedingly smooth, so you decide to keep it protected in the handkerchief when not using it. The gold rim has a fob with which to hold the monocle. This handle features the wing symbol, and it clearly says the word VOYNICH above.",
+            "reqs": [
+                {"reqName": "Voynich lens",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore45Jacket",
+            "cardText": "Inspect your jacket",
+            "addedText": "The symbol on the jacket and text above it certainly match those of the lockbox. It’s odd that you weren’t able to read it before, but now even without looking through the monocle you can quite clearly read that it spells out the word VOYNICH right above the wing-symbol.",
+            "reqs": [
+                {"reqName": "Voynich lens",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore44Front",
+            "cardText": "Inspect the lockbox using the lens",
+            "addedText": "The fact that this lockbox bears resemblance to a book is not the only unique thing about it. The foreign text decorating the front is just as illegible with or without the lens. The symbol with three bird wings arranged in a triangle is featured on the front. Looking through the lens, you can now make out the letters above the triangle. They spell out the word “VOYNICH”. You put down the lens, and you can now clearly see the letters spelling out VOYNICH clearly.",
+            "reqs": [
+                {"reqName": "wing-symbol lens",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "rewards": [
+                {"rewardName": "wing-symbol lens",
+                "rewardQuantity": -1},
+                {"rewardName": "Voynich lens",
+                "rewardQuantity": 1},
+                {"rewardName": "wing-symbol lockbox",
+                "rewardQuantity": -1},
+                {"rewardName": "Voynich lockbox",
+                "rewardQuantity": 1},
+                {"rewardName": "Voynich characters",
+                "rewardQuantity": 7},
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore45Mechanism",
+            "cardText": "Inspect the locking mechanism using the lens",
+            "addedText": "There is a very tiny scratch above each of the three dials that, at first, appears to merely indicate the home position of the dial. But when you peer carefully through the green-tinted lens, you see that they are actually tiny numbers: ‘18’ above the first dial, ‘26’ above the second, and ‘34’ above the third.",
+            "reqs": [
+                {"reqName": "Voynich lens",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "rewards": [
+                {"rewardName": "Voynich code",
+                "rewardQuantity": "18-26-34"}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
+            "nextCardsID": [
+                "BifröstShore43"
+            ]
+        },
+        {
+            "cardID": "BifröstShore45Unlock",
+            "cardText": "Set the dials to the code",
+            "addedText": "You set the three dials to 18, 26, and 34, and hear a soft click.",
+            "reqs": [
+                {"reqName": "Voynich code",
+                "reqRule": "=",
+                "reqQuantity": "18-26-34"}
+            ],
+            "hiddenIfReqsFail": true,
+            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore46"
-                ]
-            },
+            ]
+        },
         {
-            "cardID": "BifröstShore43",
-            "cardText": "continueto43",
-            "addedText": "43",
+            "cardID": "BifröstShore46",
+            "cardText": "Open the lockbox",
+            "addedText": "You feel a chill of nervous anticipation course through your body as the lid gives you no resistance. Inside the book-shaped lockbox, you find: a book! This real book is much less ornate than the original. It has a non-descript black cover, with no markings in any language. The spine also is plain.",
             "nextCardsID": [
-                "BifröstShore44"
-                ]
-        }
+                "BifröstShore47"
+            ]
+        },
+        {
+            "cardID": "BifröstShore47",
+            "cardText": "Read the book",
+            "addedText": "The first pages of the book are hand-written notes. They are also written in an unfamiliar language, but this appears to be different than the language on the lockbox. There are seven pages of notes, followed by one blank page, followed by one more paragraph on the next page. The arrangement of the entries suggests the book was used as some sort of handwritten journal. It must have been shared by two different individuals, since that last separate paragraph is written in a clearly different handwriting than the first seven pages. Although it all appears to be in the same language, the first seven pages seems somehow more foreign than that one last paragraph.",
+            "rewards": [
+                {"rewardName": "mysterious journal",
+                "rewardQuantity": 1}
+            ],
+            "openQuest": {"questID": "ReadJournal", "questTitle": "Translate the Mysterious Journal", "questDescription": "Find someone to help you decipher the journal that you found in the lockbox labeled Voynich, found in the Medusa shipwreck."},
+            "nextCardsID": [
+                "BifröstShore48"
+            ]
+        },
+        {
+            "cardID": "BifröstShore48",
+            "cardText": "Read more of the mysterious journal",
+            "addedText": "Whoever recorded their thoughts in this journal must have only begun so recently, as there are many blank pages that follow until halfway through. From there on, each page of the book has one single character along the right side of the page, almost like how an address book has a page for all the A’s, then one for all the B’s, etc. But each page in the address section is blank. Perhaps the book’s old owner didn’t have many friends? Who on the Medusa owned this book, and was this person one of the two authors? Are these languages from the local peoples of the New World, or from some darker corners of the Olden Worlde? Whatever the case, a curiosity wells up from within you. Resolute Warder Quo talked a lot about the metropolis of Capitol X, on New Atlantis Island. Perhaps someone there can help you to make sense of this mystery, or at least purchase it from you.",
+            "openQuest": {"questID": "NewAtlantis", "questTitle": "Voyage to New Atlantis", "questDescription": "It is impossible to read anything in the mysterious journal that you found. Perhaps there is someone in New Atlantis who can be of help?"},
+            "nextCardsID": [
+                "BifröstShore49read",
+                "BifröstShore50sleep"
+            ]
+        },
+        {
+            "cardID": "BifröstShore49read",
+            "cardText": "Investigate the book more",
+            "addedText": "Upon flipping through the pages, you can discern nothing else about the book. Of the hundreds of pages, most are blank except for the first seven in one hand and the last paragraph written by a different author. Taking a closer look at that last paragraph, and realize a spot where a line ends, and probably represents two separate paragraphs, not just one. The first seven pages are as inscrutable as before, but this last text seems oddly familiar. It can’t be from the New World. It must be something that you came across before. Maybe in a museum, or some foreign art. It’s nothing from the major Olden Worlde tongues, nothing Norse, not even a precursor to any of those. But you can’t shake the idea that you’ve seen something like it before.",
+            "nextCardsID": [
+                "BifröstShore50sleep"
+            ]
+        },
+        {
+            "cardID": "BifröstShore50sleep",
+            "cardText": "Sleep",
+            "addedText": "You replace the book in the lockbox - this is an island of thieves after all, even if Quo thinks they are all trustworthy. After hastily gulping down the prison fare, your exhausted body and mind quickly allow you to fall asleep.",
+            "nextCardsID": [
+                "BifröstShore51"
+            ]
+        },
+        {
+            "cardID": "BifröstShore51",
+            "cardText": "Dream",
+            "addedText": "You dream of smooth lines of small dark room.<br><br>You dream of dreams that are not your own.<br><br>You dream of the thud as the metal coffin lid closes with you on the wrong side.",
+            "nextCardsID": [
+                "BifröstShore52"
+            ]
+        },
+        {
+            "cardID": "BifröstShore52",
+            "cardText": "Dream",
+            "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you rise up and open the door to see a man standing at your door.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at the mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the courtyard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that has been set on a chair and head to the door.",
+            "nextCardsID": [
+                "BifröstShore53"
+            ]
+        },
+        {
+            "cardID": "BifröstShore53",
+            "cardText": "Leave your quarters",
+            "addedText": "You finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
+            "nextCardsID": [
+                "BifröstShore54"
+            ]
+        },
     ]
 }
