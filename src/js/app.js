@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//51
+//100
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -65,7 +65,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore43',
+    activeCard: 'BifröstShore42',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -189,6 +189,7 @@ function Progress(inputName, icon){
     this.inputName = inputName;
     this.setNames();
     this.icon = icon;
+    this.quantity = 0;
 }
 Progress.prototype = new ScoreType();
 
@@ -199,7 +200,6 @@ function HiddenProgress(inputName){
     this.singularName = inputName;
     this.pluralName = inputName;
     this.quantity = 0;
-
 }
 HiddenProgress.prototype = new ScoreType();
 
@@ -225,7 +225,6 @@ PlayerStat.prototype.increment = function(amount) {
     if (this.quantity > this.maxQuantity) {
         this.quantity = this.maxQuantity;
     }
-//    this.updateStatus();
 };
 
 Collectible.prototype.increment = function(amount) {
@@ -1093,29 +1092,34 @@ var board = {
         }
         //Create Stats and Inventory & put the text in the story
         player.displayText += deck.getCard(player.activeCard).performCard();
-        player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+//        alert(deck.getCard(player.activeCard).nextCardsID);
+//        alert(player.justWon);
+//        alert(player.justFailed);
 
         if (player.justDied) {
             player.justDied = false;
             player.activeCard = 'Dead';
             player.displayText +=`<span class = styleAlert>${deck.getCard(player.activeCard).addedText}<br></span>`;
-            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID.slice();
         }
-        if (player.justWentInsane) {
+        else if (player.justWentInsane) {
             player.justWentInsane = false;
             player.activeCard = 'Insane';
             player.displayText +=`<span class = styleAlert>${deck.getCard(player.activeCard).addedText}<br></span>`;
-            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID;
+            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID.slice();
         }
-        if (player.justWon) {
+        else if (player.justWon) {
             player.justWon = false;
             //player.displayText +=`<span class = styleReward>${deck.getCard(player.activeCard).challengeSuccessText}<br></span>`;
-            player.activeCardsShown = deck.getCard(player.activeCard).challengeSuccessCards;
+            player.activeCardsShown = deck.getCard(player.activeCard).challengeSuccessCards.slice();
         }
-        if (player.justFailed) {
+        else if (player.justFailed) {
             player.justFailed = false;
             //player.displayText +=`<span class = styleCost>${deck.getCard(player.activeCard).challengeFailText}<br></span>`;
-            player.activeCardsShown = deck.getCard(player.activeCard).challengeFailCards;
+            player.activeCardsShown = deck.getCard(player.activeCard).challengeFailCards.slice();
+        } else {
+            //if the player isn't being redirected by death, insanity or a challengeRoll, then load the usual next cards
+            player.activeCardsShown = deck.getCard(player.activeCard).nextCardsID.slice();
         }
 
         numOfCards = player.activeCardsShown.length;
@@ -1123,9 +1127,9 @@ var board = {
             var x = deck.getCard(player.activeCardsShown[i]).checkRequirements();
             if(deck.getCard(player.activeCardsShown[i]).hiddenIfReqsFail && (!x)) {
                 player.activeCardsShown.splice(i, 1);
-
             }
         }
+//        alert(deck.getCard(player.activeCard).nextCardsID);
 
         numOfCards = player.activeCardsShown.length;
         storyDisplay.innerHTML = player.displayText;
