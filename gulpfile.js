@@ -11,7 +11,8 @@ gulp.task('browserify',function(){
 });
 
 gulp.task('watch',function(){
-  gulp.watch('./src/js/*.js', ['browserify']);
+  gulp.watch(['./src/js/*.js', './src/js/*.json'], ['browserify']);
+//  gulp.watch('./src/js/*.json', ['browserify']);
   gulp.watch('./src/html/*.html', ['html']);
   gulp.watch('./src/css/*.css', ['css']);
 });

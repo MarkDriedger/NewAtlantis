@@ -232,6 +232,7 @@
         {
             "cardID": "Medusa8",
             "cardText": "Help the children escape first",
+            "locationDescription": "A ferocious storm threatens the lilting ship",
             "challengeStat": "Heart",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
@@ -903,7 +904,8 @@
         },
         {
             "cardID": "BifröstShore18",
-            "locationName": "Bifröst Prison Camp",
+            "locationName": "Bifröst Prison Camp, your quarters",
+            "locationDescription": "A plain, but comfortable bunkhouse which could house four, but you have it all to yourself.",
             "cardText": "EAT!",
             "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. No, nuthin like you and yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” You realize that this jacket you accidentally gabbed form the sinking Medusa, certainly not your own, has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
             "nextCardsID": [
@@ -1800,7 +1802,7 @@
         {
             "cardID": "BifröstShore49read",
             "cardText": "Investigate the book more",
-            "addedText": "Upon flipping through the pages, you can discern nothing else about the book. Of the hundreds of pages most are blank except for the first seven, written in one hand, and the last paragraph written by a different author. Taking a closer look at that last paragraph, you notice a spot where a line ends, probably representing two separate paragraphs rather than just one. The first seven pages are as inscrutable as before, but these last two paragraphs seem oddly familiar. It can’t be a language from the New World. It must be something that you came across before. Maybe in a museum, or in some foreign work of art. It’s nothing from the major Olden Worlde tongues, nothing Norse, not even a precursor to any of those. But you can’t shake the idea that you’ve seen something like it before.",
+            "addedText": "Upon flipping through the pages, you can discern nothing else about the book. Of the hundreds of pages most are blank except for the first seven, written in one hand, and the last paragraph written by a different author. Taking a closer look at that last paragraph, you notice a spot where a line ends, probably representing two separate paragraphs rather than just one. The first seven pages are as inscrutable as before, but these last two paragraphs seem oddly familiar. It can’t be a language from the New World. It must be something that you came across before. Maybe in a museum, or in some foreign work of art? It’s nothing from the major Olden Worlde tongues, nothing Norse, not even a precursor to any of those. But you can’t shake the idea that you’ve seen something like it before.",
             "nextCardsID": [
                 "BifröstShore50sleep"
             ]
@@ -1816,7 +1818,7 @@
         {
             "cardID": "BifröstShore51",
             "cardText": "Dream",
-            "addedText": "You dream of smooth lines of small dark enclosure.<br><br>You dream of dreams that are not your own.<br><br>You dream of the thud as the metal coffin lid closes with you on the wrong side.",
+            "addedText": "You dream of smooth lines of small dark enclosure.<br><br>You dream of dreams that are not your own.<br><br>You dream of the thud as a metal coffin lid closes with you on the wrong side.",
             "nextCardsID": [
                 "BifröstShore52"
             ]
@@ -1824,7 +1826,7 @@
         {
             "cardID": "BifröstShore52",
             "cardText": "Wake up",
-            "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you rise up and open the door to see a man standing at your door.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at the mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the courtyard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that has been set on a chair and head to the door.",
+            "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you get up and open the door to see a man standing at your door.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the rec yard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that has been set out for you on a chair and head to the door.",
             "nextCardsID": [
                 "BifröstShore53"
             ]
@@ -1834,7 +1836,156 @@
             "cardText": "Leave your quarters",
             "addedText": "You finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
             "nextCardsID": [
-                "BifröstShore54"
+                "BifröstCamp01RecYard"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01RecYard",
+            "cardText": "Enter the central rec yard",
+            "locationName": "Bifröst Prison Camp, rec yard",
+            "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
+            "firstText": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard, walled in by jungle trees, except for one part that is walled in by an actual wall. You can see the ocean through an open gate in the wall. It appears as though a couple of areas are set up for specific games, but no one is there right now. There is a camp office here and you can see a guard tower up on a nearby cliff. ",
+            "addedText": "Not many inmates are hanging out in the rec yard, since they are finishing up their breakfast at the mess hall area and heading up to the burn hill to start work.",
+            "nextCardsID": [
+                "BifröstCamp01Quarters",
+                "BifröstCamp01Office",
+                "BifröstCamp01Wall",
+                "BifröstCamp01Mess"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Quarters",
+            "cardText": "Return to your quarters",
+            "locationName": "Bifröst Prison Camp, your quarters",
+            "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
+            "firstText": "There are no locks on any of the prisoners’ quarters including the one reserved for you.  Perhaps Resolute Warder Quo was right when he reassured you that that you would have nothing to fear in terms of theft, since inmates aren’t allowed to own property anyway. ",
+            "addedText": "You check on the lockbox in your quarters, and it still seems to be safe.",
+            "nextCardsID": [
+                "BifröstCamp01RecYard"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Office",
+            "cardText": "Go to the camp office",
+            "locationName": "Bifröst Prison Camp, office",
+            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
+            "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me, but you were brought here for treatment after they found you washed up on the shore.” ",
+            "addedText": "Behind the beds, patients, and the old woman scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
+            "nextCardsID": [
+                "BifröstCamp01RecYard",
+                "BifröstCamp05QuoOffice"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Wall",
+            "cardText": "Go to the wall",
+            "locationName": "Bifröst Prison Camp, wall",
+            "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
+            "firstText": "A stone wall barricades just one side of the prison camp. In the center of the wall is a large gate, swung wide open. It looks as though it is rarely ever closed. Through the gate, stone steps can be seen leading down to the beach and an ocean pier where boats can dock. ",
+            "addedText": "Since nature provides the barriers of the raw jungle and sea, this wall is probably more for keeping people out than for keeping people in.",
+            "nextCardsID": [
+                "BifröstCamp01RecYard",
+                "BifröstCamp01Pier",
+                "BifröstCamp05Warehouses"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Pier",
+            "cardText": "Go down to the pier",
+            "locationName": "Bifröst Prison Camp, pier",
+            "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
+            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. Resolute Warder Quo is standing there, by piles of crates, scratching his head.<br><br>“Sumthin strange is going on in the New World, The Royal Empire’s been lettin tons of supplies build up here. And the sailors on the last ship weren’t allowed to speak with us convicts. Sumthin’s up for sure.”<br><br>",
+            "addedText": "Like most days, there are no boats at this pier - just an empty beach.",
+            "nextCardsID": [
+                "BifröstCamp01Wall"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Mess",
+            "cardText": "Go to the mess",
+            "locationName": "Bifröst Prison Camp, mess",
+            "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
+            "firstText": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat. Food is not rationed strictly, since fruit, nuts, and fish are fairly plentiful here on this tropical island. Here you get to see the diversity in the makeup of the population in this prison camp. There are male and female prisoners, and even children too. It seems that the prisoners have the freedom to form families during their sentences. Either that, or Her Royal Highness doesn’t balk at sentencing children to Transportation. ",
+            "addedText": "Now that you have a full stomach, you feel ready to head up to the burn hill to start work for the day.",
+            "nextCardsID": [
+                "BifröstCamp01RecYard",
+                "BifröstCamp01BurnHill"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01BurnHill",
+            "cardText": "Walk through the trees to the burn hill",
+            "locationName": "Bifröst Prison Camp, burn hill",
+            "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
+            "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
+            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
+            "nextCardsID": [
+                "BifröstCamp01Mess",
+                "BifröstCamp01JungleCreches"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01JungleCreches",
+            "cardText": "Walk through the jungle to the creches",
+            "locationName": "Bifröst Prison Camp, nesting creches",
+            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
+            "firstText": "You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Finally you see the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire clearing is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Resolute Warder Quo says as he walks up behind you. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
+            "addedText": "“Feel free to pick some candlenuts here if you want a snack,” Quo says as he stands between rows of colorful aviaries and picks a few nuts off the nearest tree.",
+            "nextCardsID": [
+                "BifröstCamp01BurnHill",
+                "BifröstCamp01PickCandlenuts"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01PickCandlenuts",
+            "cardText": "Pick candlenuts",
+            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the watering hole that the creches are built around. ",
+            "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
+            "rewards": [
+                {"rewardName": "Action",
+                "rewardQuantity": -1},
+                {"rewardName": ["candlenut"],
+                "rewardQuantity": [8],
+                "rewardRange": [3]}
+            ],
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01JungleCreches",
+                "BifröstCamp01PickCandlenuts"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp05QuoOffice",
+            "cardText": "Go to the camp office",
+            "locationName": "Bifröst Prison Camp, office",
+            "locationDescription": "Quo’s own office.",
+            "reqs": [
+                {"reqName": "Quo’s key",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "addedText": "You shouldn’t be here yet.",
+            "nextCardsID": [
+                "BifröstCamp01Office"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp05Warehouses",
+            "cardText": "Enter the warehouses",
+            "locationName": "Bifröst Prison Camp, warehouses",
+            "locationDescription": "A series of large wodden warehouses, built up against the prison wall.",
+            "reqs": [
+                {"reqName": "Quo’s key",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "addedText": "You shouldn’t be here yet.",
+            "nextCardsID": [
+                "BifröstCamp01Wall"
             ]
         }
     ]

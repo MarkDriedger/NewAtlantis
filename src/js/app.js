@@ -1,5 +1,5 @@
 /*jshint browser: true, esversion: 6, devel: true */
-//100
+//107
 var locationTitleBox = document.getElementById('location');
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
@@ -65,7 +65,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore42',
+    activeCard: 'BifröstShore49read',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -338,10 +338,11 @@ PlayerStat.prototype.updateStatus = function() {
     levelArray = 0;
 
     statList += `•  Health: ${stats.getScore('Health').quantity}/${stats.getScore('Health').maxQuantity}<br>`;
-    statList += `•  Mind: ${stats.getScore('Mind').quantity}/${stats.getScore('Health').maxQuantity}<br><br>`;
+    statList += `•  Mind: ${stats.getScore('Mind').quantity}/${stats.getScore('Health').maxQuantity}<br>`;
+    statList += `•  Actions: ${stats.getScore('Action').quantity}/${stats.getScore('Action').maxQuantity}<br><br>`;
     statList += '<b><u>Bonuses</u></b><br>';
     stats.score.forEach(function (item) {
-    if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.quantity > 0) && (item instanceof PlayerStat)) {
+    if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.singularName !== 'Action') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
         statList += `•  ${item.singularName}: ${levelArray[0]}%, ${item.quantity}(${levelArray[1]})<br>`;
         }
@@ -825,6 +826,11 @@ PlayableCard.prototype.performCard = function(){
     var returnCardText = '';
     //update locationBox
     this.updateLocation();
+    //if this is the first time viewing this card, then add any text that only applies on the first viewing
+    if (this.firstTime === true && this.firstText !== undefined) {
+        returnCardText += this.firstText;
+    }
+    this.firstTime = false;
     if (this.challengeStat !== undefined) {
         returnCardText += this.performChallenge();
     } else {
@@ -835,9 +841,6 @@ PlayableCard.prototype.performCard = function(){
         } else if (this.setScore !== undefined) {
             returnCardText += `<em>${this.processRewards([])}</em>`;
         }
-    }
-    if (this instanceof LocationCard) {
-        this.firstTime = false;
     }
     return returnCardText;
 };
@@ -1021,6 +1024,9 @@ StoryCard.prototype.loadFromData = function (data) {
     this.hideReqs = data.hideReqs;
     this.openQuest = data.openQuest;
     this.setScore = data.setScore;
+    this.firstTime = true;
+    this.firstText = data.firstText;
+
 };
 
 
@@ -1076,10 +1082,6 @@ deck.getCard('BifröstShore2').cardScript = function() {
 
 //board object
 var board = {
-    // activeCard: 'Medusa0',
-    // displayText: '',
-    // activeCardsShown: [],
-    // activeDice: [],
     locationName: '?',
 
     setBoard() {

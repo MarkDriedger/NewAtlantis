@@ -2,6 +2,7 @@
     "player": [
         {"inputName": ["Health"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
         {"inputName": ["Mind"], "quantity": 100, "maxQuantity": 100, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Action"], "quantity": 20, "maxQuantity": 20, "icon": "/assets/pugrunning21.gif"},
         {"inputName": ["Brawn"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
         {"inputName": ["Hand"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
         {"inputName": ["Heart"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
@@ -44,12 +45,12 @@
 
     "hiddenProgress": [
         {"inputName": ["Medusa lifeboat success"]},
-        {"inputName": ["Medusa lifeboat fail"]},
+        {"inputName": ["Medusa lifeboat fail"]}
     ],
 
     "collectibles": [
         {"inputName": ["candlenut"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
-        {"inputName": ["Quo’s office key"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["Quo’s key"], "quantity": 1, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["inkwell"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["travel jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
