@@ -21,17 +21,18 @@ div.output {
     width: 700px;
     overflow-y:scroll;
     height: 270px;
-    display:inline-block;
+    display: inline-block;
     padding: 5px;
 }
 
 #location {
     background-image: linear-gradient(to bottom, mediumaquamarine, aqua);
     border: 1px solid black;
-    width: 100;
+    width: 700px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
     margin: 5px;
     margin-top: 10px;
+    display: inline-block;
     padding: 5px;
 }
 
@@ -42,7 +43,7 @@ div.output {
     width: 88px;
     height: 138px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
-    display:inline-block;
+    display: inline-block;
     margin: 5px;
 }
 
@@ -53,21 +54,25 @@ div.output {
     width: 88px;
     height: 138px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
-    display:inline-block;
+    display: inline-block;
     margin: 5px;
 }
 
 .enabledCard {
     color: black;
+    display: inline-block;
+
 }
 
 .disabledCard {
     color: grey;
+    display: inline-block;
+
 }
 
 button {
     background-color: yellow;
-    display:inline-block;
+    display: inline-block;
 }
 
 .topDisplay {
@@ -75,7 +80,7 @@ button {
     border: 1px solid black;
     width: 150px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
-    display:inline-block;
+    display: inline-block;
     margin: 5px;
     padding: 5px;
     color: black;
@@ -91,47 +96,57 @@ button {
     width: 40px;
     height: 40px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
-    display:inline-block;
+    display: inline-block;
     margin: 5px;
 }
 
 .diceFace1{
     background-image: url(assets/Alea_1.png);
-    }
+    display: inline-block;
+}
 
 .diceFace2{
     background-image: url(assets/Alea_2.png);
-    }
+    display: inline-block;
+}
 
 .diceFace3{
     background-image: url(assets/Alea_3.png);
-    }
+    display: inline-block;
+}
 
 .diceFace4{
     background-image: url(assets/Alea_4.png);
-    }
+    display: inline-block;
+}
 
 .diceFace5{
     background-image: url(assets/Alea_5.png);
-    }
+    display: inline-block;
+}
 
 .diceFace6{
     background-image: url(assets/Alea_6.png);
-    }
+    display: inline-block;
+}
 
 .diceFace7{
     background-image: url(assets/120px-Dice-7.svg.png);
-    }
+    display: inline-block;
+}
 
 .diceFace8{
     background-image: url(assets/120px-Dice-8a.svg.png);
-    }
+    display: inline-block;
+}
 .diceFace9{
     background-image: url(assets/120px-Dice-9a.svg.png);
-    }
+    display: inline-block;
+}
 .diceFace10{
     background-image: url(assets/120px-Dice-10.svg.png);
-    }
+    display: inline-block;
+}
 
 .styleAlert{
     color: red;

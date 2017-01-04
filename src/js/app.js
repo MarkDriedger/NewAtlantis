@@ -1,6 +1,9 @@
 /*jshint browser: true, esversion: 6, devel: true */
 //107
-var locationTitleBox = document.getElementById('location');
+//var locationTitleBox = document.getElementById('location');
+
+
+
 var button1 = document.getElementById('button1');
 var button2 = document.getElementById('button2');
 var button3 = document.getElementById('button3');
@@ -12,6 +15,12 @@ var statsField = document.getElementById('statsField');
 
 var locationDisplay = document.getElementById('location');
 statsField.appendChild(locationDisplay);
+
+var diceField = document.getElementById('diceField');
+statsField.appendChild(diceField);
+
+var storyDisplay = document.querySelector('.output');
+statsField.appendChild(storyDisplay);
 
 var playerStatsDisplay = document.createElement('p');
 playerStatsDisplay.setAttribute('class', 'topDisplay');
@@ -25,10 +34,9 @@ var reputationDisplay = document.createElement('p');
 reputationDisplay.setAttribute('class', 'topDisplay');
 statsField.appendChild(reputationDisplay);
 
-var storyDisplay = document.querySelector('.output');
-statsField.appendChild(storyDisplay);
 
-var diceField = document.getElementById('diceField');
+
+//var diceField = document.getElementById('diceField');
 var dice = [];
 var maxdice = 20;
 var i = 0;
@@ -38,6 +46,8 @@ for (i = 0; i < maxdice; i += 1) {
 }
 
 var cardField = document.getElementById('cardField');
+statsField.appendChild(cardField);
+
 
 //create 20 displayable cards
 var display = [];
@@ -65,7 +75,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'Medusa20',
+    activeCard: 'Medusa0',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -919,7 +929,7 @@ PlayableCard.prototype.updateLocation = function(){
     if (this.locationDescription) {
         board.locationDescription = this.locationDescription;
     }
-    locationTitleBox.innerHTML = `<b>Location: ${board.locationName}</b><br>${board.locationDescription}`;
+    locationDisplay.innerHTML = `<b>Location: ${board.locationName}</b><br>${board.locationDescription}`;
 };
 
 //create a card whoe primary purpose is navigation
@@ -1078,7 +1088,8 @@ var board = {
             cardField.removeChild(display[i]);
         }
         //Create Stats and Inventory & put the text in the story
-        player.displayText += deck.getCard(player.activeCard).performCard();
+        player.displayText = deck.getCard(player.activeCard).performCard();
+//        player.displayText += deck.getCard(player.activeCard).performCard();
 //        alert(deck.getCard(player.activeCard).nextCardsID);
 //        alert(player.justWon);
 //        alert(player.justFailed);
