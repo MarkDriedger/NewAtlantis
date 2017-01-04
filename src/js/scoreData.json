@@ -91,6 +91,7 @@
         {"inputName": ["mysterious journal"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["journal tome"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["mysterious lockbox", "mysterious lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
-        {"inputName": ["Voynich lockbox", "Voynich lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+        {"inputName": ["Voynich lockbox", "Voynich lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
     ]
 }

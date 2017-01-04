@@ -845,21 +845,6 @@ PlayableCard.prototype.performCard = function(){
     return returnCardText;
 };
 
-/* DELETE PlayableCard.prototype.setChallenge = function(challengeStat, challengeQuantity, successText, successRewardItem, successRewardQuantity, successCostItem, successCostQuantity, failText, failRewardItem, failRewardQuantity, failCostItem, failCostQuantity) {
-    this.challengeStat = challengeStat;
-    this.challengeQuantity = challengeQuantity;
-    this.successText = successText;
-    this.successRewardItem = successRewardItem;
-    this.successRewardQuantity = successRewardQuantity;
-    this.successCostItem = successCostItem;
-    this.successCostQuantity = successCostQuantity;
-    this.failText = failText;
-    this.failRewardItem = failRewardItem;
-    this.failRewardQuantity = failRewardQuantity;
-    this.failCostItem = failCostItem;
-    this.failCostQuantity = failCostQuantity;
-};*/
-
 PlayableCard.prototype.performChallenge = function() {
     var rollResults = stats.getScore(this.challengeStat).rollCompare(this.challengeRoll),
     returnCardText = '',

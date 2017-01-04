@@ -836,7 +836,7 @@
         {
             "cardID": "BifröstShore14a",
             "cardText": "Hide",
-            "addedText": "You duck down low among the rocks. Even though you will soon be starving, you have no idea who these people are or whether they can be trusted.<br><br>“Enrique! I saw something move over there!”<br><br>You curse under your breath as half a dozen individuals rapidly converge on your location. They don’t look happy to see you.",
+            "addedText": "You duck down low among the rocks. Even though you will soon be starving, you have no idea who these people are or whether they can be trusted.<br><br>“Pana! I saw something move over there!”<br><br>You curse under your breath as half a dozen individuals rapidly converge on your location. They don’t look happy to see you.",
             "nextCardsID": [
                 "BifröstShore15"
             ]
@@ -856,7 +856,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "“Enrique, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. What's this crate you got 'ere'?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Convict Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Enrique asks you.",
+            "addedText": "“Pana, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Pana asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. What's this crate you got 'ere'?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Pana. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -864,7 +864,7 @@
         {
             "cardID": "BifröstShore16",
             "cardText": "I’m not sure what you mean",
-            "addedText": "“No, I’m not sure what you mean,” you respond.<br><br>“Exactly what a Snoop would say,” mumbles one of the others under her breath.<br><br>“It’s not up to you to decide,” Headmost Convict Claudia states. “You three, keep on searching the debris. Everyone else, let's escort this one to the Warder.”<br><br>Unarmed and marooned in this strange land, you really have no choice but to go along. Regardless, it isn't long before the state of your mind and body overtakes you. You pass out.",
+            "addedText": "“No, I’m not sure what you mean,” you respond.<br><br>“Exactly what a Snoop would say,” mumbles one of the others under her breath.<br><br>“It’s not up to you to decide,” Headmost Bailiff Claudia states. “You three, keep on searching the debris. Everyone else, let's escort this one to the Warder.”<br><br>Unarmed and marooned in this strange land, you really have no choice but to go along. Regardless, it isn't long before the state of your mind and body overtakes you. You pass out.",
             "nextCardsID": [
                 "BifröstShore16DreamA"
             ]
@@ -1827,6 +1827,10 @@
             "cardID": "BifröstShore52",
             "cardText": "Wake up",
             "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you get up and open the door to see a man standing at your door.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the rec yard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that has been set out for you on a chair and head to the door.",
+            "rewards": [
+                {"rewardName": "prison uniform",
+                "rewardQuantity": 1}
+            ],
             "nextCardsID": [
                 "BifröstShore53"
             ]
@@ -1834,7 +1838,11 @@
         {
             "cardID": "BifröstShore53",
             "cardText": "Leave your quarters",
-            "addedText": "You finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
+            "addedText": "Since you've still got a couple days until the HMNS Humboldt arrives, you may as well lend a hand. Besides, this could be a good chance for you to learn more about the New World. You step out your front door to finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
+            "rewards": [
+                {"rewardName": "day until the Humboldt arrives",
+                "rewardQuantity": -1}
+            ],
             "nextCardsID": [
                 "BifröstCamp01RecYard"
             ]
@@ -1921,7 +1929,8 @@
             "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
             "nextCardsID": [
                 "BifröstCamp01Mess",
-                "BifröstCamp01JungleCreches"
+                "BifröstCamp01JungleCreches",
+                "BifröstCamp02JungleCreches"
             ]
         },
         {
@@ -1929,7 +1938,7 @@
             "cardText": "Walk through the jungle to the creches",
             "locationName": "Bifröst Prison Camp, nesting creches",
             "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
-            "firstText": "You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Finally you see the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire clearing is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Resolute Warder Quo says as he walks up behind you. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
+            "firstText": "After a long uphill walk, you emerge from the trees and climb a small hill. You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Resolute Warder Quo says as he walks up behind you. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
             "addedText": "“Feel free to pick some candlenuts here if you want a snack,” Quo says as he stands between rows of colorful aviaries and picks a few nuts off the nearest tree.",
             "nextCardsID": [
                 "BifröstCamp01BurnHill",
@@ -1977,7 +1986,7 @@
             "cardID": "BifröstCamp05Warehouses",
             "cardText": "Enter the warehouses",
             "locationName": "Bifröst Prison Camp, warehouses",
-            "locationDescription": "A series of large wodden warehouses, built up against the prison wall.",
+            "locationDescription": "A series of large wooden warehouses, built up against the prison wall.",
             "reqs": [
                 {"reqName": "Quo’s key",
                 "reqRule": "=",
