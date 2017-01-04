@@ -39,7 +39,17 @@
         {"inputName": ["convicts’ respect", "convicts’ respect"], "icon": ""},
         {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "icon": ""},
         {"inputName": ["Voynich character"]},
-        {"inputName": ["Voynich code"]}
+        {"inputName": ["Voynich code"]},
+        {"inputName": ["daytime"]},
+        {"inputName": ["nautical progress"]},
+        {"inputName": ["ocean current navigation skill", "ocean current navigation skill"]},
+        {"inputName": ["wind current navigation skill", "wind current navigation skill"]},
+        {"inputName": ["solar navigation skill", "solar navigation skill"]},
+        {"inputName": ["celestial navigation skill", "celestial navigation skill"]},
+        {"inputName": ["drank seawater", "drank seawater"]},
+        {"inputName": ["followed sharks", "followed sharks"]},
+        {"inputName": ["lifeboat examined", "lifeboats examined"]}
+
 
     ],
 
@@ -50,7 +60,7 @@
 
     "collectibles": [
         {"inputName": ["candlenut"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
-        {"inputName": ["Quo’s key"], "quantity": 1, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["Quo’s key"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["inkwell"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["travel jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
@@ -92,6 +102,11 @@
         {"inputName": ["journal tome"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["mysterious lockbox", "mysterious lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["Voynich lockbox", "Voynich lockboxes"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
-        {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+        {"inputName": ["sack of wheels of cheese", "sacks of wheels of cheese"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["crate of water bottles", "crates of water bottles"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["oar"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["sail"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["bottle of fine brandy", "bottles of fine brandy"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["crate of silverware", "crates of silverware"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
     ]
 }

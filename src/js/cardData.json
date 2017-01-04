@@ -109,16 +109,14 @@
                 "Medusa4"
             ],
             "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, another passenger finds their own lantern and illuminates the scene before you. ",
-            "addedText": "You are surrounded by other lost souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. Perhaps it wasn’t wise to travel on a ship named the Medusa?<br><br>“Remain calm!” Orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks spring loose from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water. (for the time being). At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
+            "addedText": "You are surrounded by other lost souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. Perhaps it wasn’t wise to travel on a ship named the Medusa?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks spring loose from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water. (for the time being). At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
         },
         {
             "cardID": "Medusa3",
             "cardText": "Search for your belongings",
-            "addedText": "You spend some time searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your jacket and satchel though, which contains a few useful possessions. You rush toward the door.",
+            "addedText": "You spend some time searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your satchel though, which contains a few useful possessions. You rush toward the door.",
             "rewards": [
                 {"rewardName": "satchel",
-                "rewardQuantity": 1},
-                {"rewardName": "travel jacket",
                 "rewardQuantity": 1},
                 {"rewardName": "Royal shilling",
                 "rewardQuantity": 117},
@@ -128,16 +126,14 @@
                 "rewardQuantity": -1}
             ],
             "nextCardsID": [
-                "Medusa4"
+                "Medusa5"
             ]
         },
         {
             "cardID": "Medusa4",
-            "cardText": "Grab your jacket and hurry to the door",
-            "addedText": "You grab the nearest of your clothes and rush toward the door. Amidst all the chaos, that is easier said than done. A few bunks have toppled over and are blocking your path.",
+            "cardText": "Hurry to the door",
+            "addedText": "You try to rush toward the door. Amidst all the chaos though, that is easier said than done. A few bunks have toppled over and are blocking your path.",
             "rewards": [
-                {"rewardName": "travel jacket",
-                "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
             ],
@@ -261,7 +257,7 @@
                 "Medusa10"
             ],
             "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first. ",
-            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying hard, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is not far from you, but it is very quickly filling up with people."
+            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying hard, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is about to be launched, but it is very quickly filling up with people."
         },
         {
             "cardID": "Medusa9",
@@ -478,6 +474,10 @@
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
             "cardText": "Flounder",
             "addedText": "You flounder, barely managing to get your head above water to take a gasp of air. You look up and see the lifeboat swinging precariously above you. Some commotion ensues on the deck of the ship. A rope snaps. The bow of the lifeboat falls, and it does a nosedive into the ocean, spilling out all who thought they had found relative safety. Screaming people are doing their best to stay afloat, but you can barely hear them over the storm - and one other noise. You don’t know what the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart.",
+            "setScore": [
+                {"setName": "minute until The Medusa sinks",
+                "setQuantity": 0}
+            ],
             "nextCardsID": [
                 "Medusa20"
             ]
@@ -486,7 +486,7 @@
             "cardID": "Medusa20",
             "cardText": "Uh oh",
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
-            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds as if it were a paper ship designed to compactly fit inside of a bottle. The masts and sails slap the sea as if the ship is still trying to fight back. The wave engulfs you next, and when you come up for air again, there is no ship to be seen. You pull yourself up onto a piece of debris, and remember little else for the next several hours.",
+            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like origami. The masts and sails are trust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, one capsized, but there is no ship to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
             "nextCardsID": [
                 "Medusa21"
             ]
@@ -505,15 +505,814 @@
             "cardText": "dream",
             "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the echoes of thunder that trump all other sound.<br><br>You dream of slimy tentacled arms, wrapping around your body, dragging you down.",
             "nextCardsID": [
+                "LifeboatWakeUp"
+            ]
+        },
+        {
+            "cardID": "LifeboatWakeUp",
+            "cardText": "Wake up",
+            "locationName": "The open ocean",
+            "locationDescription": "Nothing but water and sky as far as the eye can see.",
+            "addedText": "You wake up to the rays of the sun scorching your body. You seem to vaguely remember  struggling to right this capsized lifeboat before passing out, but your memory is hazy. You seem to think that there had been others in the water, helping you get the boat upright, but you have no idea what happened to them. You are slightly rested, but you are hungry, thirsty, and alone in the middle of the ocean.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 10}
+            ],
+            "setScore": [
+                {"setName": "daytime",
+                "setQuantity": 1}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatDrinkSeawater",
+            "cardText": "Drink seawater",
+            "addedText": "You seem to remember hearing that drinking seawater is a bad idea. When you choke on the salty water you realize why.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -10},
+                {"rewardName": "drank seawater",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "drank seawater",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatExamineBoat",
+            "cardText": "Examine lifeboat",
+            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a metal lockbox, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. The other supplies might be good to hang on to for barter with potential rescuers.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 5},
+                {"rewardName": "Mind",
+                "rewardQuantity": 5},
+                {"rewardName": "sack of wheels of cheese",
+                "rewardQuantity": 1},
+                {"rewardName": "crate of water bottles",
+                "rewardQuantity": 1},
+                {"rewardName": "oar",
+                "rewardQuantity": 2},
+                {"rewardName": "travel jacket",
+                "rewardQuantity": 1},
+                {"rewardName": "bottle of fine brandy",
+                "rewardQuantity": 2},
+                {"rewardName": "crate of silverware",
+                "rewardQuantity": 2},
+                {"rewardName": "lifeboat examined",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "lifeboat examined",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatSleep",
+            "cardText": "Sleep",
+            "addedText": "You are feeling weak, so you curl up under the bow of the boat and close your eyes. You are unsure how long you slept for, but when you wake up you are feeling rested. You partake in a small amount of the food and fresh water in the lifeboat’s small hold.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 30},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": "<",
+                "reqQuantity": 50},
+                {"reqName": "lifeboat examined",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatPassOut",
+            "cardText": "PassOut",
+            "addedText": "You have driven yourself hard - harder than your body can handle. When you wake up, you are unsure how long you were out for, but your body is grateful in some small part for the break.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 10},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": "<=",
+                "reqQuantity": 10}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowAimlessly",
+            "cardText": "Row aimlessly",
+            "addedText": "You row for a while, but you feel you are just going in circles, not making any progress. You don’t know where you can go, but you must go somewhere. Sitting in the middle of the ocean will lead to nothing but exhaustion in the sun. You need to find some way of guiding yourself.",
+            "rewards": [
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["daytime"],
+                "rewardQuantity": [1],
+                "rewardRange": [1]}
+            ],
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatWatchWater",
+            "cardText": "Watch the water",
+            "addedText": "Although you cannot see any sign of the bottom, gazing at the deep water, you see flickers of motion passing beneath you. You slowly begin to get a feel for the direction of the ocean currents. <br><br> If you do nothing, you will have little chance of finding land, but your odds would be greatly improved if you travel faster by following the current. Perhaps with a bit more understanding, you could paddle in the direction of the current.",
+            "rewards": [
+                {"rewardName": "ocean current navigation skill",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "ocean current navigation skill",
+                "reqRule": "<",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowFollowOceanCurrent",
+            "cardText": "Row. Follow the ocean current",
+            "addedText": "You feel that you have a good enough understanding of the direction of the current to follow it. You don’t know if you are heading toward land, or just the open ocean, but at least you are are making progress, rather than just sitting out in the open ocean.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "ocean current navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "ocean current navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },{
+            "cardID": "LifeboatRowFollowDolphins",
+            "cardText": "Row, following dolphins",
+            "addedText": "You spot a pod of dolphins leaping in and out of the water. Certainly dolphins would head towards reefs or islands where there is a greater congregation of fish?",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "ocean current navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "nautical progress",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "ocean current navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowFollowSharks",
+            "cardText": "Row. Follow sharks",
+            "addedText": "That doesn’t work. The sharks seem to be following you.",
+            "hiddenIfReqsFail": true,
+            "rewards": [
+                {"rewardName": "followed sharks",
+                "rewardQuantity": 1}
+            ],
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "followed sharks",
+                "reqRule": "=",
+                "reqQuantity": 0},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "ocean current navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatWatchClouds",
+            "cardText": "Watch the clouds",
+            "addedText": "You gaze upwards at the white puffy cumulus clouds and begin to identify shapes and directions of movement. Perhaps by getting a better understanding of the prevailing winds, you can find a way towards land.",
+            "rewards": [
+                {"rewardName": "wind current navigation skill",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "wind current navigation skill",
+                "reqRule": "<",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowFollowBirds",
+            "cardText": "Row, following the birds",
+            "addedText": "You spot a flock of seagulls in the distance. Birds cannot live over water forever; they need to eventually return to land. You follow them until they fly off into the distance, confident that you are getting closer to land.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "wind current navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "nautical progress",
+                "reqRule": ">",
+                "reqQuantity": 4},
+                {"reqName": "wind current navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowFollowClouds",
+            "cardText": "Row, following clouds",
+            "addedText": "Every day and every night, in this part of the world there never seems to be a cloudless sky. You have a good understanding of the wind currents here and you are able to use this information to keep your direction true. No one can guarantee that the winds are taking you to land, but at least you know you are not going in circles.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "wind current navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "wind current navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatWatchSun",
+            "cardText": "Watch the sun",
+            "addedText": "It’s a shame that the Sun moves through the sky so slowly. Perhaps if you study it more, you can which direction it is moving in.",
+            "rewards": [
+                {"rewardName": "solar navigation skill",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "nautical progress",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "solar navigation skill",
+                "reqRule": "<",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowNavigateUsingSun",
+            "cardText": "Row. Navigate using the Sun.",
+            "addedText": "While wind and water can shift direction, the Sun only travels one consistent path, rising in the east and setting in the west. You have a good enough understanding of the sun’s motion now to tell which direction you are headed in… as long as it isn’t too cloudy out.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "solar navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "solar navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatWatchStars",
+            "cardText": "Watch the stars",
+            "addedText": "Are the stars here in the New World the same as those of the Olden? You wish you had paid more attention to learning the constellations in school. You start to make out a few patterns in the sparkling sky above, and perhaps with more understanding you could use these to navigate by.",
+            "rewards": [
+                {"rewardName": "celestial navigation skill",
+                "rewardQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "nautical progress",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "celestial navigation skill",
+                "reqRule": "<",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatRowNavigateUsingStars",
+            "cardText": "Row. Navigate using the stars.",
+            "addedText": "Out here in the open ocean, the night sky is a veritable map to guide yourself by. You have identified the North Star, which  never seems to change position, so now at night you can always tell which direction you are traveling in… as long as it isn’t overcast.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5,
+                "rewardRange": 2},
+                {"rewardName": "daytime",
+                "rewardQuantity": 0.5,
+                "rewardRange": 0.5},
+                {"rewardName": "celestial navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "nautical progress",
+                "rewardQuantity": 3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "oar",
+                "reqRule": ">=",
+                "reqQuantity": 2},
+                {"reqName": "celestial navigation skill",
+                "reqRule": ">=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatRowFollowDolphins",
+                "LifeboatRowFollowSharks",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowBirds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatSail",
+            "cardText": "Sail",
+            "addedText": "You should not be able to access this content.",
+            "reqs": [
+                {"reqName": "sail",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "LifeboatRowAimlessly"
+            ]
+        },
+        {
+            "cardID": "LifeboatLandHo",
+            "cardText": "Land ho!",
+            "locationName": "The open ocean",
+            "locationDescription": "The horizon is broken up by a small stretch of land.",
+            "addedText": "Land ho! Finally, your long trek across the waves may soon be at an end.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "nautical progress",
+                "reqRule": ">=",
+                "reqQuantity": 15}
+            ],
+            "nextCardsID": [
+                "LifeboatPaddleToShore"
+            ]
+        },
+        {
+            "cardID": "LifeboatPaddleToShore",
+            "cardText": "Paddle to shore",
+            "addedText": "You approach a land of green jungle, upon black rocks. There is no sign of human settlement, but where there are trees there may be food. As you get closer to shore, more and more of the black rocks protrude out of the ocean. This doesn’t look like a good landing site, but after days on the open ocean, any land is better than none.",
+            "nextCardsID": [
+                "LifeboatAvoidRocks"
+            ]
+        },
+        {
+            "cardID": "LifeboatAvoidRocks",
+            "cardText": "Avoid the rocks!",
+            "addedText": "As the water gets shallower, the surf gets stronger. One particularly large wave sweeps you up and dashes you against a large black boulder. Everything goes dark.",
+            "nextCardsID": [
                 "BifröstShore0"
             ]
         },
+
+
+
+
+
+
+
         {
             "cardID": "BifröstShore0",
             "cardText": "Wake up",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.<br><br>Your stomach rumbles and you remember that you had some beef leather in your pocket leftover from dinner. But upon doing a closer inspection of yourself, you realize that the jacket you are wearing is not your own. You must have grabbed a strangers clothes when fleeing the sinking Medusa.",
+            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.<br><br>Your stomach rumbles and you remember that you had some beef leather in your pocket leftover from dinner.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -30}

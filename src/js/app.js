@@ -65,7 +65,7 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'BifröstShore49read',
+    activeCard: 'Medusa20',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
