@@ -2232,7 +2232,7 @@
                 "reqRule": "<=",
                 "reqQuantity": 3}
             ],
-            "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I’ll get that prize for you tomorrow - you earned it! I’ll bring it to you then and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such. Like I said earlier, I got a prize for you. You seem to be good folk, and you certainly proved you’re capable. Your prize depends on which strategy you like to choose - not just in this game, but in life.”",
             "setScore": [
                 {"setName": "Life or Death piece",
                 "setQuantity": 0},
@@ -2247,7 +2247,11 @@
                 "rewardRange": [1]}
             ],
             "nextCardsID": [
-                "BifröstShore42"
+                "BifröstShore41Brawn",
+                "BifröstShore41Hand",
+                "BifröstShore41Heart",
+                "BifröstShore41Eye",
+                "BifröstShore41Voice",
                 ]
         },
         {
@@ -2258,7 +2262,7 @@
                 "reqRule": "<=",
                 "reqQuantity": 3}
             ],
-            "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I got a prize I’ll give you regardless - maybe it’ll help you win next game. I’ll bring it to you tomorrow and maybe we can play another game. But it’s dinner time, so I’d best be off to sup and sleep. You should too. I’ll see you at first light tomorrow.”",
+            "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I got a prize I’ll give you regardless - maybe it’ll help you win next game. You seem to be good folk, and you certainly proved you’re capable. Your prize depends on which strategy you like to choose - not just in this game, but in life.”",
             "setScore": [
                 {"setName": "Life or Death piece",
                 "setQuantity": 0},
@@ -2273,8 +2277,72 @@
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "nextCardsID": [
-                "BifröstShore42"
+                "BifröstShore41Brawn",
+                "BifröstShore41Hand",
+                "BifröstShore41Heart",
+                "BifröstShore41Eye",
+                "BifröstShore41Voice",
                 ]
+        },
+        {
+            "cardID": "BifröstShore41Brawn",
+            "cardText": "Choose Brawn. I like to solve a situation directly by relying on my might.",
+            "addedText": "“Brawn, I appreciate that. Might makes right. You’ll find like-minded folks if you seek out the Olden Worlde powers and the folks who turn the wheels of commerce when you make your way to New Atlantis. Here take this. It’ll help you out whenever your Brawn is put to the test.”",
+            "rewards": [
+                {"rewardName": "Brawn",
+                "rewardQuantity": 5050}
+            ],
+            "nextCardsID": [
+                "BifröstShore42"
+            ]
+        },
+        {
+            "cardID": "BifröstShore41Hand",
+            "cardText": "Choose Hand. I like to solve a situation indirectly by relying on my finesse.",
+            "addedText": "“Hand, I understand that. Quality over quantity. You’d be surprised how helpful the animals of New Atlantis can be when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Hand is put to the test.”",
+            "rewards": [
+                {"rewardName": "Hand",
+                "rewardQuantity": 5050}
+            ],
+            "nextCardsID": [
+                "BifröstShore42"
+            ]
+        },
+        {
+            "cardID": "BifröstShore41Heart",
+            "cardText": "Choose Heart. I like to solve a situation honorably by relying on what I know to be true in my heart.",
+            "addedText": "“Heart, I admire that. Emotions make us human, after all. You’d be surprised how helpful the locals of the New Worlde can be for someone like you who follows your heart, and who respects their traditions. Here take this. It’ll help you out whenever your Heart is put to the test.”",
+            "rewards": [
+                {"rewardName": "Heart",
+                "rewardQuantity": 5050}
+            ],
+            "nextCardsID": [
+                "BifröstShore42"
+            ]
+        },
+        {
+            "cardID": "BifröstShore41Eye",
+            "cardText": "Choose Eye. I like to solve a situation uniquely, through thought and observation.",
+            "addedText": "“Eye, I respect that. You’re a corkscrew thinker. New Atlantis is full of renegades and rebels of various sorts who like to think outside the box. Some are friendly, some are not; all of them are … unique. Here take this. It’ll help you out whenever your Eye is put to the test.”",
+            "rewards": [
+                {"rewardName": "Eye",
+                "rewardQuantity": 5050}
+            ],
+            "nextCardsID": [
+                "BifröstShore42"
+            ]
+        },
+        {
+            "cardID": "BifröstShore41Voice",
+            "cardText": "Choose Voice. I like to solve a situation subtly by relying on my powers of persuasion.",
+            "addedText": "“Voice, I’m not surprised by that. The pen is mightier than the sword, after all. There are many in New Atlantis who seek to make social change in the New Worlde, but by many different means. You should look them up when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Voice is put to the test.”",
+            "rewards": [
+                {"rewardName": "Voice",
+                "rewardQuantity": 5050}
+            ],
+            "nextCardsID": [
+                "BifröstShore42"
+            ]
         },
         {
             "cardID": "BifröstShore42",

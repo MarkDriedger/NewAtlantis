@@ -107,6 +107,8 @@
         {"inputName": ["oar"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["sail"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["bottle of fine brandy", "bottles of fine brandy"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
-        {"inputName": ["crate of silverware", "crates of silverware"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+        {"inputName": ["crate of silverware", "crates of silverware"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+
     ]
 }

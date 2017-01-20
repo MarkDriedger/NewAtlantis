@@ -75,7 +75,9 @@ for (i = 0; i < maxcards; i += 1) {
 
 var player = {
     displayText: '',
-    activeCard: 'Medusa0',
+    //whatever this is set to will be the initial card that the player will start the game at
+//    activeCard: 'Medusa0',
+    activeCard: 'BifröstShore24',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
