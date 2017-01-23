@@ -55,12 +55,13 @@ var maxcards = 20;
 var i = 0;
 for (i = 0; i < maxcards; i += 1) {
     display[i] = document.createElement('div');
-    display[i].setAttribute('class', 'displayCard enabledCard');
+    display[i].setAttribute('class', 'displayCard');
+    
 }
 
 //set up event listeners for up to 20 displayable cards
 var onCardClick = function (event) {
-    if (display[this.displayIndex].className === 'displayCard enabledCard'){
+    if (display[this.displayIndex].className !== 'disabledCard'){
         player.displayText += `<br><span class = styleCard>* ${deck.getCard(player.activeCardsShown[this.displayIndex]).cardText}<br></span>`;
         player.activeCard = player.activeCardsShown[this.displayIndex];
         board.setBoard();
@@ -76,8 +77,8 @@ for (i = 0; i < maxcards; i += 1) {
 var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
-//    activeCard: 'Medusa0',
-    activeCard: 'BifröstShore24',
+    activeCard: 'Medusa0',
+//    activeCard: 'BifröstShore24',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -1067,7 +1068,7 @@ var deck = {
 
 deck.loadData(externalCardData);
 
-deck.getCard('BifröstShore2').cardScript = function() {
+/*deck.getCard('BifröstShore2').cardScript = function() {
     if (stats.getScore('lantern').quantity > 0) {
         stats.getScore('lantern').decrement(-1 * stats.getScore('lantern').quantity);
         stats.getScore('inkwell').decrement(-1 * stats.getScore('inkwell').quantity);
@@ -1075,11 +1076,12 @@ deck.getCard('BifröstShore2').cardScript = function() {
     } else {
         return '';
     }
-};
+};*/
 
 //board object
 var board = {
     locationName: '?',
+    locationDescription: '<br>',
 
     setBoard() {
         var oldNumOfCards = player.activeCardsShown.length,
@@ -1140,9 +1142,26 @@ var board = {
             display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence()}`;
             //disable cards if requirements are not met
             if (deck.getCard(player.activeCardsShown[i]).checkRequirements()) {
-                display[i].setAttribute('class', 'displayCard enabledCard');
+                if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye') {
+                    display[i].setAttribute('class', 'eyeCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn') {
+                    display[i].setAttribute('class', 'brawnCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice') {
+                    display[i].setAttribute('class', 'voiceCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand') {
+                    display[i].setAttribute('class', 'handCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart') {
+                    display[i].setAttribute('class', 'heartCard');
+                }
+                else {
+                    display[i].setAttribute('class', 'displayCard');
+                }
             } else {
-                display[i].setAttribute('class', 'displayCard disabledCard');
+                display[i].setAttribute('class', 'disabledCard');
             }
         }
     }

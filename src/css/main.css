@@ -37,26 +37,77 @@ div.output {
 }
 
 .displayCard {
-    background-image: url(assets/queenTemplate.jpg);
+    background-image: url(assets/card-Base2.png);
     background-size: 128px,178px;
     padding: 20px;
     width: 88px;
     height: 138px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
     display: inline-block;
+    color: black;
     margin: 5px;
 }
 
-.storyCard {
-    background-image: url(jacktempate.jpg);
+.brawnCard {
+    background-image: url(assets/card-Brawn2.png);
     background-size: 128px,178px;
     padding: 20px;
     width: 88px;
     height: 138px;
     box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
     display: inline-block;
+    color: black;
     margin: 5px;
 }
+
+.handCard {
+    background-image: url(assets/card-Hand2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
+.heartCard {
+    background-image: url(assets/card-Heart2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
+.eyeCard {
+    background-image: url(assets/card-Eye2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
+.voiceCard {
+    background-image: url(assets/card-Voice2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
 
 .enabledCard {
     color: black;
@@ -64,11 +115,19 @@ div.output {
 
 }
 
-.disabledCard {
-    color: grey;
-    display: inline-block;
 
+.disabledCard {
+    background-image: url(assets/card-Disabled.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: grey;
+    margin: 5px;
 }
+
 
 button {
     background-color: yellow;

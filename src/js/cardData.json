@@ -77,7 +77,7 @@
             "locationName": "The Medusa",
             "locationDescription": "Inside a choatic cabin",
             "cardText": "Wake Up",
-            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the noise, you remember there was a lantern near your bunk.",
+            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, your mind hones in on one thought: there was a lantern near your bunk.",
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -99,7 +99,7 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you oen the shutter. Your light helps another passenger get their own lantern working too. Now you can literally shed light on what’s going on. ",
+            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
             "challengeFailRewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
@@ -108,13 +108,13 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but can’t seem to find anything there. Thankfully, another passenger finds their own lantern and illuminates the scene before you. ",
-            "addedText": "You are surrounded by other lost souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. Perhaps it wasn’t wise to travel on a ship named the Medusa?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks spring loose from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water. (for the time being). At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
+            "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
+            "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
         },
         {
             "cardID": "Medusa3",
             "cardText": "Search for your belongings",
-            "addedText": "You spend some time searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your satchel though, which contains a few useful possessions. You rush toward the door.",
+            "addedText": "You spend a few meagre moments searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your satchel though, which contains a few useful possessions. You rush toward the door.",
             "rewards": [
                 {"rewardName": "satchel",
                 "rewardQuantity": 1},
@@ -275,7 +275,7 @@
         {
             "cardID": "Medusa10",
             "cardText": "Hurry to the nearest lifeboat",
-            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their buddies and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
+            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their comrades and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -449,7 +449,7 @@
             "reqs": [
                 {"reqName": "Royal shilling",
                 "reqRule": ">=",
-                "reqQuantity": 117}
+                "reqQuantity": 100}
             ],
             "nextCardsID": [
                 "Medusa19"
@@ -458,12 +458,14 @@
         {
             "cardID": "Medusa18",
             "cardText": "Wait for the lifeboat to be launched",
-            "addedText": "One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of his buddies yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.<br><br>You flounder, barely managing to get your head above water to take a gasp of air. Screaming passengers and crew are doing their best to stay afloat, but you can barely hear them over the storm - and one other noise. You don’t know what the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart",
+            "addedText": "One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of the crew yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.<br><br>You flounder, barely managing to get your head above water to take a gasp of air. Screaming passengers and crew are doing their best to stay afloat, but you can barely hear them over the storm - and another new noise. You don’t know where the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": -20},
-                {"rewardName": "minute until The Medusa sinks",
-                "rewardQuantity": -1}
+                "rewardQuantity": -20}
+            ],
+            "setScore": [
+                {"setName": "minute until The Medusa sinks",
+                "setQuantity": 0}
             ],
             "nextCardsID": [
                 "Medusa20"
@@ -473,7 +475,7 @@
             "cardID": "Medusa19",
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
             "cardText": "Flounder",
-            "addedText": "You flounder, barely managing to get your head above water to take a gasp of air. You look up and see the lifeboat swinging precariously above you. Some commotion ensues on the deck of the ship. A rope snaps. The bow of the lifeboat falls, and it does a nosedive into the ocean, spilling out all who thought they had found relative safety. Screaming people are doing their best to stay afloat, but you can barely hear them over the storm - and one other noise. You don’t know what the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart.",
+            "addedText": "You flounder, barely managing to get your head above water to take a gasp of air. You look up and see the lifeboat swinging precariously above you. Some commotion ensues on the deck of the ship. A rope snaps. The bow of the lifeboat falls, and it does a nosedive into the ocean, spilling out all who thought they had found relative safety. Screaming people are doing their best to stay afloat, but you can barely hear them over the storm - and another new noise. You don’t know where the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart.",
             "setScore": [
                 {"setName": "minute until The Medusa sinks",
                 "setQuantity": 0}
@@ -486,7 +488,7 @@
             "cardID": "Medusa20",
             "cardText": "Uh oh",
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
-            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like origami. The masts and sails are trust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, one capsized, but there is no ship to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
+            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it is a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like paper. The masts and sails are thrust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, one capsized, but there is no ship to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
             "nextCardsID": [
                 "Medusa21"
             ]
@@ -513,7 +515,7 @@
             "cardText": "Wake up",
             "locationName": "The open ocean",
             "locationDescription": "Nothing but water and sky as far as the eye can see.",
-            "addedText": "You wake up to the rays of the sun scorching your body. You seem to vaguely remember  struggling to right this capsized lifeboat before passing out, but your memory is hazy. You seem to think that there had been others in the water, helping you get the boat upright, but you have no idea what happened to them. You are slightly rested, but you are hungry, thirsty, and alone in the middle of the ocean.",
+            "addedText": "You wake to the sun's heat scorching your body. You seem to vaguely remember  struggling to right this capsized lifeboat before passing out, but your memory is hazy. You seem to remember others in the water, helping you get the boat upright, but you have no idea what happened to them. You are slightly rested, but you are hungry, thirsty, and alone in the middle of the ocean.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 10}
@@ -550,7 +552,7 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -10},
-                {"rewardName": "drank seawater",
+                {"rewardName": "seawater drank",
                 "rewardQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
@@ -558,7 +560,7 @@
                 {"reqName": "Health",
                 "reqRule": ">",
                 "reqQuantity": 10},
-                {"reqName": "drank seawater",
+                {"reqName": "seawater drank",
                 "reqRule": "=",
                 "reqQuantity": 0}
             ],
@@ -898,14 +900,14 @@
             "addedText": "That doesn’t work. The sharks seem to be following you.",
             "hiddenIfReqsFail": true,
             "rewards": [
-                {"rewardName": "followed sharks",
+                {"rewardName": "sharks followed",
                 "rewardQuantity": 1}
             ],
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
                 "reqQuantity": 10},
-                {"reqName": "followed sharks",
+                {"reqName": "sharks followed",
                 "reqRule": "=",
                 "reqQuantity": 0},
                 {"reqName": "oar",
@@ -1261,7 +1263,7 @@
             "addedText": "You should not be able to access this content.",
             "reqs": [
                 {"reqName": "sail",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1}
             ],
             "nextCardsID": [
