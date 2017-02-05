@@ -40,7 +40,7 @@
             "cardID": "Medusa0",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "You dream of darkness<br><br>You dream of screams<br><br>You dream of the cold",
+            "addedText": "You dream of darkness<br><br>You dream of screams<br><br>You dream of the cold<br><br><br><br><em>[draw a card to play]</em>",
             "nextCardsID": [
                 "Medusa1",
                 "MedusaA"
@@ -77,7 +77,7 @@
             "locationName": "The Medusa",
             "locationDescription": "Inside a choatic cabin",
             "cardText": "Wake Up",
-            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, your mind hones in on one thought: there was a lantern near your bunk.",
+            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, your mind hones in on one thought: there was a lantern near your bunk.<br><br><em>[You will only succeed if you you have a good Eye. You need to roll a 4 or higher to find the lantern]</em>",
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -99,7 +99,7 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeSuccessText": "You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
+            "challengeSuccessText": "<em>[Now you have a 1% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 2 points of experience. When you reach 3 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
             "challengeFailRewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": 10}
@@ -108,13 +108,13 @@
                 "Medusa3",
                 "Medusa4"
             ],
-            "challengeFailText": "You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
+            "challengeFailText": "<em>[Oh well, at least now you have a 2% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 4 points of experience. When you reach 5 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
             "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
         },
         {
             "cardID": "Medusa3",
             "cardText": "Search for your belongings",
-            "addedText": "You spend a few meagre moments searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your satchel though, which contains a few useful possessions. You rush toward the door.",
+            "addedText": "You spend a few meagre moments searching, but many of your belongings have been scattered around the room. There is too little light and too much chaos to find them. You are able to grab your satchel though, which contains a few useful possessions. You rush toward the door.<br><br><em>[This next challenge requires you to have skill with your Hand instead]</em>",
             "rewards": [
                 {"rewardName": "satchel",
                 "rewardQuantity": 1},
@@ -132,7 +132,7 @@
         {
             "cardID": "Medusa4",
             "cardText": "Hurry to the door",
-            "addedText": "You try to rush toward the door. Amidst all the chaos though, that is easier said than done. A few bunks have toppled over and are blocking your path.",
+            "addedText": "You try to rush toward the door. Amidst all the chaos though, that is easier said than done. A few bunks have toppled over and are blocking your path.<br><br><em>[This next challenge requires you to have skill with your Hand instead]</em>",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -257,7 +257,7 @@
                 "Medusa10"
             ],
             "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first. ",
-            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying hard, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is about to be launched, but it is very quickly filling up with people."
+            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying their best, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is about to be launched, but it is very quickly filling up with people."
         },
         {
             "cardID": "Medusa9",
@@ -275,7 +275,7 @@
         {
             "cardID": "Medusa10",
             "cardText": "Hurry to the nearest lifeboat",
-            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their comrades and then they’ll be on the lifeboat too. How will you attempt to get on the boat?",
+            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their comrades and then they’ll be on the lifeboat too, leaving you and the other passengers behind. How will you attempt to get on the boat?",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -458,7 +458,7 @@
         {
             "cardID": "Medusa18",
             "cardText": "Wait for the lifeboat to be launched",
-            "addedText": "One of the others yells “Andie! Let’s go!” A sailor (Andie perhaps?) leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of the crew yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.<br><br>You flounder, barely managing to get your head above water to take a gasp of air. Screaming passengers and crew are doing their best to stay afloat, but you can barely hear them over the storm - and another new noise. You don’t know where the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart",
+            "addedText": "One of the sailors yells “Andie! Let’s go!” You presume it is Andie who then leaps into the lifeboat beside you, and her crewmates start to untie the knots to release the lifeboat into the heaving ocean waves. The knots are wet from the storm, and one of the crewmembers begins to hack at the ropes with his sabre.<BR><BR>“No!” One of the crew yells, but it is too late. The blade cuts through the rope, releasing only the front of the lifeboat, pitching you and all the other lifeboat passengers head over heels into the ocean.<br><br>You flounder, barely managing to get your head above water to take a gasp of air. Screaming passengers and crew are doing their best to stay afloat, but you can barely hear them over the storm - and another new noise. You don’t know where the noise is coming from - the masts, the sails, or the hull of the Medusa itself, but something is about to come apart",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20}
@@ -488,14 +488,20 @@
             "cardID": "Medusa20",
             "cardText": "Uh oh",
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
-            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it is a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like paper. The masts and sails are thrust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, one capsized, but there is no ship to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
+            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it is a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like paper. The masts and sails are thrust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, some upright. But there is no Medusa to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -20},
+                {"rewardName": "Mind",
+                "rewardQuantity": -20}
+            ],
             "nextCardsID": [
                 "Medusa21"
             ]
         },
         {
             "cardID": "Medusa21",
-            "cardText": "continue",
+            "cardText": "",
             "locationDescription": "?",
             "addedText": "You dream of darkness again<br><BR>You dream of screams again<br><br>You dream of the cold again.",
             "nextCardsID": [
@@ -511,18 +517,21 @@
             ]
         },
         {
-            "cardID": "LifeboatWakeUp",
-            "cardText": "Wake up",
-            "locationName": "The open ocean",
-            "locationDescription": "Nothing but water and sky as far as the eye can see.",
-            "addedText": "You wake to the sun's heat scorching your body. You seem to vaguely remember  struggling to right this capsized lifeboat before passing out, but your memory is hazy. You seem to remember others in the water, helping you get the boat upright, but you have no idea what happened to them. You are slightly rested, but you are hungry, thirsty, and alone in the middle of the ocean.",
-            "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": 10}
-            ],
+            "cardID": "LifeboatSunMorning",
+            "cardText": "The morning sunrise",
+            "addedText": "As the sun emerges upon a new day, you feel renewed hope that you can conquer this sea.",
             "setScore": [
-                {"setName": "daytime",
-                "setQuantity": 1}
+                {"setName": "time of day",
+                "setQuantity": 0}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": ">",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 5}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -532,35 +541,34 @@
                 "LifeboatRowAimlessly",
                 "LifeboatWatchWater",
                 "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
                 "LifeboatWatchClouds",
                 "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
                 "LifeboatWatchSun",
                 "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
                 "LifeboatSail",
                 "LifeboatLandHo"
             ]
         },
         {
-            "cardID": "LifeboatDrinkSeawater",
-            "cardText": "Drink seawater",
-            "addedText": "You seem to remember hearing that drinking seawater is a bad idea. When you choke on the salty water you realize why.",
+            "cardID": "LifeboatSunNoon",
+            "cardText": "The noon sun",
+            "addedText": "Exposed patches of your skin scorch in the hot mid-day sun of the tropics. You can’t stay here or you’ll die.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 1}
+            ],
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": -10},
-                {"rewardName": "seawater drank",
-                "rewardQuantity": 1}
+                "rewardQuantity": -5},
+                {"rewardName": "Mind",
+                "rewardQuantity": -5}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
-                {"reqName": "Health",
+                {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 10},
-                {"reqName": "seawater drank",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
                 "reqRule": "=",
                 "reqQuantity": 0}
             ],
@@ -572,13 +580,79 @@
                 "LifeboatRowAimlessly",
                 "LifeboatWatchWater",
                 "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
                 "LifeboatWatchClouds",
                 "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
                 "LifeboatWatchSun",
                 "LifeboatRowNavigateUsingSun",
+                "LifeboatRowFollowBirds",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatSunDusk",
+            "cardText": "The setting sun",
+            "addedText": "Your sunburned shoulders begin to feel relief now that the sun is beginning to dip low near the horizon, but your body still feels dehydrated.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 2}
+            ],
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": ">",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatWatchSun",
+                "LifeboatRowNavigateUsingSun",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatSunEvening",
+            "cardText": "The evening stars",
+            "addedText": "A thousand points of light dot the night sky. This could be your map, if only you knew where you were going.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": ">",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
                 "LifeboatWatchStars",
                 "LifeboatRowNavigateUsingStars",
                 "LifeboatSail",
@@ -586,15 +660,367 @@
             ]
         },
         {
+            "cardID": "LifeboatSunMidnight",
+            "cardText": "The chilled midnight wind",
+            "addedText": "The crisp night air starts to seep into your bones.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 4}
+            ],
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": ">",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatSunLateNight",
+            "cardText": "The long night",
+            "addedText": "Your body struggles against sleep as the hours of the night stretch on as vast as the ocean.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 5}
+            ],
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -5}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": ">",
+                "reqQuantity": 9},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 4}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatWatchStars",
+                "LifeboatRowNavigateUsingStars",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+
+        {
+            "cardID": "LifeboatCloudMorning",
+            "cardText": "The thick morning fog",
+            "addedText": "The gradually brightening fog informs you that the sun has risen on a new day lost at sea. For better or worse, hopefully it is your last.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 0}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 5}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowDolphins",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatCloudNoon",
+            "cardText": "The gentle mid-day rain",
+            "addedText": "The sun is obscured by so many clouds that you can barely make it out. It’s heat is no match for the fog’s cold.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 1}
+            ],
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -2}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowSharks",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatCloudDusk",
+            "cardText": "The darkening stormclouds",
+            "addedText": "Darkening stormclouds menace the evening skies.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 2}
+            ],
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -3}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowDolphins",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatCloudEvening",
+            "cardText": "The pouring rain",
+            "addedText": "The evening is cold, wet, and dark. The wind and rain sap the energy from your body.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 3}
+            ],
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -5},
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 2}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatCloudMidnight",
+            "cardText": "The black of night",
+            "addedText": "A blanket of clouds voids the night sky of moon and stars.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 4}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatRowFollowSharks",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+        {
+            "cardID": "LifeboatCloudLateNight",
+            "cardText": "The eerie darkness",
+            "addedText": "The long hours of the night drag on. The clouds block every trace of light, leaving you in darkness.",
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 5}
+            ],
+            "rewards": [
+                {"rewardName": "Mind",
+                "rewardQuantity": -2}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "weather",
+                "reqRule": "<",
+                "reqQuantity": 10},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 4}
+            ],
+            "nextCardsID": [
+                "LifeboatDrinkSeawater",
+                "LifeboatExamineBoat",
+                "LifeboatSleep",
+                "LifeboatPassOut",
+                "LifeboatRowAimlessly",
+                "LifeboatWatchWater",
+                "LifeboatRowFollowOceanCurrent",
+                "LifeboatWatchClouds",
+                "LifeboatRowFollowClouds",
+                "LifeboatSail",
+                "LifeboatLandHo"
+            ]
+        },
+
+
+
+
+
+        {
+            "cardID": "LifeboatWakeUp",
+            "cardText": "Wake up",
+            "locationName": "The open ocean",
+            "locationDescription": "Nothing but water and sky as far as the eye can see.",
+            "addedText": "You wake to the sun's heat scorching your body. You have a vague memory of struggling to right this capsized lifeboat before passing out, but your mind is hazy. There were others in the water too, helping you right the lifeboat. Weren't there? Whatever happened, they are no longer here. You are slightly rested, but you are hungry, thirsty, and alone in the middle of the ocean.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 10},
+                {"rewardName": "weather",
+                "rewardQuantity": 5}
+            ],
+            "nextCardsID": [
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
+            ]
+        },
+        {
+            "cardID": "LifeboatDrinkSeawater",
+            "cardText": "Drink seawater",
+            "addedText": "You seem to remember hearing that drinking seawater is a bad idea. When you choke on the salty water you realize why.",
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -10},
+                {"rewardName": "seawater drank",
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10},
+                {"reqName": "seawater drank",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
+            ]
+        },
+        {
             "cardID": "LifeboatExamineBoat",
             "cardText": "Examine lifeboat",
-            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a metal lockbox, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. The other supplies might be good to hang on to for barter with potential rescuers.",
+            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a metal lockbox, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. The other supplies might be good to hang on to for bartering with potential rescuers.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 5},
                 {"rewardName": "Mind",
                 "rewardQuantity": 5},
-                {"rewardName": "sack of wheels of cheese",
+                {"rewardName": "sack of cheese",
                 "rewardQuantity": 1},
                 {"rewardName": "crate of water bottles",
                 "rewardQuantity": 1},
@@ -607,7 +1033,10 @@
                 {"rewardName": "crate of silverware",
                 "rewardQuantity": 2},
                 {"rewardName": "lifeboat examined",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -616,24 +1045,18 @@
                 "reqQuantity": 0}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -643,9 +1066,9 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 30},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5}
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -657,24 +1080,18 @@
                 "reqQuantity": 1}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -684,9 +1101,9 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 10},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5}
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -695,24 +1112,18 @@
                 "reqQuantity": 10}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -723,9 +1134,9 @@
                 {"rewardName": ["Health"],
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
-                {"rewardName": ["daytime"],
+                {"rewardName": ["weather"],
                 "rewardQuantity": [1],
-                "rewardRange": [1]}
+                "rewardRange": [5]}
             ],
             "reqs": [
                 {"reqName": "Health",
@@ -736,24 +1147,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -762,7 +1167,10 @@
             "addedText": "Although you cannot see any sign of the bottom, gazing at the deep water, you see flickers of motion passing beneath you. You slowly begin to get a feel for the direction of the ocean currents. <br><br> If you do nothing, you will have little chance of finding land, but your odds would be greatly improved if you travel faster by following the current. Perhaps with a bit more understanding, you could paddle in the direction of the current.",
             "rewards": [
                 {"rewardName": "ocean current navigation skill",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -774,24 +1182,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -799,12 +1201,12 @@
             "cardText": "Row. Follow the ocean current",
             "addedText": "You feel that you have a good enough understanding of the direction of the current to follow it. You don’t know if you are heading toward land, or just the open ocean, but at least you are are making progress, rather than just sitting out in the open ocean.",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -823,36 +1225,30 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },{
             "cardID": "LifeboatRowFollowDolphins",
             "cardText": "Row, following dolphins",
             "addedText": "You spot a pod of dolphins leaping in and out of the water. Certainly dolphins would head towards reefs or islands where there is a greater congregation of fish?",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -874,24 +1270,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -901,7 +1291,10 @@
             "hiddenIfReqsFail": true,
             "rewards": [
                 {"rewardName": "sharks followed",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "reqs": [
                 {"reqName": "Health",
@@ -918,24 +1311,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -944,7 +1331,10 @@
             "addedText": "You gaze upwards at the white puffy cumulus clouds and begin to identify shapes and directions of movement. Perhaps by getting a better understanding of the prevailing winds, you can find a way towards land.",
             "rewards": [
                 {"rewardName": "wind current navigation skill",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -956,24 +1346,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -981,12 +1365,12 @@
             "cardText": "Row, following the birds",
             "addedText": "You spot a flock of seagulls in the distance. Birds cannot live over water forever; they need to eventually return to land. You follow them until they fly off into the distance, confident that you are getting closer to land.",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -1008,24 +1392,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1033,12 +1411,12 @@
             "cardText": "Row, following clouds",
             "addedText": "Every day and every night, in this part of the world there never seems to be a cloudless sky. You have a good understanding of the wind currents here and you are able to use this information to keep your direction true. No one can guarantee that the winds are taking you to land, but at least you know you are not going in circles.",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -1057,24 +1435,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1083,7 +1455,10 @@
             "addedText": "It’s a shame that the Sun moves through the sky so slowly. Perhaps if you study it more, you can which direction it is moving in.",
             "rewards": [
                 {"rewardName": "solar navigation skill",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -1098,24 +1473,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1123,12 +1492,12 @@
             "cardText": "Row. Navigate using the Sun.",
             "addedText": "While wind and water can shift direction, the Sun only travels one consistent path, rising in the east and setting in the west. You have a good enough understanding of the sun’s motion now to tell which direction you are headed in… as long as it isn’t too cloudy out.",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "solar navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -1147,24 +1516,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1173,7 +1536,10 @@
             "addedText": "Are the stars here in the New World the same as those of the Olden? You wish you had paid more attention to learning the constellations in school. You start to make out a few patterns in the sparkling sky above, and perhaps with more understanding you could use these to navigate by.",
             "rewards": [
                 {"rewardName": "celestial navigation skill",
-                "rewardQuantity": 1}
+                "rewardQuantity": 1},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -1188,24 +1554,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1213,12 +1573,12 @@
             "cardText": "Row. Navigate using the stars.",
             "addedText": "Out here in the open ocean, the night sky is a veritable map to guide yourself by. You have identified the North Star, which  never seems to change position, so now at night you can always tell which direction you are traveling in… as long as it isn’t overcast.",
             "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -5,
-                "rewardRange": 2},
-                {"rewardName": "daytime",
-                "rewardQuantity": 0.5,
-                "rewardRange": 0.5},
+                {"rewardName": ["Health"],
+                "rewardQuantity": [-5],
+                "rewardRange": [2]},
+                {"rewardName": ["weather"],
+                "rewardQuantity": [1],
+                "rewardRange": [5]},
                 {"rewardName": "celestial navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
@@ -1237,24 +1597,18 @@
                 "reqQuantity": 2}
             ],
             "nextCardsID": [
-                "LifeboatDrinkSeawater",
-                "LifeboatExamineBoat",
-                "LifeboatSleep",
-                "LifeboatPassOut",
-                "LifeboatRowAimlessly",
-                "LifeboatWatchWater",
-                "LifeboatRowFollowOceanCurrent",
-                "LifeboatRowFollowDolphins",
-                "LifeboatRowFollowSharks",
-                "LifeboatWatchClouds",
-                "LifeboatRowFollowClouds",
-                "LifeboatRowFollowBirds",
-                "LifeboatWatchSun",
-                "LifeboatRowNavigateUsingSun",
-                "LifeboatWatchStars",
-                "LifeboatRowNavigateUsingStars",
-                "LifeboatSail",
-                "LifeboatLandHo"
+                "LifeboatSunMorning",
+                "LifeboatSunNoon",
+                "LifeboatSunDusk",
+                "LifeboatSunEvening",
+                "LifeboatSunMidnight",
+                "LifeboatSunLateNight",
+                "LifeboatCloudMorning",
+                "LifeboatCloudNoon",
+                "LifeboatCloudDusk",
+                "LifeboatCloudEvening",
+                "LifeboatCloudMidnight",
+                "LifeboatCloudLateNight"
             ]
         },
         {
@@ -1263,8 +1617,8 @@
             "addedText": "You should not be able to access this content.",
             "reqs": [
                 {"reqName": "sail",
-                "reqRule": ">=",
-                "reqQuantity": 1}
+                "reqRule": ">",
+                "reqQuantity": 0}
             ],
             "nextCardsID": [
                 "LifeboatRowAimlessly"
@@ -1289,7 +1643,7 @@
         {
             "cardID": "LifeboatPaddleToShore",
             "cardText": "Paddle to shore",
-            "addedText": "You approach a land of green jungle, upon black rocks. There is no sign of human settlement, but where there are trees there may be food. As you get closer to shore, more and more of the black rocks protrude out of the ocean. This doesn’t look like a good landing site, but after days on the open ocean, any land is better than none.",
+            "addedText": "You approach a land of green jungle and black rocks. There is no sign of human settlement, but where there are trees there may be food. As you get closer to shore, more and more of the black rocks protrude out of the ocean. This doesn’t look like a good landing site, but after days on the open ocean, any land is better than none.",
             "nextCardsID": [
                 "LifeboatAvoidRocks"
             ]
@@ -1297,21 +1651,14 @@
         {
             "cardID": "LifeboatAvoidRocks",
             "cardText": "Avoid the rocks!",
-            "addedText": "As the water gets shallower, the surf gets stronger. One particularly large wave sweeps you up and dashes you against a large black boulder. Everything goes dark.",
+            "addedText": "As the water gets shallower, the surf gets stronger. One particularly large wave sweeps you up and dashes you against a large black boulder. You huddle under the protection of the bow as the surf and rocks batter your small craft.",
             "nextCardsID": [
                 "BifröstShore0"
             ]
         },
-
-
-
-
-
-
-
         {
             "cardID": "BifröstShore0",
-            "cardText": "Wake up",
+            "cardText": "The boat stopped *fix from here to include boat",
             "locationName": "?",
             "locationDescription": "",
             "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.<br><br>Your stomach rumbles and you remember that you had some beef leather in your pocket leftover from dinner.",
@@ -1529,7 +1876,7 @@
             ],
             "challengeStat": "Hand",
             "challengeRoll": 6,
-            "challengeSuccessRewards": [
+            "challengeSuccessRewards": [ {}
             ],
             "challengeSuccessCards": [
                 "BifröstShore10"
@@ -1763,7 +2110,7 @@
             "cardText": "It’s got to be better than it sounds.",
             "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this'll help you here in the New World. There are five main strategies that you can use in this game. Just like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off with no skills with all of these strategies, but you can improve them with practice. Lemme show you,” Quo says, pushing a red piece forward.<br><br>“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers.",
             "rewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": 16},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": 16}
@@ -1775,7 +2122,7 @@
         {
             "cardID": "BifröstShore25",
             "cardText": "Ask about Brawn",
-            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
+            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of Brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
             "nextCardsID": [
                 "BifröstShore26"
             ]
@@ -1799,7 +2146,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1826,7 +2173,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1837,7 +2184,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1864,7 +2211,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1899,7 +2246,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1910,7 +2257,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -1928,7 +2275,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
@@ -1939,7 +2286,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -1958,7 +2305,7 @@
         {
             "cardID": "BifröstShore33",
             "cardText": "Ask about Eye",
-            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ Imperial galleon, that show’s skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
+            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ Imperial galleon, that shows skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
             "nextCardsID": [
                 "BifröstShore34"
                 ]
@@ -1980,7 +2327,7 @@
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -2}
             ],
             "challengeFailCards": [
@@ -2021,7 +2368,7 @@
             "challengeSuccessText": "After making a couple moves that shore up your defences, you advance a Gladiator and a Librarian. Quo chooses to defend against the Librarian. He fell for it! You march your Gladiator in to capture his own Librarian, and threaten his Queen.<br><br>“Uh oh, you’re gettin dangerously close to my Queen! She’ll be able to save herself, but you fooled me well with that false Librarian.” ",
             "hideReqs": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
@@ -2041,21 +2388,27 @@
             "cardID": "BifröstShore39",
             "cardText": "keep playing",
             "addedText": "It’s your turn. What move will you make?",
+            "reqs": [
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3},
+                {"reqName": "Your Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3}
+            ],
             "nextCardsID": [
                 "BifröstShore40Brawn",
                 "BifröstShore40Hand",
                 "BifröstShore40Heart",
                 "BifröstShore40Eye",
-                "BifröstShore40Voice",
-                "BifröstShore41Won",
-                "BifröstShore41Lost"
+                "BifröstShore40Voice"
                 ]
         },
         {
             "cardID": "BifröstShore40Brawn",
             "cardText": "Use Brawn strategy",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3},
                 {"reqName": "Quo’s Life or Death piece",
@@ -2072,17 +2425,21 @@
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeSuccessText": "In a bold move, you use one of your remaining blue {0}s to take out one of Quo’s red {1}s. ",
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeFailText": "You try to forcefully advance one of your remaining blue {0}s, but Quo takes it out with his red {1}. "
         },
@@ -2090,7 +2447,7 @@
             "cardID": "BifröstShore40Hand",
             "cardText": "Use Hand strategy",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3},
                 {"reqName": "Quo’s Life or Death piece",
@@ -2107,17 +2464,21 @@
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You sneakily move your blue {0} into position. Quo didn’t see it coming, and he is forced to lose his one of his {1}s. ",
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeFailText": "You try to sneak up on Quo with a {0} but he figures out your strategy, and knocks it off the board with his red {1}. "
         },
@@ -2125,7 +2486,7 @@
             "cardID": "BifröstShore40Heart",
             "cardText": "Use Heart strategy",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3},
                 {"reqName": "Quo’s Life or Death piece",
@@ -2142,17 +2503,21 @@
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You take a stab directly at Quo’s Queen with your blue {0}. He defends, but is flustered and makes a poor move. His {1} is yours. ",
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeFailText": "You strike right at Quo’s Queen with your blue {0}, but he defends easily with a {1} and your {0} is lost. "
         },
@@ -2160,7 +2525,7 @@
             "cardID": "BifröstShore40Eye",
             "cardText": "Use Eye strategy",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3},
                 {"reqName": "Quo’s Life or Death piece",
@@ -2177,17 +2542,21 @@
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeSuccessText": "It looks like Quo is trying to place his {1} within striking distance of your Queen. You position your {0}, so that when he tries, you are able to capture his {1} handily. ",
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeFailText": "It appears that Quo is setting up his {1} for an attack on your Queen. You pre-empt him by blocking him with your {0}, but it turns out that was just a ploy. With your {0} out in the open, he easily captures it. "
         },
@@ -2195,7 +2564,7 @@
             "cardID": "BifröstShore40Voice",
             "cardText": "Use Voice strategy",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3},
                 {"reqName": "Quo’s Life or Death piece",
@@ -2212,17 +2581,21 @@
                 "rewardQuantity": -1}
             ],
             "challengeSuccessCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You try to throw Quo off. You advance your {0}, as if you are making a move on his Queen. He tries to defend though, and in doing so he leaves his {2} wide open. It’s easy to swoop in with your {1} as you had planned all along. ",
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
-                {"rewardName": "Life or Death piece",
+                {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
             ],
             "challengeFailCards": [
-                "BifröstShore39"
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
             ],
             "challengeFailText": "You try to throw Quo off his game. You advance your {0}, as if you are about to make a move on his Queen, but your real plan is to draw out one of his pieces and capture it with your {1}. He realizes that you wouldn’t be so careless to go for his Queen at this point though, and doesn’t respond to your feint. Instead he uses a move that you hadn’t seen coming at all, and with his {2} he captures your {0} while at the same time blocks your {1} from retaliating. Damn. "
         },
@@ -2234,9 +2607,9 @@
                 "reqRule": "<=",
                 "reqQuantity": 3}
             ],
-            "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such. Like I said earlier, I got a prize for you. You seem to be good folk, and you certainly proved you’re capable. Your prize depends on which strategy you like to choose - not just in this game, but in life.”",
+            "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
             "setScore": [
-                {"setName": "Life or Death piece",
+                {"setName": "Your Life or Death piece",
                 "setQuantity": 0},
                 {"setName": "Quo’s Life or Death piece",
                 "setQuantity": 0}
@@ -2249,24 +2622,20 @@
                 "rewardRange": [1]}
             ],
             "nextCardsID": [
-                "BifröstShore41Brawn",
-                "BifröstShore41Hand",
-                "BifröstShore41Heart",
-                "BifröstShore41Eye",
-                "BifröstShore41Voice",
-                ]
+                "BifröstShore41Choose"
+            ]
         },
         {
             "cardID": "BifröstShore41Lost",
             "cardText": "You lose",
             "reqs": [
-                {"reqName": "Life or Death piece",
+                {"reqName": "Your Life or Death piece",
                 "reqRule": "<=",
                 "reqQuantity": 3}
             ],
-            "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”<br><br>“I got a prize I’ll give you regardless - maybe it’ll help you win next game. You seem to be good folk, and you certainly proved you’re capable. Your prize depends on which strategy you like to choose - not just in this game, but in life.”",
+            "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
             "setScore": [
-                {"setName": "Life or Death piece",
+                {"setName": "Your Life or Death piece",
                 "setQuantity": 0},
                 {"setName": "Quo’s Life or Death piece",
                 "setQuantity": 0}
@@ -2279,11 +2648,19 @@
             "hideReqs": true,
             "hiddenIfReqsFail": true,
             "nextCardsID": [
+                "BifröstShore41Choose"
+                ]
+        },
+        {
+            "cardID": "BifröstShore41Choose",
+            "cardText": "continue",
+            "addedText": "“I got a prize I’ll give you regardless - maybe it’ll help you win next game. You seem to be good folk, and you certainly proved you’re capable. Your prize depends on which strategy you like to choose - not just in this game, but in life.” You learned about all five skills while we were playing there. Which one speaks to you most?",
+            "nextCardsID": [
                 "BifröstShore41Brawn",
                 "BifröstShore41Hand",
                 "BifröstShore41Heart",
                 "BifröstShore41Eye",
-                "BifröstShore41Voice",
+                "BifröstShore41Voice"
                 ]
         },
         {

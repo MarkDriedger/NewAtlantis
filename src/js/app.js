@@ -56,7 +56,7 @@ var i = 0;
 for (i = 0; i < maxcards; i += 1) {
     display[i] = document.createElement('div');
     display[i].setAttribute('class', 'displayCard');
-    
+
 }
 
 //set up event listeners for up to 20 displayable cards
@@ -77,8 +77,9 @@ for (i = 0; i < maxcards; i += 1) {
 var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
-    activeCard: 'Medusa0',
-//    activeCard: 'BifröstShore24',
+    activeCard: 'Medusa22',
+//    activeCard: 'BifröstShore23',
+//    activeCard: 'LifeboatRowNavigateUsingSun',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -157,7 +158,7 @@ ScoreType.prototype.correctName = function(amount){
 };
 
 //PlayerStats are ScoreType objects that track a player's abilities
-function PlayerStat(inputName, quantity, maxQuantity, icon){
+function PlayerStat(inputName, quantity, maxQuantity, minQuantity, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + points
     this.inputName = inputName;
@@ -170,6 +171,10 @@ function PlayerStat(inputName, quantity, maxQuantity, icon){
     this.quantity = quantity;
     //stats may have a maximum value. FIX this so some stats have no maxQuantity
     this.maxQuantity = maxQuantity;
+    this.minQuantity = 0;
+    if (minQuantity !== 0) {
+        this.minQuantity = minQuantity;
+    }
     this.icon = icon;
     //since dice can be rolled for PlayerStats, the number of dice is needed
     this.diceQuantity = 1;
@@ -180,12 +185,17 @@ function PlayerStat(inputName, quantity, maxQuantity, icon){
 PlayerStat.prototype = new ScoreType();
 
 //Reputations are ScoreType objects that indicate a faction's relationship with the player. They can go negative.
-function Reputation(inputName, quantity, icon){
+function Reputation(inputName, quantity, maxQuantity, minQuantity, icon){
     ScoreType.call(this);
     this.inputName = inputName;
     this.singularName = inputName[0];
     this.pluralName = inputName[0];
     this.quantity = quantity;
+    this.maxQuantity = maxQuantity;
+    this.minQuantity = 0;
+    if (minQuantity !== 0) {
+        this.minQuantity = minQuantity;
+    }
     this.icon = icon;
     //since dice can be rolled for Reputation, the number of dice is needed. FIX
     this.diceQuantity = 1;
@@ -196,32 +206,56 @@ function Reputation(inputName, quantity, icon){
 Reputation.prototype = new ScoreType();
 
 //Progresses are ScoreType objects that are a generic catch-all, indicating the progress the player has made in some aspect. The player is made aware of these. They start at zero, and generally simply increment when moving through a story.
-function Progress(inputName, icon){
+function Progress(inputName, quantity, maxQuantity, minQuantity, icon){
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + s
     this.inputName = inputName;
     this.setNames();
-    this.icon = icon;
     this.quantity = 0;
+    if (quantity >= 0) {
+        this.quantity = quantity;
+    }
+    this.minQuantity = 0;
+    if (minQuantity < 1000000) {
+        this.minQuantity = minQuantity;
+    }
+    this.maxQuantity = maxQuantity;
+    this.icon = icon;
 }
 Progress.prototype = new ScoreType();
 
 //HiddenProgresses are ScoreType objects that behave like regular Progress, but they are not shared with the player.
-function HiddenProgress(inputName){
+function HiddenProgress(inputName, quantity, maxQuantity, minQuantity, icon){
     ScoreType.call(this);
     this.inputName = inputName;
     this.singularName = inputName;
     this.pluralName = inputName;
     this.quantity = 0;
+    if (quantity >= 0) {
+        this.quantity = quantity;
+    }
+    this.minQuantity = 0;
+    if (minQuantity !== 0) {
+        this.minQuantity = minQuantity;
+    }
+    this.maxQuantity = maxQuantity;
+    this.icon = icon;
 }
 HiddenProgress.prototype = new ScoreType();
 
 //Collectibles are ScoreType objects that the player can acquire into their inventory
-function Collectible(inputName, quantity, marketValue, buff, icon){
+function Collectible(inputName, quantity, marketValue, minQuantity, buff, icon){
     ScoreType.call(this);
     this.inputName = inputName;
     this.setNames();
-    this.quantity = quantity;
+    this.quantity = 0;
+    if (quantity >= 0) {
+        this.quantity = quantity;
+    }
+    this.minQuantity = 0;
+    if (minQuantity !== 0) {
+        this.minQuantity = minQuantity;
+    }
     //Collectibles are the only ScoreType objects that can be sold or equipped, so they need marketValues and buffs
     this.marketValue = marketValue;
     this.buff = buff;
@@ -242,21 +276,30 @@ PlayerStat.prototype.increment = function(amount) {
 
 Collectible.prototype.increment = function(amount) {
     this.quantity += amount;
-//    this.updateInventory();
+    if (this.quantity > this.maxQuantity) {
+        this.quantity = this.maxQuantity;
+    }
 };
 
 Reputation.prototype.increment = function(amount) {
     this.quantity += amount;
-//    this.updateReputation();
+    if (this.quantity > this.maxQuantity) {
+        this.quantity = this.maxQuantity;
+    }
 };
 
 Progress.prototype.increment = function(amount) {
     this.quantity += amount;
-//    this.updateReputation();
+    if (this.quantity > this.maxQuantity) {
+        this.quantity = this.maxQuantity;
+    }
 };
 
 HiddenProgress.prototype.increment = function(amount) {
     this.quantity += amount;
+    if (this.quantity > this.maxQuantity) {
+        this.quantity = this.maxQuantity;
+    }
 };
 
 //decrement the quantity of a stat. All stats can go below zero except for PlayerStat and Collectible.
@@ -288,22 +331,31 @@ PlayerStat.prototype.decrement = function(amount) {
 
 Reputation.prototype.decrement = function(amount) {
     this.quantity += amount;
+    if (this.quantity < this.minQuantity) {
+        this.quantity = this.minQuantity;
+    }
     this.updateReputation();
 };
 
 Progress.prototype.decrement = function(amount) {
     this.quantity += amount;
+    if (this.quantity < this.minQuantity) {
+        this.quantity = this.minQuantity;
+    }
     this.updateReputation();
 };
 
 HiddenProgress.prototype.decrement = function(amount) {
     this.quantity += amount;
+    if (this.quantity < this.minQuantity) {
+        this.quantity = this.minQuantity;
+    }
 };
 
 Collectible.prototype.decrement = function(amount) {
     this.quantity += amount;
-    if (this.quantity < 0) {
-        this.quantity = 0;
+    if (this.quantity < this.minQuantity) {
+        this.quantity = this.minQuantity;
     }
     this.updateInventory();
 };
@@ -357,7 +409,7 @@ PlayerStat.prototype.updateStatus = function() {
     stats.score.forEach(function (item) {
     if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.singularName !== 'Action') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
-        statList += `•  ${item.singularName}: ${levelArray[0]}%, ${item.quantity}(${levelArray[1]})<br>`;
+        statList += `•  ${item.singularName}: ${levelArray[0]}% (${item.quantity} of ${item.quantity+levelArray[1]})<br>`;
         }
     });
     playerStatsDisplay.innerHTML = statList;
@@ -512,23 +564,23 @@ var stats = {
         var me = this;
         // Populate the score array with the provided data
         data.player.forEach(function (item) {
-            var myItem = new PlayerStat(item.inputName, item.quantity, item.maxQuantity, item.icon);
+            var myItem = new PlayerStat(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.icon);
             me.score.push(myItem);
         });
         data.reputation.forEach(function (item) {
-            var myItem = new Reputation(item.inputName, item.quantity, item.icon);
+            var myItem = new Reputation(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.icon);
             me.score.push(myItem);
         });
         data.progress.forEach(function (item) {
-            var myItem = new Progress(item.inputName, item.icon);
+            var myItem = new Progress(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.icon);
             me.score.push(myItem);
         });
         data.hiddenProgress.forEach(function (item) {
-            var myItem = new HiddenProgress(item.inputName);
+            var myItem = new HiddenProgress(item.inputName, item.quantity, item.maxQuantity, item.minQuantity);
             me.score.push(myItem);
         });
         data.collectibles.forEach(function (item) {
-            var myItem = new Collectible(item.inputName, item.quantity, item.marketValue, item.buff, item.icon);
+            var myItem = new Collectible(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.marketValue, item.buff, item.icon);
             me.score.push(myItem);
         });
     },
@@ -769,16 +821,22 @@ PlayableCard.prototype.requirementSentence = function(){
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            if (this.reqs[req].reqRule === '>=') {
-                reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
-            } else if (this.reqs[req].reqRule === '>') {
-                reqList += `more than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+            if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity !== 1)) {
+                reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
+            //this one will say "a" in the case that at least one thing is required
+            } else if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity === 1)) {
+                reqList += `a ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
+            } else if ((this.reqs[req].reqRule === '>') & (this.reqs[req].reqQuantity !== 0)) {
+                reqList += `more than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
+            //this one will say "a" in the case that more than zero things are required
+            } else if ((this.reqs[req].reqRule === '>') & (this.reqs[req].reqQuantity === 0)) {
+                reqList += `a ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
             } else if (this.reqs[req].reqRule === '<') {
-                reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+                reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             } else if (this.reqs[req].reqRule === '<=') {
-                reqList += `at most ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+                reqList += `at most ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             } else if (this.reqs[req].reqRule === '=') {
-                reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`; //this will not pluralize names FIX
+                reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             }
             if (req < numOfReqs - 2) {
                 reqList += ', ';
@@ -1067,16 +1125,6 @@ var deck = {
 };
 
 deck.loadData(externalCardData);
-
-/*deck.getCard('BifröstShore2').cardScript = function() {
-    if (stats.getScore('lantern').quantity > 0) {
-        stats.getScore('lantern').decrement(-1 * stats.getScore('lantern').quantity);
-        stats.getScore('inkwell').decrement(-1 * stats.getScore('inkwell').quantity);
-        return `<span class=styleCost>↓You lost 1 lantern, and 1 inkwell.</span><br>`;
-    } else {
-        return '';
-    }
-};*/
 
 //board object
 var board = {
