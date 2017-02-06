@@ -302,7 +302,8 @@
             "reqs": [
                 {"reqName": "minute until The Medusa sinks",
                 "reqRule": ">",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "Medusa11",
@@ -519,6 +520,7 @@
         {
             "cardID": "LifeboatSunMorning",
             "cardText": "The morning sunrise",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the bright morning  sky above.",
             "addedText": "As the sun emerges upon a new day, you feel renewed hope that you can conquer this sea.",
             "setScore": [
                 {"setName": "time of day",
@@ -528,10 +530,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 5}
+                "reqQuantity": 5,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -552,6 +556,7 @@
         {
             "cardID": "LifeboatSunNoon",
             "cardText": "The noon sun",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the cloudless noon  sky above.",
             "addedText": "Exposed patches of your skin scorch in the hot mid-day sun of the tropics. You can’t stay here or you’ll die.",
             "setScore": [
                 {"setName": "time of day",
@@ -567,10 +572,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -592,6 +599,7 @@
         {
             "cardID": "LifeboatSunDusk",
             "cardText": "The setting sun",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the darkening dusk sky above.",
             "addedText": "Your sunburned shoulders begin to feel relief now that the sun is beginning to dip low near the horizon, but your body still feels dehydrated.",
             "setScore": [
                 {"setName": "time of day",
@@ -605,10 +613,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -629,6 +639,7 @@
         {
             "cardID": "LifeboatSunEvening",
             "cardText": "The evening stars",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the starry evening sky above.",
             "addedText": "A thousand points of light dot the night sky. This could be your map, if only you knew where you were going.",
             "setScore": [
                 {"setName": "time of day",
@@ -638,10 +649,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -662,6 +675,7 @@
         {
             "cardID": "LifeboatSunMidnight",
             "cardText": "The chilled midnight wind",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the brightly lit midnight sky above.",
             "addedText": "The crisp night air starts to seep into your bones.",
             "setScore": [
                 {"setName": "time of day",
@@ -675,10 +689,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -699,6 +715,7 @@
         {
             "cardID": "LifeboatSunLateNight",
             "cardText": "The long night",
+            "locationDescription": "All you can see is the endless ocean below the horizon, and the dazzling night sky above.",
             "addedText": "Your body struggles against sleep as the hours of the night stretch on as vast as the ocean.",
             "setScore": [
                 {"setName": "time of day",
@@ -712,10 +729,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": ">",
-                "reqQuantity": 9},
+                "reqQuantity": 9,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 4}
+                "reqQuantity": 4,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -737,6 +756,7 @@
         {
             "cardID": "LifeboatCloudMorning",
             "cardText": "The thick morning fog",
+            "locationDescription": "The foggy morning skies hide the endless ocean that surrounds you.",
             "addedText": "The gradually brightening fog informs you that the sun has risen on a new day lost at sea. For better or worse, hopefully it is your last.",
             "setScore": [
                 {"setName": "time of day",
@@ -746,10 +766,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 5}
+                "reqQuantity": 5,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -769,6 +791,7 @@
         {
             "cardID": "LifeboatCloudNoon",
             "cardText": "The gentle mid-day rain",
+            "locationDescription": "The rainy mid-day skies hide the endless ocean that surrounds you.",
             "addedText": "The sun is obscured by so many clouds that you can barely make it out. It’s heat is no match for the fog’s cold.",
             "setScore": [
                 {"setName": "time of day",
@@ -782,10 +805,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -805,6 +830,7 @@
         {
             "cardID": "LifeboatCloudDusk",
             "cardText": "The darkening stormclouds",
+            "locationDescription": "The ominous thunderclouds of the afternoon skies loom over the endless ocean that surrounds you.",
             "addedText": "Darkening stormclouds menace the evening skies.",
             "setScore": [
                 {"setName": "time of day",
@@ -818,10 +844,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -841,6 +869,7 @@
         {
             "cardID": "LifeboatCloudEvening",
             "cardText": "The pouring rain",
+            "locationDescription": "The grey drizzling evening skies melt into the endless ocean that surrounds you.",
             "addedText": "The evening is cold, wet, and dark. The wind and rain sap the energy from your body.",
             "setScore": [
                 {"setName": "time of day",
@@ -856,10 +885,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -878,6 +909,7 @@
         {
             "cardID": "LifeboatCloudMidnight",
             "cardText": "The black of night",
+            "locationDescription": "The black midnight skies hide the endless ocean that surrounds you.",
             "addedText": "A blanket of clouds voids the night sky of moon and stars.",
             "setScore": [
                 {"setName": "time of day",
@@ -887,10 +919,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -910,6 +944,7 @@
         {
             "cardID": "LifeboatCloudLateNight",
             "cardText": "The eerie darkness",
+            "locationDescription": "The gloomy late night skies hide the endless ocean that surrounds you.",
             "addedText": "The long hours of the night drag on. The clouds block every trace of light, leaving you in darkness.",
             "setScore": [
                 {"setName": "time of day",
@@ -923,10 +958,12 @@
             "reqs": [
                 {"reqName": "weather",
                 "reqRule": "<",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "time of day",
                 "reqRule": "=",
-                "reqQuantity": 4}
+                "reqQuantity": 4,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatDrinkSeawater",
@@ -957,7 +994,7 @@
                 {"rewardName": "Health",
                 "rewardQuantity": 10},
                 {"rewardName": "weather",
-                "rewardQuantity": 5}
+                "rewardQuantity": 10}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -984,17 +1021,19 @@
                 {"rewardName": "seawater drank",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "seawater drank",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1035,14 +1074,15 @@
                 {"rewardName": "lifeboat examined",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "lifeboat examined",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1067,17 +1107,23 @@
                 {"rewardName": "Health",
                 "rewardQuantity": 30},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": "<",
-                "reqQuantity": 50},
+                "reqQuantity": 50,
+                "reqHidden": true},
+                {"reqName": "Health",
+                "reqRule": ">",
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "lifeboat examined",
                 "reqRule": "=",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1096,13 +1142,13 @@
         },
         {
             "cardID": "LifeboatPassOut",
-            "cardText": "PassOut",
+            "cardText": "Pass Out",
             "addedText": "You have driven yourself hard - harder than your body can handle. When you wake up, you are unsure how long you were out for, but your body is grateful in some small part for the break.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": 10},
+                "rewardQuantity": 20},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
@@ -1135,17 +1181,23 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
-                "rewardRange": [5]}
+                "rewardQuantity": [0],
+                "rewardRange": [1]}
             ],
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
-                "reqQuantity": 2}
+                "reqQuantity": 2},
+                {"reqName": "nautical progress",
+                "reqRule": "<",
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
+            "hiddenIfReqsFail": true,
             "nextCardsID": [
                 "LifeboatSunMorning",
                 "LifeboatSunNoon",
@@ -1169,17 +1221,19 @@
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "ocean current navigation skill",
                 "reqRule": "<",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1205,7 +1259,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
@@ -1216,7 +1270,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
@@ -1247,7 +1302,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
@@ -1258,13 +1313,15 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
                 {"reqName": "nautical progress",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 5,
+                "reqHidden": true},
                 {"reqName": "ocean current navigation skill",
                 "reqRule": ">=",
                 "reqQuantity": 2}
@@ -1293,16 +1350,18 @@
                 {"rewardName": "sharks followed",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "sharks followed",
                 "reqRule": "=",
-                "reqQuantity": 0},
+                "reqQuantity": 0,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
@@ -1333,17 +1392,19 @@
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "wind current navigation skill",
                 "reqRule": "<",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1369,7 +1430,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
@@ -1380,13 +1441,15 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
                 {"reqName": "nautical progress",
                 "reqRule": ">",
-                "reqQuantity": 4},
+                "reqQuantity": 5,
+                "reqHidden": true},
                 {"reqName": "wind current navigation skill",
                 "reqRule": ">=",
                 "reqQuantity": 2}
@@ -1415,7 +1478,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
@@ -1426,7 +1489,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
@@ -1457,20 +1521,22 @@
                 {"rewardName": "solar navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
-                "rewardRange": [5]},
+                "rewardQuantity": [0],
+                "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "nautical progress",
                 "reqRule": ">=",
                 "reqQuantity": 2},
                 {"reqName": "solar navigation skill",
                 "reqRule": "<",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1496,7 +1562,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "solar navigation skill",
                 "rewardQuantity": 1},
@@ -1507,7 +1573,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
@@ -1538,20 +1605,22 @@
                 {"rewardName": "celestial navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "nautical progress",
                 "reqRule": ">=",
                 "reqQuantity": 2},
                 {"reqName": "celestial navigation skill",
                 "reqRule": "<",
-                "reqQuantity": 2}
+                "reqQuantity": 2,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatSunMorning",
@@ -1577,7 +1646,7 @@
                 "rewardQuantity": [-5],
                 "rewardRange": [2]},
                 {"rewardName": ["weather"],
-                "rewardQuantity": [1],
+                "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "celestial navigation skill",
                 "rewardQuantity": 1},
@@ -1588,7 +1657,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 10},
+                "reqQuantity": 10,
+                "reqHidden": true},
                 {"reqName": "oar",
                 "reqRule": ">=",
                 "reqQuantity": 2},
@@ -1634,7 +1704,8 @@
             "reqs": [
                 {"reqName": "nautical progress",
                 "reqRule": ">=",
-                "reqQuantity": 15}
+                "reqQuantity": 15,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "LifeboatPaddleToShore"
@@ -1702,11 +1773,11 @@
             "cardID": "BifröstShore3a",
             "cardText": "Search debris",
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "challengeStat": "Eye",
             "challengeRoll": 3,
@@ -1734,7 +1805,6 @@
             "cardID": "BifröstShore3b",
             "cardText": "Search debris",
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "reqs": [
                 {"reqName": "worn top hat",
                 "reqRule": "=",
@@ -1777,7 +1847,6 @@
                 "reqRule": ">",
                 "reqQuantity": 5}
             ],
-            "hideReqs": true,
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
@@ -1812,7 +1881,6 @@
                 "reqRule": ">",
                 "reqQuantity": 5}
             ],
-            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore3a",
                 "BifröstShore3b",
@@ -1852,7 +1920,6 @@
                 "reqRule": ">",
                 "reqQuantity": 5}
             ],
-            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
@@ -1865,7 +1932,6 @@
             "cardID": "BifröstShore8a",
             "cardText": "Pick the lock",
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "reqs": [
                 {"reqName": "iron nail",
                 "reqRule": "<",
@@ -1918,7 +1984,6 @@
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
-            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
@@ -1938,7 +2003,6 @@
                 "BifröstShore10"
             ],
             "challengeSuccessText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come loose from the metal and you are able to get at the inside of the safe. ",
-            "hideReqs": true,
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
@@ -2142,7 +2206,6 @@
                 "BifröstShore27"
             ],
             "challengeSuccessText": "“Good job, attackin my Soldier diagonally. You took out my piece and your Viking is safe,” Quo says as he moves another piece into play. ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2180,7 +2243,6 @@
                 "BifröstShore29"
             ],
             "challengeSuccessText": "“Good job, You took out two of my powerful pieces with back to back moves. Sure you lost yer own in the process, but overall it worked out well.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2207,7 +2269,6 @@
                 "BifröstShore29"
             ],
             "challengeSuccessText": "“Good job, You took out two of my powerful pieces with back to back moves. And dammit, your Dog is safe too. Well played.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2253,7 +2314,6 @@
                 "BifröstShore32"
             ],
             "challengeSuccessText": "“Nice. My Monk is outta the picture. As is your Mermaid, but it was the price you had to pay to stay in the game. Your Queen is safe… for now.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2282,7 +2342,6 @@
                 "BifröstShore32"
             ],
             "challengeSuccessText": "“Damn, I didn’t think you would see that move! You took my Monk and saved your Queen. I got to take your Wraith, but in this placement, my Soldier is helpless.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2323,7 +2382,6 @@
                 "BifröstShore35"
             ],
             "challengeSuccessText": "You move your blue Wraith into position to block Quo’s red Dog.<br><br>“Ah, you figured me out! I thought my Dog would be able to sneak in there and eliminate both your Mermaid and your Monk.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2366,7 +2424,6 @@
                 "BifröstShore38"
             ],
             "challengeSuccessText": "After making a couple moves that shore up your defences, you advance a Gladiator and a Librarian. Quo chooses to defend against the Librarian. He fell for it! You march your Gladiator in to capture his own Librarian, and threaten his Queen.<br><br>“Uh oh, you’re gettin dangerously close to my Queen! She’ll be able to save herself, but you fooled me well with that false Librarian.” ",
-            "hideReqs": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
                 "rewardQuantity": -1}
@@ -2391,10 +2448,12 @@
             "reqs": [
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "BifröstShore40Brawn",
@@ -2410,10 +2469,12 @@
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "randomTerms": ["Viking,Gladiator", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Brawn",
@@ -2430,7 +2491,6 @@
                 "BifröstShore41Lost"
             ],
             "challengeSuccessText": "In a bold move, you use one of your remaining blue {0}s to take out one of Quo’s red {1}s. ",
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
@@ -2449,10 +2509,12 @@
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "randomTerms": ["Cat,Wraith", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Hand",
@@ -2469,7 +2531,6 @@
                 "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You sneakily move your blue {0} into position. Quo didn’t see it coming, and he is forced to lose his one of his {1}s. ",
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
@@ -2488,10 +2549,12 @@
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "randomTerms": ["Soldier,Dog", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Heart",
@@ -2508,7 +2571,6 @@
                 "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You take a stab directly at Quo’s Queen with your blue {0}. He defends, but is flustered and makes a poor move. His {1} is yours. ",
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
@@ -2527,10 +2589,12 @@
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "randomTerms": ["Gladiator,Librarian", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Eye",
@@ -2547,7 +2611,6 @@
                 "BifröstShore41Lost"
             ],
             "challengeSuccessText": "It looks like Quo is trying to place his {1} within striking distance of your Queen. You position your {0}, so that when he tries, you are able to capture his {1} handily. ",
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
@@ -2566,10 +2629,12 @@
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3},
+                "reqQuantity": 3,
+                "reqHidden": true},
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
-                "reqQuantity": 3}
+                "reqQuantity": 3,
+                "reqHidden": true}
             ],
             "randomTerms": ["Viking,Gladiator,Cat,Wraith,Soldier,Dog,Gladiator,Librarian", "Mermaid,Monk", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Voice",
@@ -2586,7 +2651,6 @@
                 "BifröstShore41Lost"
             ],
             "challengeSuccessText": "You try to throw Quo off. You advance your {0}, as if you are making a move on his Queen. He tries to defend though, and in doing so he leaves his {2} wide open. It’s easy to swoop in with your {1} as you had planned all along. ",
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "challengeFailRewards": [
                 {"rewardName": "Your Life or Death piece",
@@ -2604,8 +2668,8 @@
             "cardText": "Call to Claim",
             "reqs": [
                 {"reqName": "Quo’s Life or Death piece",
-                "reqRule": "<=",
-                "reqQuantity": 3}
+                "reqRule": "<",
+                "reqQuantity": 4}
             ],
             "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
             "setScore": [
@@ -2614,7 +2678,6 @@
                 {"setName": "Quo’s Life or Death piece",
                 "setQuantity": 0}
             ],
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "rewards": [
                 {"rewardName": ["convicts’ respect"],
@@ -2630,8 +2693,8 @@
             "cardText": "You lose",
             "reqs": [
                 {"reqName": "Your Life or Death piece",
-                "reqRule": "<=",
-                "reqQuantity": 3}
+                "reqRule": "<",
+                "reqQuantity": 4}
             ],
             "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
             "setScore": [
@@ -2645,7 +2708,6 @@
                 "rewardQuantity": [2],
                 "rewardRange": [1]}
             ],
-            "hideReqs": true,
             "hiddenIfReqsFail": true,
             "nextCardsID": [
                 "BifröstShore41Choose"
@@ -2781,10 +2843,10 @@
             "reqs": [
                 {"reqName": "Voynich code",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2796,13 +2858,14 @@
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": "=",
-                "reqQuantity": 0},
+                "reqQuantity": 0,
+                "reqHidden": true},
                 {"reqName": "Voynich lens",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2814,10 +2877,10 @@
             "reqs": [
                 {"reqName": "Voynich code",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2837,13 +2900,14 @@
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": "=",
-                "reqQuantity": 0},
+                "reqQuantity": 0,
+                "reqHidden": true},
                 {"reqName": "Voynich lens",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2855,13 +2919,14 @@
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": "=",
-                "reqQuantity": 0},
+                "reqQuantity": 0,
+                "reqHidden": true},
                 {"reqName": "Voynich lens",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore44Pocket"
             ]
@@ -2892,7 +2957,7 @@
             "addedText": "The envelope has no writing on it, but is sealed. The same wing-symbol is embossed on the corner of the paper, where a stamp would normally be placed. You tear it open and withdraw a letter from inside as well as a small object wrapped in white silk. The letter is short and, once again, written in this language you are not familiar with. Upon unwrapping it, the silk appears to be a handkerchief used to protect a monocle. The glass lens is polished smooth, housed in a gold frame. The fob used for holding the monocle features the same wing symbol. You gaze through the lens and see a slightly green-ish version of your world.",
             "reqs": [
                 {"reqName": "wing-symbol envelope",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1}
             ],
             "rewards": [
@@ -2900,7 +2965,6 @@
                 "rewardQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2911,11 +2975,10 @@
             "addedText": "The green tinted glass of the monocle is exceedingly smooth, so you decide to keep it protected in the handkerchief when not using it. The gold rim has a fob with which to hold the monocle. This handle features the wing-symbol, and some mysterious text above.",
             "reqs": [
                 {"reqName": "wing-symbol lens",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2926,11 +2989,10 @@
             "addedText": "The green tinted glass of the monocle is exceedingly smooth, so you decide to keep it protected in the handkerchief when not using it. The gold rim has a fob with which to hold the monocle. This handle features the wing symbol, and it clearly says the word VOYNICH above.",
             "reqs": [
                 {"reqName": "Voynich character",
-                "reqRule": ">",
-                "reqQuantity": 0}
+                "reqRule": ">=",
+                "reqQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2941,11 +3003,10 @@
             "addedText": "The symbol on the jacket and text above it certainly match those of the lockbox. It’s odd that you weren’t able to read it before, but now even without looking through the monocle you can quite clearly read that it spells out the word VOYNICH right above the wing-symbol.",
             "reqs": [
                 {"reqName": "Voynich lens",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2956,7 +3017,7 @@
             "addedText": "The fact that this lockbox bears resemblance to a book is not the only unique thing about it. The foreign text decorating the front is just as illegible with or without the lens. The symbol with three bird wings arranged in a triangle is featured on the front. Looking through the lens, you can now make out the letters above the triangle. They spell out the word “VOYNICH”. You put down the lens, and you can now clearly see the letters spelling out VOYNICH clearly.",
             "reqs": [
                 {"reqName": "wing-symbol lens",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1}
             ],
             "rewards": [
@@ -2972,7 +3033,6 @@
                 "rewardQuantity": 7}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -2983,18 +3043,18 @@
             "addedText": "There is a very tiny scratch above each of the three dials that, at first, appears to merely indicate the home position of the dial. But when you peer carefully through the green-tinted lens, you see that they are actually tiny numbers: ‘18’ above the first dial, ‘26’ above the second, and ‘34’ above the third.",
             "reqs": [
                 {"reqName": "Voynich lens",
-                "reqRule": "=",
+                "reqRule": ">=",
                 "reqQuantity": 1},
                 {"reqName": "Voynich code",
                 "reqRule": "=",
-                "reqQuantity": 0}
+                "reqQuantity": 0,
+                "reqHidden": true}
             ],
             "rewards": [
                 {"rewardName": "Voynich code",
                 "rewardQuantity": 182634}
             ],
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "nextCardsID": [
                 "BifröstShore43"
             ]
@@ -3004,11 +3064,11 @@
             "cardText": "Set the dials to the code",
             "addedText": "You set the three dials to 18, 26, and 34, and hear a soft click.",
             "hiddenIfReqsFail": true,
-            "hideReqs": true,
             "reqs": [
                 {"reqName": "Voynich code",
                 "reqRule": "=",
-                "reqQuantity": 182634}
+                "reqQuantity": 182634,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "BifröstShore46"

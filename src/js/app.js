@@ -78,6 +78,7 @@ var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
     activeCard: 'Medusa22',
+//    activeCard: 'Medusa0',
 //    activeCard: 'BifröstShore23',
 //    activeCard: 'LifeboatRowNavigateUsingSun',
     activeCardsShown: [],
@@ -88,7 +89,6 @@ var player = {
     justWentInsane: false,
     justWon: false,
     justFailed: false,
-    timeOfDay: 'morning',
     gender: 0,
     name: 'Cecil Palmer',
 
@@ -802,6 +802,7 @@ PlayableCard.prototype.processRewards = function(totalArray){
 
 PlayableCard.prototype.requirementSentence = function(){
     var reqList = '',
+    chalList = '',
     req,
     numOfReqs,
     challengeStat = this.challengeStat,
@@ -809,10 +810,10 @@ PlayableCard.prototype.requirementSentence = function(){
 
     //check to see if the card has a roll challenge too
     if (challengeStat !== undefined) {
-        reqList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
+        chalList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
     }
     if (this.reqs === undefined || this.hideReqs) {
-        reqList += ' (No reqs)';
+        // add no text if there are no requirements
     }
     else {
         numOfReqs = this.reqs.length;
@@ -821,7 +822,10 @@ PlayableCard.prototype.requirementSentence = function(){
             if (req === 0) {
                 reqList += '(Requires ';
             }
-            if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity !== 1)) {
+            if (this.reqs[req].reqHidden === true) {
+                //add nothing to the requirement list if this requirement should be hidden
+            }
+            else if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity !== 1)) {
                 reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             //this one will say "a" in the case that at least one thing is required
             } else if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity === 1)) {
@@ -838,18 +842,24 @@ PlayableCard.prototype.requirementSentence = function(){
             } else if (this.reqs[req].reqRule === '=') {
                 reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             }
-            if (req < numOfReqs - 2) {
+            // add a comma to the list if there are more items coming
+            if (req <= numOfReqs - 2 & this.reqs[req].reqHidden !== true) {
                 reqList += ', ';
             }
-            if (req === numOfReqs - 2) {
-                reqList += ', and ';
-            }
+// this part tried to add the word AND and an Oxford comma to the end of the list, but messed up with hidden requirements REMOVE this to FIX
+//            if (req === numOfReqs - 2 & this.reqs[req].reqHidden !== true) {
+//                reqList += ', and ';
+//            }
             if (req === numOfReqs - 1) {
                 reqList += `)`;
             }
         }
     }
-    return reqList;
+    if (reqList.substring(reqList.length, reqList.length-10) === 'Requires )') {
+        // Remove the word "Requires" from the end of the string if no things were added
+        reqList = '';
+    }
+    return chalList + reqList;
 };
 
 PlayableCard.prototype.checkRequirements = function(){

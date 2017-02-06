@@ -49,7 +49,7 @@
         {"inputName": ["seawater drank", "seawater drank"]},
         {"inputName": ["sharks followed", "sharks followed"]},
         {"inputName": ["lifeboat examined", "lifeboats examined"]},
-        {"inputName": ["weather", "weather"], "maxQuantity": 12, "maxQuantity": 8}
+        {"inputName": ["weather", "weather"], "maxQuantity": 10, "minQuantity": 9}
 
 
     ],
