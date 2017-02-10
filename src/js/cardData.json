@@ -565,6 +565,8 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
+                {"rewardName": "Brawn",
+                "rewardQuantity": 5},
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
@@ -1699,12 +1701,12 @@
             "cardText": "Land ho!",
             "locationName": "The open ocean",
             "locationDescription": "The horizon is broken up by a small stretch of land.",
-            "addedText": "Land ho! Finally, your long trek across the waves may soon be at an end.",
+            "addedText": "Land ho! A dark smudge on the horizon indicates that finally, your long trek across the waves may soon be at an end.",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "nautical progress",
                 "reqRule": ">=",
-                "reqQuantity": 15,
+                "reqQuantity": 5,
                 "reqHidden": true}
             ],
             "nextCardsID": [
@@ -2187,6 +2189,7 @@
             "cardID": "BifröstShore25",
             "cardText": "Ask about Brawn",
             "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of Brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
+            "cardStyle": "brawnCardStyle",
             "nextCardsID": [
                 "BifröstShore26"
             ]
@@ -2220,7 +2223,16 @@
         {
             "cardID": "BifröstShore27",
             "cardText": "keep playing",
-            "addedText": "After a couple more moves, no further pieces are captured.<br><br>“Ok, now here’s a perfect situation to teach you somethin new. Brawn is just one strategy, some would say the most effective strategy, some would disagree. This is a time when Brawn will let you down though. See my red Viking? Since you’re new at this, I’ll let you know that she’s gonna mess you up in short order. But if you take her head on, my Gladiator will make short work of you. You’d be better off usin a more round-about strategy of takin out my Gladiator first, then my Viking. You need a more flexible piece that has less power, but longer range than the Viking, like your Cat or Dog. We call this a Hand move. Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a spy. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflagin with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now, note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
+            "addedText": "After a couple more moves, no further pieces are captured.<br><br>“Ok, now here’s a perfect situation to teach you somethin new. Brawn is just one strategy, some would say the most effective strategy, some would disagree. This is a time when Brawn will let you down though. See my red Viking? Since you’re new at this, I’ll let you know that she’s gonna mess you up in short order. But if you take her head on, my Gladiator will make short work of you. You’d be better off usin a more round-about strategy of takin out my Gladiator first, then my Viking. You need a more flexible piece that has less power, but longer range than the Viking, like your Cat or Dog. We call this a Hand move.",
+            "nextCardsID": [
+                "BifröstShore27a"
+            ]
+        },
+        {
+            "cardID": "BifröstShore27a",
+            "cardText": "Ask about Hand",
+            "addedText": " Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a spy. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflagin with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now, note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
+            "cardStyle": "handCardStyle",
             "nextCardsID": [
                 "BifröstShore28a",
                 "BifröstShore28b"
@@ -2292,6 +2304,7 @@
             "cardID": "BifröstShore30",
             "cardText": "Ask about Heart",
             "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick their behinds to the Olden Worlde! They went with their gut, their culture that they’d been developin for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Hearth - it can be foolhardy and blind to logic.”",
+            "cardStyle": "heartCardStyle",
             "nextCardsID": [
                 "BifröstShore31a",
                 "BifröstShore31b"
@@ -2365,6 +2378,7 @@
             "cardID": "BifröstShore33",
             "cardText": "Ask about Eye",
             "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ Imperial galleon, that shows skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
+            "cardStyle": "eyeCardStyle",
             "nextCardsID": [
                 "BifröstShore34"
                 ]
@@ -2405,6 +2419,7 @@
             "cardID": "BifröstShore36",
             "cardText": "Ask about Voice",
             "addedText": "“Of course, the Gladiators use Voice a lot. But watch it if you go to their gamblin houses - their Voice skill will rob you of all your money! The Sisters of Freya too. Through the confessions they receive, they’ve gained quite a lot of information about the sins of New Atlantans - and I hear they put that knowledge to good use. The medics workin for the Salt Hearts of course use the Voice strategy too, to learn and train in how to fix people up. You know who really uses a Voice strategy a lot - too much maybe, is those subversive Librarians! It’s ironic that you can’t shush a Librarian once they get started…”<br><br>“Voice strategies aren’t always verbal though. Try to use Voice here to mislead me. At some point in the next few moves, try to throw me off. Make a move that implies a you’re gonna use one strategy, when you actually plan to use another, in order to convince me to misstep.”",
+            "cardStyle": "voiceCardStyle",
             "nextCardsID": [
                 "BifröstShore37"
                 ]
@@ -2729,6 +2744,7 @@
             "cardID": "BifröstShore41Brawn",
             "cardText": "Choose Brawn. I like to solve a situation directly by relying on my might.",
             "addedText": "“Brawn, I appreciate that. Might makes right. You’ll find like-minded folks if you seek out the Olden Worlde powers and the folks who turn the wheels of commerce when you make your way to New Atlantis. Here take this. It’ll help you out whenever your Brawn is put to the test.”",
+            "cardStyle": "brawnCardStyle",
             "rewards": [
                 {"rewardName": "Brawn",
                 "rewardQuantity": 5050}
@@ -2741,6 +2757,7 @@
             "cardID": "BifröstShore41Hand",
             "cardText": "Choose Hand. I like to solve a situation indirectly by relying on my finesse.",
             "addedText": "“Hand, I understand that. Quality over quantity. You’d be surprised how helpful the animals of New Atlantis can be when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Hand is put to the test.”",
+            "cardStyle": "handCardStyle",
             "rewards": [
                 {"rewardName": "Hand",
                 "rewardQuantity": 5050}
@@ -2753,6 +2770,7 @@
             "cardID": "BifröstShore41Heart",
             "cardText": "Choose Heart. I like to solve a situation honorably by relying on what I know to be true in my heart.",
             "addedText": "“Heart, I admire that. Emotions make us human, after all. You’d be surprised how helpful the locals of the New Worlde can be for someone like you who follows your heart, and who respects their traditions. Here take this. It’ll help you out whenever your Heart is put to the test.”",
+            "cardStyle": "heartCardStyle",
             "rewards": [
                 {"rewardName": "Heart",
                 "rewardQuantity": 5050}
@@ -2765,6 +2783,7 @@
             "cardID": "BifröstShore41Eye",
             "cardText": "Choose Eye. I like to solve a situation uniquely, through thought and observation.",
             "addedText": "“Eye, I respect that. You’re a corkscrew thinker. New Atlantis is full of renegades and rebels of various sorts who like to think outside the box. Some are friendly, some are not; all of them are … unique. Here take this. It’ll help you out whenever your Eye is put to the test.”",
+            "cardStyle": "eyeCardStyle",
             "rewards": [
                 {"rewardName": "Eye",
                 "rewardQuantity": 5050}
@@ -2777,6 +2796,7 @@
             "cardID": "BifröstShore41Voice",
             "cardText": "Choose Voice. I like to solve a situation subtly by relying on my powers of persuasion.",
             "addedText": "“Voice, I’m not surprised by that. The pen is mightier than the sword, after all. There are many in New Atlantis who seek to make social change in the New Worlde, but by many different means. You should look them up when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Voice is put to the test.”",
+            "cardStyle": "voiceCardStyle",
             "rewards": [
                 {"rewardName": "Voice",
                 "rewardQuantity": 5050}

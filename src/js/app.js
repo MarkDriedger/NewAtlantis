@@ -77,10 +77,16 @@ for (i = 0; i < maxcards; i += 1) {
 var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
-    activeCard: 'Medusa22',
+//wake up on Bifröst shore
+//    activeCard: 'Medusa22',
+//start of game
 //    activeCard: 'Medusa0',
+//beginning of Life or Death game
 //    activeCard: 'BifröstShore23',
-//    activeCard: 'LifeboatRowNavigateUsingSun',
+//end of Life or Death game
+//    activeCard: 'BifröstShore41Won',
+//beginning of lifeboat
+    activeCard: 'LifeboatWakeUp',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -206,7 +212,8 @@ function Reputation(inputName, quantity, maxQuantity, minQuantity, icon){
 Reputation.prototype = new ScoreType();
 
 //Progresses are ScoreType objects that are a generic catch-all, indicating the progress the player has made in some aspect. The player is made aware of these. They start at zero, and generally simply increment when moving through a story.
-function Progress(inputName, quantity, maxQuantity, minQuantity, icon){
+function Progress(inputName, quantity, maxQuantity, minQuantity, leveled, icon){
+    var level = 0;
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + s
     this.inputName = inputName;
@@ -221,6 +228,15 @@ function Progress(inputName, quantity, maxQuantity, minQuantity, icon){
     }
     this.maxQuantity = maxQuantity;
     this.icon = icon;
+    // create experience level requirements up to level 1000
+    this.leveled = leveled;
+    if (this.leveled) {
+        this.experience = 0;
+        this.levelRequired = [0,1];
+        for (level = 2; level <= 1000; level += 1) {
+            this.levelRequired[level] = this.levelRequired[level-1] + level;
+        }
+    }
 }
 Progress.prototype = new ScoreType();
 
@@ -289,11 +305,41 @@ Reputation.prototype.increment = function(amount) {
 };
 
 Progress.prototype.increment = function(amount) {
-    this.quantity += amount;
-    if (this.quantity > this.maxQuantity) {
-        this.quantity = this.maxQuantity;
+    if (this.leveled) {
+        this.experience += amount;
+        this.quantity = this.getLevel();
+        this.nextExp = this.getNextExp();
     }
+    else {
+        this.quantity += amount;
+        if (this.quantity > this.maxQuantity) {
+            this.quantity = this.maxQuantity;
+        }
+    }
+//    this.updateReputation();
 };
+
+Progress.prototype.getLevel = function(){
+    var exp = this.experience,
+    level = 1;
+    for (level = 1; level <= exp; level += 1) {
+        exp -= level;
+    }
+    return (level - 1);
+};
+
+Progress.prototype.getNextExp = function(){
+    var exp = 0,
+    nextLevel = this.quantity,
+    level = 1;
+    nextLevel = this.quantity + 2;
+    for (level = 1; level < (nextLevel); level += 1) {
+        exp += level;
+    }
+    return exp;
+};
+
+
 
 HiddenProgress.prototype.increment = function(amount) {
     this.quantity += amount;
@@ -374,24 +420,28 @@ Collectible.prototype.updateInventory = function() {
 };
 
 //list the reputation
-Reputation.prototype.updateReputation = function() {
+Progress.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     stats.score.forEach(function (item) {
         if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+            reputationList += `•A ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
     reputationDisplay.innerHTML = reputationList;
 };
 
 //list the progress
-Progress.prototype.updateReputation = function() {
+Reputation.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     stats.score.forEach(function (item) {
-        if (item.quantity > 0 && (item instanceof Progress || item instanceof Reputation)) {
-            reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+        if ((item.quantity > 0 ) && (item instanceof Progress || item instanceof Reputation)) {
+            if (item.leveled) {
+                reputationList += `• ${item.quantity} (${item.experience} of ${item.nextExp}) ${item.correctName(item.quantity)}<br>`;
+            } else {
+                reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
+            }
         }
     });
     reputationDisplay.innerHTML = reputationList;
@@ -405,7 +455,7 @@ PlayerStat.prototype.updateStatus = function() {
     statList += `•  Health: ${stats.getScore('Health').quantity}/${stats.getScore('Health').maxQuantity}<br>`;
     statList += `•  Mind: ${stats.getScore('Mind').quantity}/${stats.getScore('Health').maxQuantity}<br>`;
     statList += `•  Actions: ${stats.getScore('Action').quantity}/${stats.getScore('Action').maxQuantity}<br><br>`;
-    statList += '<b><u>Bonuses</u></b><br>';
+    statList += '<b><u>Levels:</u></b><br>';
     stats.score.forEach(function (item) {
     if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.singularName !== 'Action') && (item.quantity > 0) && (item instanceof PlayerStat)) {
         levelArray = item.getLevel();
@@ -419,7 +469,7 @@ PlayerStat.prototype.updateStatus = function() {
 PlayerStat.prototype.getLevel = function(){
     var exp = this.quantity,
     level = 1;
-    for (level === 1; level <= exp; level += 1) {
+    for (level = 1; level <= exp; level += 1) {
         exp -= level;
     }
     return [level - 1, exp, level - exp];
@@ -572,7 +622,7 @@ var stats = {
             me.score.push(myItem);
         });
         data.progress.forEach(function (item) {
-            var myItem = new Progress(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.icon);
+            var myItem = new Progress(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item. leveled, item.icon);
             me.score.push(myItem);
         });
         data.hiddenProgress.forEach(function (item) {
@@ -810,7 +860,7 @@ PlayableCard.prototype.requirementSentence = function(){
 
     //check to see if the card has a roll challenge too
     if (challengeStat !== undefined) {
-        chalList += `<br>Challenge: roll ${challengeRoll} ${challengeStat}.`;
+        chalList += `<br>Roll: ${challengeRoll} ${challengeStat}`;
     }
     if (this.reqs === undefined || this.hideReqs) {
         // add no text if there are no requirements
@@ -1092,7 +1142,7 @@ StoryCard.prototype.loadFromData = function (data) {
     this.setScore = data.setScore;
     this.firstTime = true;
     this.firstText = data.firstText;
-
+    this.cardStyle = data.cardStyle;
 };
 
 
@@ -1200,19 +1250,19 @@ var board = {
             display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence()}`;
             //disable cards if requirements are not met
             if (deck.getCard(player.activeCardsShown[i]).checkRequirements()) {
-                if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye') {
+                if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeCardStyle')) {
                     display[i].setAttribute('class', 'eyeCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnCardStyle')) {
                     display[i].setAttribute('class', 'brawnCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceCardStyle')) {
                     display[i].setAttribute('class', 'voiceCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='handCardStyle')) {
                     display[i].setAttribute('class', 'handCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='heartCardStyle')) {
                     display[i].setAttribute('class', 'heartCard');
                 }
                 else {
