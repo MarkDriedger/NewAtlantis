@@ -1,13 +1,13 @@
 {
     "player": [
-        {"inputName": ["Health"], "quantity": 100, "maxQuantity": 100, "minQuantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Mind"], "quantity": 100, "maxQuantity": 100, "minQuantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Action"], "quantity": 20, "maxQuantity": 20, "minQuantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Brawn"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Hand"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Heart"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Eye"], "quantity": 0, "icon": "/assets/pugrunning21.gif"},
-        {"inputName": ["Voice"], "quantity": 0, "icon": "/assets/pugrunning21.gif"}
+        {"inputName": ["Health"], "quantity": 100, "maxQuantity": 100, "minQuantity": 0, "leveled": false, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Mind"], "quantity": 100, "maxQuantity": 100, "minQuantity": 0, "leveled": false, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Action"], "quantity": 20, "maxQuantity": 20, "minQuantity": 0, "leveled": false, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Brawn"], "quantity": 0, "leveled": true, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Hand"], "quantity": 0, "leveled": true, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Heart"], "quantity": 0, "leveled": true, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Eye"], "quantity": 0, "leveled": true, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["Voice"], "quantity": 0, "leveled": true, "icon": "/assets/pugrunning21.gif"}
     ],
 
     "reputation": [
@@ -15,7 +15,7 @@
         {"inputName": ["Valhalla"], "quantity": 0, "icon": ""},
         {"inputName": ["New Foundland Company"], "quantity": 0, "icon": ""},
         {"inputName": ["Aeronautic Post"], "quantity": 0, "icon": ""},
-        {"inputName": ["Aves"], "quantity": 0, "icon": ""},
+        {"inputName": ["Pandemonium"], "quantity": 0, "icon": ""},
         {"inputName": ["Silk"], "quantity": 0, "icon": ""},
         {"inputName": ["Delphinae"], "quantity": 0, "icon": ""},
         {"inputName": ["Octopods"], "quantity": 0, "icon": ""},
@@ -23,25 +23,26 @@
         {"inputName": ["Vulcans"], "quantity": 0, "icon": ""},
         {"inputName": ["Sirens"], "quantity": 0, "icon": ""},
         {"inputName": ["Amazons"], "quantity": 0, "icon": ""},
-        {"inputName": ["Thor’s Vikings"], "quantity": 0, "icon": ""},
+        {"inputName": ["Vikings"], "quantity": 0, "icon": ""},
         {"inputName": ["Privateers"], "quantity": 0, "icon": ""},
         {"inputName": ["Animate"], "quantity": 0, "icon": ""},
         {"inputName": ["Pneumatic Institute"], "quantity": 0, "icon": ""},
         {"inputName": ["Librarians"], "quantity": 0, "icon": ""},
         {"inputName": ["Gladiators"], "quantity": 0, "icon": ""},
         {"inputName": ["Salt Hands"], "quantity": 0, "icon": ""},
-        {"inputName": ["Sisters of Freya"], "quantity": 0, "icon": ""}
+        {"inputName": ["Sisters of Freya"], "quantity": 0, "icon": ""},
+        {"inputName": ["Convicts"], "quantity": 0, "icon": ""}
+
     ],
 
     "progress": [
-        {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"], "icon": ""},
-        {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"], "icon": ""},
-        {"inputName": ["convicts’ respect", "convicts’ respect"], "icon": ""},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "icon": ""},
+        {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"]},
+        {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"]},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"]},
         {"inputName": ["Voynich character"]},
         {"inputName": ["Voynich code"]},
         {"inputName": ["time of day", "time of day"]},
-        {"inputName": ["nautical progress"], "leveled": true, "icon": "/assets/pugrunning21.gif"},
+        {"inputName": ["nautical progress"], "leveled": true},
         {"inputName": ["ocean current navigation skill", "ocean current navigation skill"], "leveled": true},
         {"inputName": ["wind current navigation skill", "wind current navigation skill"], "leveled": true},
         {"inputName": ["solar navigation skill", "solar navigation skill"], "leveled": true},

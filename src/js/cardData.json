@@ -1148,7 +1148,7 @@
             "addedText": "You have driven yourself hard - harder than your body can handle. When you wake up, you are unsure how long you were out for, but your body is grateful in some small part for the break.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": 20},
+                "rewardQuantity": 2000},
                 {"rewardName": ["weather"],
                 "rewardQuantity": [0],
                 "rewardRange": [5]}
@@ -1264,6 +1264,8 @@
                 "rewardQuantity": [0],
                 "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
+                "rewardQuantity": 1},
+                {"rewardName": "Vikings",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
                 "rewardQuantity": 1}
@@ -1484,8 +1486,10 @@
                 "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
+                {"rewardName": "Vikings",
+                "rewardQuantity": -1},
                 {"rewardName": "nautical progress",
-                "rewardQuantity": 1}
+                "rewardQuantity": -1}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -1920,7 +1924,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 5}
+                "reqQuantity": 5,
+                "reqHidden": true}
             ],
             "challengeFailCards": [
                 "BifröstShore7",
@@ -2060,7 +2065,7 @@
             "cardText": "Get their attention",
             "addedText": "You wave your hands and shout “Hey! Over here!”<br><br>You start to wonder how wise that was as the three individuals you heard speaking are joined by four more who all converge on your location. They don’t look happy to see you.",
             "rewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1}
             ],
             "nextCardsID": [
@@ -2200,7 +2205,7 @@
             "challengeStat": "Brawn",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2244,7 +2249,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 2,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2272,7 +2277,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2}
@@ -2316,7 +2321,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 2,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2344,7 +2349,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2389,7 +2394,7 @@
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
@@ -2430,7 +2435,7 @@
             "challengeStat": "Voice",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2495,7 +2500,7 @@
             "challengeStat": "Brawn",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2535,7 +2540,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2575,7 +2580,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2615,7 +2620,7 @@
             "challengeStat": "Eye",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2655,7 +2660,7 @@
             "challengeStat": "Voice",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "convicts’ respect",
+                {"rewardName": "Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2695,7 +2700,7 @@
             ],
             "hiddenIfReqsFail": true,
             "rewards": [
-                {"rewardName": ["convicts’ respect"],
+                {"rewardName": ["Convicts"],
                 "rewardQuantity": [3],
                 "rewardRange": [1]}
             ],
@@ -2719,7 +2724,7 @@
                 "setQuantity": 0}
             ],
             "rewards": [
-                {"rewardName": ["convicts’ respect"],
+                {"rewardName": ["Convicts"],
                 "rewardQuantity": [2],
                 "rewardRange": [1]}
             ],
@@ -2996,7 +3001,8 @@
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": ">=",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
             "nextCardsID": [
@@ -3295,7 +3301,7 @@
         },
         {
             "cardID": "BifröstCamp05QuoOffice",
-            "cardText": "Go to the camp office",
+            "cardText": "Go to Quo's office",
             "locationName": "Bifröst Prison Camp, office",
             "locationDescription": "Quo’s own office.",
             "reqs": [
