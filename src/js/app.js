@@ -78,7 +78,7 @@ var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
 //start of game
-        activeCard: 'Medusa0',
+//        activeCard: 'Medusa0',
 //wake up on Bifröst shore
 //    activeCard: 'Medusa22',
 //beginning of lifeboat
@@ -87,7 +87,8 @@ var player = {
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
 //    activeCard: 'BifröstShore41Won',
-
+//end of Life or Death game
+    activeCard: 'BifröstShore52',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -752,7 +753,9 @@ PlayableCard.prototype.requirementSentence = function(){
                 reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             } else if (this.reqs[req].reqRule === '<=') {
                 reqList += `at most ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
-            } else if (this.reqs[req].reqRule === '=') {
+            } else if ((this.reqs[req].reqRule === '=') & (this.reqs[req].reqQuantity === 0)){
+                reqList += `no ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
+            } else if ((this.reqs[req].reqRule === '=') & (this.reqs[req].reqQuantity !== 0)){
                 reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             }
             // add a comma to the list if there are more items coming

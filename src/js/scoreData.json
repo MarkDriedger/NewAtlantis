@@ -50,7 +50,23 @@
         {"inputName": ["seawater drank", "seawater drank"]},
         {"inputName": ["sharks followed", "sharks followed"]},
         {"inputName": ["lifeboat examined", "lifeboats examined"]},
-        {"inputName": ["weather", "weather"], "maxQuantity": 10, "minQuantity": 9}
+        {"inputName": ["weather", "weather"], "maxQuantity": 10, "minQuantity": 9},
+        {"inputName": ["Bifröst laboured", "Bifröst laboured"]},
+        {"inputName": ["Bifröst fished", "Bifröst fished"]},
+        {"inputName": ["Bifröst creched", "Bifröst creched"]},
+        {"inputName": ["Bifröst salvaged", "Bifröst salvaged"]},
+        {"inputName": ["Bifröst flamingoed", "Bifröst flamingoed"]},
+        {"inputName": ["Medusa Mystery", "Medusa Mystery"]},
+        {"inputName": ["Warehouse #2 Mystery", "Warehouse #2 Mystery"]},
+        {"inputName": ["Quo’s Mistress Mystery", "Quo’s Mistress Mystery"]},
+        {"inputName": ["Humboldt Mystery", "Humboldt Mystery"]},
+        {"inputName": ["Guards Mystery", "Guards Mystery"]},
+        {"inputName": ["Pana’s Esteem", "Pana’s Esteem"]},
+        {"inputName": ["Rainer’s Esteem", "Rainer’s Esteem"]},
+        {"inputName": ["Astrid’s Esteem", "Astrid’s Esteem"]},
+        {"inputName": ["Claudia’s Esteem", "Claudia’s Esteem"]},
+        {"inputName": ["Siobhan’s Esteem", "Siobhan’s Esteem"]}
+
 
 
     ],
@@ -69,6 +85,7 @@
         {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Royal sterling"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["Valhallan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
+        {"inputName": ["Valhallan pennigar"], "quantity": 0, "marketValue": 120, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
         {"inputName": ["Poste stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
         {"inputName": ["Aero special stamp"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
@@ -110,7 +127,9 @@
         {"inputName": ["sail"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["bottle of fine brandy", "bottles of fine brandy"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["crate of silverware", "crates of silverware"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
-        {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
-
+        {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
+        {"inputName": ["silver wedding band"], "quantity": 0, "marketValue": 250, "buff": "", "icon": ""},
+        {"inputName": ["jade amulet"], "quantity": 0, "marketValue": 325, "buff": "", "icon": ""},
+        {"inputName": ["dragon claw"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
     ]
 }

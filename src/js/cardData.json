@@ -2126,7 +2126,19 @@
             "locationName": "Bifröst Prison Camp, your quarters",
             "locationDescription": "A plain, but comfortable bunkhouse which could house four, but you have it all to yourself.",
             "cardText": "EAT!",
-            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. No, nuthin like you and yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” You realize that this jacket you accidentally gabbed form the sinking Medusa, certainly not your own, has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
+            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. Sorry, that brandy and cheese you got became property of the Queen, went to support her Imperial Prison camps. Them’s the rules for when we find salvage that’s consumable, or raw materials. Not like yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” This jacket, found in the Medusa's lifeboat, is certainly not your own. It has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
+            "setScore": [
+                {"setName": "sack of cheese",
+                "setQuantity": 0},
+                {"setName": "crate of water bottles",
+                "setQuantity": 0},
+                {"setName": "oar",
+                "setQuantity": 0},
+                {"setName": "bottle of fine brandy",
+                "setQuantity": 0},
+                {"setName": "crate of silverware",
+                "setQuantity": 0}
+            ],
             "nextCardsID": [
                 "BifröstShore19"
             ]
@@ -3163,6 +3175,10 @@
                 {"rewardName": "prison uniform",
                 "rewardQuantity": 1}
             ],
+            "setScore": [
+                {"setName": "time of day",
+                "setQuantity": 0}
+            ],
             "nextCardsID": [
                 "BifröstShore53"
             ]
@@ -3262,7 +3278,7 @@
             "nextCardsID": [
                 "BifröstCamp01Mess",
                 "BifröstCamp01JungleCreches",
-                "BifröstCamp02JungleCreches"
+                "BifröstCamp01Work",
             ]
         },
         {
@@ -3299,6 +3315,147 @@
                 "BifröstCamp01PickCandlenuts"
             ]
         },
+        {
+            "cardID": "BifröstCamp01Work",
+            "cardText": "Ready to work",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01NotReadyToWork",
+            "cardText": "Not ready to work yet",
+            "addedText": "Before starting work, you'd like to explore around the island a bit more first.”",
+            "nextCardsID": [
+                "BifröstCamp01BurnHill"
+            ]
+        },
+        {
+            "cardID": "BifröstCampLabour01",
+            "cardText": "Ready to work",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardStyle": "brawnCardStyle",
+            "reqs": [
+                {"reqName": "Bifröst laboured",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampLabour02"
+            ]
+        },
+        {
+            "cardID": "BifröstCampLabour02",
+            "cardText": "Manual Labour",
+            "addedText": "“Yer with me today then, noob.” Impulsive Convict Pana gestures to you and you follow him to a large stack of crates",
+            "reqs": [
+                {"reqName": "Bifröst laboured",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampLabour03"
+            ]
+        },
+
+
+
+
+
+
+        {
+            "cardID": "BifröstCampFishing01",
+            "cardText": "Go fishing",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardStyle": "handCardStyle",
+            "reqs": [
+                {"reqName": "Bifröst fished",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampFishing02"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches01",
+            "cardText": "Care for chicks in the creches",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardStyle": "heartCardStyle",
+            "reqs": [
+                {"reqName": "Bifröst creched",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampCreches02"
+            ]
+        },
+        {
+            "cardID": "BifröstCampSalvage01",
+            "cardText": "Salvage wreckage of the Medusa",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardStyle": "eyeCardStyle",
+            "reqs": [
+                {"reqName": "Bifröst salvaged",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampSalvage02"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFlamingos01",
+            "cardText": "Gather flamingo feathers",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardStyle": "voiceCardStyle",
+            "reqs": [
+                {"reqName": "Bifröst flamingoed",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampFlamingos02"
+            ]
+        },
+
         {
             "cardID": "BifröstCamp05QuoOffice",
             "cardText": "Go to Quo's office",
