@@ -31,41 +31,41 @@
         {"inputName": ["Gladiators"], "quantity": 0, "icon": ""},
         {"inputName": ["Salt Hands"], "quantity": 0, "icon": ""},
         {"inputName": ["Sisters of Freya"], "quantity": 0, "icon": ""},
-        {"inputName": ["Convicts"], "quantity": 0, "icon": ""}
+        {"inputName": ["Bifröst Convicts"], "quantity": 0, "icon": ""}
 
     ],
 
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"]},
         {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"]},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"]},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "maxQuantity": 10, "minQuantity": -10},
         {"inputName": ["Voynich character"]},
         {"inputName": ["Voynich code"]},
-        {"inputName": ["time of day", "time of day"]},
+        {"inputName": ["time of day", "time of day"], "hidden": true},
         {"inputName": ["nautical progress"], "leveled": true},
         {"inputName": ["ocean current navigation skill", "ocean current navigation skill"], "leveled": true},
         {"inputName": ["wind current navigation skill", "wind current navigation skill"], "leveled": true},
         {"inputName": ["solar navigation skill", "solar navigation skill"], "leveled": true},
         {"inputName": ["celestial navigation skill", "celestial navigation skill"], "leveled": true},
-        {"inputName": ["seawater drank", "seawater drank"]},
-        {"inputName": ["sharks followed", "sharks followed"]},
-        {"inputName": ["lifeboat examined", "lifeboats examined"]},
-        {"inputName": ["weather", "weather"], "maxQuantity": 10, "minQuantity": 9},
-        {"inputName": ["Bifröst laboured", "Bifröst laboured"]},
-        {"inputName": ["Bifröst fished", "Bifröst fished"]},
-        {"inputName": ["Bifröst creched", "Bifröst creched"]},
-        {"inputName": ["Bifröst salvaged", "Bifröst salvaged"]},
-        {"inputName": ["Bifröst flamingoed", "Bifröst flamingoed"]},
-        {"inputName": ["Medusa Mystery", "Medusa Mystery"]},
-        {"inputName": ["Warehouse #2 Mystery", "Warehouse #2 Mystery"]},
-        {"inputName": ["Quo’s Mistress Mystery", "Quo’s Mistress Mystery"]},
-        {"inputName": ["Humboldt Mystery", "Humboldt Mystery"]},
-        {"inputName": ["Guards Mystery", "Guards Mystery"]},
-        {"inputName": ["Pana’s Esteem", "Pana’s Esteem"]},
-        {"inputName": ["Rainer’s Esteem", "Rainer’s Esteem"]},
-        {"inputName": ["Astrid’s Esteem", "Astrid’s Esteem"]},
-        {"inputName": ["Claudia’s Esteem", "Claudia’s Esteem"]},
-        {"inputName": ["Siobhan’s Esteem", "Siobhan’s Esteem"]}
+        {"inputName": ["seawater drank", "seawater drank"], "hidden": true},
+        {"inputName": ["sharks followed", "sharks followed"], "hidden": true},
+        {"inputName": ["lifeboat examined", "lifeboats examined"], "hidden": true},
+        {"inputName": ["weather", "weather"], "hidden": true, "maxQuantity": 10, "minQuantity": 9},
+        {"inputName": ["Bifröst laboured", "Bifröst laboured"], "hidden": true},
+        {"inputName": ["Bifröst fished", "Bifröst fished"], "hidden": true},
+        {"inputName": ["Bifröst creched", "Bifröst creched"], "hidden": true},
+        {"inputName": ["Bifröst salvaged", "Bifröst salvaged"], "hidden": true},
+        {"inputName": ["Bifröst flamingoed", "Bifröst flamingoed"], "hidden": true},
+        {"inputName": ["Medusa mystery", "Medusa mystery"]},
+        {"inputName": ["Warehouse #2 mystery", "Warehouse #2 mystery"]},
+        {"inputName": ["Quo’s Mistress mystery", "Quo’s Mistress mystery"]},
+        {"inputName": ["Humboldt mystery", "Humboldt mystery"]},
+        {"inputName": ["Guards mystery", "Guards mystery"]},
+        {"inputName": ["Pana’s esteem", "Pana’s esteem"]},
+        {"inputName": ["Rainer’s esteem", "Rainer’s esteem"]},
+        {"inputName": ["Astrid’s esteem", "Astrid’s esteem"]},
+        {"inputName": ["Claudia’s esteem", "Claudia’s esteem"]},
+        {"inputName": ["Siobhan’s esteem", "Siobhan’s esteem"]}
 
 
 
@@ -85,7 +85,7 @@
         {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Royal sterling"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
         {"inputName": ["Valhallan mark"], "quantity": 0, "marketValue": 100, "buff": "", "icon": ""},
-        {"inputName": ["Valhallan pennigar"], "quantity": 0, "marketValue": 120, "buff": "", "icon": ""},
+        {"inputName": ["Valhallan pennigar"], "quantity": 0, "marketValue": 2, "buff": "", "icon": ""},
         {"inputName": ["New Foundland scrip", "New Foundland scrip"], "quantity": 0, "marketValue": 50, "buff": "", "icon": ""},
         {"inputName": ["Poste stamp"], "quantity": 0, "marketValue": 9, "buff": "", "icon": ""},
         {"inputName": ["Aero special stamp"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
@@ -130,6 +130,7 @@
         {"inputName": ["prison uniform"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["silver wedding band"], "quantity": 0, "marketValue": 250, "buff": "", "icon": ""},
         {"inputName": ["jade amulet"], "quantity": 0, "marketValue": 325, "buff": "", "icon": ""},
-        {"inputName": ["dragon claw"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
+        {"inputName": ["shake snake fang"], "quantity": 0, "marketValue": 620, "buff": "", "icon": ""},
+        {"inputName": ["dragon claw"], "quantity": 0, "marketValue": 585, "buff": "", "icon": ""}
     ]
 }

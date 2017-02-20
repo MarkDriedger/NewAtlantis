@@ -87,8 +87,8 @@ var player = {
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
 //    activeCard: 'BifröstShore41Won',
-//end of Life or Death game
-    activeCard: 'BifröstShore52',
+//end of beginning of work day
+    activeCard: 'BifröstCamp01BurnHill',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -245,7 +245,8 @@ function PlayerStat(inputName, quantity, maxQuantity, minQuantity, leveled, icon
     this.inputName = inputName;
     this.singularName = inputName[0];
     if (inputName.length === 1) {
-        this.pluralName = inputName[0]+' points';
+    //    this.pluralName = inputName[0]+' points'; DELETE
+        this.pluralName = inputName[0];
     } else {
         this.pluralName = inputName[1];
     }
@@ -661,6 +662,18 @@ PlayableCard.prototype.processRewards = function(totalArray){
         rewardList = `<span class=styleReward>↑You gained `;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
             rewardList += `${rewardArray[rewardIndex].rewardQuantity} ${stats.getScore(rewardArray[rewardIndex].rewardName).correctName(rewardArray[rewardIndex].rewardQuantity)}`;
+            // add the word "reputation" in if you are gaining reputation
+            if (stats.getScore(rewardArray[rewardIndex].rewardName) instanceof Reputation) {
+                rewardList += ' reputation';
+            }
+            // add the word "points" in if you are gaining stat points
+            if ((stats.getScore(rewardArray[rewardIndex].rewardName) instanceof PlayerStat) && (rewardArray[rewardIndex].rewardQuantity !== 1)) {
+                rewardList += ' points';
+            }
+            // add the word "point" in if you are gaining one stat point
+            if ((stats.getScore(rewardArray[rewardIndex].rewardName) instanceof PlayerStat) && (rewardArray[rewardIndex].rewardQuantity === 1)) {
+                rewardList += ' point';
+            }
             if (rewardIndex < numOfRewards - 2) {
                 rewardList += ', ';
             }

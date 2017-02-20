@@ -3279,6 +3279,7 @@
                 "BifröstCamp01Mess",
                 "BifröstCamp01JungleCreches",
                 "BifröstCamp01Work",
+                "BifröstCamp01Bedtime"
             ]
         },
         {
@@ -3318,7 +3319,14 @@
         {
             "cardID": "BifröstCamp01Work",
             "cardText": "Ready to work",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn about how things work around here.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": ">=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
             "nextCardsID": [
                 "BifröstCampLabour01",
                 "BifröstCampFishing01",
@@ -3326,6 +3334,21 @@
                 "BifröstCampSalvage01",
                 "BifröstCampFlamingos01",
                 "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01Bedtime",
+            "cardText": "Ready to work",
+            "addedText": "You may be ready to work, but the camp isn't. The sun is going down. Go back to your quarters and sleep.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01BurnHill"
             ]
         },
         {
@@ -3338,123 +3361,1242 @@
         },
         {
             "cardID": "BifröstCampLabour01",
-            "cardText": "Ready to work",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "cardText": "Perform manual labour",
+            "addedText": "“Yer with me today then, noob.” Impulsive Convict Pana gestures to you and you follow him to a large stack of crates",
             "cardStyle": "brawnCardStyle",
             "reqs": [
                 {"reqName": "Bifröst laboured",
                 "reqRule": "=",
                 "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
                 "reqHidden": true}
             ],
-            "nextCardsID": [
-                "BifröstCampLabour02"
-            ]
-        },
-        {
-            "cardID": "BifröstCampLabour02",
-            "cardText": "Manual Labour",
-            "addedText": "“Yer with me today then, noob.” Impulsive Convict Pana gestures to you and you follow him to a large stack of crates",
-            "reqs": [
-                {"reqName": "Bifröst laboured",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true}
+            "rewards": [
+                {"rewardName": "Bifröst laboured",
+                "rewardQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCampLabour03"
             ]
         },
-
-
-
-
-
-
+        {
+            "cardID": "BifröstCampLabour03",
+            "cardText": "Haul crates of feathers",
+            "locationName": "Bifröst Prison Camp",
+            "locationDescription": "Labouring in the hot sun",
+            "challengeStat": "Brawn",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Warehouse #2 mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour04",
+                "BifröstCampLabour05"
+            ],
+            "challengeSuccessText": "Feathers are surprisingly heavy when they are packed into wooden crates. Even with a cart, it feels like a long distance between the creches and the prison’s one stone wall, but you manage to move an impressive number of crates. The cart gets wobblier on each run.<br><br> “Good work, noob. Pack ‘em into warehouse number 6 since warehouse 1, 3, 4, and 5 are all full,” Pana orders. You wonder to yourself, “what about number 2?” ",
+            "challengeFailRewards": [
+                {"rewardName": "Warehouse #2 mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour04",
+                "BifröstCampLabour05"
+            ],
+            "challengeFailText": "Feathers are surprisingly heavy when they are packed into wooden crates. Even with a cart, it feels like a long distance between the creches and the prison’s one stone wall, but you manage to move your assigned quota of crates. The cart gets wobblier on each run.<br><br> “Pack ‘em into warehouse number 4 since warehouse 1, 3, 4, and 5 are all full,” Pana orders. You wonder to yourself, “what about number 2?” "
+        },
+        {
+            "cardID": "BifröstCampLabour04",
+            "cardText": "Repair the cart",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour06"
+            ],
+            "challengeSuccessText": "The cart you use is starting to wobble, which is fine for hauling crates of feathers, but too dangerous for transporting fragile flamingo eggs. Thankfully, you are skillful enough to repair it. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour06"
+            ],
+            "challengeFailText": "The cart you use is starting to wobble, which is fine for hauling crates of feathers, but too dangerous for transporting fragile flamingo eggs. You are unable to repair it yourself, but at least you are able to help another inmate fix it. "
+        },
+        {
+            "cardID": "BifröstCampLabour05",
+            "cardText": "Build a new cart",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour06"
+            ],
+            "challengeSuccessText": "The cart you use is starting to wobble, which is fine for hauling crates of feathers, but too dangerous for transporting fragile flamingo eggs. You skillfully craft a better quality cart, specifically for the eggs. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour06"
+            ],
+            "challengeFailText": "The cart you use is starting to wobble, which is fine for hauling crates of feathers, but too dangerous for transporting fragile flamingo eggs. You attempt to build a better cart for the eggs, but your end result is no better than the existing carts. Oh well, two crappy carts are better than one, I suppose... "
+        },
+        {
+            "cardID": "BifröstCampLabour06",
+            "cardText": "Chop firewood",
+            "challengeStat": "Brawn",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour07"
+            ],
+            "challengeSuccessText": "After an hour of backbreaking labour, you have supplied the prison camp with a fairly significant pile of wood. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour07"
+            ],
+            "challengeFailText": "After an hour of backbreaking labour, you have supplied the prison camp with a moderate pile of wood. "
+        },
+        {
+            "cardID": "BifröstCampLabour07",
+            "cardText": "Lunch!",
+            "addedText": "The lunch horn blows, but while everyone stops for a quick break, an inmate named Gregor breaks down in tears.<br><br> “Noon. It’s noon,” he sobs. “Madeleine and I got married at noon.” With a little encouragement, Despondent Inmate Gregor opens up and tells you that today is his one-year wedding anniversary.<br><br> “Poor bastard’s only ten months into a ten year Transportation sentence,” Impulsive Convict Pana tells you quietly.",
+            "nextCardsID": [
+                "BifröstCampLabour08",
+                "BifröstCampLabour09"
+            ]
+        },
+        {
+            "cardID": "BifröstCampLabour08",
+            "cardText": "Convince him to let go",
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "silver wedding band",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour10"
+            ],
+            "challengeSuccessText": "You argue to Despondent Inmate Gregor that he has to live with the reality of his current situation. From what you’ve seen so far, prisoners here on this tropical island have it better than in any other prison in the world - in many respects, he lives better than many free men. Even though he may never see Madeleine again, she would certainly be happier imagining him living his life to the fullest, as opposed to wasting it away. “Maybe you’re right,” Gregor says, taking your hand and holding it in his own. “I hurts us both to hang on to the past.” When he releases your hand there is a silver ring in your palm. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour10"
+            ],
+            "challengeFailText": "You argue to Despondent Inmate Gregor that he has to live with the reality of his current situation. If she is as young beautiful as he says she is, she will probably have many other suitors, and it isn’t fair for him to expect her to wait for him. Since he may never see Madeleine again, they will both be happier if he lets her go.<br><br>Gregor does not respond. He doesn’t seem so emotional anymore, but he is ertainly not over his grief."
+        },
+        {
+            "cardID": "BifröstCampLabour09",
+            "cardText": "Reassure him that they will reunite",
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "silver wedding band",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour10"
+            ],
+            "challengeSuccessText": "You argue to Despondent Inmate Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. “Thank you,” Gregor responds, taking your hand and holding it in his own. “I can keep my memory of her alive in my mind until it’s time for us to reunite. We convicts aren’t allowed to own property, and I can’t risk doing anything that will keep me here any longer than I need to.  When he releases your hand there is a silver ring in your palm. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour10"
+            ],
+            "challengeFailText": "You argue to Despondent Inmate Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. Not even if she is a decade older, and has lost her looks. Not even if the experience of prison changes his personality, or hers. Not even if other suitors approach her, as they surely will. Perhaps you should stop talking now. "
+        },
+        {
+            "cardID": "BifröstCampLabour10",
+            "cardText": "Haul more firewood",
+            "challengeStat": "Brawn",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampLabour11"
+            ],
+            "challengeSuccessText": "After a day of labouring and counselling, the low sun tells you that the time has come to carry this firewood back. This should keep the fires in the burn pit and the mess stoked for a long while. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampLabour11"
+            ],
+            "challengeFailText": "After a day of labouring and counselling, the low sun tells you that the time has come to carry this firewood back. This should keep the fires in the burn pit and the mess stoked for a little while. "
+        },
+        {
+            "cardID": "BifröstCampLabour11",
+            "cardText": "Head back to camp",
+            "addedText": "“Well, you turned out to be slightly less useless than the boys predicted you’d be,” Impulsive Convict Pana says, in what you can assume is high praise coming from him. “Quo likes to cycle around work details, but I’ll have to request you give me a hand next week with the lumber.” You begin to explain to Pana that although you would gladly help him again, you’ll be leaving soon on the next Navy ship <br><br> “Quo told you you’re leaving on the Humboldt? Good luck. The last 2 shipment dates came and went. Our warehouses are full up with goods, and no one’s comin to get them, so you might be here a bit longer than you expect, pal.”",
+            "rewards": [
+                {"rewardName": "Humboldt mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Pana’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01BurnHill"
+            ]
+        },
         {
             "cardID": "BifröstCampFishing01",
             "cardText": "Go fishing",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "addedText": "“You’ve probably noticed by now that here on Bifröst, we don’t keep no livestock,” says a weathered old convict named Rainer. He wears a permanent frown. “So if you want meat for dinner tonight the only way to get that is from the sea. And we humans gotta share the catch with the flamingo chicks, so we got some work to do today.”<br><br>Grumpy convict Rainer escorts you and a dozen other inmates to the pier. Four of them haul a small skiff down the shore to go fishing on the reef. Rainer hands you a fishing pole and begins by teaching you their technique for fishing off the pier.",
             "cardStyle": "handCardStyle",
             "reqs": [
                 {"reqName": "Bifröst fished",
                 "reqRule": "=",
                 "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
                 "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Bifröst fished",
+                "rewardQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCampFishing02"
             ]
         },
         {
+            "cardID": "BifröstCampFishing02",
+            "cardText": "Fish from pier",
+            "challengeStat": "Hand",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing03"
+            ],
+            "challengeSuccessText": "It takes you 30 minutes to make your first catch, and then you start to get the hang of it. After two hours, your catch bucket is emptier than all the others, but not by much. Already you have caught more fish than you yourself will eat in the day, so the other inmates find your results acceptable. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing03"
+            ],
+            "challengeFailText": "It takes you 30 minutes to make your first catch, and then you start to get the hang of it. But after two hours, your catch bucket is much emptier than everyone else’s. At this rate, you would barely be able to feed yourself, much less contribute to the rest of the group. "
+        },
+        {
+            "cardID": "BifröstCampFishing03",
+            "cardText": "Count your catch",
+            "addedText": "Count your catch. As the prisoners are all gathering up their catches and equipment, a scuffle breaks out between two young female prisoners, Rebecca and Celeste. One is accusing the other of stealing her fish. You weren’t watching them closely, but they were in your field of view and you did not notice any theft.",
+            "nextCardsID": [
+                "BifröstCampFishing04",
+                "BifröstCampFishing05"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing04",
+            "cardText": "Calm down the situation with an emotional argument",
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing06"
+            ],
+            "challengeSuccessText": "You argue that all of the fish caught is going to support the good of everyone here. It doesn’t matter who gets credit for catching the fish - all of the fish we caught contribute to the health and happiness of all the prisoners sharing this space together. Rebecca and Celeste glare at each other, but stop arguing.<br><br> “Good job,” Grumpy convict Rainer says privately to you. “It’s tough to get those two ladies to stop squabbling. Do you how it works when Transportation convicts are released? We don’t automatically get to go back home to the Empire, or Valhalla - not unless we can somehow afford it. Most of us just stay here in the New World. Rebecca and Celeste are both in love with the same man, who was released about six months ago, but they each still have a month left on their sentences, and then they’ll be hunting that poor fellow down like jaguars on a bunny rabbit.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing06"
+            ],
+            "challengeFailText": "You argue that all of the fish caught is going to support the good of everyone here. It doesn’t matter who gets credit for catching the fish - all of the fish we caught contribute to the health and happiness of all the prisoners sharing this space together. Rebecca and Celeste ignore you and the volume of their bickering intensifies until Grumpy Convict Rainer intercedes.<br><br> “Nice try,” he says privately to you afterward. “But it’s impossible to get those two ladies to stop squabbling. Do you how it works when Transportation convicts are released? We don’t automatically get to go back home to the Empire, or Valhalla - not unless we can somehow afford it. Most of us just stay here in the New World. Rebecca and Celeste are both in love with the same man, who was released about six months ago, but they each still have a month left on their sentences, and then they’ll be hunting that poor fellow down like jaguars on a bunny rabbit.” "
+        },
+        {
+            "cardID": "BifröstCampFishing05",
+            "cardText": "De-escalate the situation with a logical argument",
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing06"
+            ],
+            "challengeSuccessText": "You argue that you had a clear view of both of their buckets, and you saw no one stealing fish. The two women glare at each other, but stop arguing.<br><br> “Good job,” Grumpy convict Rainer says privately to you. “It’s tough to get those two ladies to stop squabbling. Do you how it works when Transportation convicts are released? We don’t automatically get to go back home to the Empire, or Valhalla - not unless we can somehow afford it. Most of us just stay here in the New World. Rebecca and Celeste are both in love with the same man, who was released about six months ago, but they each still have a month left on their sentences, and then they’ll be hunting that poor fellow down like jaguars on a bunny rabbit.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing06"
+            ],
+            "challengeFailText": "You argue that you had a clear view of both of their buckets, and you saw no one stealing fish. The two women ignore you and the volume of their bickering intensifies until Grumpy Convict Rainer intercedes.<br><br> “Nice try,” he says privately to you afterward. “But it’s impossible to get those two ladies to stop squabbling. Do you how it works when Transportation convicts are released? We don’t automatically get to go back home to the Empire, or Valhalla - not unless we can somehow afford it. Most of us just stay here in the New World. Rebecca and Celeste are both in love with the same man, who was released about six months ago, but they each still have a month left on their sentences, and then they’ll be hunting that poor fellow down like jaguars on a bunny rabbit.” "
+        },
+        {
+            "cardID": "BifröstCampFishing06",
+            "cardText": "Lagoon fishing",
+            "challengeStat": "Hand",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing07"
+            ],
+            "challengeSuccessText": "The four inmates in the skiff return with a good catch. After the small boat is emptied, you and three other inmates take a shot at it. The waters are shallow and calm on the on the back reef, but still you need to manoeuvre carefully to avoid hitting any shallow coral heads. The fish are small, but plentiful, and after an hour your boat has at least as many fish as the previous group caught. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing07"
+            ],
+            "challengeFailText": "The four inmates in the skiff return with a good catch. After the small boat is emptied, you and three other inmates take a shot at it. The waters are shallow and calm on the on the back reef, but still you need to manoeuvre carefully to avoid hitting any shallow coral heads. The fish are plentiful, but small and difficult to catch. After an hour your boat has less than half as many fish as the previous group caught. "
+        },
+        {
+            "cardID": "BifröstCampFishing07",
+            "cardText": "Fore reef fishing",
+            "challengeStat": "Hand",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing08"
+            ],
+            "challengeSuccessText": "This side of the reef is exposed to the open ocean, so the water is choppier. The fish are bigger though, and with some hard work, your team manages to bring in a few large snappers.<br><br> “Excellent, it seems like you aren’t completely useless after all. Tonight, everyone in the camp will get to eat meat!” Grumpy Convict Rainer says. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing08"
+            ],
+            "challengeFailText": "This side of the reef is exposed to the open ocean, so the water is choppier. The fish are bigger, but faster and smarter at avoiding capture. With some hard work, your team manages to bring in a one young snapper.<br><br> “Between this morning’s catch, and this, it looks like we’re gonna be vegetarians tonight.” Grumpy Convict Rainer says. "
+        },
+        {
+            "cardID": "BifröstCampFishing08",
+            "cardText": "“Why don’t more prisoners fish?”",
+            "addedText": "“If it was up to Warder Quo, then I’m sure he’d send more of us fishing each day, but it ain’t up to him. The guards won’t allow us to fall behind in our quotas for the feather harvest, so Quo only lets a handful of us go out fishing as long as our feather numbers have been good. Of course, in the old days, we’d get re-supplied with food and medical supplies, but who knows when the next ship will be coming.",
+            "nextCardsID": [
+                "BifröstCampFishing09a",
+                "BifröstCampFishing09b",
+                "BifröstCampFishing09c"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing09a",
+            "cardText": "“But Quo said the Humboldt will arrive in 2 days.”",
+            "addedText": "“And he said that the Humboldt would take you back along with all those months worth of packed feathers fillin up our warehouses? Well, Quo says a lot of things, but between you and me, don’t expect to be packin’ your bags in two days.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 2,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Humboldt mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampFishing10"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing09b",
+            "cardText": "“But Quo said the Humboldt will arrive tomorrow.”",
+            "addedText": "“And he said that the Humboldt would take you back along with all those months worth of packed feathers fillin up our warehouses? Well, Quo says a lot of things, but between you and me, don’t expect to be packin’ your bags tomorrow.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 1,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Humboldt mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampFishing10"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing09c",
+            "cardText": "“But Quo said the Humboldt will arrive today.”",
+            "addedText": "“And he said that the Humboldt would take you back along with all those months worth of packed feathers fillin up our warehouses? Well, Quo says a lot of things, but between you and me, don’t expect to be packin’ your bags tonight.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "<",
+                "reqQuantity": 1,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Humboldt mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampFishing10"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing10",
+            "cardText": "Bring your catch back to the pier",
+            "addedText": "“Hey newbie, is that a chunk of your ship?” another inmate asks as you are all rowing back to shore. Manoeuvring the skiff between dangerous shoals, you see a large slab of wooden construction, larger than your skiff, that has been caught up on a rocky outcropping of the reef.<br><br> “That wasn’t there last week,” Rainer agrees. Could this be part of the Medusa’s hull? If so, it really got smashed to pieces. “Look,” rainer says, pointing to a piece of sailcloth still attached to a chunk of a mast. “Scorch marks. Did the ship get struck by lightning?” Grump Convict Rainer doesn’t seem happy that you have no idea why the ship sank. “Let’s search around for salvage.”",
+            "rewards": [
+                {"rewardName": "Medusa mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampFishing11",
+                "BifröstCampFishing12"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFishing11",
+            "cardText": "Try to move the large chunk of debris",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4},
+                {"rewardName": "jade amulet",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing13"
+            ],
+            "challengeSuccessText": "You and a convict jump out of the boat and try moving the large planks - a difficult task while you are treading water. You are able to free it from the rocks, and realize that you are also dragging several ropes and metal pulleys.<br><br> “Don’t let the metal eyelets slide off the rope!” Rainer yells at you. “With no re-supplies coming from the Empire, we need all the metal we can get, and those joints should be full of good nails. Tie it up, and we’ll drag the wood back behind our boat.” As you reach out to save the metal eyelets, you see a jade pendant on a thin strap caught on one of the nails. You quickly pocket it.<br><br> “Convicts like me ain’t allowed to own property anyway, so I’ll pretend I didn’t see that,” Rainer says as you climb out of the water. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing13"
+            ],
+            "challengeFailText": "You and a convict jump out of the boat and try moving the large planks - a difficult task while you are treading water, but you are able to free it from the rocks.<br><br> “With no re-supplies coming from the Empire, we need all the metal we can get,” Rainer says. “And those joints should be full of good nails. Tie it up, and we’ll drag the wood back behind our boat.” "
+        },
+        {
+            "cardID": "BifröstCampFishing12",
+            "cardText": "Dive down to search for small debris",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 5},
+                {"rewardName": "Valhallan pennigar",
+                "rewardQuantity": 82}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFishing13"
+            ],
+            "challengeSuccessText": "While the other convicts investigate the large chunk of wood, you remove most of your clothes and jump down into the water. You spot a metal box, but it is heavy and you have to leave it. You go up for a larger breath of air and try again, this time re-emerging with a metal box that you pass up onto the skiff. Rainer opens it up and the three convicts all cheer out!<br><br> “You’ve got a good eye on ya, Newbie! Grab a hold of this and get on board!” he says, holding a metal hammer out to you. The inmates investigate the chisels, saws, sharpening tools, and some sort of clips that must have a nautical purpose. “With no Imperial re-supplies, we’ve been sorely lacking in good tools. These’ll be put to good use back at camp. And here, convicts ain’t allowed to own property, so you go ahead and take these for yourself,” Rainer says, scooping up a few brass coins from the bottom of the box and handing them to you. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFishing13"
+            ],
+            "challengeFailText": "While the other convicts investigate the large chunk of wood, you remove most of your clothes and jump down into the water. You spot a metal shape, and pull up some sort of metal tool.<br><br> “You’ve got a good eye on ya, Newbie,” Rainer says. “That there’s winch from a the running rigging of your old ship. Not much use for one on land, but we can try melting it down. With no Imperial re-supplies, we’ve been sorely lacking in metal.” "
+        },
+        {
+            "cardID": "BifröstCampFishing13",
+            "cardText": "The end of a long day",
+            "addedText": "“Gather up the nets! Time to head in!” Grumpy Convict Rainer shouts. Your back is sore, your shoulders ache, and your hands are covered in the slime of various sea creatures. “Newbie, you’re certainly not born to fish, and I don’t know if what you caught today will actually offset our food you’ve been eatin, or the medical care we gave you. In fact, some are of the mind that that our dear Resolute Warder Quo should’ve just thrown you back in the sea and let the Cursed take care of you. However, I can appreciate when someone puts in some honest hard work, regardless of how little competence they possess.” You assume that this is Rainer’s version of a compliment.",
+            "rewards": [
+                {"rewardName": "Rainer’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01Pier"
+            ]
+        },
+        {
             "cardID": "BifröstCampCreches01",
             "cardText": "Care for chicks in the creches",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "addedText": "“... snakes, geckos, tarantulas, dragons, oh, and not to mention other birds, like albatrosses, ospreys, gulls, and sea eagles. They’ll kill one in a heartbeat. Earthquakes knock down any poorly constructed creches, crushing them dead. Rainstorms will freeze them dead. Too much sun will bake their brains and kill them. Strong winds trigger the traps and knock debris onto the eggs. Even fungus. There’s a fungus here that will grow on the shells - it looks like nothing harmless - while it pierces the shell and eats the unborn chick inside.” Pessimistic Convict Astrid needs to use all the fingers on both hands, and then some, as she lists off all of the potential hazards to the flamingo chicks that you are going to help protect today.",
             "cardStyle": "heartCardStyle",
             "reqs": [
                 {"reqName": "Bifröst creched",
                 "reqRule": "=",
                 "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
                 "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Bifröst creched",
+                "rewardQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCampCreches02"
             ]
         },
         {
+            "cardID": "BifröstCampCreches02",
+            "cardText": "“Wait, dragons?”",
+            "addedText": "“Oh don’t worry, not those kind of dragons. Atlas dragons. Not the mythical things as big as a warehouse, breathing fire, of course. They’re basically just large iguanas, named by some explorer with an overactive imagination, I suppose. From an egg’s perspective, they’re dragon-sized though. And they love visiting our creches for a meal if they can.” Pessimistic Convict Astrid and you are part of a small group of inmates who are tasked with caring for the flamingo eggs and chicks today.<br><br>After a long uphill walk, you emerge from the trees and see the steep-sided walls of the mesa where the creches are located.",
+            "nextCardsID": [
+                "BifröstCampCreches03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches03",
+            "cardText": "Climb up the mesa",
+            "addedText": "You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red, fluorescent green. Some cages are home to juvenile birds, while others house dozens of eggs, still unhatched.",
+            "nextCardsID": [
+                "BifröstCampCreches04"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches04",
+            "cardText": "Feed chicks",
+            "challengeStat": "Heart",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches05"
+            ],
+            "challengeSuccessText": "“You can’t just throw a handful in each creche, creche, you have to feed them by hand, like a mother bird would. Being high up on a mesa allows us to keep away most predators, but if any scavenger birds come, smack ‘em with a stick.” Pessimistic Convict Astrid hands you a bag of small dead crustaceans, while she picks up a bag of seeds and nuts for herself. Flamingo chicks look like small ducklings, covered in fluffy white down - nothing at all like their adult counterparts. The birds take a liking to you and are soon, quite literally, eating out of the palm of your hand. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches05"
+            ],
+            "challengeFailText": "“You can’t just throw a handful in each creche, creche, you have to feed them by hand, like a mother bird would. Being high up on a mesa allows us to keep away most predators, but if any scavenger birds come, smack ‘em with a stick. Pessimistic Convict Astrid hands you a bag of small dead crustaceans, while she picks up a bag of seeds and nuts for herself. Flamingo chicks look like small ducklings, covered in fluffy white down - nothing at all like their adult counterparts. It is slow going. Not surprisingly, the chicks are wary about taking food from a stranger. "
+        },
+        {
+            "cardID": "BifröstCampCreches05",
+            "cardText": "“Can’t I feed them seeds?”",
+            "addedText": "“You stick to your smelly fish,” says Astrid. “They need variety in their diet or their colors end up dull. Only brightly colored feathers are worth anything at market.” Astrid looks around warily. “Plus, if the guards notice you doing anything that will lower the price of our feathers, you’ll get in deep trouble.” You look around, but for the life of you, you see no guards. In fact, in the couple of days you’ve been here, you can’t remember seeing a single guard in this prison colony, only senior prisoners like Resolute Warder Quo.",
+            "rewards": [
+                {"rewardName": "Guards mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampCreches06"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches06",
+            "cardText": "Continue feeding",
+            "addedText": "After some time, you are distracted by an inmate waving his arms at you.<br><br> “Hey! You got a runaway!” he yells, running over to you. “He hopped over the edge down into those rocks!” You and Astrid run off in that direction.",
+            "nextCardsID": [
+                "BifröstCampCreches07",
+                "BifröstCampCreches08"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches07",
+            "cardText": "Search from higher ground",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches09"
+            ],
+            "challengeSuccessText": "While Astrid starts making some ridiculous sounding bird call, you climb up to the top of one of the highest rocks in the area, scanning for any sign of a runaway chick. In a rock crevice you momentarily see a puff of white and you dash off in that direction. You hear an urgent chirping sound and you pick up the little baby escapee. You only take a few steps when you hear a soft scraping sound, and you turn to see a snake darting away into a rock crevice. “Good thing you found him when you did,” says Astrid, giving a kiss to the little bird. “But be more careful watching your creches in the future.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches09"
+            ],
+            "challengeFailText": "While Astrid starts making some ridiculous sounding bird call, you climb up to the top of one of the highest rocks in the area, scanning for any sign of a runaway chick. In a rock crevice you momentarily see a puff of white and you dash off in that direction. You hear an urgent chirping sound but cannot seem to locate the source of it. You search in vain briefly, and can no longer hear the chirping sounds. “No luck?” says Astrid, abandoning her search too. “Be more careful watching your creches in the future.” On your walk back, your eyes catch those of a rattlesnake, before it darts away into a crevice in the rocks. It has a bulge in its belly and maybe it’s just your imagination, but it also appears to have a grin on its face. "
+        },
+        {
+            "cardID": "BifröstCampCreches08",
+            "cardText": "Call the missing chick",
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches09"
+            ],
+            "challengeSuccessText": "““Go like this,” Astrid orders. She makes a variety of noises that sound more like monkeys or pigs than birds. “It’s what the mothers sound like.” You do your best to impersonate her. Eventually you hear an urgent chirping sound respond to your noises and you follow it to find the little baby escapee. Only a few steps after you pick it up, you hear a soft scraping sound, and you turn to see a snake darting away into a rock crevice. “Good thing you found him when you did,” says Astrid, giving a kiss to the little bird. “But be more careful watching your creches in the future.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches09"
+            ],
+            "challengeFailText": "““Go like this,” Astrid orders. She makes a variety of noises that sound more like monkeys or pigs than birds. “It’s what the mothers sound like.” You do your best to impersonate her. For a moment, you think you hear an urgent chirping sound respond to your noises, but cannot seem to locate the source of it. You search in vain briefly, and can no longer hear the chirping sounds. “No luck?” says Astrid, abandoning her search too. “Be more careful watching your creches in the future.” On your walk back, your eyes catch those of a rattlesnake, before it darts away into a crevice in the rocks. It has a bulge in its belly and maybe it’s just your imagination, but it also appears to have a grin on its face. "
+        },
+        {
+            "cardID": "BifröstCampCreches09",
+            "cardText": "Clean creches",
+            "challengeStat": "Heart",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Warehouse #2 mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches10"
+            ],
+            "challengeSuccessText": "“Everyone always likes the idea of caring for animals. No one ever thinks of cleaning up after them,” Pessimistic Convict Astrid says, handing you a shovel and bucket. “Tie a rag around your face. The guano of Bifröst flamingos is highly reactive. It’s great for fertilizer and, I hear, even for making cannon powder. Not so good for breathing in though. We’ve got a whole warehouse full of it down by the front of the camp.” After an hour of labour, you have several buckets full of the smelly, caustic material. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Warehouse #2 mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Health",
+                "rewardQuantity": -5}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches10"
+            ],
+            "challengeFailText": "“Everyone always likes the idea of caring for animals. No one ever thinks of cleaning up after them,” Pessimistic Convict Astrid says, handing you a shovel and bucket. “Tie a rag around your face. The guano of Bifröst flamingos is highly reactive. It’s great for fertilizer. Not so good for breathing in though. We’ve got a whole warehouse full of it down by the front of the camp.” After an hour of labour, you have a couple buckets full of the smelly, caustic material. "
+        },
+        {
+            "cardID": "BifröstCampCreches10",
+            "cardText": "Lunch time",
+            "addedText": "Sweaty and sunburt, you and most of the other prisoners sit go down from the mesa top into the shade of the some trees to grab a quick lunch break. Most of them are already sitting in groups. Not knowing much of the social dynamics in this prison camp, you decide not to rock any boats, and sit down beside the one woman who is sitting alone. You notice she is scratching a rock with a peice of charcoal, writing out words and wiping then off, so you ask what she is writing. “Oh, it’s nothing, just some, well, I feel silly saying this, but you’re an outsider so maybe you can give me some advice,” she says, clearly quite flustered. “There’s another inmate here, Cameron. Have you met? No, probably not. Anyway, Cameron recently seeing another woman here, Celeste, but the rumor is they’re on the outs now, and, well, I’ve always fancied Cameron, so… I was writing, or trying to write a… um… a little bit of a love letter, a poem really. Oh dear, I’m really not much of a writer though. I don’t suppose you are?”",
+            "nextCardsID": [
+                "BifröstCampCreches11a",
+                "BifröstCampCreches11b"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches11a",
+            "cardText": "Help with Rhea’s love-letter to Cameron",
+            "challengeStat": "Heart",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 5}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches12"
+            ],
+            "challengeSuccessText": "You agree to help Forlorn Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. It’s still cheesy, but sweet. As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches12"
+            ],
+            "challengeFailText": "You agree to help Forlorn Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. “Hmmm, I thank you for your suggestions, but I don’t know if that ending really fits Cameron’s, er, personality…” As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. "
+        },
+        {
+            "cardID": "BifröstCampCreches11b",
+            "cardText": "Stay out of it",
+            "addedText": "You know your strengths and weaknesses, and writing poetry definitely falls into the latter category. Forlorn Convict Rhea seems a little disappointed, but she understands. A thought occurs to you though: usually in this game we call life, the riskier an option is, the more rewards are, even if you fail. Choosing an option with no risk at all will often lead to disappointing results.",
+            "rewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+                "BifröstCampCreches12"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches12",
+            "cardText": "Repair creches",
+            "addedText": "Astrid assigns you and a couple of young men to search through the trees at the foot of the mesa for reeds to use in repairing traps that have been damaged by weather. Your focus on the foliage is broken though, when you hear a cry of “Dragon! Dragon! Help!” coming from the lip of the mesa. You rush over to see a convict on the ground, his leg bleeding. Directly in front of him is a lizard, larger than an iguana, closer in length to a small crocodile, but with a narrower jaw. You can see it has plenty of large teeth, as it opens its mouth and tries to intimidate you, letting out a violent hissing noise. It works.<br><br> “There are those Atlas dragons I told you about,” Pessimistic Convict Astrid says, responding to the calls of the injured man. “I thought you said it wasn’t real dragon!” you say, pointing at the 10-foot-long monster. “Well, it doesn’t breathe fire.” Astrid bends down and picks up a branch, never taking her eyes from the beast. “You take it from the left, I’ll take the right.”",
+            "nextCardsID": [
+                "BifröstCampCreches13",
+                "BifröstCampCreches14"
+            ]
+        },
+        {
+            "cardID": "BifröstCampCreches13",
+            "cardText": "Hit the dragon with a big stick",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4},
+                {"rewardName": "dragon claw",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches15"
+            ],
+            "challengeSuccessText": "You crouch down and scurry off to the left, rounding a large boulder. You find an old tree branch about the length and size of your arm, although you’d prefer to be more than arm’s length from this creature. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and charge forward, bringing the branch down hard on the beast’s hind foot. The dragon’s hiss becomes higher pitched as it rotates, hisses at you and flees over the edge of the mesa wall. “Nice work,” Astrid congratulates you, kneeling down to check out the ground. “A souvenir,” she says, handing you an ominous two-inch-long claw. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "Health",
+                "rewardQuantity": -10}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches15"
+            ],
+            "challengeFailText": "You crouch down and scurry off to the left, rounding a large boulder. You find an old tree branch about the length and size of your arm, although you’d prefer to be more than arm’s length from this creature. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and charge forward, bringing the branch down hard on the beast’s tail. The dragon rotates to face you, catching your leg as its tail whips around. Its serrated teeth are even more ominous at this short distance. It is about to charge you when Astrid lunges forward, bringing her branch down hard on the beast’s back. The dragon’s hiss becomes higher pitched as it turns and flees over the edge of the mesa wall.  “Nice work,” Astrid congratulates you, “Now let’s get back to fixing those traps.” "
+        },
+        {
+            "cardID": "BifröstCampCreches14",
+            "cardText": "Throw a big rock at the dragon",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4},
+                {"rewardName": "dragon claw",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampCreches15"
+            ],
+            "challengeSuccessText": "You crouch down and scurry off to the left, rounding a large boulder. The mesa is littered with stones of all sizes, so you pick up the heaviest one that you feel you can throw. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and hurl the rock, which slams into the beast’s hind foot. The dragon’s hiss becomes higher pitched as it rotates, hisses at you and flees over the edge of the mesa wall. “Nice work,” Astrid congratulates you, kneeling down to check out the ground. “A souvenir,” she says, handing you an ominous two-inch-long claw. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampCreches15"
+            ],
+            "challengeFailText": "You crouch down and scurry off to the left, rounding a large boulder. The mesa is littered with stones of all sizes, so you pick up the heaviest one that you feel you can throw. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and hurl the boulder, which slams onto the beast’s tail. The dragon rotates to face you. Its serrated teeth are even more ominous at this distance. It is about to charge you when Astrid lunges forward, bringing her branch down hard on the beast’s back. The dragon’s hiss becomes higher pitched as it turns and flees over the edge of the mesa wall.  “Nice work,” Astrid congratulates you, “Now let’s get back to fixing those traps.” "
+        },
+        {
+            "cardID": "BifröstCampCreches15",
+            "cardText": "A hard day’s work done",
+            "addedText": "As the sun begins to hang low in the sky, a night watch crew comes in to watch over the creches. You and the other convicts put away your tools and march back to the Burn Hill for a well-deserved dinner. Pessimistic Convict Astrid comes over and slaps you on the back. “I saw you do some good work out there today, newbie, and the guards said you seemed to be pulling your weight too. Thanks for the help today.” That’s strange; all day you don’t remember seeing a single guard.",
+            "rewards": [
+                {"rewardName": "Astrid’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01BurnHill"
+            ]
+        },
+
+        {
             "cardID": "BifröstCampSalvage01",
             "cardText": "Salvage wreckage of the Medusa",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "addedText": "“We start our survey here. It’s low tide, so check all the tidal pools,” Headmost Bailiff Claudia declares. You’ve been trekking through the jungle for twenty minutes to a new section of coastline that hasn’t been searched yet for wreckage of the Medusa. This area doesn’t have the same huge black rocks as the part where you washed ashore. This area seems more eroded by the sea.",
             "cardStyle": "eyeCardStyle",
             "reqs": [
                 {"reqName": "Bifröst salvaged",
                 "reqRule": "=",
                 "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
                 "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Bifröst salvaged",
+                "rewardQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCampSalvage02"
             ]
         },
         {
+            "cardID": "BifröstCampSalvage02",
+            "cardText": "Investigate the tidal pools",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage03"
+            ],
+            "challengeSuccessText": "What at first appears to a large jellyfish sticking out of a tidal pool instead turns out to be a large part of a sail.<br><br> “That’s some good strong fabric,” Claudia says, “probably part of the mizzen sail. A piece this big could make a good rain-shelter for the mess. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage03"
+            ],
+            "challengeFailText": "What at first appears to a large jellyfish sticking out of a tidal pool instead turns out to be part of a sail.<br><br> “That’s some good strong fabric,” Claudia says, “probably part of the mizzen topsail. We could cut this up to make splints and bandages. "
+        },
+        {
+            "cardID": "BifröstCampSalvage03",
+            "cardText": "Keep searching",
+            "addedText": "An inmate named Taymond calls out that he has found some kitchen supplies. While others come to sort through usable cutlery and cracked plates, Taymond moves off on his own. You notice a large, heavy bulge in his trousers - either he’s got a stolen silver candlestick down his pants, or he is very happy to see you.",
+            "nextCardsID": [
+                "BifröstCampSalvage04",
+                "BifröstCampSalvage05",
+                "BifröstCampSalvage06"
+            ]
+        },
+        {
+            "cardID": "BifröstCampSalvage04",
+            "cardText": "Convince him to return stolen candlestick",
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage07"
+            ],
+            "challengeSuccessText": "“You strike up a conversation with Taymond, learning that he still has four more years to serve on his sentence.<br><br> “And you really think you’ll be able to keep a stolen silver candlestick hidden for four years in a place like this?” you ask him. His face blushes, and he thinks about it for a moment. Taymond then bends down on one knee.<br><br> “Look! Look what I found over here, Bailiff Claudia!” he says, holding out the candlestick. “I was going to report it anyway… I was… Please, don’t say anything about it. I owe you.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -2},
+                {"rewardName": "Health",
+                "rewardQuantity": -20}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage07"
+            ],
+            "challengeFailText": "You talk to Taymond, a short way away from the group, threatening that he must return the silver candlestick, or you will inform Warder Quo. Before you even have a chance to react, you feel a sharp elbow in your gut. Taymond again hits you with the candlestick right on your neck, as you crumple down to the ground.<br><br> “Claudia! Bailiff Claudia!” he yells out. “The newbie here found a silver candlestick and was gonna steal it!” Arguments ensue as you defend yourself, that you would never do such a thing, and Taymond argues that he would never do such a thing either, since prisoners aren’t allowed personal possessions. It seems that Claudia doesn’t believe Taymond, but she does not entirely believe you either. "
+        },
+        {
+            "cardID": "BifröstCampSalvage05",
+            "cardText": "Steal candlestick back from convict",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage07"
+            ],
+            "challengeSuccessText": "You stay close to Taymond. A few minutes later, he is trying to lift a large piece of wood, tangled in seaweed. You ask if he needs help. While he is bending over, the silver candlestick he has stolen is actually protruding from his prison uniform pocket. You deftly slip it out while he is occupied with the effort of lifting the wood.<br><br> “Taymond, look what was on the ground right under this plank you lifted up! A silver candlestick!” Taymond drops the wood and subtly feels his pocket. “Bailiff Claudia, look what Taymond found!” Everyone is uplifted by Taymond’s find, and he plays it up as well, not sure how the candlestick fell out of his pocket, but happy that his theft ended up in him being praised, not caught. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1},
+                {"rewardName": "Health",
+                "rewardQuantity": -10}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage07"
+            ],
+            "challengeFailText": "You stay close to Taymond. A few minutes later, he is trying to lift a large piece of wood, tangled in seaweed. You ask if he needs help. While he is bending over, the silver candlestick he has stolen is actually protruding from his prison uniform pocket. You try to deftly slip it out while he is occupied with the effort of lifting the wood, but his hand is immediately on your wrist, gripping it hard, to the point where it feels near to breaking.<br><br> “You say a word about this to anyone, and I’ll make sure that you don’t wake up tomorrow morning. Bailiff Claudia loves me, and she’ll certainly believe me over a stranger like you.” "
+        },
+        {
+            "cardID": "BifröstCampSalvage06",
+            "cardText": "Don’t get involved",
+            "addedText": "If he wants to risk increasing his sentence, that’s fine with you. A thought occurs to you though: usually in this game we call life, the riskier an option is, the more rewards are, even if you fail. Choosing an option with no risk at all will often lead to disappointing results.",
+            "nextCardsID": [
+                "BifröstCampSalvage07"
+            ]
+        },
+        {
+            "cardID": "BifröstCampSalvage07",
+            "cardText": "Search in tidal pools",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4},
+                {"rewardName": "Royal shilling",
+                "rewardQuantity": 55}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage08"
+            ],
+            "challengeSuccessText": "“You spot something glittering form the bottom of a tidal pool, and when you investigate, you see a couple of shiny coins beside a small coin pouch. You try to lift the coin pouch and realize it is attached to something. Pulling away the green strands of kelp, you realize that the coin pouch is actually a tip jar, and is tied to a keg that feels full. An older convict turns the spigot and tastes the contents. “Rum! It’s rum!” all the inmates cheer, much more excited about the rum than the coins. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage08"
+            ],
+            "challengeFailText": "You spot something that looks like a mass of kelp, but when you pull away the green strands, you see an intact barrel. An older convict takes a deep whiff of the cask. “Pickles! It’s pickles!” everyone cheers. Pickles must be a rare commodity out here. "
+        },
+        {
+            "cardID": "BifröstCampSalvage08",
+            "cardText": "A gruesome discovery",
+            "addedText": "All the convicts rush over to Gregor, a young convict who has been here less than a year. He is throwing up behind a log.<br><br> “Hey Newbie. We found one of your buddies. Recognize him?” You look at the centre of the circle of inmates and see a man who was much less fortunate than yourself. His skin is pale white and bloated, and most of one arm is missing. You confirm that his uniform matches that of the Medusa’s crew, but you do not recognize the corpse. Gregor, who found the body is obviously young and not yet used to the harshness of life in a prison work camp. He is not handling it well.",
+            "nextCardsID": [
+                "BifröstCampSalvage09",
+                "BifröstCampSalvage10"
+            ]
+        },
+        {
+            "cardID": "BifröstCampSalvage09",
+            "cardText": "Blow it off as if it’s nothing",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage11"
+            ],
+            "challengeSuccessText": "You start describing to Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor doesn’t say anything, but wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage11"
+            ],
+            "challengeFailText": "You start describing to Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t give anyone else morale-boosting talks today. We have work to do.” "
+        },
+        {
+            "cardID": "BifröstCampSalvage10",
+            "cardText": "Ask Gregor about his feelings",
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage11"
+            ],
+            "challengeSuccessText": "You sit down by Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Between sobs, and silence, he gradually opens up to you. You learn about how he isn’t even guilty of the crime he was convicted of, and how he misses his family back home, and is fearful that they won’t be able to pay the expensive return fare when his sentence is up, so he’ll be stuck in New Atlantis forever. There isn’t even much you have to say; Gregor just needed someone to listen.<br><br> “Thanks for listening.” Gregor wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. “I can never handle the mushy stuff.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage11"
+            ],
+            "challengeFailText": "You sit down by Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t try consoling anyone else like this today. We have work to do.” "
+        },
+        {
+            "cardID": "BifröstCampSalvage11",
+            "cardText": "Get back to work",
+            "addedText": "“Newbie, come look at this!” Headmost Bailiff Claudia waves you over, holding up one end of a wooden beam. She is using it to pry up a large iron safe. The safe is bent, and its door is missing. There are black marks along the side and bottom of it. “Scorch marks. Did the Medusa sink due to a fire on board?”",
+            "nextCardsID": [
+                "BifröstCampSalvage12"
+            ]
+        },
+        {
+            "cardID": "BifröstCampSalvage12",
+            "cardText": "Investigate burn marks",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Claudia’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "Medusa mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampSalvage13"
+            ],
+            "challengeSuccessText": "You explain that you and all the other passengers were asleep, so you don’t know what caused the shipwreck. All you know is that a storm was going on. The prisoners’ interest is piqued.<br><br> “Could’ve been a robbery,” one inmate suggests. <br><br> “Lightning?” <br><br> “Were you under attack? The could be from cannonfire,”<br><br> “There may have been other survivors,” Headmost Bailiff Claudia says. “The sun is low, so we’re through searching the wreckage today, but keep an eye out for tracks. Perhaps we’ll have some more guests from the Medusa. Hopefully they’ll be as hardworking as you are.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Claudia’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "Medusa mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampSalvage13"
+            ],
+            "challengeFailText": "You explain that you and all the other passengers were asleep, so you don’t know what caused the shipwreck. All you know is that a storm was going on. The prisoners seem dissatisfied that you cannot give them any more information. <br><br> “Could’ve been a robbery,” one inmate suggests. <br><br> “Lightning?” <br><br> “Were you under attack? The could be from cannonfire,”<br><br> “There may have been other survivors,” Headmost Bailiff Claudia says. “The sun is low, so we’re through searching the wreckage today, but keep an eye out for tracks. Perhaps we’ll have some more guests from the Medusa. Hopefully they’ll be as hardworking as you are.” "
+        },
+        {
+            "cardID": "BifröstCampSalvage13",
+            "cardText": "Claudia pulls you aside",
+            "addedText": "On the march back to the prison camp, Headmost Bailiff Claudia pulls you aside <br><br> “There are some odd facts about this shipwreck,” she starts. “The same storm that hit the Medusa that night also swept through Bifröst. A ship that large should be able to weather such a minor storm. One survivor, one corpse, that mysterious book. Yes, I know about your book. Resolute Warder Quo and I share much - information, secrets, beds.” Claudia looks you up and down, as if trying to decide whether or not she can trust you. “There are strange things going on in the New Worlde these days. And the Empire tells us nothing. If you remember anything else of import about the Medusa, Quo and I would be very interested to know more.”",
+            "rewards": [
+                {"rewardName": "Quo’s Mistress mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01BurnHill"
+            ]
+        },
+        {
             "cardID": "BifröstCampFlamingos01",
             "cardText": "Gather flamingo feathers",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills.”",
+            "addedText": "“Be very quiet, and follow my lead,” Imitator Convict Siobhan says to you as both are huddled behind the fronds of large plant. A couple of adult flamingos descend gracefully into the clearing. “Mating pair. The bright purple one is the male, and the blue one is the female.” <br><br> The brightly coloured Bifröst flamingos make high-pitched chirping noises that sound like they should be emanating from a smaller bird as they approach a pile of fish carcasses that Siobhan had laid out on the ground.<br><br>Once they are contently eating the food, Siobhan slowly stands up and makes a high gurgling noise that imitates the chirping of the birds. She slowly starts walking toward them, gurgling all the while. When she reaches the male, she starts grooming it with a special comb which plucks out all of the loose feathers. Surprisingly, the bird doesn’t seem to mind. She gestures to you to join her.",
             "cardStyle": "voiceCardStyle",
             "reqs": [
                 {"reqName": "Bifröst flamingoed",
                 "reqRule": "=",
                 "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
                 "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Bifröst flamingoed",
+                "rewardQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCampFlamingos02"
             ]
         },
+        {
+            "cardID": "BifröstCampFlamingos02",
+            "cardText": "Try doing a flamingo call",
+            "challengeStat": "Voice",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos03"
+            ],
+            "challengeSuccessText": "You do your best to copy what Siobhan did. This is your first time impersonating a prison convict impersonating a bird, so you aren’t quite sure what you are doing. The female flamingo eyes you warily as you approach her. Even she can tell you haven’t done this before.<br><br> “They groom each other while feeding, so they are very trusting as long as you don’t make fast movements,” Siobhan whispers to you between gurgles. Sure enough, the bird trusts you and you are able to use the feather comb on her with moderate success. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos03"
+            ],
+            "challengeFailText": "You do your best to copy what Siobhan did. This is your first time impersonating a prison convict impersonating a bird, so you aren’t quite sure what you are doing. The female flamingo eyes you warily as you approach her. Even she can tell you haven’t done this before.<br><br> “They groom each other while feeding, so can be fairly trusting, but you have to stop making any kind of fast movements,” Siobhan whispers to you between gurgles. The bird lets you approach, but when you run the comb along its back, it backs away and you only get a few feathers. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos03",
+            "cardText": "Search for tracks",
+            "addedText": "“You’re lucky to have been assigned to me today,” Imitator Convict Siobhan says to you while walking through a jungle path with a few other prisoners. “Bifröst flamingo feathers are prized for their radiant colors, used in fashionable clothing all over the New World and the Olden. It’s probably the most important work detail on the island” <br><br> “And the easiest work detail,” a one-armed prisoner chimes in. <br><br> “Oh, I don’t know, I think Bailiff Claudia’s got the easiest work detail,” adds a woman with a snide look on her face. <br><br> “What, sleeping with the Warder? I’d rather pluck feathers.”",
+            "rewards": [
+                {"rewardName": "Quo’s Mistress mystery",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCampFlamingos04"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFlamingos04",
+            "cardText": "Check the traps",
+            "addedText": "“The flamingos’ only natural predators here are reptiles like snakes and lizards, so we set ground traps for them like this one,” Siobhan explains to you, gesturing to a complex metal and wood mechanism on the ground. <br><br> “See the red sash ring painted around that tree trunk? Be careful if you ever see that; it means a trap is hidden in the undergrowth nearby. Something triggered this one and ran off,” another inmate says, pointing to blood on the trap’s metal teeth of the trap. <br><br> “Two of you stay here and reset the trap, everyone else, let’s track the predator.”",
+            "nextCardsID": [
+                "BifröstCampFlamingos05",
+                "BifröstCampFlamingos06"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFlamingos05",
+            "cardText": "Follow flamingo tracks",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "shake snake fang",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos07"
+            ],
+            "challengeSuccessText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds you spot a green and black striped snake coiled near the base of a tree. <br><br> “Good find! Keep this as a souvenir,” Imitator Convict Siobhan says to you after she quickly dispatches the snake with her hunting knife. She places a single fang in your palm that resembles a needle, only curved and slightly thicker. “Don’t let yourself get pricked by it though, not unless you’re a fan of seizures. They call them shake snakes for a reason. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos07"
+            ],
+            "challengeFailText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds Siobhan spots a green and black striped snake coiled near the base of a tree. <br><br> “Good job leading me here.” Imitator Convict Siobhan says to you as she quickly dispatches the snake with her hunting knife. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos06",
+            "cardText": "Repair traps",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "shake snake fang",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos07"
+            ],
+            "challengeSuccessText": "The traps have to be durable, and easily reset in order to be useful here in the middle of the jungle. Repairing the trap is tricky work, but one of the prisoners stays back with you to work on it. “I wonder what set it off?” She wonders, wiping a bit of the blood off of the metal jaws. “Ah, here we go. Shake snake.” She hands you a single fang that resembles a needle, only curved and slightly thicker. “Your payment, for helping us today. Oh, and don’t prick yourself with it. The seizures the snake venom causes are not fun. Trust me. I know first hand.” ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos07"
+            ],
+            "challengeFailText": "The traps have to be durable, and easily reset in order to be useful here in the middle of the jungle. Repairing the trap is tricky work, but one of the prisoners stays back with you to work on it. “Tanks for helping me with this,” she says, just before the trap snaps shut accidentally. She resets it on her own this time. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos07",
+            "cardText": "Try a flamingo call",
+            "challengeStat": "Voice",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos08"
+            ],
+            "challengeSuccessText": "“The gathering call is much different than the calming call that we learned before,” Imitator Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, four beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack full of loose feathers. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos08"
+            ],
+            "challengeFailText": "“The gathering call is much different than the calming call that we learned before,” Imitator Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, two beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack of loose feathers. Siobhan collects most of the feathers, but you still feel that you contributed in some small part. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos08",
+            "cardText": "Collect stray feathers",
+            "addedText": "You are with three other prisoners, circling a watering hole, collecting feathers that have fallen from flamingos while drinking. You notice something odd in the undergrowth not far from you. It is shaped like a small starfish, and is bright yellow. Upon closer inspection, you realize it is a mushroom. You pluck it from the ground and hold it up to the other inmates, asking if it is edible.<br><br> “Brainstar! I’ll take that, thank you very much!” says one of the young men as he swipes if deftly from your hand before you can even react. <br><br> “No! No! You owe me one!” says the other prisoner, shoving the first to the ground. The two start wrestling with each other, each trying to take the mushroom you found.",
+            "nextCardsID": [
+                "BifröstCampFlamingos09",
+                "BifröstCampFlamingos10"            ]
+        },
+        {
+            "cardID": "BifröstCampFlamingos09",
+            "cardText": "Physically break up the fight. A mushroom isn’t worth this.",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Guards mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos11"
+            ],
+            "challengeSuccessText": "You shove yourself between the two men, trying to separate them, but that only gets you involved even more in the fight. Neither of them is much of a match for you though, and you are able to separate them. You grab the brainstar mushroom from the one who has it and throw it back into the bushes. And not a moment too soon.<br><br> “Guards! Heads up!” cries out another prisoner who looks to be little more than a teenager. Even though they were at each others’ throats a moment ago, both men immediately brush it off as if it were nothing. They walk away together, not even looking back into the bushes where you threw the mushroom. You see no guards. “That’s good that you broke up the fight. Brainstar mushrooms - they get you high,” the teenaged inmate says, eyes darting side to side “They are quite illegal here, and in high demand among certain inmates. But we should go. If the guards suspect someone possesses brainstars, there’ll be big trouble - even for you.” You both walk away. Still, you can see no guards. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Health",
+                "rewardQuantity": -10},
+                {"rewardName": "Guards mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos11"
+            ],
+            "challengeFailText": "You shove yourself between the two men, trying to separate them, but that only gets you involved even more in the fight. Either one of them would be a match for you though, so you only get a punch in the ribs for your valiant efforts.<br><br> “Guards! Heads up!” cries out another prisoner who looks to be little more than a teenager. Even though they were at each others’ throats a moment ago, both men immediately brush it off as if it were nothing. They walk away together, tossing the mushroom off into the bushes. You see no guards. “That’s good that you tried to break up the fight. Brainstar mushrooms - they get you high,” the teenaged inmate says, eyes darting side to side “They are quite illegal here, and in high demand among certain inmates. But we should go. If the guards suspect someone possesses brainstars, there’ll be big trouble - even for you.” You both walk away. Still, you can see no guards. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos10",
+            "cardText": "Demand the ‘brainstar’ back, since you found it first",
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Guards mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampFlamingos11"
+            ],
+            "challengeSuccessText": "Counting on the idea that words are more powerful than fists, you demand loudly that the two young men stop their fighting immediately and return the mushroom to you. They are stunned at your verbal aggressiveness and they pause to look at you. “Guards! Heads up!” cries out another prisoner who looks to be little more than a teenager. Even though they were at each others’ throats a moment ago, both men immediately brush it off as if it were nothing. They walk away together, tossing the mushroom off into the bushes. You see no guards. “That’s good that you yelled some sense into them. Brainstar mushrooms - they get you high,” the teenaged inmate says, eyes darting side to side “They are quite illegal here, and in high demand among certain inmates. But we should go. If the guards suspect someone possesses brainstars, there’ll be big trouble - even for you.” You both walk away. Still, you can see no guards. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Guards mystery",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampFlamingos11"
+            ],
+            "challengeFailText": "Counting on the idea that words are more powerful than fists, you demand loudly that the two young men stop their fighting immediately and return the mushroom to you. Your verbal aggressiveness as absolutely no effect. “Guards! Heads up!” cries out another prisoner who looks to be little more than a teenager. Even though they were at each others’ throats a moment ago, both men immediately brush it off as if it were nothing. They walk away together, tossing the mushroom off into the bushes. You see no guards. “That’s good that you tried to yell some sense into them. Brainstar mushrooms - they get you high,” the teenaged inmate says, eyes darting side to side “They are quite illegal here, and in high demand among certain inmates. But we should go. If the guards suspect someone possesses brainstars, there’ll be big trouble - even for you.” You both walk away. Still, you can see no guards. "
+        },
+        {
+            "cardID": "BifröstCampFlamingos11",
+            "cardText": "Head back to camp",
+            "addedText": "The Sun low in the sky, Imitator Convict Siobhan announces it is time to head back to camp. Siobhan chats with you casually, the two of you slowly falling back behind the other prisoners with sacks of feathers slung over their shoulders. She completely stops you. “Have you heard the rumors circling about you?” <br><br> “What rumors?” you ask. <br><br> “There is more than one inmate here on Bifrost who believes you may be a snoop, an agent of Her Royal Imperial Majesty, who is checking up on us. Maybe the Empire doesn’t trust us? Maybe they don’t trust the guards? What do you have to say for yourself?”",
+            "nextCardsID": [
+                "BifröstCampFlamingos12"
+            ]
+        },
+        {
+            "cardID": "BifröstCampFlamingos12",
+            "cardText": "Deny being a snoop",
+            "challengeStat": "Voice",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Siobhan’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp01BurnHill"
+            ],
+            "challengeSuccessText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You make some very strong points, reminding her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are good points,” Siobhan replies. “I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Siobhan’s esteem",
+                "rewardQuantity": 1},
+                {"rewardName": "time of day",
+                "rewardQuantity": 3,
+                "reqHidden": true}
+            ],
+            "challengeFailCards": [
+                "BifröstCamp01BurnHill"
+            ],
+            "challengeFailText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You probably shouldn’t have mentioned that. But you recover, and remind her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are reasonable points,” Siobhan replies. “I suppose I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. "
+        },
+
+
+
+
+
 
         {
             "cardID": "BifröstCamp05QuoOffice",
