@@ -76,6 +76,7 @@
             "cardID": "Medusa1",
             "locationName": "The Medusa",
             "locationDescription": "Inside a choatic cabin",
+            "backColor": "red",
             "cardText": "Wake Up",
             "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, your mind hones in on one thought: there was a lantern near your bunk.<br><br><em>[You will only succeed if you you have a good Eye. You need to roll a 4 or higher to find the lantern]</em>",
             "nextCardsID": [
@@ -502,7 +503,7 @@
         },
         {
             "cardID": "Medusa21",
-            "cardText": "",
+            "cardText": "???",
             "locationDescription": "?",
             "addedText": "You dream of darkness again<br><BR>You dream of screams again<br><br>You dream of the cold again.",
             "nextCardsID": [
@@ -1055,7 +1056,7 @@
         {
             "cardID": "LifeboatExamineBoat",
             "cardText": "Examine lifeboat",
-            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a metal lockbox, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. The other supplies might be good to hang on to for bartering with potential rescuers.",
+            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. There is also a sealed metal chest, but you don't have any way of opening it here at sea. The other supplies might be good to hang on to for bartering with potential rescuers.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 5},
@@ -1735,13 +1736,23 @@
         },
         {
             "cardID": "BifröstShore0",
-            "cardText": "The boat stopped *fix from here to include boat",
+            "cardText": "Crash!",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "Blinding light sears your eyes as you open them. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on sea water. You get up onto your hands and knees and you cough the salty sea water out of your system and wipe your wet face with wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl to a relatively dry one and throw your body upon on it. You close your eyes. First you try to take account of your own status. The wetness and pain are spread throughout your body, but you still seem to be in one piece. You feel like crap though.<br><br>Your stomach rumbles and you remember that you had some beef leather in your pocket leftover from dinner.",
-            "rewards": [
-                {"rewardName": "Health",
-                "rewardQuantity": -30}
+            "addedText": "You are gasp for air as you’ve just been smashed against a rock, the wind knocked out of you. You regain your breath, after passing out, or did you pass out? All you know is that blinding light sears your eyes. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on some sea water. You get up onto your hands and knees and you cough the salty sea water out and you wipe your wet face with your wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl over to a close, relatively dry one and throw yourself down on it. You close your eyes. First you try to take account of your own status. You feel pain and wet all over, but you still seem to be in one piece. You feel like crap though.",
+            "setScore": [
+                {"setName": "Health",
+                "setQuantity": 10},
+                {"setName": "sack of cheese",
+                "setQuantity": 0},
+                {"setName": "crate of water bottles",
+                "setQuantity": 0},
+                {"setName": "oar",
+                "setQuantity": 0},
+                {"setName": "bottle of fine brandy",
+                "setQuantity": 0},
+                {"setName": "crate of silverware",
+                "setQuantity": 0}
             ],
             "nextCardsID": [
                 "BifröstShore1"
@@ -1751,9 +1762,9 @@
             "cardID": "BifröstShore1",
             "cardText": "Close your eyes",
             "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. To one side is the ocean, vast, yet relatively calm. The sky is picturesquely blue, as if to call you a liar. You imagine a nervous cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself, causing you to wonder about your own sanity.",
-            "rewards": [
-                {"rewardName": "Mind",
-                "rewardQuantity": -30}
+            "setScore": [
+                {"setName": "Mind",
+                "setQuantity": 20}
             ],
             "nextCardsID": [
                 "BifröstShore2"
@@ -1763,7 +1774,7 @@
             "cardID": "BifröstShore2",
             "cardText": "Look around",
             "locationDescription": "Some rocky, desolate shore",
-            "addedText": "The whole coast is made of this same black rock. Inland, the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have barely any clothes, and you are alone, as far as you know.<br><br>Oh, and you have no tools, food, or fresh water. “Good luck, me!” You wish yourself.",
+            "addedText": "The whole coast is made of this same black rock. Inland, the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown, and you are alone, as far as you know.<br><br>Oh, and you have been thrown clear from your boat so you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
             "rewards": [
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
@@ -1796,7 +1807,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeSuccessText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. After a fair bit of searching, you find a worn top hat that is waterlogged, but it will serve to keep the sun off your head. The parrot is still sitting there, watching you. ",
+            "challengeSuccessText": "You search between nearby rocks for anything you can find: supplies from the Medusa, the wreckage of your lifeboat, even other survivors - if there are any. After a fair bit of searching, you find a worn top hat that is waterlogged, but it will serve to keep the sun off your head. The parrot is still sitting there, watching you. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
@@ -1805,7 +1816,7 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You search between nearby rocks for anything you can find: supplies from the Medusa, food rations from a wrecked lifeboat, even other survivors - if there are any. You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you. "
+            "challengeFailText": "You search between nearby rocks for anything you can find: supplies from the Medusa, the wreckage of your lifeboat, even other survivors - if there are any. You fail to find anything other than large rocks and chunks of soaked wood. The parrot is still sitting there, watching you. "
         },
         {
             "cardID": "BifröstShore3b",
@@ -1856,7 +1867,7 @@
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
-            "challengeSuccessText": "Although you are already a little worried about your remaining sanity, talking to a parrot couldn’t really hurt, could it?<br><br>“Hello, by any chance, are you a trained parrot? Are you a pet? Hello? Hello?”<br><br>The parrot cocks its head and looks at you - you certainly are a bizarre curiosity for it. Only when it does a couple of hops onto a different rock, do you realize that the parrot wasn’t sitting on a rock at all, but rather a huge piece of debris from the shipwreck. The debris isn’t just a piece of the hull though - it’s more finely worked. You walk over to inspect it. ",
+            "challengeSuccessText": "“Hello, by any chance, are you a trained pet parrot? Is there someone nearby? Hello? Hello?”<br><br>The parrot cocks its head and looks at you - certainly a bizarre curiosity. Only when it does a couple of hops onto a different rock, do you realize that the parrot wasn’t sitting on a rock at all, but rather the aft hull of your lifeboat!  ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
@@ -1877,7 +1888,7 @@
             "challengeSuccessCards": [
                 "BifröstShore6"
             ],
-            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed.<br><br>You notice that the rock it had just been sitting on was not a rock at all, but rather a large ornate piece of debris from the Medusa. The parrot watches you investigate further. ",
+            "challengeSuccessText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed.<br><br>You notice though that the rock it had just been sitting on was not a rock at all, but rather the aft hull of your lifeboat! The parrot watches you investigate further ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
@@ -1893,21 +1904,51 @@
                 "BifröstShore4",
                 "BifröstShore5"
             ],
-            "challengeFailText": "You try to clamber up into a better position to take the bird unawares, but the parrot just watches you limp along as blood trickles down your scraped shin. "
+            "challengeFailText": "You climb up to a high rock, and lunge at the parrot. It lazily hops to another rock, and continues to stare at you. It does not seem to be at all fazed. The parrot watches you limp along as blood trickles down your scraped shin."
         },
         {
             "cardID": "BifröstShore6",
             "cardText": "Investigate the debris",
-            "addedText": "As you get closer to the debris, you realize it isn’t debris - it’s a crate, and a sturdy one at that. Metal plating and rivets keep it all held together solidly, but the long hinges on one edge seem to have been damaged quite badly by the waves and rocks. Although it weighs nearly as much as you do, you manage to shift the chest so that it is upright, causing water to flow out. The crate must have been damaged enough for the seal to have been broken.",
+            "addedText": "You embrace the hull of wrecked lifeboat out of gratitude. There is a massive crack in one side which would need to be repaired before it could be seaworthy again, but other than that, it is in one piece. You become even more overjoyed when you realize that the wheels of cheese are still here, as well as the brandy. The bottles of water are missing, as are the oars, but you don’t feel like going back out to sea anytime soon. Even the silverware and sealed metal chest are still secured inside. Now that you are on land, you may be able to open it up.",
+            "rewards": [
+                {"rewardName": "sack of cheese",
+                "rewardQuantity": 1},
+                {"rewardName": "bottle of fine brandy",
+                "rewardQuantity": 2},
+                {"rewardName": "crate of silverware",
+                "rewardQuantity": 2}
+            ],
             "nextCardsID": [
-                "BifröstShore7",
+                "BifröstShore7a",
+                "BifröstShore7b",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
             ]
         },
         {
-            "cardID": "BifröstShore7",
+            "cardID": "BifröstShore7a",
+            "cardText": "EAT!",
+            "addedText": "You eat a few bites of the cheese, and open a bottle of brandy, drinking enough to invigorate you, but not enough to impair you.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Health",
+                "reqRule": "<",
+                "reqQuantity": 30,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": 10},
+                {"rewardName": "Mind",
+                "rewardQuantity": 10}
+            ],
+            "nextCardsID": [
+                "BifröstShore6"
+            ]
+        },
+        {
+            "cardID": "BifröstShore7b",
             "cardText": "Smash it with a rock",
             "challengeStat": "Brawn",
             "challengeRoll": 4,
@@ -1916,7 +1957,7 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "There is no shortage of sharp, heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate. The hinge snaps under the force. With that broken, it doesn’t matter that the lock is still in place, you are able to wiggle the lid off the crate.",
+            "challengeSuccessText": "There is no shortage of sharp heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the chest. The hinge snaps under the force of the rock. With that broken, it doesn’t matter that the lock is still in place, you are able to wiggle the lid off the chest.",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5}
@@ -1933,7 +1974,7 @@
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "here is no shortage of sharp, heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the crate. Even though the ocean started this process already, the crate is sturdier than you thought. The rock bounces off the crate and grazes your shin. "
+            "challengeFailText": "There is no shortage of sharp heavy rocks. You select the largest one you can lift, and bring it crashing down on the hinges of the chest. Even though the ocean started this process already, the chest is sturdier than you thought. The rock bounces off the chest and grazes your shin. "
         },
         {
             "cardID": "BifröstShore8a",
@@ -1954,7 +1995,7 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "You pick up a small deciduous tree needle that had washed up on a rock and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the crate opens. ",
+            "challengeSuccessText": "You pick up a small deciduous tree needle that had washed up on shore and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the lid opens. ",
             "challengeFailRewards": [
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
@@ -2009,14 +2050,14 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come loose from the metal and you are able to get at the inside of the safe. ",
+            "challengeSuccessText": "If the chest was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search its edges for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come apart from the metal and you are able to get at the inside of the crate. ",
             "challengeFailCards": [
                 "BifröstShore7",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
             ],
-            "challengeFailText": "If the crate was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search the edges of the crate for the weak point that must be there. You find a joint that seems to have some flexibility. You try to pry it apart, but nothing budges. "
+            "challengeFailText": "If the chest was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search its edges for the weak point that must be there. You find a joint that seems to have some flexibility. You try to pry it apart, but nothing budges. "
         },
         {
             "cardID": "BifröstShore10",
@@ -2029,16 +2070,15 @@
         {
             "cardID": "BifröstShore11",
             "cardText": "Open the lockbox",
-            "addedText": "The lockbox is quite secure, locked with a four digit code. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems to be sealed. By its weight, you can tell there is something inside, some large solid thing.<br><br>Your parrot friend also seems interested as he flies back over to you and starts investigating the straw you pulled out of the crate. It’s probably looking for food - the same food that you are going to need if you want to survive on this island.",
+            "addedText": "Inside the chest is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. Groping around in the straw, you pull out a lockbox, about the size of a large book.",
             "nextCardsID": [
-                "BifröstShore13"
+                "BifröstShore12"
             ]
         },
         {
             "cardID": "BifröstShore12",
-            "cardText": "Place your hand over the outline",
-            "addedText": "DELETEYou line your hand up with the outline on the lockbox. The cool metal sends a shiver through your wet body.",
-            "openQuest": {"questID": "OpenLockbox", "questTitle": "Open the Medusa Lockbox", "questDescription": "In the wreckage of the Medusa, you found a sturdy lockbox contained in a safe. What could be inside of it?"},
+            "cardText": "Open the lockbox",
+            "addedText": "The lockbox is quite secure. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems sealed. By its weight, you can tell there is something inside, some large solid thing.<br><br>The parrot flies back over to you and starts investigating the crate. It’s probably interested in your cheese - maybe the brandy too?",
             "nextCardsID": [
                 "BifröstShore13"
             ]
@@ -2046,7 +2086,7 @@
         {
             "cardID": "BifröstShore13",
             "cardText": "Shoo the bird away",
-            "addedText": "You shoo it away, yelling at it. The bird squawks loudly and angrily at you.<br><br>“Go away!” you yell.<br><br>“Go away! Go away!” The parrot yells back at you, as it leaps up into the air and flyies into the trees “Go away! Go away!”<br><br>“I’m not going anywhere, featherhead,”<br><br>“Hey, don’t talk to the birds like that.”<br><br>“I’ll talk to the damn birds how I want!” You realize that the voices are coming from two men on the edge of the jungle.<br><br>“You’re new here, you’ll learn,” says a third voice, a woman.",
+            "addedText": "You shoo it away from your few worldly possessions, yelling at it. The bird squawks loudly and angrily at you.<br><br>“Go away!” you yell.<br><br>“Go away! Go away!” The parrot yells back at you, as it leaps up into the air and flyies into the trees “Go away! Go away!”<br><br>“I’m not going anywhere, featherhead,”<br><br>“Hey, don’t talk to the birds like that.”<br><br>“I’ll talk to the damn birds how I want!” You realize that the voices are coming from two men on the edge of the jungle.<br><br>“You’re new here, you’ll learn,” says a third voice, a woman.",
             "nextCardsID": [
                 "BifröstShore14a",
                 "BifröstShore14b"
@@ -2075,7 +2115,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "“Pana, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“Think he’s a convict, Claudia?” Pana asks as he grabs your hand roughly and flips it over to see your wrist. You notice that everyone surrounding you has numbers tattooed on their own wrists. What's this crate you got 'ere'?” he asks as he greedily grabs at you.<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Pana. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
+            "addedText": "“Pana, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“You a convict?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. In doing so, you notice a number tattooed on his.<br><br>“Bailiff Claudia! He’s got food! And drink!” One of the others yells out, noticing your lifeboat and supplies. You notice that all of them have numbers tattooed on their own wrists. “There’s a lockbox here too. What’s in it?”<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -3323,7 +3363,7 @@
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
-                "reqRule": ">=",
+                "reqRule": "=",
                 "reqQuantity": 0,
                 "reqHidden": true}
             ],
@@ -3911,7 +3951,7 @@
         {
             "cardID": "BifröstCampCreches05",
             "cardText": "“Can’t I feed them seeds?”",
-            "addedText": "“You stick to your smelly fish,” says Astrid. “They need variety in their diet or their colors end up dull. Only brightly colored feathers are worth anything at market.” Astrid looks around warily. “Plus, if the guards notice you doing anything that will lower the price of our feathers, you’ll get in deep trouble.” You look around, but for the life of you, you see no guards. In fact, in the couple of days you’ve been here, you can’t remember seeing a single guard in this prison colony, only senior prisoners like Resolute Warder Quo.",
+            "addedText": "“You stick to your smelly fish,” says Astrid. “They need variety in their diet or their colors end up dull. Only brightly colored feathers are worth anything at market.” Astrid looks around warily. “Plus, if the guards notice you doing anything that will lower the price of our feathers, you’ll get in deep trouble.” You look around, but for the life of you, you see no guards. In fact, in the couple of days you’ve been here, you can’t remember seeing a single guard in this prison colony, only senior convicts like Resolute Warder Quo.",
             "rewards": [
                 {"rewardName": "Guards mystery",
                 "rewardQuantity": 1}

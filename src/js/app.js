@@ -78,7 +78,7 @@ var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
 //start of game
-//        activeCard: 'Medusa0',
+        activeCard: 'Medusa0',
 //wake up on Bifröst shore
 //    activeCard: 'Medusa22',
 //beginning of lifeboat
@@ -88,7 +88,7 @@ var player = {
 //end of Life or Death game
 //    activeCard: 'BifröstShore41Won',
 //end of beginning of work day
-    activeCard: 'BifröstCamp01BurnHill',
+//    activeCard: 'BifröstCamp01BurnHill',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -930,6 +930,15 @@ PlayableCard.prototype.updateLocation = function(){
         board.locationDescription = this.locationDescription;
     }
     locationDisplay.innerHTML = `<b>Location: ${board.locationName}</b><br>${board.locationDescription}`;
+    //allow cards to update the background color of the screen
+    //if (this.backColor) {
+        html.setAttribute('background-color', 'white');
+        //REMOVE html.setAttribute('style', 'background-color: white');
+        //REMOVE html.classList.add('markswhitebackground');
+
+        //do it this way
+        html.setAttribute('class', 'markswhitebackground');
+    //}
 };
 
 //create a card whoe primary purpose is navigation
@@ -1002,6 +1011,7 @@ StoryCard.prototype.loadFromData = function (data) {
     this.cardID = data.cardID;
     this.locationName = data.locationName;
     this.locationDescription = data.locationDescription;
+    this.backColor = data.backColor;
     this.cardText = data.cardText;
     this.challengeStat = data.challengeStat;
     this.challengeRoll = data.challengeRoll;
