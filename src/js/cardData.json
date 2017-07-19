@@ -3402,7 +3402,7 @@
         {
             "cardID": "BifröstCampLabour01",
             "cardText": "Perform manual labour",
-            "addedText": "“Yer with me today then, noob.” Impulsive Convict Pana gestures to you and you follow him to a large stack of crates",
+            "addedText": "“Yer with me today then, noob.” Impulsive Gaoler Pana gestures to you and you follow him to a large stack of crates",
             "cardStyle": "brawnCardStyle",
             "reqs": [
                 {"reqName": "Bifröst laboured",
@@ -3517,7 +3517,7 @@
         {
             "cardID": "BifröstCampLabour07",
             "cardText": "Lunch!",
-            "addedText": "The lunch horn blows, but while everyone stops for a quick break, an inmate named Gregor breaks down in tears.<br><br> “Noon. It’s noon,” he sobs. “Madeleine and I got married at noon.” With a little encouragement, Despondent Inmate Gregor opens up and tells you that today is his one-year wedding anniversary.<br><br> “Poor bastard’s only ten months into a ten year Transportation sentence,” Impulsive Convict Pana tells you quietly.",
+            "addedText": "The lunch horn blows, but while everyone stops for a quick break, an inmate named Gregor breaks down in tears.<br><br> “Noon. It’s noon,” he sobs. “Madeleine and I got married at noon.” With a little encouragement, Despondent Convict Gregor opens up and tells you that today is his one-year wedding anniversary.<br><br> “Poor bastard’s only ten months into a ten year Transportation sentence,” Impulsive Gaoler Pana tells you quietly.",
             "nextCardsID": [
                 "BifröstCampLabour08",
                 "BifröstCampLabour09"
@@ -3537,7 +3537,7 @@
             "challengeSuccessCards": [
                 "BifröstCampLabour10"
             ],
-            "challengeSuccessText": "You argue to Despondent Inmate Gregor that he has to live with the reality of his current situation. From what you’ve seen so far, prisoners here on this tropical island have it better than in any other prison in the world - in many respects, he lives better than many free men. Even though he may never see Madeleine again, she would certainly be happier imagining him living his life to the fullest, as opposed to wasting it away. “Maybe you’re right,” Gregor says, taking your hand and holding it in his own. “I hurts us both to hang on to the past.” When he releases your hand there is a silver ring in your palm. ",
+            "challengeSuccessText": "You argue to Despondent Convict Gregor that he has to live with the reality of his current situation. From what you’ve seen so far, prisoners here on this tropical island have it better than in any other prison in the world - in many respects, he lives better than many free men. Even though he may never see Madeleine again, she would certainly be happier imagining him living his life to the fullest, as opposed to wasting it away. “Maybe you’re right,” Gregor says, taking your hand and holding it in his own. “I hurts us both to hang on to the past.” When he releases your hand there is a silver ring in your palm. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
@@ -3545,7 +3545,7 @@
             "challengeFailCards": [
                 "BifröstCampLabour10"
             ],
-            "challengeFailText": "You argue to Despondent Inmate Gregor that he has to live with the reality of his current situation. If she is as young beautiful as he says she is, she will probably have many other suitors, and it isn’t fair for him to expect her to wait for him. Since he may never see Madeleine again, they will both be happier if he lets her go.<br><br>Gregor does not respond. He doesn’t seem so emotional anymore, but he is ertainly not over his grief."
+            "challengeFailText": "You argue to Despondent Convict Gregor that he has to live with the reality of his current situation. If she is as young beautiful as he says she is, she will probably have many other suitors, and it isn’t fair for him to expect her to wait for him. Since he may never see Madeleine again, they will both be happier if he lets her go.<br><br>Gregor does not respond. He doesn’t seem so emotional anymore, but he is ertainly not over his grief."
         },
         {
             "cardID": "BifröstCampLabour09",
@@ -3561,7 +3561,7 @@
             "challengeSuccessCards": [
                 "BifröstCampLabour10"
             ],
-            "challengeSuccessText": "You argue to Despondent Inmate Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. “Thank you,” Gregor responds, taking your hand and holding it in his own. “I can keep my memory of her alive in my mind until it’s time for us to reunite. We convicts aren’t allowed to own property, and I can’t risk doing anything that will keep me here any longer than I need to.  When he releases your hand there is a silver ring in your palm. ",
+            "challengeSuccessText": "You argue to Despondent Convict Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. “Thank you,” Gregor responds, taking your hand and holding it in his own. “I can keep my memory of her alive in my mind until it’s time for us to reunite. We convicts aren’t allowed to own property, and I can’t risk doing anything that will keep me here any longer than I need to.  When he releases your hand there is a silver ring in your palm. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
@@ -3569,7 +3569,7 @@
             "challengeFailCards": [
                 "BifröstCampLabour10"
             ],
-            "challengeFailText": "You argue to Despondent Inmate Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. Not even if she is a decade older, and has lost her looks. Not even if the experience of prison changes his personality, or hers. Not even if other suitors approach her, as they surely will. Perhaps you should stop talking now. "
+            "challengeFailText": "You argue to Despondent Convict Gregor that if he and Madeleine are truly committed to each other as much as he says, then nothing can stand in the way of their love. Not even if she is a decade older, and has lost her looks. Not even if the experience of prison changes his personality, or hers. Not even if other suitors approach her, as they surely will. Perhaps you should stop talking now. "
         },
         {
             "cardID": "BifröstCampLabour10",
@@ -3596,7 +3596,7 @@
         {
             "cardID": "BifröstCampLabour11",
             "cardText": "Head back to camp",
-            "addedText": "“Well, you turned out to be slightly less useless than the boys predicted you’d be,” Impulsive Convict Pana says, in what you can assume is high praise coming from him. “Quo likes to cycle around work details, but I’ll have to request you give me a hand next week with the lumber.” You begin to explain to Pana that although you would gladly help him again, you’ll be leaving soon on the next Navy ship <br><br> “Quo told you you’re leaving on the Humboldt? Good luck. The last 2 shipment dates came and went. Our warehouses are full up with goods, and no one’s comin to get them, so you might be here a bit longer than you expect, pal.”",
+            "addedText": "“Well, you turned out to be slightly less useless than the boys predicted you’d be,” Impulsive Gaoler Pana says, in what you can assume is high praise coming from him. “Quo likes to cycle around work details, but I’ll have to request you give me a hand next week with the lumber.” You begin to explain to Pana that although you would gladly help him again, you’ll be leaving soon on the next Navy ship <br><br> “Quo told you you’re leaving on the Humboldt? Good luck. The last 2 shipment dates came and went. Our warehouses are full up with goods, and no one’s comin to get them, so you might be here a bit longer than you expect, pal.”",
             "rewards": [
                 {"rewardName": "Humboldt mystery",
                 "rewardQuantity": 1},
@@ -3607,7 +3607,8 @@
                 "reqHidden": true}
             ],
             "nextCardsID": [
-                "BifröstCamp01BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ]
         },
         {
@@ -3888,7 +3889,8 @@
                 "reqHidden": true}
             ],
             "nextCardsID": [
-                "BifröstCamp01Pier"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ]
         },
         {
@@ -4157,7 +4159,8 @@
                 "reqHidden": true}
             ],
             "nextCardsID": [
-                "BifröstCamp01BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ]
         },
 
@@ -4313,7 +4316,7 @@
             "challengeSuccessCards": [
                 "BifröstCampSalvage11"
             ],
-            "challengeSuccessText": "You start describing to Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor doesn’t say anything, but wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. ",
+            "challengeSuccessText": "You start describing to Desopondent Convict Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor doesn’t say anything, but wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": -1}
@@ -4321,7 +4324,7 @@
             "challengeFailCards": [
                 "BifröstCampSalvage11"
             ],
-            "challengeFailText": "You start describing to Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t give anyone else morale-boosting talks today. We have work to do.” "
+            "challengeFailText": "You start describing to Desopondent Convict Gregor what it was actually like on the sinking ship. Passengers screaming out. Families separated, sailors falling from the rigging. This is nothing. You explain that he’s young, and life is sometimes cruel. He has to stop being childish and just learn to deal with it.<br><br>Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t give anyone else morale-boosting talks today. We have work to do.” "
         },
         {
             "cardID": "BifröstCampSalvage10",
@@ -4335,7 +4338,7 @@
             "challengeSuccessCards": [
                 "BifröstCampSalvage11"
             ],
-            "challengeSuccessText": "You sit down by Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Between sobs, and silence, he gradually opens up to you. You learn about how he isn’t even guilty of the crime he was convicted of, and how he misses his family back home, and is fearful that they won’t be able to pay the expensive return fare when his sentence is up, so he’ll be stuck in New Atlantis forever. There isn’t even much you have to say; Gregor just needed someone to listen.<br><br> “Thanks for listening.” Gregor wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. “I can never handle the mushy stuff.” ",
+            "challengeSuccessText": "You sit down by Desopondent Convict Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Between sobs, and silence, he gradually opens up to you. You learn about how he isn’t even guilty of the crime he was convicted of, and how he misses his family back home, and is fearful that they won’t be able to pay the expensive return fare when his sentence is up, so he’ll be stuck in New Atlantis forever. There isn’t even much you have to say; Gregor just needed someone to listen.<br><br> “Thanks for listening.” Gregor wipes the tears from his eyes, stands up and walks away, getting back to work.<br><br> “Thanks for speaking to him,” Headmost Bailiff Claudia says, putting a hand on your shoulder. “I can never handle the mushy stuff.” ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": -1}
@@ -4343,7 +4346,7 @@
             "challengeFailCards": [
                 "BifröstCampSalvage11"
             ],
-            "challengeFailText": "You sit down by Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t try consoling anyone else like this today. We have work to do.” "
+            "challengeFailText": "You sit down by Desopondent Convict Gregor and put an arm around his shoulders. He says he doesn’t want to talk about the corpse. You ask about his feelings instead. Gregor bursts into tears and runs off along the beach. Another convict runs after Gregor to try consoling him.<br><br> “He’s just a kid,” Headmost Bailiff Claudia says, arms crossed. “Please don’t try consoling anyone else like this today. We have work to do.” "
         },
         {
             "cardID": "BifröstCampSalvage11",
@@ -4395,13 +4398,14 @@
                 "reqHidden": true}
             ],
             "nextCardsID": [
-                "BifröstCamp01BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ]
         },
         {
             "cardID": "BifröstCampFlamingos01",
             "cardText": "Gather flamingo feathers",
-            "addedText": "“Be very quiet, and follow my lead,” Imitator Convict Siobhan says to you as both are huddled behind the fronds of large plant. A couple of adult flamingos descend gracefully into the clearing. “Mating pair. The bright purple one is the male, and the blue one is the female.” <br><br> The brightly coloured Bifröst flamingos make high-pitched chirping noises that sound like they should be emanating from a smaller bird as they approach a pile of fish carcasses that Siobhan had laid out on the ground.<br><br>Once they are contently eating the food, Siobhan slowly stands up and makes a high gurgling noise that imitates the chirping of the birds. She slowly starts walking toward them, gurgling all the while. When she reaches the male, she starts grooming it with a special comb which plucks out all of the loose feathers. Surprisingly, the bird doesn’t seem to mind. She gestures to you to join her.",
+            "addedText": "“Be very quiet, and follow my lead,” Covert Convict Siobhan says to you as both are huddled behind the fronds of large plant. A couple of adult flamingos descend gracefully into the clearing. “Mating pair. The bright purple one is the male, and the blue one is the female.” <br><br> The brightly coloured Bifröst flamingos make high-pitched chirping noises that sound like they should be emanating from a smaller bird as they approach a pile of fish carcasses that Siobhan had laid out on the ground.<br><br>Once they are contently eating the food, Siobhan slowly stands up and makes a high gurgling noise that imitates the chirping of the birds. She slowly starts walking toward them, gurgling all the while. When she reaches the male, she starts grooming it with a special comb which plucks out all of the loose feathers. Surprisingly, the bird doesn’t seem to mind. She gestures to you to join her.",
             "cardStyle": "voiceCardStyle",
             "reqs": [
                 {"reqName": "Bifröst flamingoed",
@@ -4442,7 +4446,7 @@
         {
             "cardID": "BifröstCampFlamingos03",
             "cardText": "Search for tracks",
-            "addedText": "“You’re lucky to have been assigned to me today,” Imitator Convict Siobhan says to you while walking through a jungle path with a few other prisoners. “Bifröst flamingo feathers are prized for their radiant colors, used in fashionable clothing all over the New World and the Olden. It’s probably the most important work detail on the island” <br><br> “And the easiest work detail,” a one-armed prisoner chimes in. <br><br> “Oh, I don’t know, I think Bailiff Claudia’s got the easiest work detail,” adds a woman with a snide look on her face. <br><br> “What, sleeping with the Warder? I’d rather pluck feathers.”",
+            "addedText": "“You’re lucky to have been assigned to me today,” Covert Convict Siobhan says to you while walking through a jungle path with a few other prisoners. “Bifröst flamingo feathers are prized for their radiant colors, used in fashionable clothing all over the New World and the Olden. It’s probably the most important work detail on the island” <br><br> “And the easiest work detail,” a one-armed prisoner chimes in. <br><br> “Oh, I don’t know, I think Bailiff Claudia’s got the easiest work detail,” adds a woman with a snide look on her face. <br><br> “What, sleeping with the Warder? I’d rather pluck feathers.”",
             "rewards": [
                 {"rewardName": "Quo’s Mistress mystery",
                 "rewardQuantity": 1}
@@ -4474,7 +4478,7 @@
             "challengeSuccessCards": [
                 "BifröstCampFlamingos07"
             ],
-            "challengeSuccessText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds you spot a green and black striped snake coiled near the base of a tree. <br><br> “Good find! Keep this as a souvenir,” Imitator Convict Siobhan says to you after she quickly dispatches the snake with her hunting knife. She places a single fang in your palm that resembles a needle, only curved and slightly thicker. “Don’t let yourself get pricked by it though, not unless you’re a fan of seizures. They call them shake snakes for a reason. ",
+            "challengeSuccessText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds you spot a green and black striped snake coiled near the base of a tree. <br><br> “Good find! Keep this as a souvenir,” Covert Convict Siobhan says to you after she quickly dispatches the snake with her hunting knife. She places a single fang in your palm that resembles a needle, only curved and slightly thicker. “Don’t let yourself get pricked by it though, not unless you’re a fan of seizures. They call them shake snakes for a reason. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
@@ -4482,7 +4486,7 @@
             "challengeFailCards": [
                 "BifröstCampFlamingos07"
             ],
-            "challengeFailText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds Siobhan spots a green and black striped snake coiled near the base of a tree. <br><br> “Good job leading me here.” Imitator Convict Siobhan says to you as she quickly dispatches the snake with her hunting knife. "
+            "challengeFailText": "You all split off, looking for signs of the predator who threatens the precious birds. It isn’t long before you spot blood on a fern leaf. You call the others over, and within seconds Siobhan spots a green and black striped snake coiled near the base of a tree. <br><br> “Good job leading me here.” Covert Convict Siobhan says to you as she quickly dispatches the snake with her hunting knife. "
         },
         {
             "cardID": "BifröstCampFlamingos06",
@@ -4520,7 +4524,7 @@
             "challengeSuccessCards": [
                 "BifröstCampFlamingos08"
             ],
-            "challengeSuccessText": "“The gathering call is much different than the calming call that we learned before,” Imitator Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, four beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack full of loose feathers. ",
+            "challengeSuccessText": "“The gathering call is much different than the calming call that we learned before,” Covert Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, four beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack full of loose feathers. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 2}
@@ -4528,7 +4532,7 @@
             "challengeFailCards": [
                 "BifröstCampFlamingos08"
             ],
-            "challengeFailText": "“The gathering call is much different than the calming call that we learned before,” Imitator Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, two beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack of loose feathers. Siobhan collects most of the feathers, but you still feel that you contributed in some small part. "
+            "challengeFailText": "“The gathering call is much different than the calming call that we learned before,” Covert Convict Siobhan states. You find yourself in a clearing much like earlier in the day. This one again has a pile of flamingo food, but no flamingos. She begins making a noise that sounds like a pig chasing a sheep chasing a monkey. You feel ridiculous, but you try to join in with her, creating something much worse than anyone would normally experience in a barnyard. Sure enough though, two beautifully colored flamingos glide downward in the clearing and begin feeding on the bait. You switch sounds, approach with the comb, and are rewarded with a sack of loose feathers. Siobhan collects most of the feathers, but you still feel that you contributed in some small part. "
         },
         {
             "cardID": "BifröstCampFlamingos08",
@@ -4595,7 +4599,7 @@
         {
             "cardID": "BifröstCampFlamingos11",
             "cardText": "Head back to camp",
-            "addedText": "The Sun low in the sky, Imitator Convict Siobhan announces it is time to head back to camp. Siobhan chats with you casually, the two of you slowly falling back behind the other prisoners with sacks of feathers slung over their shoulders. She completely stops you. “Have you heard the rumors circling about you?” <br><br> “What rumors?” you ask. <br><br> “There is more than one inmate here on Bifrost who believes you may be a snoop, an agent of Her Royal Imperial Majesty, who is checking up on us. Maybe the Empire doesn’t trust us? Maybe they don’t trust the guards? What do you have to say for yourself?”",
+            "addedText": "The Sun low in the sky, Covert Convict Siobhan announces it is time to head back to camp. Siobhan chats with you casually, the two of you slowly falling back behind the other prisoners with sacks of feathers slung over their shoulders. She completely stops you. “Have you heard the rumors circling about you?” <br><br> “What rumors?” you ask. <br><br> “There is more than one inmate here on Bifrost who believes you may be a snoop, an agent of Her Royal Imperial Majesty, who is checking up on us. Maybe the Empire doesn’t trust us? Maybe they don’t trust the guards? What do you have to say for yourself?”",
             "nextCardsID": [
                 "BifröstCampFlamingos12"
             ]
@@ -4615,7 +4619,8 @@
                 "reqHidden": true}
             ],
             "challengeSuccessCards": [
-                "BifröstCamp01BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ],
             "challengeSuccessText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You make some very strong points, reminding her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are good points,” Siobhan replies. “I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. ",
             "challengeFailRewards": [
@@ -4628,9 +4633,335 @@
                 "reqHidden": true}
             ],
             "challengeFailCards": [
-                "BifröstCamp01BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCampPandemonium01"
             ],
             "challengeFailText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You probably shouldn’t have mentioned that. But you recover, and remind her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are reasonable points,” Siobhan replies. “I suppose I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. "
+        },
+
+        {
+            "cardID": "BifröstCamp02BurnHill",
+            "cardText": "Walk through the trees to the burn hill",
+            "locationName": "Bifröst Prison Camp, burn hill",
+            "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
+            "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
+            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
+            "nextCardsID": [
+                "BifröstCamp02Mess",
+                "BifröstCamp02JungleCreches",
+                "BifröstCamp02Work",
+                "BifröstCamp02Bedtime"
+            ]
+        },
+
+        {
+            "cardID": "BifröstCampPandemonium01",
+            "cardText": "Walk through the trees to the burn hill",
+            "locationName": "Bifröst Prison Camp, jungle",
+            "locationDescription": "The dense jungle foliage gives way to a small but well-worn path",
+            "addedText": "Working all day, you didn’t have much time to take care of other bodily business. While walking back to the burn hill to check out for the day, you ask to stop to relieve yourself. After, you seek to catch up to the rest of the group, but are in no great rush - the path here is cut cleanly through the jungle and well-maintained. You are considering what you will say to Quo when you next see him and confront him about what is going on with the Humboldt. From how he has been avoiding you lately, it is certain that he knows more than he is letting on. You come to the decision that you must confront him, and get some answers about what is really going on here. What kind of strategy will you plan to use when you approach Resolute Warder Quo?",
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": -1}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium02Brawn",
+                "BifröstCampPandemonium02Hand",
+                "BifröstCampPandemonium02Heart",
+                "BifröstCampPandemonium02Eye",
+                "BifröstCampPandemonium02Voice"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium02Brawn",
+            "cardText": "Foreceful. Make Demands.",
+            "addedText": "You make up your mind to demand that Quo tells you what is going on with the Humboldt’s delays. There are obviously no guards here for you to worry about, and Quo doesn’t seem to carry a weapon on him. You scout out a heavy, firm stick that will make a good negotiating tool.",
+            "rewards": [
+                {"rewardName": "Brawn",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium02Hand",
+            "cardText": "Economical. Make a deal.",
+            "addedText": "You make up your mind to negotiate with Quo. You want to get to the bottom of what is going on here. One way or another, you will get out of here eventually. Since there don’t seem to be any guards actually here, there will be opportunities for you to escape. And if the guards ever do show up, they will see that you don’t belong here and release you. Quo too will be released eventually when his sentence is over, and it would be very beneficial for him if he has you on the outside owing him a favour.",
+            "rewards": [
+                {"rewardName": "Hand",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium02Heart",
+            "cardText": "Emotional. Make a plea.",
+            "addedText": "You make up your mind to appeal to Quo’s sense of honour and duty. Here he is, sentenced to work in a beautiful place, where he enjoys ample food, a leadership position, and no oversight of guards. Yet he is still a prisoner. Can he not understand how it feels for you, imprisoned without cause? Without even a sentence from a judge? Without a trial by your peers? Without any crime committed? Surely, you can get him to open up and share what is really going on here.",
+            "rewards": [
+                {"rewardName": "Heart",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium02Eye",
+            "cardText": "Observant. Lay out the facts.",
+            "addedText": "You make up your mind to lay out the facts for Quo. People keep saying there are guards, yet there clearly are no guards here. Quo said that the Humboldt was coming for its regular monthly delivery yesterday, yet it didn’t show up. In fact, various individuals around the camp have implied that the Humboldt hasn’t been here for a while. The weather has been gentle, so there is some other reason that it hasn’t arrived, and you want to know what that is.",
+            "rewards": [
+                {"rewardName": "Eye",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium02Voice",
+            "cardText": "Convincing. Imply threats.",
+            "addedText": "You make up your mind to convince Quo that you have not been completely forthcoming with him. You have friends in high places in Her Majesty’s court, and in New Atlantis, and that he had better do what he can to get you on board a ship very soon or he will be very sorry.",
+            "rewards": [
+                {"rewardName": "Voice",
+                "rewardQuantity": 100}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium03"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium03",
+            "cardText": "Interrupted.",
+            "addedText": "Your concentration is interrupted by a loud squawking sound off in the trees nearby. It sounds panicked. Something is in pain.",
+            "nextCardsID": [
+                "BifröstCampPandemonium04a",
+                "BifröstCampPandemonium04b"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium04a",
+            "cardText": "Follow the sound",
+            "addedText": "You push through some trees, quickly at first, slowing down when you see the familiar red marking on a tree that indicate that a predator-trap has been set nearby. Through the leaves you catch glimpses of a flailing green bird with a yellow chest not far away.",
+            "nextCardsID": [
+                "BifröstCampPandemonium05"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium04b",
+            "cardText": "Wait and see what happens.",
+            "addedText": "The panicked squawking sounds continue. Something is in pain.",
+            "nextCardsID": [
+                "BifröstCampPandemonium04a",
+                "BifröstCampPandemonium04b"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium05",
+            "cardText": "The injured bird",
+            "firstText": "You advance toward the sound and see what is certainly not a flamingo. It’s a parrot. The parrot must have bacome snared in a trap designed to catch the flamingos’ reptile predators. As you approach it, the squawking changes to something resembling a cross between a baby crying and wolf howling. ",
+            "addedText": "The parrot looks at you, still screaming, fear in its eyes.",
+            "nextCardsID": [
+                "BifröstCampPandemonium06Brawn",
+                "BifröstCampPandemonium06Hand",
+                "BifröstCampPandemonium06Heart",
+                "BifröstCampPandemonium06Eye",
+                "BifröstCampPandemonium06Voice"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium06Brawn",
+            "cardText": "Free the bird by severing its leg",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -10}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampPandemonium07Brawn"
+            ],
+            "challengeSuccessText": "It is the tough thing to do, but the right thing to do. After all, birds don’t really need their legs, do they? You step forward to get a better look. The metal teeth of the trap are securely locked around the leg; it  would probably never be functional again anyway. The parrot almost seems to understand what you are about to do as you step toward it. With one hand you grab its neck to keep its beak at bay, while the other snaps the bird’s leg off using the trap for leverage. ",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeFailText": "It is the tough thing to do, but the right thing to do. After all, birds don’t really need their legs, do they? You step forward to get a better look. The metal teeth of the trap are securely locked around the leg; it does not look good. It would probably never be functional again anyway. The parrot almost seems to understand what you are about to do as you step toward it, and it does not agree with your solution one bit. The bird beats you back with its sharp beak and free talons. You tell yourself that it was only able to do this on account of its adrenaline."
+        },
+        {
+            "cardID": "BifröstCampPandemonium07Brawn",
+            "cardText": "continue",
+            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, leaving behind you and its lost leg. It perches on a branch as best as it can, leaning beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with an yellow chest and orange back.<br><br>”That was violent, but necessary,” it says. “Thank you for your help, human.” And the two fly off together.",
+            "rewards": [
+                {"rewardName": "Pandemonium",
+                "rewardQuantity": 40}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium08"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium06Hand",
+            "cardText": "Attempt to disarm the trap",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessCards": [
+                "BifröstCampPandemonium07Hand"
+            ],
+            "challengeSuccessText": "It will be difficult, but it’s the right thing to do. The bird is wary of you as you kneel down. But its shrieking seems to relax almost as if it can understand what you are trying to do. You haven’t seen this type of trap before though. There is some sort of release mechanism for the teeth, but every time you fiddle with it, it painfully twists the bir’s trapped leg. Eventually, you find the release pin, and the teeth open. The bird flies up, one useless leg hanging limply in the air. ",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeFailText": "It will be difficult, but it’s the right thing to do. The bird is wary of you as you kneel down. But its shrieking seems to relax almost as if it can understand what you are trying to do. You haven’t seen this type of trap before though. There is some sort of release mechanism for the teeth, but every time you fiddle with it, it painfully twists the bir’s trapped leg. It gets fed up with your attempts and tries to claw at you with its beak until you back away."
+        },
+        {
+            "cardID": "BifröstCampPandemonium07Hand",
+            "cardText": "continue",
+            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, up above you. It perches on a branch as best as it can, leaning beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with an yellow chest and orange back.<br><br>”That was very skilled work,” it says. “Thank you for your help, human.” And the two fly off together.",
+            "rewards": [
+                {"rewardName": "Pandemonium",
+                "rewardQuantity": 60}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium08"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium06Heart",
+            "cardText": "Put the bird out of its misery",
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Health",
+                "rewardQuantity": -10}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampPandemonium07Heart"
+            ],
+            "challengeSuccessText": "It is the tough thing to do, but the right thing to do. After all, it’s just a bird. You step forward to get a better look. The metal teeth of the trap are securely locked around the leg; it does not look good. It would probably never be functional again anyway. The parrot almost seems to understand what you are about to do as you step toward it. It tries to fight back, but you are too fast. In two quick motions, you put your hands around the creature’s neck and twist. It quickly goes limp. ",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeFailText": "It is the tough thing to do, but the right thing to do. After all, it’s just a bird. You step forward to get a better look. The metal teeth of the trap are securely locked around the leg; it does not look good. It would probably never be functional again anyway. The parrot almost seems to understand what you are about to do as you step toward it. It fights back, and you cannot get your hands in among the beak and talons. The small bird forces you back."
+        },
+        {
+            "cardID": "BifröstCampPandemonium07Heart",
+            "cardText": "continue",
+            "addedText": "“Poor choice,” you hear a very hoarse voice behind you say. At first you cannot see anyone standing behind you. It is only when the voice begins to speak again, that you realize it is coming from a larger orange parrot resting on a branch behind you. “Well, at least now we know where you stand.” It leaps up into the sky.",
+            "rewards": [
+                {"rewardName": "Pandemonium",
+                "rewardQuantity": -60}
+            ],
+            "nextCardsID": [
+                "BifröstCampPandemonium08"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium06Eye",
+            "cardText": "Search the jungle for anything or anyone that can help",
+            "reqs": [
+                {"reqName": "Bifröst chose eye",
+                "reqRule": "<",
+                "reqQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst chose eye",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeSuccessText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to prison camp. Your eye catches some motion above the ground though, and you spot another parrot - a large orange one, nearly half as tall as you are sitting quietly on a branch. Your eyes meet, and you stare at each other for a moment.<br><br> “Help,” it says in a hoarse bird-ish voice. What kind of pet owner teaches their parrot to say that? ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst chose eye",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeFailText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to prison camp, and there is no one else to be seen."
+        },
+        {
+            "cardID": "BifröstCampPandemonium06Voice",
+            "cardText": "Search the jungle for anything or anyone that can help",
+            "reqs": [
+                {"reqName": "Bifröst chose voice",
+                "reqRule": "<",
+                "reqQuantity": 1}
+            ],
+            "hiddenIfReqsFail": true,
+            "challengeStat": "Voice",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst chose voice",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeSuccessText": "You do not want to risk committing some faux pas in a place where birds, flamingoes albeit, are so highly revered.<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something’s wrong. The voice is nearby. Turning all around, you can see no one though. “Help!” you hear again, in between the parrots shrieks, and this time you see the speaker. It’s another parrot - a large orange one who must have been sitting here this whole time. Is it just echoing you the way pet parrots do? ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst chose voice",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstCampPandemonium05"
+            ],
+            "challengeFailText": "You do not want to risk committing some faux pas in a place where birds, flamingoes albeit, are so highly revered.<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something’s wrong. The voice is coming from nearby, but for the life of you, you can see no one."
+        },
+
+
+
+
+
+        {
+            "cardID": "BifröstCampPandemonium08",
+            "cardText": "What the...",
+            "addedText": "You have no idea what just happened, but you need to get back to camp and get some answers about what is going on here on Bifröst Island.",
+            "nextCardsID": [
+                "BifröstCampPandemonium09"
+            ]
+        },
+        {
+            "cardID": "BifröstCampPandemonium09",
+            "cardText": "Get back to camp",
+            "addedText": "You are not far from the camp, but still you hurry. As you run down the path to the burn hill, you hear a bell tolling off in the distance.",
+            "nextCardsID": [
+                "BifröstCamp03BurnHill"
+            ]
+        },
+
+
+
+
+
+
+
+
+        {
+            "cardID": "BifröstCamp03BurnHill",
+            "cardText": "Walk through the trees to the burn hill",
+            "locationName": "Bifröst Prison Camp, burn hill",
+            "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
+            "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
+            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
+            "nextCardsID": [
+                "BifröstCamp03Mess",
+                "BifröstCamp03JungleCreches",
+                "BifröstCamp03Work",
+                "BifröstCamp03Bedtime"
+            ]
         },
 
 

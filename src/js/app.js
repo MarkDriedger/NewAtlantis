@@ -78,7 +78,7 @@ var player = {
     displayText: '',
     //whatever this is set to will be the initial card that the player will start the game at
 //start of game
-        activeCard: 'Medusa0',
+//        activeCard: 'Medusa0',
 //wake up on Bifröst shore
 //    activeCard: 'Medusa22',
 //beginning of lifeboat
@@ -86,7 +86,7 @@ var player = {
 //beginning of Life or Death game
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
-//    activeCard: 'BifröstShore41Won',
+    activeCard: 'BifröstCampPandemonium01',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
     activeCardsShown: [],

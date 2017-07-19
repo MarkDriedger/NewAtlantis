@@ -65,7 +65,9 @@
         {"inputName": ["Rainer’s esteem", "Rainer’s esteem"]},
         {"inputName": ["Astrid’s esteem", "Astrid’s esteem"]},
         {"inputName": ["Claudia’s esteem", "Claudia’s esteem"]},
-        {"inputName": ["Siobhan’s esteem", "Siobhan’s esteem"]}
+        {"inputName": ["Siobhan’s esteem", "Siobhan’s esteem"]},
+        {"inputName": ["Bifröst chose eye"], "hidden": true},
+        {"inputName": ["Bifröst chose voice"], "hidden": true}
 
 
 
