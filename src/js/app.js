@@ -771,6 +771,7 @@ PlayableCard.prototype.requirementSentence = function(){
             } else if ((this.reqs[req].reqRule === '=') & (this.reqs[req].reqQuantity !== 0)){
                 reqList += `exactly ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             }
+
             // add a comma to the list if there are more items coming
             if (req <= numOfReqs - 2 & this.reqs[req].reqHidden !== true) {
                 reqList += ', ';

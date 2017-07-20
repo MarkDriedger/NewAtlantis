@@ -61,16 +61,20 @@
         {"inputName": ["Quo’s Mistress mystery", "Quo’s Mistress mystery"]},
         {"inputName": ["Humboldt mystery", "Humboldt mystery"]},
         {"inputName": ["Guards mystery", "Guards mystery"]},
+        {"inputName": ["Derby mystery", "Derby mystery"]},
         {"inputName": ["Pana’s esteem", "Pana’s esteem"]},
         {"inputName": ["Rainer’s esteem", "Rainer’s esteem"]},
         {"inputName": ["Astrid’s esteem", "Astrid’s esteem"]},
         {"inputName": ["Claudia’s esteem", "Claudia’s esteem"]},
         {"inputName": ["Siobhan’s esteem", "Siobhan’s esteem"]},
-        {"inputName": ["Bifröst chose eye"], "hidden": true},
-        {"inputName": ["Bifröst chose voice"], "hidden": true}
+        {"inputName": ["Bifröst chose eye", "Bifröst chose eye"], "hidden": true},
+        {"inputName": ["Bifröst chose voice", "Bifröst chose voice"], "hidden": true},
+        {"inputName": ["Tordenvær inspected", "Tordenvær inspected"]},
 
 
 
+
+        {"inputName": ["big stick", "big sticks"]}
     ],
 
     "hiddenProgress": [

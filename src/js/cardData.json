@@ -4809,6 +4809,8 @@
             "cardText": "Attempt to disarm the trap",
             "challengeStat": "Hand",
             "challengeRoll": 4,
+            "challengeSuccessRewards": [
+            ],
             "challengeSuccessCards": [
                 "BifröstCampPandemonium07Hand"
             ],
@@ -4841,7 +4843,9 @@
                 {"rewardName": "Health",
                 "rewardQuantity": -10}
             ],
-            "challengeSuccessCards": [
+            "challengeSuccessRewards": [
+            ],
+              "challengeSuccessCards": [
                 "BifröstCampPandemonium07Heart"
             ],
             "challengeSuccessText": "It is the tough thing to do, but the right thing to do. After all, it’s just a bird. You step forward to get a better look. The metal teeth of the trap are securely locked around the leg; it does not look good. It would probably never be functional again anyway. The parrot almost seems to understand what you are about to do as you step toward it. It tries to fight back, but you are too fast. In two quick motions, you put your hands around the creature’s neck and twist. It quickly goes limp. ",
@@ -4870,7 +4874,8 @@
             "reqs": [
                 {"reqName": "Bifröst chose eye",
                 "reqRule": "<",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
             "challengeStat": "Eye",
@@ -4898,7 +4903,8 @@
             "reqs": [
                 {"reqName": "Bifröst chose voice",
                 "reqRule": "<",
-                "reqQuantity": 1}
+                "reqQuantity": 1,
+                "reqHidden": true}
             ],
             "hiddenIfReqsFail": true,
             "challengeStat": "Voice",
@@ -4943,26 +4949,600 @@
         },
 
 
-
-
-
-
-
-
+        {
+            "cardID": "BifröstCamp03RecYard",
+            "cardText": "Enter the central rec yard",
+            "locationName": "Bifröst Prison Camp, rec yard",
+            "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
+            "addedText": "You see no one in the rec yard, but the ringing of the bell is certainly closer.",
+            "nextCardsID": [
+                "BifröstCamp03Quarters",
+                "BifröstCamp03Office",
+                "BifröstCamp03Wall",
+                "BifröstCamp03Mess"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp03Quarters",
+            "cardText": "Return to your quarters",
+            "locationName": "Bifröst Prison Camp, your quarters",
+            "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
+            "addedText": "All of the quarters are deserted. Yours is as you left it. You hear a bell tolling from outside.",
+            "nextCardsID": [
+                "BifröstCamp03RecYard"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp03Office",
+            "cardText": "Go to the camp office",
+            "locationName": "Bifröst Prison Camp, office",
+            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
+            "addedText": "The office is empty. There aren’t even any injured in the makeshift hospital. You hear a bell ringing outside.",
+            "nextCardsID": [
+                "BifröstCamp03RecYard",
+                "BifröstCamp05QuoOffice"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp03Mess",
+            "cardText": "Go to the mess",
+            "locationName": "Bifröst Prison Camp, mess",
+            "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
+            "addedText": "Even the kitchen staff is gone. The ringing bell is louder here.",
+            "nextCardsID": [
+                "BifröstCamp03RecYard",
+                "BifröstCamp03BurnHill"
+            ]
+        },
         {
             "cardID": "BifröstCamp03BurnHill",
             "cardText": "Walk through the trees to the burn hill",
             "locationName": "Bifröst Prison Camp, burn hill",
             "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
-            "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
-            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
+            "addedText": "Normally someone is gathered around the burn pit, tending the fire. But today it is empty, and there is the sound of a bell tolling in the distance.",
             "nextCardsID": [
                 "BifröstCamp03Mess",
-                "BifröstCamp03JungleCreches",
-                "BifröstCamp03Work",
-                "BifröstCamp03Bedtime"
+                "BifröstCamp03JungleCreches"
             ]
         },
+        {
+            "cardID": "BifröstCamp03JungleCreches",
+            "cardText": "Walk through the jungle to the creches",
+            "locationName": "Bifröst Prison Camp, nesting creches",
+            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
+            "addedText": "You start to walk to ward the jungle creches, but you realize that the sound of the ringing bell is coming from the other direction, so you head back",
+            "nextCardsID": [
+                "BifröstCamp03BurnHill"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp03Wall",
+            "cardText": "Go to the wall",
+            "locationName": "Bifröst Prison Camp, wall",
+            "locationDescription": "The inmates of Bifröst are gathered around the wall’s large wooden door, now closed, listening to Quo speaking from up top.",
+            "addedText": "Upon rounding the warehouses, you see a massive crowd. It looks like the entire population of Bifröst Island is gathered here - the prisoners anyway - still no sign of the guards. Several prisoners are standing on top of the wall, some are leaning on the gate. In all, there appear to be over 150 of Her Majesty’s finest inmates gathered around the wall, waiting. Headmost Bailiff Claudia is looking down from on high, checking names on a list. Upon seeing you, she nods to Resolute Warder Quo. “That’s everyone except the last fishing crew.” <br><br> “May I have your attention,” Quo starts. “I would like to make a very important announcement.”",
+            "nextCardsID": [
+                "BifröstInvasion00"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion00",
+            "cardText": "continue",
+            "addedText": "“The Humboldt is here!” Quo announces, to great cheers from all gathered round. <br><br> “I must confess, I have not been entirely honest with you all,” Quo says, looking around the crowd. “You have all, of course, noticed the shortages in supplies, the need to fish for food, the diminished number of guards. You all knew that the Humboldt hasn’t made its regular shipment in four months.” Quo looks at you, “Well, most of you knew. Anyways, this delay has been quite out-of-the-ordinary, and has forced us to improvise. You may remember ten months ago that the Humboldt was three days late for its monthly run. This was quite strange, since we are only one day’s sail from Fort Smythe. The reason for both delays is the same,” Quo pauses.",
+            "nextCardsID": [
+                "BifröstInvasion01"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion01",
+            "cardText": "continue",
+            "addedText": "“New Atlantis has revolted against the Empire.” Gasps reverberate through the assembled crowd.<br><br> “All of New Atlantis?” cries out one inmate.<br><br> “Yes, the entire island of New Atlantis has come together in traitorous revolution - the farms, the mines, the city of course. Alas, many other island colonies have joined the revolution too, dozens of them. By now, maybe all of them. But, since New Atlantis is by far the most populous and wealthiest of the island colonies here in the New Worlde, they are referring to all of the rebelling islands together as the Nation of New Atlantis, governed by revolutionaries in the city of Capitol X” <br><br> “How could this happen?” someone in the crowd cries out.",
+            "nextCardsID": [
+                "BifröstInvasion02"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion02",
+            "cardText": "continue",
+            "addedText": "“Many suspected something like this would be coming. The New Worlde is rich in resources, and New Atlantis has been growing, especially through their trade with the locals. Why, Capitol X probably rivals London or Trondheim by now in terms of population and wealth.” <br><br> “But New Atlantis had no military!”",
+            "nextCardsID": [
+                "BifröstInvasion03"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion03",
+            "cardText": "continue",
+            "addedText": "“You’re right, but there are plenty of other militaries in the region. Apparently, the revolutionaries struck deals with both the Privateers and Thor’s Warriors to fight the Royal Empire and Valhalla. Most of the ships in the Royal Navy and Odin’s Armada had been sent back to the Olden Worlde anyway to fight in their wars, leaving only limited troops and ships here.” <br><br> “But even if they have some Pirates and Vikings helping them, the Empire and Valhalla both have fortifications…”",
+            "nextCardsID": [
+                "BifröstInvasion04"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion04",
+            "cardText": "continue",
+            "addedText": "“Fort Smythe is gone,” Quo states. <br><br> “Gone? What do you mean, gone?” <br><br> “I mean gone, blown up.” <br><br> “Fort Smythe was an impenetrable mountain fortress rising up out of the sea!” <br><br> “Yes, and apparently now it’s an impenetrable pile of rubble rising out of the sea,” Quo responds. “Now, I don’t know all the details. The Humboldt captain didn’t know much himself, and I can’t get any information from the guards. Ironically, they won’t talk,” Quo chuckles, and the other inmates parrot him. <br><br> “So,” another inmate asks, “does that mean we’re free now?”",
+            "nextCardsID": [
+                "BifröstInvasion05"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion05",
+            "cardText": "continue",
+            "addedText": "“No, no, unfortunately we are not free,” Quo explains. “New Atlantis has not completely removed the Royal Empire or Valhalla from the New Worlde. After their revolution victories, New Atlantis reached certain agreements with the Olden Worlde powers. The Empire is able to keep certain forts, as well as any colonies who wish to declare their allegiance to the Queen, as well as...” Quo pauses “their prison colonies.”<br><br> “And what about all the other groups? The guards? The Post? The local tribes?”",
+            "nextCardsID": [
+                "BifröstInvasion06"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion06",
+            "cardText": "continue",
+            "addedText": "“As far as I know, they’re all still keeping their contracts with the Empire, and making new agreements with New Atlantis. The Silk, the Pandemonium, the Cursed, the Vulcans, the Post, all of them. The guards will continue to watch us for the Empire, the Newfoundland Company will still buy feathers from the Empire, and even if you die, you’re still the property of the Queen. So, for us, it’ll be back to business as usual.” <br><br> “But then why has the Humboldt been so late in making our deliveries?”",
+            "nextCardsID": [
+                "BifröstInvasion07"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion07",
+            "cardText": "continue",
+            "addedText": "“Good question,” Quo states, “I was wondering that myself. Of course, we’ve managed to find alternative sources of food supplies just fine once our rations started to run out, but there’s no metal on this island, no mines. And I’m sure you’ve all been noticing that our tools have been getting worn and scarce. But there’s another shortage that’s even more important,” Quo says looking over at Bailiff Claudia. <br><br> “Quinine,” she states. “Quinine is a tincture added to the water barrels that you all fill your canteens from. We have Quinine to last us for two more months, perhaps four if we stretch the dosages. But if we receive no more Quinine, then all of us here will be susceptible to Roman fever.” <br><br> “Before the discovery of the effects of quinine, many Olden Worlders died from Roman fever, especially in old Valhallan prison camps,” Quo inserts. “Without it, we estimate about two-thirds of us would be dead within a year.” The crowd gasps again.",
+            "nextCardsID": [
+                "BifröstInvasion08"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion08",
+            "cardText": "continue",
+            "addedText": "“That’s why a week ago, I took advantage of the new boat we had, furnished by our new friend here,” Quo says, gesturing to you. “Your lifeboat needed some work, but while you were receiving medical care, we fixed it up, rigged a sail, and sent off a rescue attempt. I’m sure some of you have noticed an absent inmate this past week.” <br><br> “Warder,” Impulsive Gaoler Pana interrupts. <br><br> “Derby,” Quo continues, ignoring Pana. “Three days ago, I sent Derby off to get help, and now here comes the Humboldt, hopefully with him on board…” <br><br> “Warder,” Pana interrupts again, holding a telescope “That isn’t the Humboldt. That’s a Viking ship.”",
+            "nextCardsID": [
+                "BifröstInvasion09"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion09",
+            "cardText": "continue",
+            "addedText": "“Give me that!” Headmost Bailiff Claudia grabs the telescope from Pana. All of the prisoners look terrified. “No, it is quite clearly the Humboldt,” she says, emphasizing every word individually. <br><br> “No, it’s Vikings!” another inmate says, after grabbing another telescope from the lookout station on the wall. <br><br> “I’d recognize the Humboldt anywhere. It’s the Humboldt!” <br><br> “I can see the red of the viking flag!” All off the inmates crowd the top of the wall, or the cliffs just outside the gate, trying to catch glimpses of a dot on the horizon.",
+            "nextCardsID": [
+                "BifröstInvasion10"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion10",
+            "cardText": "Grab a telescope yourself",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion11"
+            ],
+            "challengeSuccessText": "You take a telescope from a box of supplies by the wall. You spend a few seconds focusing the telescope, and soon you see the ship. You cannot tell what type of ship it is, but a ship is certainly coming your way. It has a red flag, so it could be Vikings. You scan the horizon, and notice a second ship, a much different model than the first. ",
+            "challengeFailRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion12"
+            ],
+            "challengeFailText": "You take a telescope from a box of supplies by the wall. You spend a few seconds focusing the telescope, and soon you see the ship. You cannot tell what type of ship it is, but a ship is certainly coming your way. It has a red flag, so it could be Vikings. You scan the horizon, and notice a second ship, a much different model than the first. "
+        },
+        {
+            "cardID": "BifröstInvasion11",
+            "cardText": "Tell people there are two ships",
+            "addedText": "“Oh bloody hell. There <em>are</em> two ships,” says Headmost Bailiff Claudia, looking through her telescope “One is the Humboldt, the other is a Viking ship. They’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
+            "nextCardsID": [
+                "BifröstInvasion13"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion12",
+            "cardText": "Tell people there is a red-flagged ship",
+            "addedText": "“Oh bloody hell. There is a Viking ship,” says Headmost Bailiff Claudia, looking through her telescope “...in addition to the Humboldt. They’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
+            "nextCardsID": [
+                "BifröstInvasion13"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion13",
+            "cardText": "continue",
+            "addedText": "“The Vikings are turning!” Pana yells out, still looking through his telescope. “They’re engaging the Humboldt!” <br><br> “Is it possible that the Vikings are coming to liberate us?” Combative Convict Celeste asks, “You know, as part of the revolution?” <br><br> “I wouldn’t count on it,” Quo responds, “In fact, this is probably part of the deal that the New Atlantis revolutionaries struck with the Pirates and Vikings. New Atlantis gets the Vikings & Pirates to help defeat the Empire, and in exchange the Vikings & Pirates get to raid the Empire’s remaining colonies and prison camps.”",
+            "nextCardsID": [
+                "BifröstInvasion14"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion14",
+            "cardText": "continue",
+            "addedText": "“So, we could go from being prisoners of the Empire to prisoners of the Vikings,” Covert Convict Siobhan states, “No big change.” <br><br> “No,” Resolute Warder Quo says. “We could go from being inmates, serving temporary sentences to the Empire on a beautiful tropical island until our release, to being slaves, rowing away in the hold of a Viking ship until we soon die miserably.” <br><br> “Slavery is against the law,” Siobhan counters. <br><br> “Against Imperial law,” Quo corrects her. “With the Royal Empire out of the picture, who knows what laws rule in New Atlantis. Make no mistake, every single one of us will have worse lives, and sooner deaths if the Vikings come knocking on our gate.”",
+            "nextCardsID": [
+                "BifröstInvasion15"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion15",
+            "cardText": "continue",
+            "addedText": "“Cannonfire!” Pana yells out. Sure enough, moments later small popping sounds are heard. “Almost exactly one second. They’re a league and a half away.” <br><br> “The victor will be here in less than twenty minutes then,” Quo states. The entire group of prisoners falls silent, listening to the sounds of the distant cannonfire that will determine everyone’s fates. <br><br> “Please Odin, let the Empire win,” says old Convict Rainer. <br><br> “I thought you were from Valhalla, shouldn’t you favour the Vikings?” <br><br> “I spit on Thor’s Vikings! They reject the one true father of the gods, Lord Odin!”",
+            "nextCardsID": [
+                "BifröstInvasion16"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion16",
+            "cardText": "continue",
+            "addedText": "“Silence!” Quo commands. All are quiet. As is the sea.",
+            "nextCardsID": [
+                "BifröstInvasion17"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion17",
+            "cardText": "continue",
+            "addedText": "“They stopped firing,” says Pana, who must have the best eyes, or best telescope. “They’re using signal flags.” <br><br> “What are they saying?” <br><br> “I can’t see the Humboldt’s flags, they’re facing each other, not us. I can see a bit of the Viking ship’s flags,” Pana says. “I can make out a few things. Something about cannons, the wind. Oh bollocks, I think I just saw the flags spell out Skaarhart.” Worried mutters spread through the crowd of convicts.",
+            "nextCardsID": [
+                "BifröstInvasion18"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion18",
+            "cardText": "continue",
+            "addedText": "“Is the ship named Tordenvær?” Rainer asks. <br><br> “If it’s Dread Kommandør Skaarhart, then certainly the ship is the Tordenvær,” Claudia states, also peering through her telescope. “Don’t focus on the ship, focus on the flags Pana. We need to see what they’re saying.”",
+            "nextCardsID": [
+                "BifröstInvasion19"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasion19",
+            "cardText": "continue",
+            "addedText": "“Feathers. Double bollocks,” Pana says. “I just saw the Viking flags spell out the word “feathers”.” <br><br> “That can only mean they’re here to raid us,” Quo says. “But why isn’t the Navy firing on them? The Humboldt should be able to put up a good fight against a Viking ship like the Tordenvær. Does either ship look disabled?”",
+            "nextCardsID": [
+                "BifröstInvasion20"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion20",
+            "cardText": "Try looking yourself",
+            "addedText": "You decide to try helping with the telescope you are holding.",
+            "nextCardsID": [
+              "BifröstInvasion21Tordenvær",
+              "BifröstInvasion21Humboldt"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion21Tordenvær",
+            "cardText": "Inspect the Tordenvær",
+            "reqs": [
+                {"reqName": "Tordenvær inspected",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "Tordenvær inspected",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion20"
+            ],
+            "challengeSuccessText": "You see no signs of major damage to the Tordenvær. You can see signal flags, but have no idea what they mean. ",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion20"
+            ],
+            "challengeFailText": "You have difficulty focusing your telescope on the Tordenvær. "
+        },
+        {
+            "cardID": "BifröstInvasion21Humboldt",
+            "cardText": "Inspect the Humboldt",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion22"
+            ],
+            "challengeSuccessText": "You see no signs of major damage to the Humboldt. You can only catch glimpses of signal flags. But you notice something else that is wrong with the flags...",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion20"
+            ],
+            "challengeFailText": "You have difficulty focusing your telescope on the Humboldt. "
+        },
+        {
+            "cardID": "BifröstInvasion22",
+            "cardText": "The flag looks odd",
+            "addedText": "The Humboldt isn’t flying a Royal Navy flag. “I’m not completely familiar with flags in this part of the world,” you interject, “but I don’t suppose the flag of the Royal Navy is a black field with a white skull and crossed roses, is it?”",
+            "nextCardsID": [
+                "BifröstInvasion23"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion23",
+            "cardText": "All the bollocks in the world",
+            "addedText": "“Pirates,” Claudia curses, looking through her own telescope. “The Humboldt is flying a Privateer flag. And those aren’t roses. It’s the flag of the Widow Violet.” <br><br> Terrified muttering erupts from the crowd. “How could bloody Pirates take the Humboldt?” <br><br> “If they took Fort Smythe…” <br><br> “Where’s the Navy to protect us?” <br><br> “There is no more Navy!”",
+            "nextCardsID": [
+                "BifröstInvasion24"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion24",
+            "cardText": "Widow Violet?",
+            "addedText": "You turn to an inmate beside you who you recognize from yesterday’s work duty. “Widow Violet? I’ve found that most individuals here in the New Worlde have three names - a descriptor, a title and a given name, like Resolute Warder Quo, Headmost Bailiff Claudia, even Dread Kommandør Skaarhart. Is Widow her descriptor or title?” <br><br> “Really? At a time like this? Don’t you think we have more to worry about?”",
+            "nextCardsID": [
+                "BifröstInvasion25"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion25",
+            "cardText": "continue",
+            "addedText": "“They’re turning!” Impulsive Gaoler Pana yells out. “Both ships are heading straight for us!” <br><br> “And they're not firing on each other?” <br><br> “No, they’re sailing side-by-side.” <br><br> “Bloody hell,” Quo curses. “Well, it appears I was a bit premature in declaring that we had been rescued. We’ve drilled for a raid by either Vikings or Pirates. I never thought I’d live to see them working together, but it’s happening. This isn’t a drill. You all know what to do! Secure the gate!”",
+            "nextCardsID": [
+                "BifröstInvasion26"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion26",
+            "cardText": "Help out",
+            "addedText": "Immediately the crowd erupts into a flurry of activity. Some gather supplies from the pier, others get to work on the heavy wooden doors of the gate. The doors regularly never close, so tussocks of grass have grown around them, and you lend a hand scraping away the earth so that the giant gate can be sealed. You point out to another inmate that as you are pushing the doors form the outside, you will be trapped on the wrong side of the wall. But they tell you not to worry. A dumbwaiter is lowered over the edge of the wall to lift up those of you who were on the outside securing the gate. By the time the door is closed and well-barred from the inside, the Pirate and Viking ships are approaching the pier.",
+            "nextCardsID": [
+                "BifröstInvasion27"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion27",
+            "cardText": "Ask Quo for a weapon",
+            "addedText": "“Friend, this is a prison camp. We don’t have a lot of weapons here.” You notice that other convicts are picking up whatever they can: tree-saws, hammers, large rocks.",
+            "rewards": [
+                {"rewardName": "big stick",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion28"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion28",
+            "cardText": "continue",
+            "addedText": "You climb back up the inside of the wall and stand near Quo, the large wooden pier juts out into the bay. “That’s the Humboldt alright,” Quo says, staring at the large carrack tied up on one side of the pier. “She’s a beauty. Never thought I’d see her flying Pirate colors. Never thought I’d see her tied up side by side with the Tordenvær, either. You ever seen a drakkar-lang up close before?” You gaze at the fearsome dragon’s head protruding from the bow of the great vessel. “Them Viking ships are designed to strike fear into a man’s heart so that he gives up before the battle even begins. And now it begins.” Several dozen Vikings and Pirates are climbing the steps from the pier and approaching the Bifröst prison gate.",
+            "nextCardsID": [
+                "BifröstInvasion29"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion29",
+            "cardText": "continue",
+            "addedText": "Two women lead the group. One is strikingly tall, gorgeous, and outfit in a gleaming metal breastplate and helmet. She looks like a valkyrie warrior from Norse legend. The other is much more subdued. She is much smaller, and wears a plain hooded robe of a deep plum color. As they approach the gate, she pulls back the hood of her cloak to reveal a pale beautiful face framed by black locks of hair. Quo’s face is ashen “I just hope we can get through this without anyone dying.” <br><br> “These are two of the deadliest women in the New Worlde,” says Claudia. “Before the end of the day, someone will die.”",
+            "nextCardsID": [
+                "BifröstInvasion30"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion30",
+            "cardText": "Let’s try not to die today",
+            "addedText": "“We will speak with Quo!” the tall woman commands. <br><br> “That would be me,” Quo says boldly. Immediately, a crossbows and pistols are aimed at him. All the other prisoners gathered on top of the wall duck down, but Quo stays stock still. “Open your gates. We are here for your feathers and eggs.”",
+            "nextCardsID": [
+                "BifröstInvasion31"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion31",
+            "cardText": "continue",
+            "addedText": "“All property here on Bifröst Island is the property of Her Royal Majesty. I shall not hand it over.” <br><br> “Not even to a ship of the Royal Navy?” the woman in purple asks, gesturing to the Humboldt. “I know who you are: Dread Kommandør Skaarhart and the Widow Violet.”",
+            "nextCardsID": [
+                "BifröstInvasion32"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion32",
+            "cardText": "continue",
+            "addedText": "“And do you know about what’s been going on in New Atlantis?” the Widow Violet asks. “The chains of the Empire and Valhalla are broken. We have all been freed.” <br><br> “Not according to what I hear from the guards here. They tell me that the Royal Empire has suffered losses, but is still strong. Besides, you know as well as I do, that we are prisoners, even death cannot free us until our sentences are over.”",
+            "nextCardsID": [
+                "BifröstInvasion33"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion33",
+            "cardText": "continue",
+            "addedText": "“We care little for your sentences,” Dread Kommandør Skaarhart then yells, “Bring up the cannon!” You see several vikings begin to push a heavy cannon onto some sort of cart. By winding a wheel at the back of the cart, they are able to move the cannon up the slope of the hill. At this rate, their contraption will have the cannon up at the gate in about 10 minutes or so. <br><br> “Of course, we don’t wish to harm anyone. We just want your goods,” says the Widow Violet. <br><br> “We’re taking every single flamingo feather and egg you’ve got here on this island,” continues Skaarhart. “If you make us blast your gates open, I swear I’ll kill every prisoner behind those walls.”",
+            "nextCardsID": [
+                "BifröstInvasion34"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion34",
+            "cardText": "continue",
+            "addedText": "With most of the prison inmates running around doing various preparations that they have drilled for, you are left with Quo and a few other senior inmates. Quo turns from the wall and confers with you. “I have to admit. I don’t know what to do.” <br><br> “Our wall can’t survive cannonfire much less the gate, we have to do as Violet says,” says Pana. <br><br> “I trust the Widow least of the two. At least Skaarhart has the decency to be honest that she’ll have us all killed. From what I’ve heard of the Widow Violet, her treatment of us will be worse.” <br><br> “There’s a chance we could survive death or worse if we try bluffing our way out,” interjects Grumpy Convict Rainer. “They don’t know when our last shipment was, and that we’ve got four months of goods stockpiled. We tell them that since the Empire is running with their tail between their legs, a couple days ago an Imperial ship just took our entire inventory of feathers and eggs with them back to the Olden Worlde.",
+            "nextCardsID": [
+                "BifröstInvasion35Derby",
+                "BifröstInvasion35Claudia",
+                "BifröstInvasion35Pana",
+                "BifröstInvasion35Rainer"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion35Derby",
+            "cardText": "Propose Derby’s Treachery",
+            "addedText": "You point out that the New Atlantis Revolution has been going on for some time, so it is odd that both the Pirates and Vikings would attack now, and at the same time. It is likely that Derby’s mission for help alerted the wrong people that, with no more Imperial Navy presence, there was a large cache of goods building up here. No sooner do the other convict leaders agree with you, than a commotion is heard from below the wall.",
+            "reqs": [
+                {"reqName": "Derby mystery",
+                "reqRule": ">=",
+                "reqQuantity": 2,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 5}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion36"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion35Claudia",
+            "cardText": "Agree with Claudia",
+            "addedText": "No sooner do you tell the others of your agreement with Claudia’s ideas, than a commotion is heard from below the wall.",
+            "rewards": [
+                {"rewardName": "Claudia’s esteem",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion36"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion35Pana",
+            "cardText": "Agree with Pana",
+            "addedText": "No sooner do you tell the others of your agreement with Pana’s ideas, than a commotion is heard from below the wall.",
+            "rewards": [
+                {"rewardName": "Pana’s esteem",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion36"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion35Rainer",
+            "cardText": "Agree with Rainer",
+            "addedText": "No sooner do you tell the others of your agreement with Rainer’s ideas, than a commotion is heard from below the wall.",
+            "rewards": [
+                {"rewardName": "Rainer’s esteem",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion36"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion36",
+            "cardText": "Peek over the wall",
+            "addedText": "“Looks like we got a couple of escaped convicts!” hollers one of the Viking captains, as the Vikings and Pirates walk forward leading two convicts. You don’t know their names, but you recognize them as having worked on fishing duty on most days. They must have been caught on the wrong side of the wall. <br><br> “Open the gates, or these two will face death, right here, right now,” says the Widow Violet in a surprisingly powerful voice.",
+            "nextCardsID": [
+                "BifröstInvasion37"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion37",
+            "cardText": "continue",
+            "addedText": "“If I open the gates, we’ll all be facing death, right here, right now,” Resolute Warder Quo replies. The two men are brought to kneel before the two captains, who give each other a look.",
+            "nextCardsID": [
+                "BifröstInvasion38"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion38",
+            "cardText": "continue",
+            "addedText": "“Enough of this delaying already,” Dread Kommandør Skaarhart says as she draws a hefty sword from the scabbard on her belt. She doesn’t make any more demands of Quo, or ask the poor inmate if he has any last words. She just swings her gleaming blade in a broad arc that passes through the man’s neck as if it were a mere weed. The head falls to the ground while his body falls forward.",
+            "nextCardsID": [
+                "BifröstInvasion39"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion39",
+            "cardText": "continue",
+            "addedText": "The Widow Violet approaches the convict who was forced to kneel before her, clearly shivering in fear. She lowers the purple hood of her cloak, and all can see her extreme beauty. Violet leans forward, bringing her body close to the convict and angles her face forward into his. All watch as she gives him a soft, loving kiss on the lips. The kiss lasts for a few seconds. When she backs away though, the front of the man’s prison clothes are covered in red, and blood gushes from his throat. He slumps backward onto the ground, quite dead.",
+            "nextCardsID": [
+                "BifröstInvasion40"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion40",
+            "cardText": "continue",
+            "addedText": "“Take a souvenir, would you dear?” the Widow Violet asks, and one of her Privateers takes out a knife and removes one of the convict’s pinky fingers. A Viking steps forward and does the same to the headless torso. <br><br> “Now then,” Violet says, turning to Quo. “The only question left is whether you would like to see your two friends again sooner, or later?” <br><br> “Who bloody cares?” Skaarhart interrupts. “The cannon’s nearly here. Let’s blow this gate apart.” Vikings line up the cannon with the gate and begin digging a hole to stabilize it when it fires. Quo steps back and quickly confers with Claudia, Pana, and Rainer. You feel left out until they all look at you and call you over.",
+            "nextCardsID": [
+                "BifröstInvasion41"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion41",
+            "cardText": "continue",
+            "addedText": "“Well, my new friend,” Quo says, slapping you on the back. “We’ve got a plan to get out of this. You’re not going to like it, but trust us.” You have no time to do anything as Claudia and Pana quickly grab your arms and Rainer starts to tie your wrists with a rope. You struggle, and they tie your legs too.",
+            "nextCardsID": [
+                "BifröstInvasion42"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion42",
+            "cardText": "What the…",
+            "addedText": "“Wait, my powerful captains,” Quo yells to Skaarhart & Violet. “I’d rather not die today, so I will work with you. I’ve ordered some of my inmates to dig out the earth we piled around the gate. In the meantime, please accept this gift, more valuable than feathers or eggs. I have a hostage, worth a great deal to whoever takes the ransom!”. Quo now whispers to you “Trust me, this is the best option for your get off this island other than dying, which we all know is such an immense inconvenience.”",
+            "nextCardsID": [
+                "BifröstInvasion43"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion43",
+            "cardText": "This does not sound good",
+            "addedText": "“What the bollocks are you talking about?” Skaarhart asks. <br><br> “My great and powerful ladies of the sea, I know little about the current state of affairs of New Atlantis, but I imagine that the Gladiators are still powerful and wealthy members of society in Capitol X?” Quo asks. <br><br> “Yes what of it?” Violet responds. <br><br> “Then I imagine that in whatever government rules New Atlantis,” Quo continues, “the head of the Gladiators, Zardolo is sure to be of great prominence?” <br><br> “Yes, of course,” Skaarhart replies.",
+            "nextCardsID": [
+                "BifröstInvasion44"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion44",
+            "cardText": "Struggle!",
+            "addedText": "“Well, here, I present to you a captive, who will surely command a handsome ransom, newly arrived via shipwreck from the Olden Worlde, the cousin of Ringmaster Zardolo.” Quo says this as the others heft you up into the dumbwaiter. “Remember the strategies that I taught you in Life or Death,” Quo whispers to you.” This game is no different from that. Vikings are impressed by Brawn and Eye. Pirates are impressed by Hand and Eye. Choose one of them to take you to New Atlantis, then you’ll have to figure out the rest on your own from there.” With that, Headmost Bailiff Claudia begins to turn the crank that lowers the rickety elevator of the dumbwaiter to the base of the wall.",
+            "nextCardsID": [
+                "BifröstInvasion45"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion45",
+            "cardText": "continue",
+            "addedText": "A couple of Pirates grab you and hold you upright, since you cannot rise on your own with your hands and feet bound. <br><br> “Ringmaster Zardolo,” Skaarhart states, standing right in front of you. Her bloodied sword, still in her hand. “Quite possibly the wealthiest man in New Atlantis.” She locks eyes with you. “Are you really his cousin?”",
+            "nextCardsID": [
+                "BifröstInvasion46"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion46",
+            "cardText": "continue",
+            "addedText": "texthere",
+            "nextCardsID": [
+                "BifröstInvasion47"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion47",
+            "cardText": "continue",
+            "addedText": "texthere",
+            "nextCardsID": [
+                "BifröstInvasion48"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion48",
+            "cardText": "continue",
+            "addedText": "texthere",
+            "nextCardsID": [
+                "BifröstInvasion49"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion49",
+            "cardText": "continue",
+            "addedText": "texthere",
+            "nextCardsID": [
+                "BifröstInvasion50"
+            ]
+        },
+
+
 
 
 
