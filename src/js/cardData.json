@@ -1862,7 +1862,8 @@
             "reqs": [
                 {"reqName": "Mind",
                 "reqRule": ">",
-                "reqQuantity": 5}
+                "reqQuantity": 5,
+                "reqHidden": true}
             ],
             "challengeSuccessCards": [
                 "BifröstShore6"
@@ -1896,7 +1897,8 @@
             "reqs": [
                 {"reqName": "Health",
                 "reqRule": ">",
-                "reqQuantity": 5}
+                "reqQuantity": 5,
+                "reqHidden": true}
             ],
             "challengeFailCards": [
                 "BifröstShore3a",
@@ -3226,7 +3228,7 @@
         {
             "cardID": "BifröstShore53",
             "cardText": "Leave your quarters",
-            "addedText": "Since you've still got a couple days until the HMNS Humboldt arrives, you may as well lend a hand. Besides, this could be a good chance for you to learn more about the New World. You step out your front door to finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
+            "addedText": "Since you've still got a couple days until the HMNS Humboldt arrives, you may as well lend a hand. Besides, this could be a good chance for you to learn more about the New Worlde. You step out your front door to finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
             "rewards": [
                 {"rewardName": "day until the Humboldt arrives",
                 "rewardQuantity": -1}
@@ -3254,7 +3256,7 @@
             "cardText": "Return to your quarters",
             "locationName": "Bifröst Prison Camp, your quarters",
             "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
-            "firstText": "There are no locks on any of the prisoners’ quarters including the one reserved for you.  Perhaps Resolute Warder Quo was right when he reassured you that that you would have nothing to fear in terms of theft, since inmates aren’t allowed to own property anyway. ",
+            "firstText": "There are no locks on any of the prisoners’ quarters including the one reserved for you. Perhaps Resolute Warder Quo was right when he reassured you that that you would have nothing to fear in terms of theft, since inmates aren’t allowed to own property anyway. ",
             "addedText": "You check on the lockbox in your quarters, and it still seems to be safe.",
             "nextCardsID": [
                 "BifröstCamp01RecYard"
@@ -3265,11 +3267,41 @@
             "cardText": "Go to the camp office",
             "locationName": "Bifröst Prison Camp, office",
             "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
-            "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me, but you were brought here for treatment after they found you washed up on the shore.” ",
-            "addedText": "Behind the beds, patients, and the old woman scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
+            "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me - Nurse Polito. You were brought here for treatment after they found you washed up on the shore.” ",
+            "addedText": "Behind the beds, patients, and Caring Nurse Polito scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
             "nextCardsID": [
                 "BifröstCamp01RecYard",
-                "BifröstCamp05QuoOffice"
+                "BifröstCamp05QuoOffice",
+                "BifröstCamp01OfficePolito"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01OfficePolito",
+            "cardText": "Ask Polito if you can help her out",
+            "addedText": "“That’s kind of you dear,” Caring Nurse Polito says, “but even if you aren't a convict like the rest of us, you should still head down to the burn pit to get a daily job assignment from Resolute Warder Quo.” <br><br> “And if you come across any fabric, I could use some more for bandages. Bailiff Derby took all the fabric I had a couple days ago and I haven't seen it since, or him either for that matter.”",
+            "cardStyle": "displayActionCardStyle",
+            "rewards": [
+                {"rewardName": "Derby mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Polito talked",
+                "rewardQuantity": 1},
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Polito talked",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01RecYard"
             ]
         },
         {
@@ -3290,10 +3322,40 @@
             "cardText": "Go down to the pier",
             "locationName": "Bifröst Prison Camp, pier",
             "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
-            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. Resolute Warder Quo is standing there, by piles of crates, scratching his head.<br><br>“Sumthin strange is going on in the New World, The Royal Empire’s been lettin tons of supplies build up here. And the sailors on the last ship weren’t allowed to speak with us convicts. Sumthin’s up for sure.”<br><br>",
-            "addedText": "Like most days, there are no boats at this pier - just an empty beach.",
+            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. A boy, perhaps eight years old, is picking through rocks on the shore. Surely he is too young to be a convict? Perhaps not. <br><br>“Hi! You’re the shipwreck survivor, aren’t you? I'm Seneca, and I have to apologize, but I’m very busy.” The boy goes back to rooting through the rocks",
+            "addedText": "As always, there are no boats at this pier - just Diligent Youth Seneca rooting around in the rocks.",
             "nextCardsID": [
-                "BifröstCamp01Wall"
+                "BifröstCamp01Wall",
+                "BifröstCamp01PierSeneca"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01PierSeneca",
+            "cardText": "Ask Seneca if he needs help",
+            "addedText": "“Thanks, but I'm the only one who can get these sea snails out of their shells,” he says as he holds up a slimy little creature. “Kind Nurse Polito needs them for one of her medicines.” You ask if snails are a common medical treatment in the New Worlde. <br><br> “No, but we've had to make do since the re-supply ships stopped coming, and we had to put together a big package of medical supplies for Absent Bailiff Derby.” You ask why he refers to Bailiff Derby as Absent. “Well, he got some medical supplies, and some other supplies, and now he isn't here!”",
+            "cardStyle": "displayActionCardStyle",
+            "rewards": [
+                {"rewardName": "Derby mystery",
+                "rewardQuantity": 1},
+                {"rewardName": "Seneca talked",
+                "rewardQuantity": 1},
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 1},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Seneca talked",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01RecYard"
             ]
         },
         {
@@ -3301,7 +3363,7 @@
             "cardText": "Go to the mess",
             "locationName": "Bifröst Prison Camp, mess",
             "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
-            "firstText": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat. Food is not rationed strictly, since fruit, nuts, and fish are fairly plentiful here on this tropical island. Here you get to see the diversity in the makeup of the population in this prison camp. There are male and female prisoners, and even children too. It seems that the prisoners have the freedom to form families during their sentences. Either that, or Her Royal Highness doesn’t balk at sentencing children to Transportation. ",
+            "firstText": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat. Food is  rationed, but not too strictly, since fruit, nuts, and fish are fairly plentiful here on this tropical island. Here you get to see the diversity in the makeup of the population in this prison camp. There are male and female prisoners, and even children too. It seems that the prisoners have the freedom to form families during their sentences. Either that, or Her Royal Highness doesn’t balk at sentencing children to Transportation. ",
             "addedText": "Now that you have a full stomach, you feel ready to head up to the burn hill to start work for the day.",
             "nextCardsID": [
                 "BifröstCamp01RecYard",
@@ -3318,7 +3380,10 @@
             "nextCardsID": [
                 "BifröstCamp01Mess",
                 "BifröstCamp01JungleCreches",
-                "BifröstCamp01Work",
+                "BifröstCamp01WorkDay2",
+                "BifröstCamp01WorkDay1",
+                "BifröstCamp01WorkDay0",
+                "BifröstCamp01WorkDay-1",
                 "BifröstCamp01Bedtime"
             ]
         },
@@ -3327,8 +3392,8 @@
             "cardText": "Walk through the jungle to the creches",
             "locationName": "Bifröst Prison Camp, nesting creches",
             "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
-            "firstText": "After a long uphill walk, you emerge from the trees and climb a small hill. You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Resolute Warder Quo says as he walks up behind you. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
-            "addedText": "“Feel free to pick some candlenuts here if you want a snack,” Quo says as he stands between rows of colorful aviaries and picks a few nuts off the nearest tree.",
+            "firstText": "After a long uphill walk, you emerge from the trees and climb a small hill. You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Covert Convict Siobhan says as she emerges from the trees. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
+            "addedText": "“Feel free to pick some candlenuts here if you want a snack,” Covert Convict Siobhan says as she stands between rows of colorful aviaries and picks a few nuts off the nearest tree. “And of course we convicts aren’t allowed any currency, but just between you and me candlenuts serve as a sort of informal currency around here.”",
             "nextCardsID": [
                 "BifröstCamp01BurnHill",
                 "BifröstCamp01PickCandlenuts"
@@ -3352,19 +3417,23 @@
                 "reqQuantity": 1}
             ],
             "nextCardsID": [
-                "BifröstCamp01JungleCreches",
+                "BifröstCamp01BurnHill",
                 "BifröstCamp01PickCandlenuts"
             ]
         },
         {
-            "cardID": "BifröstCamp01Work",
+            "cardID": "BifröstCamp01WorkDay2",
             "cardText": "Ready to work",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, let’s get to work,” Resolute Warder Quo announces. “New friend, you’ve only got two days here before Her Majesty’s Navy Ship arrives to pick up our cargo, so I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn about how things work around here.”",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, breakfast’s over,” Resolute Warder Quo announces. “I’d like you all to meet our new friend, who will be helpin us out with our chores today,” Quo says, gesturing to you. “Now, let’s get to work!” He turns to you. “Since you’ve only got two days here before the Humboldt arrives to pick up our cargo, I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn a little about how things work around here.”",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
                 "reqRule": "=",
                 "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 2,
                 "reqHidden": true}
             ],
             "nextCardsID": [
@@ -3376,6 +3445,96 @@
                 "BifröstCamp01NotReadyToWork"
             ]
         },
+
+        {
+            "cardID": "BifröstCamp01WorkDay1",
+            "cardText": "Ready to work",
+            "addedText": "You have just enjoyed a simple but filling breakfast.<br><br>“Sunny weather today, boys and girls, let’s get to work in case it becomes an afternoon shower,” Resolute Warder Quo announces, then he turns to you. “Rule here is, all the junior convicts gotta switch up their chores each day. It stops fights over duties and keeps folks fresh. So, you’ll have to pick a different task today. Your choice.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 1,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay0",
+            "cardText": "Ready to LEAVE",
+            "addedText": "Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay0a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay0a",
+            "cardText": "You’re certain it’s coming today though?",
+            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay-1",
+            "cardText": "REALLY READY TO LEAVE",
+            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": -1,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay-1a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay-1a",
+            "cardText": "I’m supposed to be leaving today",
+            "addedText": "You explain your situation to Claudia that you were supposed to have left already for New Atlantis on The Humboldt. <br><br> “Well, no ships have arrived lately, so unless the dolphins are taking you, you’re stuck here a little while longer. Now pick a chore, if you’re still eating our food and sleeping in our storage shed, then you’ve gotta help out with the chores.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+
         {
             "cardID": "BifröstCamp01Bedtime",
             "cardText": "Ready to work",
@@ -4599,7 +4758,7 @@
         {
             "cardID": "BifröstCampFlamingos11",
             "cardText": "Head back to camp",
-            "addedText": "The Sun low in the sky, Covert Convict Siobhan announces it is time to head back to camp. Siobhan chats with you casually, the two of you slowly falling back behind the other prisoners with sacks of feathers slung over their shoulders. She completely stops you. “Have you heard the rumors circling about you?” <br><br> “What rumors?” you ask. <br><br> “There is more than one inmate here on Bifrost who believes you may be a snoop, an agent of Her Royal Imperial Majesty, who is checking up on us. Maybe the Empire doesn’t trust us? Maybe they don’t trust the guards? What do you have to say for yourself?”",
+            "addedText": "The Sun low in the sky, Covert Convict Siobhan announces it is time to head back to camp. Siobhan chats with you casually, the two of you slowly falling back behind the other prisoners with sacks of feathers slung over their shoulders. She completely stops you. “Have you heard the rumors circling about you?” <br><br> “What rumors?” you ask. <br><br> “There is more than one inmate here on Bifröst who believes you may be a snoop, an agent of Her Royal Imperial Majesty, who is checking up on us. Maybe the Empire doesn’t trust us? Maybe they don’t trust the guards? What do you have to say for yourself?”",
             "nextCardsID": [
                 "BifröstCampFlamingos12"
             ]
@@ -4637,21 +4796,6 @@
                 "BifröstCampPandemonium01"
             ],
             "challengeFailText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You probably shouldn’t have mentioned that. But you recover, and remind her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are reasonable points,” Siobhan replies. “I suppose I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. "
-        },
-
-        {
-            "cardID": "BifröstCamp02BurnHill",
-            "cardText": "Walk through the trees to the burn hill",
-            "locationName": "Bifröst Prison Camp, burn hill",
-            "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
-            "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
-            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
-            "nextCardsID": [
-                "BifröstCamp02Mess",
-                "BifröstCamp02JungleCreches",
-                "BifröstCamp02Work",
-                "BifröstCamp02Bedtime"
-            ]
         },
 
         {
@@ -4899,7 +5043,7 @@
         },
         {
             "cardID": "BifröstCampPandemonium06Voice",
-            "cardText": "Search the jungle for anything or anyone that can help",
+            "cardText": "Call out to the other prisoners for help",
             "reqs": [
                 {"reqName": "Bifröst chose voice",
                 "reqRule": "<",
@@ -5382,9 +5526,9 @@
             "reqs": [
                 {"reqName": "Derby mystery",
                 "reqRule": ">=",
-                "reqQuantity": 2,
-                "reqHidden": true}
+                "reqQuantity": 2}
             ],
+            "hiddenIfReqsFail": true,
             "rewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 5}
@@ -5544,6 +5688,266 @@
 
 
 
+
+
+        {
+            "cardID": "BifröstCamp02RecYard",
+            "cardText": "Enter the central rec yard",
+            "locationName": "Bifröst Prison Camp, rec yard",
+            "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
+            "firstText": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard, walled in by jungle trees, except for one part that is walled in by an actual wall. You can see the ocean through an open gate in the wall. It appears as though a couple of areas are set up for specific games, but no one is there right now. There is a camp office here and you can see a guard tower up on a nearby cliff. ",
+            "addedText": "Not many inmates are hanging out in the rec yard, since they are finishing up their breakfast at the mess hall area and heading up to the burn hill to start work.",
+            "nextCardsID": [
+                "BifröstCamp02Quarters",
+                "BifröstCamp02Office",
+                "BifröstCamp02Wall",
+                "BifröstCamp02Mess"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Quarters",
+            "cardText": "Return to your quarters",
+            "locationName": "Bifröst Prison Camp, your quarters",
+            "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
+            "firstText": "There are no locks on any of the prisoners’ quarters including the one reserved for you. Perhaps Resolute Warder Quo was right when he reassured you that that you would have nothing to fear in terms of theft, since inmates aren’t allowed to own property anyway. ",
+            "addedText": "You check on the lockbox in your quarters, and it still seems to be safe.",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02Bedtime"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Office",
+            "cardText": "Go to the camp office",
+            "locationName": "Bifröst Prison Camp, office",
+            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
+            "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me, but you were brought here for treatment after they found you washed up on the shore.” ",
+            "addedText": "Behind the beds, patients, and the old woman scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp05QuoOffice"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Wall",
+            "cardText": "Go to the wall",
+            "locationName": "Bifröst Prison Camp, wall",
+            "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
+            "firstText": "A stone wall barricades just one side of the prison camp. In the center of the wall is a large gate, swung wide open. It looks as though it is rarely ever closed. Through the gate, stone steps can be seen leading down to the beach and an ocean pier where boats can dock. ",
+            "addedText": "Since nature provides the barriers of the raw jungle and sea, this wall is probably more for keeping people out than for keeping people in.",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02Pier",
+                "BifröstCamp05Warehouses"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Pier",
+            "cardText": "Go down to the pier",
+            "locationName": "Bifröst Prison Camp, pier",
+            "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
+            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. Resolute Warder Quo is standing there, by piles of crates, scratching his head.<br><br>“Sumthin strange is going on in the New World, The Royal Empire’s been lettin tons of supplies build up here. And the sailors on the last ship weren’t allowed to speak with us convicts. Sumthin’s up for sure.”<br><br>",
+            "addedText": "Like most days, there are no boats at this pier - just an empty beach.",
+            "nextCardsID": [
+                "BifröstCamp02Wall"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Mess",
+            "cardText": "Go to the mess",
+            "locationName": "Bifröst Prison Camp, mess",
+            "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
+            "firstText": "There are not as many inmates here in the evening as there were in the morning. Many have already headed off for bed, but some hang around playing games of chance ",
+            "addedText": "Now that you have a full stomach, you feel ready to head up to the burn hill to start work for the day.",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02BurnHill"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02BurnHill",
+            "cardText": "Walk through the trees to the burn hill",
+            "locationName": "Bifröst Prison Camp, burn hill",
+            "locationDescription": "The small depression at the top of the hill houses a blazing fire into which the camp's waste is being disposed of.",
+            "firstText": "There is much less bustle around the fire at this time of evening. The convicts have all eaten and now have time for recreation or retiring early for the night. ",
+            "addedText": "From the brightly burning fire, there is a well-worn path back to the rest of the camp, and another leading off into the dark jungle with a sign labeled as ‘creches’.",
+            "nextCardsID": [
+                "BifröstCamp02Mess",
+                "BifröstCamp02JungleCreches"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02JungleCreches",
+            "cardText": "Walk through the jungle to the creches",
+            "locationName": "Bifröst Prison Camp, nesting creches",
+            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
+            "firstText": "As you walk, the sun sets and immediately the mood of the jungle changes. You walk through the trees, listening to the multitude of sounds that are quite different from those of the daytime. With such dense foliage, there is little light, but you manage to follow the path to the jungle creches. It is dark here, but a convict who is on duty gurading the eggs has a torch lit. The mesa clearing allows enough moonlight in for you to barely see that there are candlenuts to pick. There is a dark path through the jungle leading back to the burn hill. ",
+            "addedText": "The mesa clearing allows enough moonlight in for you to barely see that there are candlenuts to pick.",
+            "nextCardsID": [
+                "BifröstCamp02BurnHill",
+                "BifröstCamp02PickCandlenuts"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02PickCandlenuts",
+            "cardText": "Pick candlenuts",
+            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the watering hole that the creches are built around. ",
+            "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
+            "rewards": [
+                {"rewardName": "Action",
+                "rewardQuantity": -1},
+                {"rewardName": ["candlenut"],
+                "rewardQuantity": [8],
+                "rewardRange": [3]}
+            ],
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">=",
+                "reqQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstCamp02BurnHill",
+                "BifröstCamp02PickCandlenuts"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime",
+            "cardText": "Ready to work",
+            "addedText": "You may be ready to work, but the camp isn't. The sun is going down. Go back to your quarters and sleep.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp02BurnHill"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02NotReadyToWork",
+            "cardText": "Not ready to work yet",
+            "addedText": "Before starting work, you'd like to explore around the island a bit more first.”",
+            "nextCardsID": [
+                "BifröstCamp02BurnHill"
+            ]
+        },
+
+
+        {
+            "cardID": "BifröstCamp01WorkDay2",
+            "cardText": "Ready to work",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, breakfast’s over,” Resolute Warder Quo announces. “I’d like you all to meet our new friend, who will be helpin us out with our chores today,” Quo says, gesturing to you. “Now, let’s get to work!” He turns to you. “Since you’ve only got two days here before the Humboldt arrives to pick up our cargo, I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn a little about how things work around here.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 2,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+
+        {
+            "cardID": "BifröstCamp01WorkDay1",
+            "cardText": "Ready to work",
+            "addedText": "You have just enjoyed a simple but filling breakfast.<br><br>“Sunny weather today, boys and girls, let’s get to work in case it becomes an afternoon shower,” Resolute Warder Quo announces, then he turns to you. “Rule here is, all the junior convicts gotta switch up their chores each day. It stops fights over duties and keeps folks fresh. So, you’ll have to pick a different task today. Your choice.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 1,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay0",
+            "cardText": "Ready to LEAVE",
+            "addedText": "Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay0a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay0a",
+            "cardText": "You’re certain it’s coming today though?",
+            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay-1",
+            "cardText": "REALLY READY TO LEAVE",
+            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": -1,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay-1a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp01WorkDay-1a",
+            "cardText": "I’m supposed to be leaving today",
+            "addedText": "You explain your situation to Claudia that you were supposed to have left already for New Atlantis on The Humboldt. <br><br> “Well, no ships have arrived lately, so unless the dolphins are taking you, you’re stuck here a little while longer. Now pick a chore, if you’re still eating our food and sleeping in our storage shed, then you’ve gotta help out with the chores.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
 
 
 

@@ -86,7 +86,7 @@ var player = {
 //beginning of Life or Death game
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
-    activeCard: 'BifröstCampPandemonium01',
+    activeCard: 'BifröstCamp01Quarters',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
     activeCardsShown: [],
@@ -1143,17 +1143,35 @@ var board = {
                 if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeCardStyle')) {
                     display[i].setAttribute('class', 'eyeCard');
                 }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeActionCardStyle') {
+                    display[i].setAttribute('class', 'eyeActionCard');
+                }
                 else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnCardStyle')) {
                     display[i].setAttribute('class', 'brawnCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnActionCardStyle') {
+                    display[i].setAttribute('class', 'brawnActionCard');
                 }
                 else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceCardStyle')) {
                     display[i].setAttribute('class', 'voiceCard');
                 }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceActionCardStyle') {
+                    display[i].setAttribute('class', 'voiceActionCard');
+                }
                 else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='handCardStyle')) {
                     display[i].setAttribute('class', 'handCard');
                 }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='handActionCardStyle') {
+                    display[i].setAttribute('class', 'handActionCard');
+                }
                 else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='heartCardStyle')) {
                     display[i].setAttribute('class', 'heartCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='heartActionCardStyle') {
+                    display[i].setAttribute('class', 'heartActionCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='displayActionCardStyle') {
+                    display[i].setAttribute('class', 'displayActionCard');
                 }
                 else {
                     display[i].setAttribute('class', 'displayCard');

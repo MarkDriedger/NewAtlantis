@@ -38,7 +38,7 @@
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"]},
         {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"]},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "maxQuantity": 10, "minQuantity": -10},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "quantity": 3, "maxQuantity": 10, "minQuantity": -10},
         {"inputName": ["Voynich character"]},
         {"inputName": ["Voynich code"]},
         {"inputName": ["time of day", "time of day"], "hidden": true},
@@ -70,6 +70,8 @@
         {"inputName": ["Bifröst chose eye", "Bifröst chose eye"], "hidden": true},
         {"inputName": ["Bifröst chose voice", "Bifröst chose voice"], "hidden": true},
         {"inputName": ["Tordenvær inspected", "Tordenvær inspected"]},
+        {"inputName": ["Seneca talked", "Seneca talked"]},
+        {"inputName": ["Polito talked", "Polito talked"]},
 
 
 

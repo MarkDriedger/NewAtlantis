@@ -52,8 +52,32 @@ div.output {
     margin: 5px;
 }
 
+.displayActionCard {
+    background-image: url(assets/card-Base-Action2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
 .brawnCard {
     background-image: url(assets/card-Brawn2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
+.brawnActionCard {
+    background-image: url(assets/card-Brawn-Action2.png);
     background-size: 128px,178px;
     padding: 20px;
     width: 88px;
@@ -76,8 +100,32 @@ div.output {
     margin: 5px;
 }
 
+.handActionCard {
+    background-image: url(assets/card-Hand-Action2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
 .heartCard {
     background-image: url(assets/card-Heart3.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
+.heartActionCard {
+    background-image: url(assets/card-Heart-Action3.png);
     background-size: 128px,178px;
     padding: 20px;
     width: 88px;
@@ -100,6 +148,18 @@ div.output {
     margin: 5px;
 }
 
+.eyeActionCard {
+    background-image: url(assets/card-Eye-Action2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
+
 .voiceCard {
     background-image: url(assets/card-Voice2.png);
     background-size: 128px,178px;
@@ -112,6 +172,17 @@ div.output {
     margin: 5px;
 }
 
+.voiceActionCard {
+    background-image: url(assets/card-Voice-Action2.png);
+    background-size: 128px,178px;
+    padding: 20px;
+    width: 88px;
+    height: 138px;
+    box-shadow: 5px 5px 1px rgba(0,0,0,0.7);
+    display: inline-block;
+    color: black;
+    margin: 5px;
+}
 
 .enabledCard {
     color: black;
