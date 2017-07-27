@@ -3266,7 +3266,7 @@
             "cardID": "BifröstCamp01Office",
             "cardText": "Go to the camp office",
             "locationName": "Bifröst Prison Camp, office",
-            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
+            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a makeshift hospital.",
             "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me - Nurse Polito. You were brought here for treatment after they found you washed up on the shore.” ",
             "addedText": "Behind the beds, patients, and Caring Nurse Polito scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
             "nextCardsID": [
@@ -3402,7 +3402,7 @@
         {
             "cardID": "BifröstCamp01PickCandlenuts",
             "cardText": "Pick candlenuts",
-            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the watering hole that the creches are built around. ",
+            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the mesa that the creches are built upon. ",
             "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
             "rewards": [
                 {"rewardName": "Action",
@@ -3414,7 +3414,7 @@
             "reqs": [
                 {"reqName": "Action",
                 "reqRule": ">=",
-                "reqQuantity": 1}
+                "reqQuantity": 5}
             ],
             "nextCardsID": [
                 "BifröstCamp01BurnHill",
@@ -4207,7 +4207,7 @@
         {
             "cardID": "BifröstCampCreches10",
             "cardText": "Lunch time",
-            "addedText": "Sweaty and sunburt, you and most of the other prisoners sit go down from the mesa top into the shade of the some trees to grab a quick lunch break. Most of them are already sitting in groups. Not knowing much of the social dynamics in this prison camp, you decide not to rock any boats, and sit down beside the one woman who is sitting alone. You notice she is scratching a rock with a peice of charcoal, writing out words and wiping then off, so you ask what she is writing. “Oh, it’s nothing, just some, well, I feel silly saying this, but you’re an outsider so maybe you can give me some advice,” she says, clearly quite flustered. “There’s another inmate here, Cameron. Have you met? No, probably not. Anyway, Cameron recently seeing another woman here, Celeste, but the rumor is they’re on the outs now, and, well, I’ve always fancied Cameron, so… I was writing, or trying to write a… um… a little bit of a love letter, a poem really. Oh dear, I’m really not much of a writer though. I don’t suppose you are?”",
+            "addedText": "Sweaty and sunburt, you and most of the other prisoners sit go down from the mesa top into the shade of the some trees to grab a quick lunch break. Most of them are already sitting in groups. Not knowing much of the social dynamics in this prison camp, you decide not to rock any boats, and sit down beside the one woman who is sitting alone. You notice she is scratching a rock with a piece of charcoal, writing out words and wiping then off, so you ask what she is writing. “Oh, it’s nothing, just some, well, I feel silly saying this, but you’re an outsider so maybe you can give me some advice,” she says, clearly quite flustered. “There’s another inmate here, Cameron. Have you met? No, probably not. Anyway, Cameron recently seeing another woman here, Celeste, but the rumor is they’re on the outs now, and, well, I’ve always fancied Cameron, so… I was writing, or trying to write a… um… a little bit of a love letter, a poem really. Oh dear, I’m really not much of a writer though. I don’t suppose you are?”",
             "nextCardsID": [
                 "BifröstCampCreches11a",
                 "BifröstCampCreches11b"
@@ -4804,6 +4804,7 @@
             "locationName": "Bifröst Prison Camp, jungle",
             "locationDescription": "The dense jungle foliage gives way to a small but well-worn path",
             "addedText": "Working all day, you didn’t have much time to take care of other bodily business. While walking back to the burn hill to check out for the day, you ask to stop to relieve yourself. After, you seek to catch up to the rest of the group, but are in no great rush - the path here is cut cleanly through the jungle and well-maintained. You are considering what you will say to Quo when you next see him and confront him about what is going on with the Humboldt. From how he has been avoiding you lately, it is certain that he knows more than he is letting on. You come to the decision that you must confront him, and get some answers about what is really going on here. What kind of strategy will you plan to use when you approach Resolute Warder Quo?",
+            "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "day until the Humboldt arrives",
                 "reqRule": "=",
@@ -5695,14 +5696,118 @@
             "cardText": "Enter the central rec yard",
             "locationName": "Bifröst Prison Camp, rec yard",
             "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
-            "firstText": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard, walled in by jungle trees, except for one part that is walled in by an actual wall. You can see the ocean through an open gate in the wall. It appears as though a couple of areas are set up for specific games, but no one is there right now. There is a camp office here and you can see a guard tower up on a nearby cliff. ",
-            "addedText": "Not many inmates are hanging out in the rec yard, since they are finishing up their breakfast at the mess hall area and heading up to the burn hill to start work.",
+            "firstText": "The rec area is lively at this time of day. Although this is a prison, it is the most comfortable prison you have ever seen in your life - certainly better than anything back in the Olden Worlde. The prisoners gather in small groups to talk or play games. Two convicts are engaged in obviously flirty conversation, while another is shooing her two children off to bed.",
+            "addedText": "After a long day of hard labour, a few convicts have set up some set up a court for playing Smarts, while others are gathered around a table engaged in armwrestling.",
             "nextCardsID": [
                 "BifröstCamp02Quarters",
                 "BifröstCamp02Office",
                 "BifröstCamp02Wall",
-                "BifröstCamp02Mess"
+                "BifröstCamp02Mess",
+                "BifröstCamp02RecYardArmwrestle",
+                "BifröstCamp02RecYardSmarts"
             ]
+        },
+        {
+            "cardID": "BifröstCamp02RecYardArmwrestle",
+            "cardText": "Check out the armwrestling matches",
+            "firstText": "A group of inmates are excitedly gathered around a table. A few of them call out numbers and cheers. In the middle, two of them are locked in a fierce armwrestling competition. By the looks on their faces, and the candlenuts on the table, there is more on the line than just pride. <br><br>",
+            "addedText": "“You want in?” a stocky woman beside you asks. “It costs 5 candlenuts to play, but you get 10 back if you win.",
+            "cardStyle": "brawnCardStyle",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02RecYardArmwrestleBrawn"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02RecYardArmwrestleBrawn",
+            "cardText": "Armwrestle",
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0},
+                {"reqName": "candlenut",
+                "reqRule": ">=",
+                "reqQuantity": 5}
+            ],
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "candlenut",
+                "rewardQuantity": 5},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02RecYardArmwrestleBrawn"
+            ],
+            "challengeSuccessText": "You are paired up against a tough-looking convict. At the signal, you start pushing with all your might. He is strong, but not as strong as you, and after several seconds of intense battling, you slam his fist down onto the table.",
+            "challengeFailRewards": [
+              {"rewardName": "Bifröst Convicts",
+              "rewardQuantity": 1},
+              {"rewardName": "candlenut",
+              "rewardQuantity": -5},
+              {"rewardName": "Action",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+              "BifröstCamp02RecYard",
+              "BifröstCamp02RecYardArmwrestleBrawn"
+            ],
+            "challengeFailText": "You are paired up against a tough-looking convict. At the signal, you start pushing with all your might. He is strong, a little stronger than you even, and after several seconds of intense battling, he slams your fist down onto the table."
+        },
+        {
+            "cardID": "BifröstCamp02RecYardSmarts",
+            "cardText": "Check out the game of Small Darts",
+            "cardStyle": "handCardStyle",
+            "firstText": "“You never played Smarts before?” a convict asks you. “I’m Rebecca. Small darts is a game of finesse, not strength,” she says, tossing a weighted dart into the air and watching as it comes to land right in the middle of a series of concentric circles drawn in chalk onto a bare patch of the rec field. <br><br>",
+            "addedText": "“It’ll cost 10 candlenuts to play Small Darts. We draw straws to randomize the teams, and then you get 20 back if your team wins,“ a convict whose name you do not know tells you. “Care to join my team for the next round?”",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02RecYardSmartsHand"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02RecYardSmartsHand",
+            "cardText": "Play Smarts",
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0},
+                {"reqName": "candlenut",
+                "reqRule": ">=",
+                "reqQuantity": 10}
+            ],
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 2},
+                {"rewardName": "candlenut",
+                "rewardQuantity": 10},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02RecYardSmartsHand"
+            ],
+            "challengeSuccessText": "Your teammates are good, and you are lucky. The game is close, but you manage to beat out the other team in a close match.",
+            "challengeFailRewards": [
+              {"rewardName": "Bifröst Convicts",
+              "rewardQuantity": -1},
+              {"rewardName": "candlenut",
+              "rewardQuantity": -10},
+              {"rewardName": "Action",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+              "BifröstCamp02RecYard",
+              "BifröstCamp02RecYardSmartsHand"
+            ],
+            "challengeFailText": "Your teammates are good, but you obviously don’t have the experience that they do. Plus, the other team has Competitive Convict Rebecca on it, who hits the bullseye with nearly every shot. Your team loses - quite badly. Certainly the others blame the loss partly on you."
         },
         {
             "cardID": "BifröstCamp02Quarters",
@@ -5710,7 +5815,7 @@
             "locationName": "Bifröst Prison Camp, your quarters",
             "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
             "firstText": "There are no locks on any of the prisoners’ quarters including the one reserved for you. Perhaps Resolute Warder Quo was right when he reassured you that that you would have nothing to fear in terms of theft, since inmates aren’t allowed to own property anyway. ",
-            "addedText": "You check on the lockbox in your quarters, and it still seems to be safe.",
+            "addedText": "You recline on your prison bunk after a long day of work.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
                 "BifröstCamp02Bedtime"
@@ -5720,21 +5825,70 @@
             "cardID": "BifröstCamp02Office",
             "cardText": "Go to the camp office",
             "locationName": "Bifröst Prison Camp, office",
-            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a hospital.",
-            "firstText": "You enter the small office beside the central rec yard. Instead of seeing Quo there, you see an elderly woman, dressed in inmates clothing.<br><br>“Well, it looks like someone’s doing much better today!” she says. She moves from bed to bed, since the majority of space in this office seems to have been repurposed into a makeshift hospital.<br><br>“We had a bad fire the day before you arrived,” she says, nodding to several patients laid up in beds with various levels of burns. “You seem to be doing fine though, she says inspecting your body. You probably don’t remember me, but you were brought here for treatment after they found you washed up on the shore.” ",
-            "addedText": "Behind the beds, patients, and the old woman scrubbing out a bedpan, you see a couple file drawers, and a door that appears to lead to Resolute Warder Quo’s personal office.",
+            "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a makeshift hospital.",
+            "firstText": "You hear the aound of painful yelling as you enter the prison camp’s small office that serves as a hospital.<br><br>“Now you lay down and rest here for a few minutes, so I can check for swelling,” Kind Nurse Polito says to a young convict laying on a bed. She then turns to you “Dislocated a shoulder while working on the construction of the new bunkhouse. I’m glad to see you’re all in one piece though,” she says, inspecting you. “If you're all done with your work duty for the day, I’ve got work you could help me with here.” ",
+            "addedText": "The hospital is surprisingly busy in the evening. Several injured inmates lie in beds resting, attended to by Kind Nurse Polito, who could use a hand.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
-                "BifröstCamp05QuoOffice"
+                "BifröstCamp05QuoOffice",
+                "BifröstCamp02OfficePolito"
             ]
+        },
+        {
+            "cardID": "BifröstCamp02OfficePolito",
+            "cardText": "Help Nurse Polito",
+            "cardStyle": "heartCardStyle",
+            "firstText": "No one here is in critical condition, but we had a fire a couple days before you arrived. A few folks were in the process of building a new bunkhouse, but the wind picked up and knocked it over before they had fixed everything into place. Probably was the same storm that caused your shipwreck, in fact. The whole building collapsed on a few workers and their lantern, and so we’ve got a few more injuries to take care of than we normally do. We don’t have a wealth of supplies here, but we do what we can here to treat their burns. ",
+            "addedText": "If you’ve got a moment, I could use a hand re-applying some of the older bandages.",
+            "nextCardsID": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02OfficePolitoHeart"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02OfficePolitoHeart",
+            "cardText": "Re-bandage patients",
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0}
+            ],
+            "challengeStat": "Heart",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "candlenut",
+                "rewardQuantity": 3},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp02RecYard",
+                "BifröstCamp02OfficePolitoHeart"
+            ],
+            "challengeSuccessText": "“My my, you seem to have some natural gift for this kind of thing!” Kind Nurse Polito says. “You should consider joining the Sawbones when you get off this rock. Here’s a little something for your trouble.”",
+            "challengeFailRewards": [
+              {"rewardName": "Bifröst Convicts",
+              "rewardQuantity": 2},
+              {"rewardName": "candlenut",
+              "rewardQuantity": 2},
+              {"rewardName": "Action",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+              "BifröstCamp02RecYard",
+              "BifröstCamp02OfficePolitoHeart"
+            ],
+            "challengeFailText": "“That’s a little loose, so I might have to re-apply this one, but it’s quite a good job for someone with no medical training,” Kind Nurse Polito says. “Here’s a little something for your trouble.”"
         },
         {
             "cardID": "BifröstCamp02Wall",
             "cardText": "Go to the wall",
             "locationName": "Bifröst Prison Camp, wall",
             "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
-            "firstText": "A stone wall barricades just one side of the prison camp. In the center of the wall is a large gate, swung wide open. It looks as though it is rarely ever closed. Through the gate, stone steps can be seen leading down to the beach and an ocean pier where boats can dock. ",
-            "addedText": "Since nature provides the barriers of the raw jungle and sea, this wall is probably more for keeping people out than for keeping people in.",
+            "firstText": "The strong stone wall defends the only accessible harbour space on Bifröst Island. ",
+            "addedText": "Through the large open gate, you see the sea glittering like a million diamonds from the reflections of the stars.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
                 "BifröstCamp02Pier",
@@ -5746,23 +5900,124 @@
             "cardText": "Go down to the pier",
             "locationName": "Bifröst Prison Camp, pier",
             "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
-            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. Resolute Warder Quo is standing there, by piles of crates, scratching his head.<br><br>“Sumthin strange is going on in the New World, The Royal Empire’s been lettin tons of supplies build up here. And the sailors on the last ship weren’t allowed to speak with us convicts. Sumthin’s up for sure.”<br><br>",
-            "addedText": "Like most days, there are no boats at this pier - just an empty beach.",
+            "firstText": "This evening the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. Diligent Youth Seneca is scrounging through the rocks, making piles of shells. <br><br> ",
+            "addedText": "As always, there are no boats at this pier - just Diligent Youth Seneca rooting around in the rocks.",
             "nextCardsID": [
-                "BifröstCamp02Wall"
+                "BifröstCamp02Wall",
+                "BifröstCamp02PierSeneca"
             ]
+        },
+        {
+            "cardID": "BifröstCamp02PierSeneca",
+            "cardText": "Help Seneca catch shellfish",
+            "cardStyle": "eyeCardStyle",
+            "firstText": "“If you’re all done with your work for the day, I could use a hand here. The survival of the entire camp depends upon it,” the Seneca says, putting a shell in one pile. “You see, if the shells open easily, that means they’re dead. If someone eats those, they could get sick and die, but Nurse Polito can still grind them up for poultices,” “The ones that don’t want to open up easily are still good to eat, so put them over in this pile.” It takes some effort, to find them in the dark, but they only come out of the sand in the evening when it’s cool. ” ",
+            "addedText": "In times like this, we need all the supplies we can get, so you could lend me a hand.",
+            "nextCardsID": [
+                "BifröstCamp02Pier",
+                "BifröstCamp02PierSenecaEye"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02PierSenecaEye",
+            "cardText": "Search for shellfish",
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0}
+            ],
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 3},
+                {"rewardName": "candlenut",
+                "rewardQuantity": 3},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp02Wall",
+                "BifröstCamp02PierSenecaEye"
+            ],
+            "challengeSuccessText": "“Thanks for all that help! Diligent Youth Seneca says, looking down at the piles of live and dead mussels you have gathered. “Here’s a reward for helping our food and medical supplies last longer.”",
+            "challengeFailRewards": [
+              {"rewardName": "Bifröst Convicts",
+              "rewardQuantity": 2},
+              {"rewardName": "candlenut",
+              "rewardQuantity": 2},
+              {"rewardName": "Action",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstCamp02Wall",
+                "BifröstCamp02PierSenecaEye"
+            ],
+            "challengeFailText": "“You missed a few,” Diligent Youth Seneca says, reaching down into the piles of live mussels you have gathered, and opening a few up easily. “A couple of these are dead. You have to sort them out. Still, I suppose you deserve a bit of a reward for helping our food and medical supplies last a little longer”"
         },
         {
             "cardID": "BifröstCamp02Mess",
             "cardText": "Go to the mess",
             "locationName": "Bifröst Prison Camp, mess",
             "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
-            "firstText": "There are not as many inmates here in the evening as there were in the morning. Many have already headed off for bed, but some hang around playing games of chance ",
-            "addedText": "Now that you have a full stomach, you feel ready to head up to the burn hill to start work for the day.",
+            "firstText": "There are not as many inmates here in the evening as there were in the morning. Many have already headed off for bed, but some hang around socializing or playing games of chance. ",
+            "addedText": "A few welcoming convicts are playing a card game called Greenqueen.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
-                "BifröstCamp02BurnHill"
+                "BifröstCamp02BurnHill",
+                "BifröstCamp02MessGamble"
             ]
+        },
+        {
+            "cardID": "BifröstCamp02MessGamble",
+            "cardText": "Check out the card game",
+            "cardStyle": "voiceCardStyle",
+            "firstText": "All traces of dinner have been cleared away and a few inmates sit gathered around a table, playing some sort of card game. They invite you over and explain the rules of the game they are playing, called Greenqueen. It seems like the game itself isn’t that difficult to master, the hard part comes in the betting process, in telling who is bluffing about the strength of their cards.  <br><br>",
+            "addedText": "“You have to wager 10 candlenuts, but it you win, you receive the jackpot of 40 candlenuts. Care to hand over some of your candlenuts right now, or after playing a hand?”",
+            "nextCardsID": [
+                "BifröstCamp02Mess",
+                "BifröstCamp02MessGambleVoice"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02MessGambleVoice",
+            "cardText": "Play Smarts",
+            "reqs": [
+                {"reqName": "Action",
+                "reqRule": ">",
+                "reqQuantity": 0},
+                {"reqName": "candlenut",
+                "reqRule": ">=",
+                "reqQuantity": 10}
+            ],
+            "challengeStat": "Voice",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": -1},
+                {"rewardName": "candlenut",
+                "rewardQuantity": 40},
+                {"rewardName": "Action",
+                "rewardQuantity": -1}
+            ],
+            "challengeSuccessCards": [
+                "BifröstCamp02Mess",
+                "BifröstCamp02MessGambleVoice"
+            ],
+            "challengeSuccessText": "Through successfully reading your opponents’ facial expressions, you win the hand and the jackpot!",
+            "challengeFailRewards": [
+              {"rewardName": "Bifröst Convicts",
+              "rewardQuantity": 1},
+              {"rewardName": "candlenut",
+              "rewardQuantity": -10},
+              {"rewardName": "Action",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+              "BifröstCamp02Mess",
+              "BifröstCamp02MessGambleVoice"
+            ],
+            "challengeFailText": "You try to read your opponents’ facial expressions, but your hand isn’t very strong, and lose the hand."
         },
         {
             "cardID": "BifröstCamp02BurnHill",
@@ -5791,14 +6046,14 @@
         {
             "cardID": "BifröstCamp02PickCandlenuts",
             "cardText": "Pick candlenuts",
-            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the watering hole that the creches are built around. ",
+            "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but they are always dense near the mesa that the creches are built upon. ",
             "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
             "rewards": [
                 {"rewardName": "Action",
                 "rewardQuantity": -1},
                 {"rewardName": ["candlenut"],
-                "rewardQuantity": [8],
-                "rewardRange": [3]}
+                "rewardQuantity": [5],
+                "rewardRange": [2]}
             ],
             "reqs": [
                 {"reqName": "Action",

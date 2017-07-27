@@ -756,12 +756,12 @@ PlayableCard.prototype.requirementSentence = function(){
                 reqList += `at least ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             //this one will say "a" in the case that at least one thing is required
             } else if ((this.reqs[req].reqRule === '>=') & (this.reqs[req].reqQuantity === 1)) {
-                reqList += `a ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
+                reqList += `one ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
             } else if ((this.reqs[req].reqRule === '>') & (this.reqs[req].reqQuantity !== 0)) {
                 reqList += `more than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             //this one will say "a" in the case that more than zero things are required
             } else if ((this.reqs[req].reqRule === '>') & (this.reqs[req].reqQuantity === 0)) {
-                reqList += `a ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
+                reqList += `one ${stats.getScore(this.reqs[req].reqName).correctName(1)}`;
             } else if (this.reqs[req].reqRule === '<') {
                 reqList += `less than ${this.reqs[req].reqQuantity} ${stats.getScore(this.reqs[req].reqName).correctName(this.reqs[req].reqQuantity)}`;
             } else if (this.reqs[req].reqRule === '<=') {
@@ -1140,35 +1140,35 @@ var board = {
             display[i].innerHTML = `${deck.getCard(player.activeCardsShown[i]).cardText}<br>${deck.getCard(player.activeCardsShown[i]).requirementSentence()}`;
             //disable cards if requirements are not met
             if (deck.getCard(player.activeCardsShown[i]).checkRequirements()) {
-                if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeCardStyle')) {
-                    display[i].setAttribute('class', 'eyeCard');
-                }
-                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeActionCardStyle') {
+                if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Eye')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeActionCardStyle')) {
                     display[i].setAttribute('class', 'eyeActionCard');
                 }
-                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnCardStyle')) {
-                    display[i].setAttribute('class', 'brawnCard');
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='eyeCardStyle') {
+                    display[i].setAttribute('class', 'eyeCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnActionCardStyle') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Brawn')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnActionCardStyle')) {
                     display[i].setAttribute('class', 'brawnActionCard');
                 }
-                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceCardStyle')) {
-                    display[i].setAttribute('class', 'voiceCard');
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='brawnCardStyle') {
+                    display[i].setAttribute('class', 'brawnCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceActionCardStyle') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Voice')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceActionCardStyle')) {
                     display[i].setAttribute('class', 'voiceActionCard');
                 }
-                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='handCardStyle')) {
-                    display[i].setAttribute('class', 'handCard');
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='voiceCardStyle') {
+                    display[i].setAttribute('class', 'voiceCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='handActionCardStyle') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Hand')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='handActionCardStyle')) {
                     display[i].setAttribute('class', 'handActionCard');
                 }
-                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='heartCardStyle')) {
-                    display[i].setAttribute('class', 'heartCard');
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='handCardStyle') {
+                    display[i].setAttribute('class', 'handCard');
                 }
-                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='heartActionCardStyle') {
+                else if ((deck.getCard(player.activeCardsShown[i]).challengeStat==='Heart')||(deck.getCard(player.activeCardsShown[i]).cardStyle==='heartActionCardStyle')) {
                     display[i].setAttribute('class', 'heartActionCard');
+                }
+                else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='heartCardStyle') {
+                    display[i].setAttribute('class', 'heartCard');
                 }
                 else if (deck.getCard(player.activeCardsShown[i]).cardStyle==='displayActionCardStyle') {
                     display[i].setAttribute('class', 'displayActionCard');
