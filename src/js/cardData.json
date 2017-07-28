@@ -2107,7 +2107,7 @@
             "cardText": "Get their attention",
             "addedText": "You wave your hands and shout “Hey! Over here!”<br><br>You start to wonder how wise that was as the three individuals you heard speaking are joined by four more who all converge on your location. They don’t look happy to see you.",
             "rewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
             ],
             "nextCardsID": [
@@ -2259,7 +2259,7 @@
             "challengeStat": "Brawn",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2303,7 +2303,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 2,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2331,7 +2331,7 @@
             "challengeStat": "Hand",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2}
@@ -2362,7 +2362,7 @@
         {
             "cardID": "BifröstShore30",
             "cardText": "Ask about Heart",
-            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick their behinds to the Olden Worlde! They went with their gut, their culture that they’d been developin for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Hearth - it can be foolhardy and blind to logic.”",
+            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick their behinds to the Olden Worlde! They went with their gut, their culture that they’d been developin for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Heart - it can be foolhardy and blind to logic.”",
             "cardStyle": "heartCardStyle",
             "nextCardsID": [
                 "BifröstShore31a",
@@ -2375,7 +2375,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 2,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1},
@@ -2403,7 +2403,7 @@
             "challengeStat": "Heart",
             "challengeRoll": 5,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -2},
@@ -2448,7 +2448,7 @@
             "challengeStat": "Eye",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
@@ -2489,7 +2489,7 @@
             "challengeStat": "Voice",
             "challengeRoll": 3,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2518,7 +2518,7 @@
         {
             "cardID": "BifröstShore39",
             "cardText": "keep playing",
-            "addedText": "It’s your turn. What move will you make?",
+            "addedText": "It’s your turn. Different strategies present themselves at each point in the game. What move will you make?",
             "reqs": [
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
@@ -2529,12 +2529,30 @@
                 "reqQuantity": 3,
                 "reqHidden": true}
             ],
+            "rewards": [
+                {"rewardName": ["LOD Brawn Option"],
+                "rewardQuantity": [50],
+                "rewardRange": [50]},
+                {"rewardName": ["LOD Hand Option"],
+                "rewardQuantity": [50],
+                "rewardRange": [50]},
+                {"rewardName": ["LOD Heart Option"],
+                "rewardQuantity": [50],
+                "rewardRange": [50]},
+                {"rewardName": ["LOD Eye Option"],
+                "rewardQuantity": [50],
+                "rewardRange": [50]},
+                {"rewardName": ["LOD Voice Option"],
+                "rewardQuantity": [50],
+                "rewardRange": [50]}
+            ],
             "nextCardsID": [
                 "BifröstShore40Brawn",
                 "BifröstShore40Hand",
                 "BifröstShore40Heart",
                 "BifröstShore40Eye",
-                "BifröstShore40Voice"
+                "BifröstShore40Voice",
+                "BifröstShore40Poor"
                 ]
         },
         {
@@ -2548,16 +2566,32 @@
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Brawn Option",
+                "reqRule": ">",
+                "reqQuantity": 40,
                 "reqHidden": true}
             ],
             "randomTerms": ["Viking,Gladiator", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Brawn",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
+            ],
+            "setScore": [
+                {"setName": "LOD Brawn Option",
+                "setQuantity": 0},
+                {"setName": "LOD Hand Option",
+                "setQuantity": 0},
+                {"setName": "LOD Heart Option",
+                "setQuantity": 0},
+                {"setName": "LOD Eye Option",
+                "setQuantity": 0},
+                {"setName": "LOD Voice Option",
+                "setQuantity": 0}
             ],
             "challengeSuccessCards": [
                 "BifröstShore39",
@@ -2588,13 +2622,29 @@
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Hand Option",
+                "reqRule": ">",
+                "reqQuantity": 40,
                 "reqHidden": true}
+            ],
+            "setScore": [
+                {"setName": "LOD Brawn Option",
+                "setQuantity": 0},
+                {"setName": "LOD Hand Option",
+                "setQuantity": 0},
+                {"setName": "LOD Heart Option",
+                "setQuantity": 0},
+                {"setName": "LOD Eye Option",
+                "setQuantity": 0},
+                {"setName": "LOD Voice Option",
+                "setQuantity": 0}
             ],
             "randomTerms": ["Cat,Wraith", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Hand",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2628,13 +2678,29 @@
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Heart Option",
+                "reqRule": ">",
+                "reqQuantity": 40,
                 "reqHidden": true}
+            ],
+            "setScore": [
+                {"setName": "LOD Brawn Option",
+                "setQuantity": 0},
+                {"setName": "LOD Hand Option",
+                "setQuantity": 0},
+                {"setName": "LOD Heart Option",
+                "setQuantity": 0},
+                {"setName": "LOD Eye Option",
+                "setQuantity": 0},
+                {"setName": "LOD Voice Option",
+                "setQuantity": 0}
             ],
             "randomTerms": ["Soldier,Dog", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Heart",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2668,13 +2734,29 @@
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Eye Option",
+                "reqRule": ">",
+                "reqQuantity": 40,
                 "reqHidden": true}
+            ],
+            "setScore": [
+                {"setName": "LOD Brawn Option",
+                "setQuantity": 0},
+                {"setName": "LOD Hand Option",
+                "setQuantity": 0},
+                {"setName": "LOD Heart Option",
+                "setQuantity": 0},
+                {"setName": "LOD Eye Option",
+                "setQuantity": 0},
+                {"setName": "LOD Voice Option",
+                "setQuantity": 0}
             ],
             "randomTerms": ["Gladiator,Librarian", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Eye",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2708,13 +2790,29 @@
                 {"reqName": "Quo’s Life or Death piece",
                 "reqRule": ">",
                 "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Voice Option",
+                "reqRule": ">",
+                "reqQuantity": 40,
                 "reqHidden": true}
+            ],
+            "setScore": [
+                {"setName": "LOD Brawn Option",
+                "setQuantity": 0},
+                {"setName": "LOD Hand Option",
+                "setQuantity": 0},
+                {"setName": "LOD Heart Option",
+                "setQuantity": 0},
+                {"setName": "LOD Eye Option",
+                "setQuantity": 0},
+                {"setName": "LOD Voice Option",
+                "setQuantity": 0}
             ],
             "randomTerms": ["Viking,Gladiator,Cat,Wraith,Soldier,Dog,Gladiator,Librarian", "Mermaid,Monk", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Voice",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
-                {"rewardName": "Convicts",
+                {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
                 {"rewardName": "Quo’s Life or Death piece",
                 "rewardQuantity": -1}
@@ -2738,6 +2836,51 @@
             "challengeFailText": "You try to throw Quo off his game. You advance your {0}, as if you are about to make a move on his Queen, but your real plan is to draw out one of his pieces and capture it with your {1}. He realizes that you wouldn’t be so careless to go for his Queen at this point though, and doesn’t respond to your feint. Instead he uses a move that you hadn’t seen coming at all, and with his {2} he captures your {0} while at the same time blocks your {1} from retaliating. Damn. "
         },
         {
+            "cardID": "BifröstShore40Poor",
+            "cardText": "You see no good moves available",
+            "reqs": [
+                {"reqName": "Your Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "Quo’s Life or Death piece",
+                "reqRule": ">",
+                "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "LOD Brawn Option",
+                "reqRule": "<=",
+                "reqQuantity": 40,
+                "reqHidden": true},
+                {"reqName": "LOD Hand Option",
+                "reqRule": "<=",
+                "reqQuantity": 40,
+                "reqHidden": true},
+                {"reqName": "LOD Heart Option",
+                "reqRule": "<=",
+                "reqQuantity": 40,
+                "reqHidden": true},
+                {"reqName": "LOD Eye Option",
+                "reqRule": "<=",
+                "reqQuantity": 40,
+                "reqHidden": true},
+                {"reqName": "LOD Voice Option",
+                "reqRule": "<=",
+                "reqQuantity": 40,
+                "reqHidden": true}
+            ],
+            "rewards": [
+                {"rewardName": "Your Life or Death piece",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+                "BifröstShore39",
+                "BifröstShore41Won",
+                "BifröstShore41Lost"
+            ],
+            "addedText": "You see absolutely no good move you could make. You try something that you’re sure won’t work. And it doesn’t.",
+            "hiddenIfReqsFail": true
+        },
+        {
             "cardID": "BifröstShore41Won",
             "cardText": "Call to Claim",
             "reqs": [
@@ -2745,16 +2888,33 @@
                 "reqRule": "<",
                 "reqQuantity": 4}
             ],
+            "addedText": "Quo has only three pieces left on the board. It is inevitable. You have won!",
+            "hiddenIfReqsFail": true,
+            "nextCardsID": [
+                "BifröstShore41Wona",
+                "BifröstCamp02Bedtime2eWin"
+            ]
+        },
+
+        {
+            "cardID": "BifröstShore41Wona",
+            "cardText": "You win!",
             "addedText": "“Dammit, you got call to claim,” Quo says, shaking his head. “That’s the phrase you use when you win at Life or Death. You got my Queen locked down, and there’s nuthin I can do to save her.<br><br>“It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true}
+            ],
             "setScore": [
                 {"setName": "Your Life or Death piece",
                 "setQuantity": 0},
                 {"setName": "Quo’s Life or Death piece",
                 "setQuantity": 0}
             ],
-            "hiddenIfReqsFail": true,
             "rewards": [
-                {"rewardName": ["Convicts"],
+                {"rewardName": ["Bifröst Convicts"],
                 "rewardQuantity": [3],
                 "rewardRange": [1]}
             ],
@@ -2764,13 +2924,31 @@
         },
         {
             "cardID": "BifröstShore41Lost",
-            "cardText": "You lose",
+            "cardText": "Quo says “Call to claim”",
             "reqs": [
                 {"reqName": "Your Life or Death piece",
                 "reqRule": "<",
                 "reqQuantity": 4}
             ],
+            "addedText": "You are down to only three pieces left on the board. It is inevitable. You have lost.",
+            "hiddenIfReqsFail": true,
+            "nextCardsID": [
+                "BifröstShore41Losta",
+                "BifröstCamp02Bedtime2eLose"
+                ]
+        },
+        {
+            "cardID": "BifröstShore41Losta",
+            "cardText": "You lose",
             "addedText": "“Call to claim,” Quo states matter-of-factly. “That’s the phrase you use when you win at Life or Death. I’ve got your Queen locked down, and there’s no moves left for you to stop me. It certainly is nice to play against someone who can pick up the strategy of a game like this though. Most of the folk here’d rather play Smarts or some such.”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true}
+            ],
+
             "setScore": [
                 {"setName": "Your Life or Death piece",
                 "setQuantity": 0},
@@ -2778,11 +2956,10 @@
                 "setQuantity": 0}
             ],
             "rewards": [
-                {"rewardName": ["Convicts"],
+                {"rewardName": ["Bifröst Convicts"],
                 "rewardQuantity": [2],
                 "rewardRange": [1]}
             ],
-            "hiddenIfReqsFail": true,
             "nextCardsID": [
                 "BifröstShore41Choose"
                 ]
@@ -2885,12 +3062,12 @@
             "cardText": "continueto43",
             "addedText": "44",
             "rewards": [
-                {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero stamp"],
+                {"rewardName": ["Royal sterling", "Valhallan mark", "New Foundland scrip", "Aero special stamp"],
                 "rewardQuantity": [10, 10, 10, 10],
                 "rewardRange": [20, 20, 20, 20]},
-                {"rewardName": ["fig", "kumquat"],
-                "rewardQuantity": [5, 1000],
-                "rewardRange": [2, 2]}
+                {"rewardName": ["fig"],
+                "rewardQuantity": [5],
+                "rewardRange": [1]}
             ],
             "nextCardsID": [
                 "BifröstShore43"
@@ -5818,7 +5995,9 @@
             "addedText": "You recline on your prison bunk after a long day of work.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
-                "BifröstCamp02Bedtime"
+                "BifröstCamp02Bedtime2",
+                "BifröstCamp02Bedtime1",
+                "BifröstCamp02Bedtime0"
             ]
         },
         {
@@ -6066,21 +6245,6 @@
             ]
         },
         {
-            "cardID": "BifröstCamp02Bedtime",
-            "cardText": "Ready to work",
-            "addedText": "You may be ready to work, but the camp isn't. The sun is going down. Go back to your quarters and sleep.",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 3,
-                "reqHidden": true}
-            ],
-            "nextCardsID": [
-                "BifröstCamp02BurnHill"
-            ]
-        },
-        {
             "cardID": "BifröstCamp02NotReadyToWork",
             "cardText": "Not ready to work yet",
             "addedText": "Before starting work, you'd like to explore around the island a bit more first.”",
@@ -6204,6 +6368,189 @@
             ]
         },
 
+
+        {
+            "cardID": "BifröstCamp02Bedtime2",
+            "cardText": "Done for the day",
+            "addedText": "You lay down on your bed, going over what you have learned about this New Worlde, when you hear a knock on on door.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 2,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp02Bedtime2a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime2a",
+            "cardText": "Come in",
+            "addedText": "“G’devening, newbie,” Quo says, entering your quarters when you open the door for him. Hope you didn’t get too tuckered out from your work day. Now you have an idea what it’s like to be in prison - stay in school!” You chuckle lightly to play along. “Actually, it ain’t nearly so bad here as bein in prison back in the Olden Worlde. We got food, nice weather, and the only walls are the seas around us. Us Transportation convicts got free time too. Care for another game of Life or Death?”",
+            "nextCardsID": [
+                "BifröstCamp02Bedtime2b",
+                "BifröstCamp02Bedtime2c"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime2b",
+            "cardText": "Sure",
+            "addedText": "“Great, I’ll let you go first. And tomorrow I’ll start piling up a big sack of candlenuts for you - if you can beat me. Now keep in mind, you’ve got that extra lucky dice I gave you yesterday, so don’t be afraid to use it when you can. Also, you’ve probably built up some skills while you were out workin, so let’s see if you learned much of anythin.”",
+            "nextCardsID": [
+                "BifröstCamp02Bedtime2d"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime2c",
+            "cardText": "Not particularly",
+            "addedText": "“I’ll make it worth your while. Strictly speaking, I’m not supposed to let ya leave here with anything, but candlenuts are nutritious and plentiful here. Beat me tonight and I’ll give you a whole sack of them when you set sail on the Humboldt the day after tomorrow. Now keep in mind, you’ve got that extra lucky dice I gave you yesterday, so don’t be afraid to use it when you can. Also, you’ve probably built up some skills while you were out workin, so let’s see if you learned much of anythin.”",
+            "nextCardsID": [
+                "BifröstCamp02Bedtime2d"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime2d",
+            "cardText": "Life or Death",
+            "addedText": "Quo sets up the board like last time. “Remember what I taught you last night. Brawn represents strength & power, Hand represents adaptability & nimbleness, Heart represents emotion & tradition, Eye represents observation & watchfulness, and Voice represents persuasion & communication. Play to your strengths.”",
+            "rewards": [
+                {"rewardName": "Your Life or Death piece",
+                "rewardQuantity": 16},
+                {"rewardName": "Quo’s Life or Death piece",
+                "rewardQuantity": 16}
+            ],
+            "nextCardsID": [
+                "BifröstShore39"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime2eWin",
+            "cardText": "Call to Claim",
+            "addedText": "“Yeah, y’er certainly gettin the hang of this game.” Quo says. “I’m gonna have to start pulling out some tougher strategies next time. I gotta go do curfew checks soon though. Maybe tomorrow night we can play another round.” ",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 2,
+                "reqHidden": true}
+            ],
+            "setScore": [
+                {"setName": "Your Life or Death piece",
+                "setQuantity": 0},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 0}
+            ],
+            "rewards": [
+                {"rewardName": "candlenut",
+                "rewardQuantity": 50},
+                {"rewardName": "Bifröst Convicts",
+                "rewardQuantity": 5}
+            ],
+            "nextCardsID": [
+                "BifröstCamp02Bedtime2f"
+            ]
+        },
+        {
+              "cardID": "BifröstCamp02Bedtime2eLose",
+              "cardText": "You Lose",
+              "addedText": "“Call to claim,” Quo says. “Ah, you’ll get the hang of it eventually. I gotta go do curfew checks soon though. Maybe tomorrow night we can play another round.” ",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "day until the Humboldt arrives",
+                  "reqRule": "=",
+                  "reqQuantity": 2,
+                  "reqHidden": true}
+              ],
+              "setScore": [
+                  {"setName": "Your Life or Death piece",
+                  "setQuantity": 0},
+                  {"setName": "Quo’s Life or Death piece",
+                  "setQuantity": 0}
+              ],
+              "rewards": [
+                  {"rewardName": "candlenut",
+                  "rewardQuantity": 25},
+                  {"rewardName": "Bifröst Convicts",
+                  "rewardQuantity": 3}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp02Bedtime2f"
+              ]
+          },
+          {
+                "cardID": "BifröstCamp02Bedtime2f",
+                "cardText": "Go to bed",
+                "addedText": "Between the phsyical labour of the day, the mental workout of playing against Quo, and not to mention the fact that you are still in recovery after your shipwreck, you are exhausted.",
+                "nextCardsID": [
+                    "BifröstCamp02Bedtime2g"
+                ]
+          },
+          {
+                "cardID": "BifröstCamp02Bedtime2f",
+                "cardText": "Sleep",
+                "addedText": ".",
+                "nextCardsID": [
+                    "BifröstCamp02Morning1"
+                ]
+            },
+
+
+
+        {
+            "cardID": "BifröstCamp02Bedtime1",
+            "cardText": "Ready to LEAVE",
+            "addedText": "“Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 1,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay0a"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime1a",
+            "cardText": "You’re certain it’s coming today though?",
+            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
+            "nextCardsID": [
+                "BifröstCampLabour01",
+                "BifröstCampFishing01",
+                "BifröstCampCreches01",
+                "BifröstCampSalvage01",
+                "BifröstCampFlamingos01",
+                "BifröstCamp01NotReadyToWork"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Bedtime0",
+            "cardText": "REALLY READY TO LEAVE",
+            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "time of day",
+                "reqRule": "=",
+                "reqQuantity": 3,
+                "reqHidden": true},
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": "=",
+                "reqQuantity": 0,
+                "reqHidden": true}
+            ],
+            "nextCardsID": [
+                "BifröstCamp01WorkDay-1a"
+            ]
+        },
 
 
 

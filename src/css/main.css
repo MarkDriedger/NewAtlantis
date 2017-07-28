@@ -19,7 +19,7 @@ html {
 
 div.output {
     font-size: 16px;
-    background-color: floralwhite;
+    background-image: linear-gradient(to bottom, floralwhite, lavender);
     color: black;
     border: 3px solid darkseagreen;
     width: 700px;

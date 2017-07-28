@@ -38,7 +38,7 @@
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"]},
         {"inputName": ["Medusa crew gratitude", "Medusa crew gratitude"]},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "quantity": 2, "maxQuantity": 10, "minQuantity": -10},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "quantity": 0, "maxQuantity": 10, "minQuantity": -10},
         {"inputName": ["Voynich character"]},
         {"inputName": ["Voynich code"]},
         {"inputName": ["time of day", "time of day"], "hidden": true},
@@ -72,6 +72,12 @@
         {"inputName": ["Tordenvær inspected", "Tordenvær inspected"]},
         {"inputName": ["Seneca talked", "Seneca talked"]},
         {"inputName": ["Polito talked", "Polito talked"]},
+        {"inputName": ["LOD Brawn Option", "LOD Brawn Option"], "hidden": true},
+        {"inputName": ["LOD Hand Option", "LOD Hand Option"], "hidden": true},
+        {"inputName": ["LOD Heart Option", "LOD Heart Option"], "hidden": true},
+        {"inputName": ["LOD Eye Option", "LOD Eye Option"], "hidden": true},
+        {"inputName": ["LOD Voice Option", "LOD Voice Option"], "hidden": true},
+
 
 
 

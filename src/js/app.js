@@ -84,9 +84,9 @@ var player = {
 //beginning of lifeboat
 //    activeCard: 'LifeboatWakeUp',
 //beginning of Life or Death game
-//    activeCard: 'BifröstShore23',
+    activeCard: 'BifröstShore23',
 //end of Life or Death game
-    activeCard: 'BifröstCamp01Quarters',
+//    activeCard: 'BifröstShore43TestingRandomnessDELETE',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
     activeCardsShown: [],
