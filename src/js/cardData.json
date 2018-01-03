@@ -4988,7 +4988,7 @@
             "cardText": "Walk through the trees to the burn hill",
             "locationName": "Bifröst Prison Camp, jungle",
             "locationDescription": "The dense jungle foliage gives way to a small but well-worn path",
-            "addedText": "Working all day, you didn’t have much time to take care of other bodily business. While walking back to the burn hill to check out for the day, you ask to stop to relieve yourself. After, you seek to catch up to the rest of the group, but are in no great rush - the path here is cut cleanly through the jungle and well-maintained. You are considering what you will say to Quo when you next see him and confront him about what is going on with the Humboldt. From how he has been avoiding you lately, it is certain that he knows more than he is letting on. You come to the decision that you must confront him, and get some answers about what is really going on here. What kind of strategy will you plan to use when you approach Resolute Warder Quo?",
+            "addedText": "Working all day, you didn’t have much time to take care of your bodily business. While walking back to the burn hill to check out for the day, you ask to stop to relieve yourself. After, you seek to catch up to the rest of the group, but are in no great rush - the path here is cut cleanly through the jungle and well-maintained. You are considering what you will say to Quo when you next see him and confront him about what is going on with the Humboldt. From how he has been avoiding you lately, it is certain that he knows more than he is letting on. You come to the decision that you must confront him, and get some answers about what is really going on here. What kind of strategy will you plan to use when you approach Resolute Warder Quo?",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "day until the Humboldt arrives",
@@ -5019,7 +5019,7 @@
         {
             "cardID": "BifröstCampPandemonium02Hand",
             "cardText": "Economical. Make a deal.",
-            "addedText": "You make up your mind to negotiate with Quo. You want to get to the bottom of what is going on here. One way or another, you will get out of here eventually. Since there don’t seem to be any guards actually here, there will be opportunities for you to escape. And if the guards ever do show up, they will see that you don’t belong here and release you. Quo too will be released eventually when his sentence is over, and it would be very beneficial for him if he has you on the outside owing him a favour.",
+            "addedText": "You make up your mind to negotiate with Quo. You want to get to the bottom of what is going on here. One way or another, you will get out of here eventually. Since there don’t seem to be any actual guards here, there will be opportunities for you to escape. And if the guards ever do show up, they will see that you don’t belong here and release you. Quo too will be released eventually when his sentence is over, and it would be very beneficial for him if he has you on the outside owing him a favour.",
             "rewards": [
                 {"rewardName": "Hand",
                 "rewardQuantity": 100}
@@ -5031,7 +5031,7 @@
         {
             "cardID": "BifröstCampPandemonium02Heart",
             "cardText": "Emotional. Make a plea.",
-            "addedText": "You make up your mind to appeal to Quo’s sense of honour and duty. Here he is, sentenced to work in a beautiful place, where he enjoys ample food, a leadership position, and no oversight of guards. Yet he is still a prisoner. Can he not understand how it feels for you, imprisoned without cause? Without even a sentence from a judge? Without a trial by your peers? Without any crime committed? Surely, you can get him to open up and share what is really going on here.",
+            "addedText": "You make up your mind to appeal to Quo’s sense of honour and duty. Here he is, sentenced to work in a beautiful place, where he enjoys ample food, a leadership position, and no oversight from guards. Yet he is still a prisoner. Can he not understand how it feels for you, imprisoned without cause? Without even a sentence from a judge? Without a trial by your peers? Without any crime committed? Surely, you can get him to open up and share what is really going on here.",
             "rewards": [
                 {"rewardName": "Heart",
                 "rewardQuantity": 100}
@@ -5043,7 +5043,7 @@
         {
             "cardID": "BifröstCampPandemonium02Eye",
             "cardText": "Observant. Lay out the facts.",
-            "addedText": "You make up your mind to lay out the facts for Quo. People keep saying there are guards, yet there clearly are no guards here. Quo said that the Humboldt was coming for its regular monthly delivery yesterday, yet it didn’t show up. In fact, various individuals around the camp have implied that the Humboldt hasn’t been here for a while. The weather has been gentle, so there is some other reason that it hasn’t arrived, and you want to know what that is.",
+            "addedText": "You make up your mind to lay out the facts for Quo. People keep saying there are guards, yet there clearly are none. Quo said that the Humboldt was coming for its regular monthly delivery yesterday, yet it didn’t show up. In fact, various individuals around the camp have implied that the Humboldt hasn’t been here for a while. The weather has been gentle, so there is some other reason that it hasn’t arrived, and you want to know what that is.",
             "rewards": [
                 {"rewardName": "Eye",
                 "rewardQuantity": 100}
@@ -5076,7 +5076,7 @@
         {
             "cardID": "BifröstCampPandemonium04a",
             "cardText": "Follow the sound",
-            "addedText": "You push through some trees, quickly at first, slowing down when you see the familiar red marking on a tree that indicate that a predator-trap has been set nearby. Through the leaves you catch glimpses of a flailing green bird with a yellow chest not far away.",
+            "addedText": "You push through some trees, quickly at first, slowing down when you see the familiar red marking on some trees that indicate which serve to indicate that a predator-trap has been set nearby. Through the leaves you catch glimpses of a flailing green bird not far away.",
             "nextCardsID": [
                 "BifröstCampPandemonium05"
             ]
@@ -5093,8 +5093,8 @@
         {
             "cardID": "BifröstCampPandemonium05",
             "cardText": "The injured bird",
-            "firstText": "You advance toward the sound and see what is certainly not a flamingo. It’s a parrot. The parrot must have bacome snared in a trap designed to catch the flamingos’ reptile predators. As you approach it, the squawking changes to something resembling a cross between a baby crying and wolf howling. ",
-            "addedText": "The parrot looks at you, still screaming, fear in its eyes.",
+            "firstText": "You advance toward the sound and see what is certainly not a flamingo. It’s a parrot - vibrant green with a yellow chest. The parrot must have bacome snared in a trap designed to catch the island’s reptilian predators. As you approach it, the squawking changes to something resembling a cross between a baby crying and wolf howling. ",
+            "addedText": "The parrot looks at you, still screaming, fear in its eyes. You feel the need to intervene.",
             "nextCardsID": [
                 "BifröstCampPandemonium06Brawn",
                 "BifröstCampPandemonium06Hand",
@@ -5126,7 +5126,7 @@
         {
             "cardID": "BifröstCampPandemonium07Brawn",
             "cardText": "continue",
-            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, leaving behind you and its lost leg. It perches on a branch as best as it can, leaning beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with an yellow chest and orange back.<br><br>”That was violent, but necessary,” it says. “Thank you for your help, human.” And the two fly off together.",
+            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, leaving behind you and its lost leg. It perches one-legged on a branch as best as it can, resting beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with orange feathers and a yellow chest.<br><br>”That was violent, but necessary,” it says. “Thank you for your help, human.” And the two fly off together.",
             "rewards": [
                 {"rewardName": "Pandemonium",
                 "rewardQuantity": 40}
@@ -5156,7 +5156,7 @@
         {
             "cardID": "BifröstCampPandemonium07Hand",
             "cardText": "continue",
-            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, up above you. It perches on a branch as best as it can, leaning beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with an yellow chest and orange back.<br><br>”That was very skilled work,” it says. “Thank you for your help, human.” And the two fly off together.",
+            "addedText": "The parrot’s screeching shifts to more of a wheezing as it quickly flies away, up above you. It perches one-legged on a branch as best as it can, resting beside another parrot who must have been sitting there this whole time. This one is even bigger, nearly half your height, with orange feathers and a yellow chest.<br><br>”That was very skilled work,” it says. “Thank you for your help, human.” And the two fly off together.",
             "rewards": [
                 {"rewardName": "Pandemonium",
                 "rewardQuantity": 60}
@@ -5193,7 +5193,9 @@
             "addedText": "“Poor choice,” you hear a very hoarse voice behind you say. At first you cannot see anyone standing behind you. It is only when the voice begins to speak again, that you realize it is coming from a larger orange parrot resting on a branch behind you. “Well, at least now we know where you stand.” It leaps up into the sky.",
             "rewards": [
                 {"rewardName": "Pandemonium",
-                "rewardQuantity": -60}
+                "rewardQuantity": -40},
+                {"rewardName": "Silk",
+                "rewardQuantity": 20}
             ],
             "nextCardsID": [
                 "BifröstCampPandemonium08"
@@ -5218,7 +5220,7 @@
             "challengeSuccessCards": [
                 "BifröstCampPandemonium05"
             ],
-            "challengeSuccessText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to prison camp. Your eye catches some motion above the ground though, and you spot another parrot - a large orange one, nearly half as tall as you are sitting quietly on a branch. Your eyes meet, and you stare at each other for a moment.<br><br> “Help,” it says in a hoarse bird-ish voice. What kind of pet owner teaches their parrot to say that? ",
+            "challengeSuccessText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to the camp. Your eye catches some motion above the ground though, and you spot another parrot - a large orange one, nearly half as tall as you are sitting quietly on a branch. Your eyes meet, and you stare at each other for a moment.<br><br> “Help,” it says in a hoarse bird-ish voice. What kind of pet owner teaches their parrot to say that? ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst chose eye",
                 "rewardQuantity": 1}
@@ -5226,7 +5228,7 @@
             "challengeFailCards": [
                 "BifröstCampPandemonium05"
             ],
-            "challengeFailText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to prison camp, and there is no one else to be seen."
+            "challengeFailText": "Flamingos are highly valued on Bifröst Island, but not parrots, right? Are there rules here governing the treatment of other birds? You search around, but all of the other inmates are farther ahead on the path back to the camp, and there is no one else to be seen."
         },
         {
             "cardID": "BifröstCampPandemonium06Voice",
@@ -5247,7 +5249,7 @@
             "challengeSuccessCards": [
                 "BifröstCampPandemonium05"
             ],
-            "challengeSuccessText": "You do not want to risk committing some faux pas in a place where birds, flamingoes albeit, are so highly revered.<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something’s wrong. The voice is nearby. Turning all around, you can see no one though. “Help!” you hear again, in between the parrots shrieks, and this time you see the speaker. It’s another parrot - a large orange one who must have been sitting here this whole time. Is it just echoing you the way pet parrots do? ",
+            "challengeSuccessText": "You do not want to risk committing some critical faux pas in a place where certain birds are so highly revered. Are parrots also protected like flamingos are?<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something is odd. The voice is nearby. Turning all around, you can see no one though. “Help!” you hear again, in between the parrots shrieks, and this time you see the speaker. It’s another parrot - a large orange one who must have been sitting here this whole time. Is it just echoing you the way pet parrots do? ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst chose voice",
                 "rewardQuantity": 1}
@@ -5255,7 +5257,7 @@
             "challengeFailCards": [
                 "BifröstCampPandemonium05"
             ],
-            "challengeFailText": "You do not want to risk committing some faux pas in a place where birds, flamingoes albeit, are so highly revered.<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something’s wrong. The voice is coming from nearby, but for the life of you, you can see no one."
+            "challengeFailText": "You do not want to risk committing some critical faux pas in a place where certain birds are so highly revered. Are parrots also protected like flamingos are?<br><br>“Help!” you call out, followed by names of a few of the prisoners who were working with you today.<br><br>”Help!” you hear echoed from a raspy voice. But something is wrong. The voice is coming from nearby, but for the life of you, you can see no one."
         },
 
 
@@ -5341,7 +5343,7 @@
             "cardText": "Walk through the jungle to the creches",
             "locationName": "Bifröst Prison Camp, nesting creches",
             "locationDescription": "A large mesa rising up out of the jungle features a large pond surrounded by countless rows of nests and aviaries.",
-            "addedText": "You start to walk to ward the jungle creches, but you realize that the sound of the ringing bell is coming from the other direction, so you head back",
+            "addedText": "You start to walk toward the jungle creches, but you realize that the sound of the ringing bell is coming from the other direction, so you head back",
             "nextCardsID": [
                 "BifröstCamp03BurnHill"
             ]
@@ -5351,7 +5353,7 @@
             "cardText": "Go to the wall",
             "locationName": "Bifröst Prison Camp, wall",
             "locationDescription": "The inmates of Bifröst are gathered around the wall’s large wooden door, now closed, listening to Quo speaking from up top.",
-            "addedText": "Upon rounding the warehouses, you see a massive crowd. It looks like the entire population of Bifröst Island is gathered here - the prisoners anyway - still no sign of the guards. Several prisoners are standing on top of the wall, some are leaning on the gate. In all, there appear to be over 150 of Her Majesty’s finest inmates gathered around the wall, waiting. Headmost Bailiff Claudia is looking down from on high, checking names on a list. Upon seeing you, she nods to Resolute Warder Quo. “That’s everyone except the last fishing crew.” <br><br> “May I have your attention,” Quo starts. “I would like to make a very important announcement.”",
+            "addedText": "Upon rounding the warehouses, you see a massive crowd. It looks like the entire population of Bifröst Island is gathered here - the prisoners anyway - still no sign of the guards. Several prisoners are standing on top of the wall, some are leaning on the gate. In all, there appear to be over 150 of Her Majesty’s finest criminals gathered around the wall, waiting. Headmost Bailiff Claudia is looking down from on high, checking names on a list. Upon seeing you, she nods to Resolute Warder Quo. “That’s everyone except the last fishing crew. No telling when they’ll be back.” <br><br> “May I have your attention,” Quo starts. “I would like to make a very important announcement.”",
             "nextCardsID": [
                 "BifröstInvasion00"
             ]
@@ -5359,7 +5361,7 @@
         {
             "cardID": "BifröstInvasion00",
             "cardText": "continue",
-            "addedText": "“The Humboldt is here!” Quo announces, to great cheers from all gathered round. <br><br> “I must confess, I have not been entirely honest with you all,” Quo says, looking around the crowd. “You have all, of course, noticed the shortages in supplies, the need to fish for food, the diminished number of guards. You all knew that the Humboldt hasn’t made its regular shipment in four months.” Quo looks at you, “Well, most of you knew. Anyways, this delay has been quite out-of-the-ordinary, and has forced us to improvise. You may remember ten months ago that the Humboldt was three days late for its monthly run. This was quite strange, since we are only one day’s sail from Fort Smythe. The reason for both delays is the same,” Quo pauses.",
+            "addedText": "“The Humboldt is here!” Quo announces, to great cheers from all gathered round. <br><br> “I must confess, I have not been entirely forthcoming with you all,” Quo says, looking around the crowd. “You have all, of course, noticed the shortages in supplies, the need to fish for food, the diminished number of guards. You all knew that the Humboldt hasn’t made its regular shipment in four months.” Quo looks at you, “Well, most of you knew. Anyways, this delay has been quite out-of-the-ordinary, and has forced us to improvise. You may remember ten months ago that the Humboldt was three days late for its monthly run. This was quite strange, since we are only one day’s sail from Fort Smythe. The reason for both delays is the same,” Quo pauses.",
             "nextCardsID": [
                 "BifröstInvasion01"
             ]
@@ -5367,7 +5369,7 @@
         {
             "cardID": "BifröstInvasion01",
             "cardText": "continue",
-            "addedText": "“New Atlantis has revolted against the Empire.” Gasps reverberate through the assembled crowd.<br><br> “All of New Atlantis?” cries out one inmate.<br><br> “Yes, the entire island of New Atlantis has come together in traitorous revolution - the farms, the mines, the city of course. Alas, many other island colonies have joined the revolution too, dozens of them. By now, maybe all of them. But, since New Atlantis is by far the most populous and wealthiest of the island colonies here in the New World, they are referring to all of the rebelling islands together as the Nation of New Atlantis, governed by revolutionaries in the city of Capitol X” <br><br> “How could this happen?” someone in the crowd cries out.",
+            "addedText": "“New Atlantis has revolted against the Empire.” Gasps reverberate through the assembled crowd.<br><br> “All of New Atlantis?” cries out one inmate.<br><br> “Yes, the entire island of New Atlantis has come together in traitorous revolution - the farms, the mines, the city of course. Alas, many other island colonies have joined the revolution too, dozens of them. By now, maybe all of them. But, since New Atlantis is by far the most populous and wealthiest of the island colonies here in the New World, they are referring to all of the rebelling islands together as the Nation of New Atlantis, and they are being governed by revolutionaries in the city of Capitol X” <br><br> “How could this happen?” someone in the crowd cries out.",
             "nextCardsID": [
                 "BifröstInvasion02"
             ]
@@ -5391,7 +5393,7 @@
         {
             "cardID": "BifröstInvasion04",
             "cardText": "continue",
-            "addedText": "“Fort Smythe is gone,” Quo states. <br><br> “Gone? What do you mean, gone?” <br><br> “I mean gone, blown up.” <br><br> “Fort Smythe was an impenetrable mountain fortress rising up out of the sea!” <br><br> “Yes, and apparently now it’s an impenetrable pile of rubble rising out of the sea,” Quo responds. “Now, I don’t know all the details. The Humboldt captain didn’t know much himself, and I can’t get any information from the guards. Ironically, they won’t talk,” Quo chuckles, and the other inmates parrot him. <br><br> “So,” another inmate asks, “does that mean we’re free now?”",
+            "addedText": "“Are you referring to Fort Smythe?” Quo asks. “Fort Smythe is gone.”<br><br> “Gone? What do you mean, gone?” <br><br> “I mean gone, blown up.” <br><br> “Fort Smythe was an impenetrable mountain fortress rising up out of the sea!” <br><br> “Yes, and apparently now it’s an impenetrable pile of rubble rising out of the sea,” Quo responds. “Now, I don’t know all the details. The Humboldt captain didn’t know much himself, and I can’t get any information from our guards. Ironically, they won’t talk,” Quo chuckles, and the other inmates parrot him. <br><br> “So,” another inmate asks, “does that mean we’re free now?”",
             "nextCardsID": [
                 "BifröstInvasion05"
             ]
@@ -5399,7 +5401,7 @@
         {
             "cardID": "BifröstInvasion05",
             "cardText": "continue",
-            "addedText": "“No, no, unfortunately we are not free,” Quo explains. “New Atlantis has not completely removed the Royal Empire or Valhalla from the New World. After their revolution victories, New Atlantis reached certain agreements with the Olden Worlde powers. The Empire is able to keep certain forts, as well as any colonies who wish to declare their allegiance to the Queen, as well as...” Quo pauses “their prison colonies.”<br><br> “And what about all the other groups? The guards? The Post? The local tribes?”",
+            "addedText": "“No, no, unfortunately we are not free,” Quo explains. “New Atlantis has not completely removed the power of the Royal Empire or Valhalla from the New World. After their revolution victories, New Atlantis reached certain agreements with the Olden Worlde powers. The Empire is able to keep certain forts, as well as any colonies who wish to declare their allegiance to Her Royal Majesty, as well as...” Quo pauses “their prison colonies.”<br><br> “And what about all the other groups? The guards? The Post? The local tribes?”",
             "nextCardsID": [
                 "BifröstInvasion06"
             ]
@@ -5415,7 +5417,7 @@
         {
             "cardID": "BifröstInvasion07",
             "cardText": "continue",
-            "addedText": "“Good question,” Quo states, “I was wondering that myself. Of course, we’ve managed to find alternative sources of food supplies just fine once our rations started to run out, but there’s no metal on this island, no mines. And I’m sure you’ve all been noticing that our tools have been getting worn and scarce. But there’s another shortage that’s even more important,” Quo says looking over at Bailiff Claudia. <br><br> “Quinine,” she states. “Quinine is a tincture added to the water barrels that you all fill your canteens from. We have Quinine to last us for two more months, perhaps four if we stretch the dosages. But if we receive no more Quinine, then all of us here will be susceptible to Roman fever.” <br><br> “Before the discovery of the effects of quinine, many Olden Worlders died from Roman fever, especially in old Valhallan prison camps,” Quo inserts. “Without it, we estimate about two-thirds of us would be dead within a year.” The crowd gasps again.",
+            "addedText": "“Good question,” Quo states, “I was wondering that myself. Of course, we’ve managed to find alternative sources of food supplies just fine once our rations started to run out, but there’s no metal on this island, no mines. And I’m sure you’ve all been noticing that our tools have been getting worn. But there’s another shortage that’s even more important,” Quo says looking over at Bailiff Claudia. <br><br> “Quinine,” she states. “Quinine is a tincture added to the water barrels that you all fill your canteens from. We have Quinine to last us for two more months, perhaps four if we stretch the dosages. But if we receive no more Quinine, then all of us here will be susceptible to Roman fever.” <br><br> “Before the discovery of the effects of quinine, many Olden Worlders died from Roman fever, especially in old Valhallan prison camps,” Quo inserts. “Without it, I estimate about two-thirds of us would be dead within a year.” The crowd gasps again.",
             "nextCardsID": [
                 "BifröstInvasion08"
             ]
@@ -5423,7 +5425,7 @@
         {
             "cardID": "BifröstInvasion08",
             "cardText": "continue",
-            "addedText": "“That’s why a week ago, I took advantage of the new boat we had, furnished by our new friend here,” Quo says, gesturing to you. “Your lifeboat needed some work, but while you were receiving medical care, we fixed it up, rigged a sail, and sent off a rescue attempt. I’m sure some of you have noticed an absent inmate this past week.” <br><br> “Warder,” Impulsive Gaoler Pana interrupts. <br><br> “Derby,” Quo continues, ignoring Pana. “Three days ago, I sent Derby off to get help, and now here comes the Humboldt, hopefully with him on board…” <br><br> “Warder,” Pana interrupts again, holding a telescope “That isn’t the Humboldt. That’s a Viking ship.”",
+            "addedText": "“That’s why a week ago, I took advantage of the new boat we had, furnished by our new friend here,” Quo says, gesturing to you. “Your lifeboat needed some work, but while you were receiving medical care, we fixed it up, rigged a sail, and sent off a rescue attempt. I’m sure some of you have noticed an absent inmate this past week.” <br><br> “Warder,” Impulsive Gaoler Pana attempts to interrupt. <br><br> “Derby,” Quo continues, ignoring Pana. “Three days ago, I sent Derby off to get help, and now here comes the Humboldt, hopefully with him on board…” <br><br> “Warder,” Pana interrupts again, holding a telescope “That isn’t the Humboldt. That’s a Viking ship.”",
             "nextCardsID": [
                 "BifröstInvasion09"
             ]
@@ -5431,7 +5433,7 @@
         {
             "cardID": "BifröstInvasion09",
             "cardText": "continue",
-            "addedText": "“Give me that!” Headmost Bailiff Claudia grabs the telescope from Pana. All of the prisoners look terrified. “No, it is quite clearly the Humboldt,” she says, emphasizing every word individually. <br><br> “No, it’s Vikings!” another inmate says, after grabbing another telescope from the lookout station on the wall. <br><br> “I’d recognize the Humboldt anywhere. It’s the Humboldt!” <br><br> “I can see the red of the viking flag!” All off the inmates crowd the top of the wall, or the cliffs just outside the gate, trying to catch glimpses of a dot on the horizon.",
+            "addedText": "“Give me that!” Headmost Bailiff Claudia grabs the telescope from Pana. All of the prisoners look terrified. “No, it is quite clearly the Humboldt,” she says, emphasizing every word individually. <br><br> “No, it’s Vikings!” another inmate says, after grabbing another telescope from the lookout station on the wall. <br><br> “I’d recognize the Humboldt anywhere. It’s the Humboldt!” <br><br> “I can see the red of the viking flag!” All off the inmates crowd the top of the wall, or the cliffs just outside the gate, trying to catch glimpses of the horizon.",
             "nextCardsID": [
                 "BifröstInvasion10"
             ]
@@ -5461,7 +5463,7 @@
         {
             "cardID": "BifröstInvasion11",
             "cardText": "Tell people there are two ships",
-            "addedText": "“Oh bloody hell. There <em>are</em> two ships,” says Headmost Bailiff Claudia, looking through her telescope “One is the Humboldt, the other is a Viking ship. They’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
+            "addedText": "“Oh bloody hell, you’re right. There <em>are</em> two ships,” says Headmost Bailiff Claudia, looking through her telescope “One is the Humboldt, the other is a Viking ship. They’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
             "nextCardsID": [
                 "BifröstInvasion13"
             ]
@@ -5470,7 +5472,7 @@
         {
             "cardID": "BifröstInvasion12",
             "cardText": "Tell people there is a red-flagged ship",
-            "addedText": "“Oh bloody hell. There is a Viking ship,” says Headmost Bailiff Claudia, looking through her telescope “...in addition to the Humboldt. They’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
+            "addedText": "“Oh bloody hell, you’re right. There is a Viking ship,” says Headmost Bailiff Claudia, looking through her telescope “...in addition to the Humboldt. Look, they’re both headed straight at us, but coming from different directions.” Murmurs of worry ripple through the crowd of inmates.",
             "nextCardsID": [
                 "BifröstInvasion13"
             ]
@@ -5497,7 +5499,7 @@
         {
             "cardID": "BifröstInvasion15",
             "cardText": "continue",
-            "addedText": "“Cannonfire!” Pana yells out. Sure enough, moments later small popping sounds are heard. “Almost exactly one second. They’re a league and a half away.” <br><br> “The victor will be here in less than twenty minutes then,” Quo states. The entire group of prisoners falls silent, listening to the sounds of the distant cannonfire that will determine everyone’s fates. <br><br> “Please Odin, let the Empire win,” says old Convict Rainer. <br><br> “I thought you were from Valhalla, shouldn’t you favour the Vikings?” <br><br> “I spit on Thor’s Vikings! They reject the one true father of the gods, Lord Odin!”",
+            "addedText": "“Cannonfire!” Pana yells out. Sure enough, moments later small popping sounds are heard. “Almost exactly one second. They’re a league and a half away.” <br><br> “The victor will be here in less than twenty minutes then,” Quo states. The entire group of prisoners falls silent, listening to the distant popping sounds of cannonfire that would determine their fates. <br><br> “Please Odin, let the Empire win,” says old Convict Rainer. <br><br> “I thought you were from Valhalla, shouldn’t you favour the Vikings?” <br><br> “I spit on Thor’s Vikings! They reject the one true father of the gods, Lord Odin!”",
             "nextCardsID": [
                 "BifröstInvasion16"
             ]
@@ -5515,7 +5517,7 @@
         {
             "cardID": "BifröstInvasion17",
             "cardText": "continue",
-            "addedText": "“They stopped firing,” says Pana, who must have the best eyes, or best telescope. “They’re using signal flags.” <br><br> “What are they saying?” <br><br> “I can’t see the Humboldt’s flags, they’re facing each other, not us. I can see a bit of the Viking ship’s flags,” Pana says. “I can make out a few things. Something about cannons, the wind. Oh bollocks, I think I just saw the flags spell out Skaarhart.” Worried mutters spread through the crowd of convicts.",
+            "addedText": "“They stopped firing,” says Pana, who must have the best eyes, or best telescope. “They’re using signal flags.” <br><br> “What are they saying?” <br><br> “I can’t see the Humboldt’s flags, they’re facing each other, not us. I can see a bit of the Viking ship’s flags,” Pana says. “I barely can make out… something about cannons… the wind. Oh bollocks, I think I just saw the flags spell out Skaarhart.” Worried mutters spread through the crowd of convicts.",
             "nextCardsID": [
                 "BifröstInvasion18"
             ]
@@ -5533,7 +5535,7 @@
         {
             "cardID": "BifröstInvasion19",
             "cardText": "continue",
-            "addedText": "“Feathers. Double bollocks,” Pana says. “I just saw the Viking flags spell out the word “feathers”.” <br><br> “That can only mean they’re here to raid us,” Quo says. “But why isn’t the Navy firing on them? The Humboldt should be able to put up a good fight against a Viking ship like the Tordenvær. Does either ship look disabled?”",
+            "addedText": "“Feathers. Double bollocks,” Pana says. “The Viking flags just spelled out the word “feathers”.” <br><br> “That can only mean they’re here to raid us,” Quo says. “But why isn’t the Navy firing on them? The Humboldt should be able to put up a good fight against a Viking ship like the Tordenvær. Does either ship look disabled?”",
             "nextCardsID": [
                 "BifröstInvasion20"
             ]
@@ -5606,7 +5608,7 @@
         {
             "cardID": "BifröstInvasion23",
             "cardText": "All the bollocks in the world",
-            "addedText": "“Pirates,” Claudia curses, looking through her own telescope. “The Humboldt is flying a Privateer flag. And those aren’t roses. It’s the flag of the Widow Violet.” <br><br> Terrified muttering erupts from the crowd. “How could bloody Pirates take the Humboldt?” <br><br> “If they took Fort Smythe…” <br><br> “Where’s the Navy to protect us?” <br><br> “There is no more Navy!”",
+            "addedText": "“Pirates,” Claudia curses, looking through her own telescope. “The Humboldt is flying a Privateer flag. And those aren’t roses. It’s the flag of the Widow Violet.” <br><br> Terrified muttering erupts from the crowd. “How could bloody Pirates take the Humboldt?” <br><br> “If they took Fort Smythe…” <br><br> “Where’s the Navy to protect us?” <br><br> “There is no more Empire! No more Navy!”",
             "nextCardsID": [
                 "BifröstInvasion24"
             ]
@@ -5614,7 +5616,7 @@
         {
             "cardID": "BifröstInvasion24",
             "cardText": "Widow Violet?",
-            "addedText": "You turn to an inmate beside you who you recognize from yesterday’s work duty. “Widow Violet? I’ve found that most individuals here in the New World have three names - a descriptor, a title and a given name, like Resolute Warder Quo, Headmost Bailiff Claudia, even Dread Kommandør Skaarhart. Is Widow her descriptor or title?” <br><br> “Really? At a time like this? Don’t you think we have more to worry about?”",
+            "addedText": "You turn to an inmate beside you who you recognize from yesterday’s work duty. “Widow Violet? I’ve found that most individuals here in the New World have three names - a descriptor, a title and a given name, like Resolute Warder Quo, Headmost Bailiff Claudia, even Dread Kommandør Skaarhart. Is ‘Widow’ her descriptor or title?” <br><br> “Really? At a time like this? Don’t you think we have more to worry about?”",
             "nextCardsID": [
                 "BifröstInvasion25"
             ]
@@ -5630,7 +5632,7 @@
         {
             "cardID": "BifröstInvasion26",
             "cardText": "Help out",
-            "addedText": "Immediately the crowd erupts into a flurry of activity. Some gather supplies from the pier, others get to work on the heavy wooden doors of the gate. The doors regularly never close, so tussocks of grass have grown around them, and you lend a hand scraping away the earth so that the giant gate can be sealed. You point out to another inmate that as you are pushing the doors form the outside, you will be trapped on the wrong side of the wall. But they tell you not to worry. A dumbwaiter is lowered over the edge of the wall to lift up those of you who were on the outside securing the gate. By the time the door is closed and well-barred from the inside, the Pirate and Viking ships are approaching the pier.",
+            "addedText": "Immediately the crowd erupts into a flurry of activity. Some gather supplies from the pier, others get to work on the heavy wooden doors of the gate. The doors regularly never close, so tussocks of grass have grown around them, and you lend a hand scraping away the earth so that the giant gate can be sealed. You fear that as you are pushing the doors from the outside, you will be trapped on the wrong side of the wall. But you are told not to worry. A dumbwaiter is lowered over the edge of the wall to lift up those of you who were on the outside securing the gate. By the time the door is closed and well-barred from the inside, the Pirate and Viking ships are approaching the pier.",
             "nextCardsID": [
                 "BifröstInvasion27"
             ]
@@ -5650,7 +5652,7 @@
         {
             "cardID": "BifröstInvasion28",
             "cardText": "continue",
-            "addedText": "You climb back up the inside of the wall and stand near Quo, the large wooden pier juts out into the bay. “That’s the Humboldt alright,” Quo says, staring at the large carrack tied up on one side of the pier. “She’s a beauty. Never thought I’d see her flying Pirate colors. Never thought I’d see her tied up side by side with the Tordenvær, either. You ever seen a drakkar-lang up close before?” You gaze at the fearsome dragon’s head protruding from the bow of the great vessel. “Them Viking ships are designed to strike fear into a man’s heart so that he gives up before the battle even begins. And now it begins.” Several dozen Vikings and Pirates are climbing the steps from the pier and approaching the Bifröst prison gate.",
+            "addedText": "You climb back up the inside of the wall and stand near Quo, looking out at the large wooden pier jutting out into the bay. “That’s the Humboldt alright,” Quo says, staring at the large carrack tied up on one side of the pier. “She’s a beauty. Never thought I’d see her flying Pirate colors. Never thought I’d see her tied up side by side with the Tordenvær, either. You ever seen a drakkar-lang up close before?” You gaze at the fearsome dragon’s head protruding from the bow of the great vessel. “Them Viking ships are designed to strike fear into a man’s heart so that he gives up before the battle even begins. And now it begins.” Several dozen Vikings and Pirates are climbing the steps from the pier and approaching the Bifröst prison gate.",
             "nextCardsID": [
                 "BifröstInvasion29"
             ]
@@ -5666,7 +5668,7 @@
         {
             "cardID": "BifröstInvasion30",
             "cardText": "Let’s try not to die today",
-            "addedText": "“We will speak with Quo!” the tall woman commands. <br><br> “That would be me,” Quo says boldly. Immediately, a crossbows and pistols are aimed at him. All the other prisoners gathered on top of the wall duck down, but Quo stays stock still. “Open your gates. We are here for your feathers and eggs.”",
+            "addedText": "“We will speak with Quo!” the tall woman commands. <br><br> “That would be me,” Quo says boldly. Immediately, crossbows and pistols are aimed at him from below. All the other prisoners gathered on top of the wall duck down, but Quo stays stock still. “Open your gates. We are here for your valuables: your feathers and eggs.”",
             "nextCardsID": [
                 "BifröstInvasion31"
             ]
@@ -5674,7 +5676,7 @@
         {
             "cardID": "BifröstInvasion31",
             "cardText": "continue",
-            "addedText": "“All property here on Bifröst Island is the property of Her Royal Majesty. I shall not hand it over.” <br><br> “Not even to a ship of the Royal Navy?” the woman in purple asks, gesturing to the Humboldt. “I know who you are: Dread Kommandør Skaarhart and the Widow Violet.”",
+            "addedText": "“All property here on Bifröst Island is the property of Her Royal Majesty. I am not at liberty to hand it over.” <br><br> “Not even to a ship of the Royal Navy?” the woman in purple asks, gesturing to the Humboldt. <br><br>“I know who you are: Dread Kommandør Skaarhart and the Widow Violet.”",
             "nextCardsID": [
                 "BifröstInvasion32"
             ]
@@ -5690,7 +5692,7 @@
         {
             "cardID": "BifröstInvasion33",
             "cardText": "continue",
-            "addedText": "“We care little for your sentences,” Dread Kommandør Skaarhart then yells, “Bring up the cannon!” You see several vikings begin to push a heavy cannon onto some sort of cart. By winding a wheel at the back of the cart, they are able to move the cannon up the slope of the hill. At this rate, their contraption will have the cannon up at the gate in about 10 minutes or so. <br><br> “Of course, we don’t wish to harm anyone. We just want your goods,” says the Widow Violet. <br><br> “We’re taking every single flamingo feather and egg you’ve got here on this island,” continues Skaarhart. “If you make us blast your gates open, I swear I’ll kill every prisoner behind those walls.”",
+            "addedText": "“We care little for your sentences,” Dread Kommandør Skaarhart then yells, “Bring up the cannon!” You see several vikings begin to push a heavy cannon onto some sort of cart. By winding a wheel at the back of the cart, they are able to move the cannon up the slope of the hill. At this rate, their contraption will have the cannon up near the gate in about 10 minutes or so. <br><br> “Of course, we don’t wish to harm anyone. We just want your goods,” says the Widow Violet. <br><br> “We’re taking every single flamingo feather and egg you’ve got here on this island,” continues Skaarhart. “If you make us blast your gates open, I swear I’ll kill every prisoner behind those walls.”",
             "nextCardsID": [
                 "BifröstInvasion34"
             ]
@@ -5698,7 +5700,7 @@
         {
             "cardID": "BifröstInvasion34",
             "cardText": "continue",
-            "addedText": "With most of the prison inmates running around doing various preparations that they have drilled for, you are left with Quo and a few other senior inmates. Quo turns from the wall and confers with you. “I have to admit. I don’t know what to do.” <br><br> “Our wall can’t survive cannonfire much less the gate, we have to do as Violet says,” says Pana. <br><br> “I trust the Widow least of the two. At least Skaarhart has the decency to be honest that she’ll have us all killed. From what I’ve heard of the Widow Violet, her treatment of us will be worse.” <br><br> “There’s a chance we could survive death or worse if we try bluffing our way out,” interjects Grumpy Convict Rainer. “They don’t know when our last shipment was, and that we’ve got four months of goods stockpiled. We tell them that since the Empire is running with their tail between their legs, a couple days ago an Imperial ship just took our entire inventory of feathers and eggs with them back to the Olden Worlde.",
+            "addedText": "With most of the prison inmates running around doing various preparations that they have drilled for, you are left with Quo and a few other senior inmates. Quo turns from the wall and confers with you. “I have to admit. I don’t know what to do.” <br><br> “Our wall can’t survive cannonfire. We have to do as Violet says,” says Pana. <br><br> “I trust the Widow least of the two. At least Skaarhart has the decency to be honest that she’ll have us all killed. From what I’ve heard of the Widow Violet, her treatment of us will be worse.” <br><br> “There’s a chance we could survive death or worse if we try bluffing our way out,” interjects Grumpy Convict Rainer. “They don’t know when our last shipment was, and that we’ve got four months of goods stockpiled. We tell them that since the Empire is running with their tail between their legs, a couple days ago an Imperial ship just took our entire inventory of feathers and eggs with them back to the Olden Worlde.",
             "nextCardsID": [
                 "BifröstInvasion35Derby",
                 "BifröstInvasion35Claudia",
@@ -5779,7 +5781,7 @@
         {
             "cardID": "BifröstInvasion38",
             "cardText": "continue",
-            "addedText": "“Enough of this delaying already,” Dread Kommandør Skaarhart says as she draws a hefty sword from the scabbard on her belt. She doesn’t make any more demands of Quo, or ask the poor inmate if he has any last words. She just swings her gleaming blade in a broad arc that passes through the man’s neck as if it were a mere weed. The head falls to the ground while his body falls forward.",
+            "addedText": "“Enough of this delaying already,” Dread Kommandør Skaarhart says as she draws a long, hefty sword from the scabbard on her belt. She doesn’t make any more demands of Quo, or ask the poor inmate if he has any last words. She just swings her gleaming blade in a broad arc that passes through the man’s neck as if it were a mere weed. The head falls to the ground while his body falls forward.",
             "nextCardsID": [
                 "BifröstInvasion39"
             ]
@@ -5795,7 +5797,7 @@
         {
             "cardID": "BifröstInvasion40",
             "cardText": "continue",
-            "addedText": "“Take a souvenir, would you dear?” the Widow Violet asks, and one of her Privateers takes out a knife and removes one of the convict’s pinky fingers. A Viking steps forward and does the same to the headless torso. <br><br> “Now then,” Violet says, turning to Quo. “The only question left is whether you would like to see your two friends again sooner, or later?” <br><br> “Who bloody cares?” Skaarhart interrupts. “The cannon’s nearly here. Let’s blow this gate apart.” Vikings line up the cannon with the gate and begin digging a hole to stabilize it when it fires. Quo steps back and quickly confers with Claudia, Pana, and Rainer. You feel left out until they all look at you and call you over.",
+            "addedText": "“Take a souvenir, would you dear?” the Widow Violet asks, and one of her Privateers takes out a knife and removes one of the convict’s pinky fingers. A Viking steps forward and does the same to the headless torso. <br><br> “Now then,” Violet says, turning to Quo. “The only question left is whether you would like to see your two friends again sooner, or later?” <br><br> “Who bloody cares?” Skaarhart interrupts. “The cannon’s nearly here. Let’s brace it and blow this gate apart.” Vikings line up the cannon with the gate and begin digging a hole to stabilize it when it fires. Quo steps back and quickly confers with Claudia, Pana, and Rainer. You feel left out until they all look at you and call you over.",
             "nextCardsID": [
                 "BifröstInvasion41"
             ]
@@ -5803,7 +5805,7 @@
         {
             "cardID": "BifröstInvasion41",
             "cardText": "continue",
-            "addedText": "“Well, my new friend,” Quo says, slapping you on the back. “We’ve got a plan to get out of this. You’re not going to like it, but trust us.” You have no time to do anything as Claudia and Pana quickly grab your arms and Rainer starts to tie your wrists with a rope. You struggle, and they tie your legs too.",
+            "addedText": "“Well, my new friend,” Quo says, slapping you on the back. “We’ve got a plan to get out of this. You’re not going to like it, but trust us.” You have no time to act as Claudia and Pana quickly grab your arms and Rainer starts to tie your wrists with a rope. You struggle, and they tie your legs too.",
             "nextCardsID": [
                 "BifröstInvasion42"
             ]
@@ -5811,7 +5813,7 @@
         {
             "cardID": "BifröstInvasion42",
             "cardText": "What the…",
-            "addedText": "“Wait, my powerful captains,” Quo yells to Skaarhart & Violet. “I’d rather not die today, so I will work with you. I’ve ordered some of my inmates to dig out the earth we piled around the gate. In the meantime, please accept this gift, more valuable than feathers or eggs. I have a hostage, worth a great deal to whoever takes the ransom!”. Quo now whispers to you “Trust me, this is the best option for your get off this island other than dying, which we all know is such an immense inconvenience.”",
+            "addedText": "“Wait, my powerful captains,” Quo yells to Skaarhart & Violet. “I’d rather not die today, so I will work with you. I’ve ordered some of my inmates to dig out the earth we piled around the gate. In the meantime, please accept this gift, more valuable than feathers or eggs. I have a hostage, worth a great deal to whoever takes the ransom!” Quo now whispers to you “Trust me, this is the best option for you to get off this island other than dying, which we all know is such an immense inconvenience.”",
             "nextCardsID": [
                 "BifröstInvasion43"
             ]
@@ -5819,7 +5821,7 @@
         {
             "cardID": "BifröstInvasion43",
             "cardText": "This does not sound good",
-            "addedText": "“What the bollocks are you talking about?” Skaarhart asks. <br><br> “My great and powerful ladies of the sea, I know little about the current state of affairs of New Atlantis, but I imagine that the Gladiators are still powerful and wealthy members of society in Capitol X?” Quo asks. <br><br> “Yes what of it?” Violet responds. <br><br> “Then I imagine that in whatever government rules New Atlantis,” Quo continues, “the head of the Gladiators, Zardolo is sure to be of great prominence?” <br><br> “Yes, of course,” Skaarhart replies.",
+            "addedText": "“What the bollocks are you talking about?” Skaarhart asks. <br><br> “My great and powerful ladies of the sea, I know little about the current state of affairs of New Atlantis, but I imagine that the Gladiators are still powerful and wealthy members of society in Capitol X?” Quo asks. <br><br> “Yes what of it?” Violet responds. <br><br> “Then I imagine that in whatever government rules New Atlantis,” Quo continues, “the head of the Gladiators, Zardolo is sure to be of great prominence?” <br><br> “What is your point?” Skaarhart replies.",
             "nextCardsID": [
                 "BifröstInvasion44"
             ]
@@ -5827,7 +5829,7 @@
         {
             "cardID": "BifröstInvasion44",
             "cardText": "Struggle!",
-            "addedText": "“Well, here, I present to you a captive, who will surely command a handsome ransom, newly arrived via shipwreck from the Olden Worlde, the cousin of Ringmaster Zardolo.” Quo says this as the others heft you up into the dumbwaiter. “Remember the strategies that I taught you in Life or Death,” Quo whispers to you.” This game is no different from that. Vikings are impressed by Brawn and Eye. Pirates are impressed by Hand and Eye. Choose one of them to take you to New Atlantis, then you’ll have to figure out the rest on your own from there.” With that, Headmost Bailiff Claudia begins to turn the crank that lowers the rickety elevator of the dumbwaiter to the base of the wall.",
+            "addedText": "I present to you a captive, who will surely command a handsome ransom, newly arrived via shipwreck from the Olden Worlde, the cousin of Ringmaster Zardolo.” Quo says this as the others heft you up into the dumbwaiter. “Remember the strategies that I taught you in Life or Death,” Quo whispers to you.” The game you are to play now is no different from that. Vikings are impressed by Brawn and Eye. Pirates are impressed by Hand and Eye. Choose one of them to take you to New Atlantis, then you’ll have to figure out the rest on your own from there.” With that, Headmost Bailiff Claudia begins to turn the crank that lowers the rickety elevator of the dumbwaiter to the base of the wall.",
             "nextCardsID": [
                 "BifröstInvasion45"
             ]
