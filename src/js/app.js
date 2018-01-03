@@ -84,11 +84,13 @@ var player = {
 //beginning of lifeboat
 //    activeCard: 'LifeboatWakeUp',
 //beginning of Life or Death game
-    activeCard: 'BifröstShore23',
+//    activeCard: 'BifröstShore23',
 //end of Life or Death game
-//    activeCard: 'BifröstShore43TestingRandomnessDELETE',
+    activeCard: 'BifröstShore52',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
+//whenever
+//        activeCard: 'BifröstShore41Choose',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -380,7 +382,7 @@ Progress.prototype.updateReputation = function() {
     stats.score.forEach(function (item) {
         if ((item.quantity > 0 ) && (item instanceof Progress || item instanceof Reputation)) {
             if (item.leveled) {
-                reputationList += `• ${item.quantity} (${item.experience} of ${item.nextExp}) ${item.correctName(item.quantity)}<br>`;
+                reputationList += `• LVL ${item.quantity} ${item.correctName(item.quantity)} (${item.experience} of ${item.nextExp}) <br>`;
             } else {
                 reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
             }
@@ -396,7 +398,7 @@ Reputation.prototype.updateReputation = function() {
     stats.score.forEach(function (item) {
         if ((item.quantity > 0 ) && (item instanceof Progress || item instanceof Reputation)) {
             if (item.leveled) {
-                reputationList += `• ${item.quantity} (${item.experience} of ${item.nextExp}) ${item.correctName(item.quantity)}<br>`;
+                reputationList += `• LVL ${item.quantity} ${item.correctName(item.quantity)} (${item.experience} of ${item.nextExp}) <br>`;
             } else {
                 reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
             }
@@ -417,7 +419,7 @@ PlayerStat.prototype.updateStatus = function() {
     stats.score.forEach(function (item) {
         if ((item.singularName !== 'Health') && (item.singularName !== 'Mind') && (item.singularName !== 'Action') && (item.quantity > 0) && (item instanceof PlayerStat)) {
             if (item.leveled) {
-                statList += `• ${item.quantity} (${item.experience} of ${item.nextExp}) ${item.correctName(item.quantity)}<br>`;
+                statList += `• LVL ${item.quantity} ${item.correctName(item.quantity)} (${item.experience} of ${item.nextExp}) <br>`;
             } else {
                 statList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
             }

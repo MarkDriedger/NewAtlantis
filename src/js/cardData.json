@@ -92,9 +92,7 @@
                 {"rewardName": "lantern",
                 "rewardQuantity": 1},
                 {"rewardName": "Medusa crew gratitude",
-                "rewardQuantity": 1},
-                {"rewardName": "minute until The Medusa sinks",
-                "rewardQuantity": 10}
+                "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
                 "Medusa3",
@@ -102,16 +100,19 @@
             ],
             "challengeSuccessText": "<em>[Now you have a 1% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 2 points of experience. When you reach 3 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
             "challengeFailRewards": [
-                {"rewardName": "minute until The Medusa sinks",
-                "rewardQuantity": 10}
             ],
             "challengeFailCards": [
                 "Medusa3",
                 "Medusa4"
             ],
             "challengeFailText": "<em>[Oh well, at least now you have a 2% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 4 points of experience. When you reach 5 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
-            "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops."
+            "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops.",
+            "setScore": [
+                {"setName": "minute until The Medusa sinks",
+                "setQuantity": 10}
+            ]
         },
+
         {
             "cardID": "Medusa3",
             "cardText": "Search for your belongings",
@@ -121,7 +122,7 @@
                 "rewardQuantity": 1},
                 {"rewardName": "Royal shilling",
                 "rewardQuantity": 117},
-                {"rewardName": "inkwell",
+                {"rewardName": "passport",
                 "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -167,7 +168,7 @@
                 "Medusa6"
             ],
             "challengeFailText": "You have trouble finding your way through the toppled furniture, cursing when the jagged edge of a broken bedpost scrapes you along the thigh. ",
-            "addedText": "The door of the cabin is jammed shut. The tiny glimmer of light peeking through the cracks show that in some areas the frame is pulled away from the door, and in others, it is pressed tight. The ship’s tilting must be putting enormous strain on the walls. That is not a good sign."
+            "addedText": "The door of the cabin is jammed shut. The tiny glimmer of light peeking through the cracks show that in some areas the frame is pulled away from the door. The ship’s tilting must be putting enormous strain on the walls. That is not a good sign."
         },
         {
             "cardID": "Medusa6",
@@ -224,7 +225,7 @@
                 "Medusa8"
             ],
             "challengeFailText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his possessions. ",
-            "addedText": "There are two children here in this cabin - they really should be the first to escape."
+            "addedText": "<br><br>There are two children here in this cabin - they really should be the first to escape."
         },
         {
             "cardID": "Medusa8",
@@ -258,7 +259,7 @@
                 "Medusa10"
             ],
             "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first. ",
-            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying their best, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. One more is about to be launched, but it is very quickly filling up with people."
+            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying their best, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. There is only one more lifeboat you can see, and it is very quickly filling up with people."
         },
         {
             "cardID": "Medusa9",
@@ -376,7 +377,7 @@
             "challengeSuccessCards": [
                 "Medusa18"
             ],
-            "challengeSuccessText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. ”There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You must be a good actor - or just lucky. The leader of the three sailors says a few expletives and shoves you onto the lifeboat. ",
+            "challengeSuccessText": "“Please, you have to let me on the lifeboat! I’m the sole breadwinner for my family,” you lie. “There are seven children. And my mother - she is sick and needs me to pay for her medication! If you let me die here, you’ll be sentencing them all to death!”<br><br>You must be a good actor - or just lucky. The leader of the three sailors says a few expletives and shoves you onto the lifeboat. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -497,6 +498,12 @@
                 {"rewardName": "Mind",
                 "rewardQuantity": -20}
             ],
+            "setScore": [
+                {"setName": "passport",
+                "setQuantity": 0},
+                {"setName": "lantern",
+                "setQuantity": 0}
+            ],
             "nextCardsID": [
                 "Medusa21"
             ]
@@ -513,7 +520,7 @@
         {
             "cardID": "Medusa22",
             "cardText": "dream",
-            "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the echoes of thunder that trump all other sound.<br><br>You dream of slimy tentacled arms, wrapping around your body, dragging you down.",
+            "addedText": "You dream of the fins of undersea predators circling you in the water.<br><br>You dream of the echoes of thunder that obliterate all other sound.<br><br>You dream of slimy tentacled arms, wrapping around your body, dragging you down.",
             "nextCardsID": [
                 "LifeboatWakeUp"
             ]
@@ -566,8 +573,6 @@
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
-                {"rewardName": "Brawn",
-                "rewardQuantity": 5},
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
@@ -1056,7 +1061,7 @@
         {
             "cardID": "LifeboatExamineBoat",
             "cardText": "Examine lifeboat",
-            "addedText": "The unpainted wooden boat stretches a mere ten feet from bow to stern. It’s nothing fancy but seems water-tight, which is the only important thing right now. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could be a good place to shelter you from sun or rain while you sleep. In the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. There is also a sealed metal chest, but you don't have any way of opening it here at sea. The other supplies might be good to hang on to for bartering with potential rescuers.",
+            "addedText": "The unpainted wooden boat is only a few yards long from bow to stern. It’s nothing fancy but seems water-tight. You see there is a small area at the bow where the front of the boat has an overhang. It is tight, but this could provide shelter from sun or rain while you sleep. Back in the stern, there is a small hold. There are a few supplies stored here, including a few wheels of cheese, some bottles of water, and two oars for rowing. It seems that some others who were fleeing the shipwreck started to stow their possessions in this hold too, as there is a jacket, a couple bottles of fine brandy, and a crate of silverware. <br><br>You put on the jacket, as it will protect you from the sun. You consume a small amount of the cheese and water, but you will have to ration it out, since you have no idea how long it may take for you to be rescued, or find land. There is also a sealed metal chest, but you don't have any way of unlocking it here at sea. The other supplies might be good to hang on to for bartering with potential rescuers.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 5},
@@ -1149,7 +1154,7 @@
             "addedText": "You have driven yourself hard - harder than your body can handle. When you wake up, you are unsure how long you were out for, but your body is grateful in some small part for the break.",
             "rewards": [
                 {"rewardName": "Health",
-                "rewardQuantity": 2000},
+                "rewardQuantity": 20},
                 {"rewardName": ["weather"],
                 "rewardQuantity": [0],
                 "rewardRange": [5]}
@@ -1266,8 +1271,6 @@
                 "rewardRange": [5]},
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
-                {"rewardName": "Vikings",
-                "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
                 "rewardQuantity": 1}
             ],
@@ -1300,7 +1303,7 @@
             ]
         },{
             "cardID": "LifeboatRowFollowDolphins",
-            "cardText": "Row, following dolphins",
+            "cardText": "Row. Follow dolphins",
             "addedText": "You spot a pod of dolphins leaping in and out of the water. Certainly dolphins would head towards reefs or islands where there is a greater congregation of fish?",
             "rewards": [
                 {"rewardName": ["Health"],
@@ -1312,7 +1315,7 @@
                 {"rewardName": "ocean current navigation skill",
                 "rewardQuantity": 1},
                 {"rewardName": "nautical progress",
-                "rewardQuantity": 3}
+                "rewardQuantity": 4}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -1325,7 +1328,7 @@
                 "reqQuantity": 2},
                 {"reqName": "nautical progress",
                 "reqRule": ">",
-                "reqQuantity": 5,
+                "reqQuantity": 2,
                 "reqHidden": true},
                 {"reqName": "ocean current navigation skill",
                 "reqRule": ">=",
@@ -1428,7 +1431,7 @@
         },
         {
             "cardID": "LifeboatRowFollowBirds",
-            "cardText": "Row, following the birds",
+            "cardText": "Row. Follow birds",
             "addedText": "You spot a flock of seagulls in the distance. Birds cannot live over water forever; they need to eventually return to land. You follow them until they fly off into the distance, confident that you are getting closer to land.",
             "rewards": [
                 {"rewardName": ["Health"],
@@ -1476,7 +1479,7 @@
         },
         {
             "cardID": "LifeboatRowFollowClouds",
-            "cardText": "Row, following clouds",
+            "cardText": "Row. Follow clouds",
             "addedText": "Every day and every night, in this part of the world there never seems to be a cloudless sky. You have a good understanding of the wind currents here and you are able to use this information to keep your direction true. No one can guarantee that the winds are taking you to land, but at least you know you are not going in circles.",
             "rewards": [
                 {"rewardName": ["Health"],
@@ -1487,10 +1490,8 @@
                 "rewardRange": [5]},
                 {"rewardName": "wind current navigation skill",
                 "rewardQuantity": 1},
-                {"rewardName": "Vikings",
-                "rewardQuantity": -1},
                 {"rewardName": "nautical progress",
-                "rewardQuantity": -1}
+                "rewardQuantity": 1}
             ],
             "hiddenIfReqsFail": true,
             "reqs": [
@@ -1706,7 +1707,7 @@
             "cardText": "Land ho!",
             "locationName": "The open ocean",
             "locationDescription": "The horizon is broken up by a small stretch of land.",
-            "addedText": "Land ho! A dark smudge on the horizon indicates that finally, your long trek across the waves may soon be at an end.",
+            "addedText": "Land ho! A dark smudge on the horizon indicates that finally your long trek across the waves may soon be at an end.",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "nautical progress",
@@ -1739,7 +1740,7 @@
             "cardText": "Crash!",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "You are gasp for air as you’ve just been smashed against a rock, the wind knocked out of you. You regain your breath, after passing out, or did you pass out? All you know is that blinding light sears your eyes. You can’t even tell what you’re looking at except that it is too bright to see. You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on some sea water. You get up onto your hands and knees and you cough the salty sea water out and you wipe your wet face with your wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl over to a close, relatively dry one and throw yourself down on it. You close your eyes. First you try to take account of your own status. You feel pain and wet all over, but you still seem to be in one piece. You feel like crap though.",
+            "addedText": "You gasp for air as you’ve just been smashed against a rock, the wind knocked out of you. You regain your breath, after passing out, or did you pass out? You feel hot and cold at the same time. You realize why as a wave crashes over you and you choke on some sea water. You get up onto your hands and knees, cough up the salty sea water, and you wipe your wet face with your wet hands. You see a large black rock - you see many large black rocks, jagged from the pummelling they receive from the relentless ocean waves. You crawl over to a close, relatively dry one and throw yourself down on it. You close your eyes. First you try to take account of your own status. You feel pain and wet all over, but you still seem to be in one piece. You feel like crap though.",
             "setScore": [
                 {"setName": "Health",
                 "setQuantity": 10},
@@ -1761,7 +1762,7 @@
         {
             "cardID": "BifröstShore1",
             "cardText": "Close your eyes",
-            "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. To one side is the ocean, vast, yet relatively calm. The sky is picturesquely blue, as if to call you a liar. You imagine a nervous cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself, causing you to wonder about your own sanity.",
+            "addedText": "When you open your eyes again, your blurry vision begins to resolve and you take in your surroundings. To one side is the ocean, vast, yet relatively calm. The sky is picturesquely blue, as if to call you a liar. You imagine an indignant cloud saying “Storm? What storm? I didn’t just sink a ship and kill hundreds of innocents with a storm!” You chuckle to yourself, causing you to wonder about your own sanity.",
             "setScore": [
                 {"setName": "Mind",
                 "setQuantity": 20}
@@ -1774,7 +1775,7 @@
             "cardID": "BifröstShore2",
             "cardText": "Look around",
             "locationDescription": "Some rocky, desolate shore",
-            "addedText": "The whole coast is made of this same black rock. Inland, the rocks look smooth, but they get rougher and more jagged the further out into the water they go. The ocean seems to have deposited you in some kind of tidal pool, along with a fair amount of debris from the Medusa’s shipwreck.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown, and you are alone, as far as you know.<br><br>Oh, and you have been thrown clear from your boat so you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
+            "addedText": "The whole coast is made of these same black rocks, some smooth, some jagged. The ocean seems to have deposited you in some kind of tidal pool, along with a bit of debris from the shipwreck of the Medusa’s lifeboat.<br><br>You are just wondering whether anyone else survived the wreck when you are distracted by a squawking sound and notice a bright red parrot sitting on a rock not far behind you. Parrots aren’t scavengers are they? Is it waiting for you to die so that it can eat you? It continues to watch you while you try to stand up and figure out your next move.<br><br>You have no idea where you are, you have no clothes except your torn nightgown, and you are alone, as far as you know.<br><br>Oh, and you have been thrown clear from your lifeboat so you have no tools, food or fresh water. “Good luck, me!” You wish yourself.",
             "rewards": [
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
@@ -1911,7 +1912,7 @@
         {
             "cardID": "BifröstShore6",
             "cardText": "Investigate the debris",
-            "addedText": "You embrace the hull of wrecked lifeboat out of gratitude. There is a massive crack in one side which would need to be repaired before it could be seaworthy again, but other than that, it is in one piece. You become even more overjoyed when you realize that the wheels of cheese are still here, as well as the brandy. The bottles of water are missing, as are the oars, but you don’t feel like going back out to sea anytime soon. Even the silverware and sealed metal chest are still secured inside. Now that you are on land, you may be able to open it up.",
+            "addedText": "You embrace the hull of your wrecked lifeboat out of gratitude. There is a massive crack in one side which would need to be repaired before it could be seaworthy again, but other than that, it is in one piece. You become even more overjoyed when you realize that the wheels of cheese are still here, as well as the brandy. The bottles of water are missing, as are the oars, but you don’t feel like going back out to sea anytime soon. Even the silverware and sealed metal chest are still secured inside. Now that you are on land, you may be able to open it up.",
             "rewards": [
                 {"rewardName": "sack of cheese",
                 "rewardQuantity": 1},
@@ -1971,7 +1972,7 @@
                 "reqHidden": true}
             ],
             "challengeFailCards": [
-                "BifröstShore7",
+                "BifröstShore7a",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
@@ -2003,7 +2004,7 @@
                 "rewardQuantity": -5}
             ],
             "challengeFailCards": [
-                "BifröstShore7",
+                "BifröstShore7a",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
@@ -2029,13 +2030,13 @@
             "challengeSuccessCards": [
                 "BifröstShore10"
             ],
-            "challengeSuccessText": "You take one of the nails that you picked up earlier and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the crate opens. ",
+            "challengeSuccessText": "You take one of the nails that you picked up earlier and attempt to use it to pick the lock. With a satisfying click, the lock has opened! It still takes a bit of force to open the chest since the hinge is battered, but with a loud groan, the chest opens. ",
             "challengeFailRewards": [
                 {"rewardName": "Mind",
                 "rewardQuantity": -5}
             ],
             "challengeFailCards": [
-                "BifröstShore7",
+                "BifröstShore7a",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
@@ -2054,7 +2055,7 @@
             ],
             "challengeSuccessText": "If the chest was full of water, it must have a crack somewhere. Using your fingers and your eyes, you search its edges for the weak point that must be there. You notice small air bubbles by one of the joints. You push on it with a rock, and feel some give. Smashing the rock even harder on that point causes the wood to come apart from the metal and you are able to get at the inside of the crate. ",
             "challengeFailCards": [
-                "BifröstShore7",
+                "BifröstShore7a",
                 "BifröstShore8a",
                 "BifröstShore8b",
                 "BifröstShore9"
@@ -2063,16 +2064,8 @@
         },
         {
             "cardID": "BifröstShore10",
-            "cardText": "Open the crate",
-            "addedText": "Inside the crate is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. But after groping around in the straw, you pull out a lockbox, about the size of a large book. In fact, it is decorated like a book too, decorated with symbol that could be triangles, or wings, surrounded by the text of a language you are unfamiliar with. The lockbox is sturdy, built out of some kind of lightweight grey metal.",
-            "nextCardsID": [
-                "BifröstShore11"
-            ]
-        },
-        {
-            "cardID": "BifröstShore11",
-            "cardText": "Open the lockbox",
-            "addedText": "Inside the chest is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to store so securely must have been damaged. Groping around in the straw, you pull out a lockbox, about the size of a large book.",
+            "cardText": "Open the chest",
+            "addedText": "Inside the chest is a bunch of wet soggy straw, and you are worried that whatever was valuable enough to be stored so securely may have been damaged. But after groping around in the straw, you pull out a lockbox, about the size of a large book. In fact, it is decorated like a book too, featuring a symbol that could be triangles, or wings, surrounded by the text of a language you are unfamiliar with. The lockbox is sturdy, built out of some kind of lightweight grey metal.",
             "nextCardsID": [
                 "BifröstShore12"
             ]
@@ -2080,7 +2073,7 @@
         {
             "cardID": "BifröstShore12",
             "cardText": "Open the lockbox",
-            "addedText": "The lockbox is quite secure. There’s no way you’re getting into it. You shake it and no water comes out, so it still seems sealed. By its weight, you can tell there is something inside, some large solid thing.<br><br>The parrot flies back over to you and starts investigating the crate. It’s probably interested in your cheese - maybe the brandy too?",
+            "addedText": "The lockbox is quite secure, locked with three numbered dials. There’s no way you’re getting into it now. You shake it and no water comes out, so it still seems sealed. By its weight, you can tell there is something inside, some large solid thing.<br><br>The parrot flies back over to you and starts investigating the crate. It’s probably interested in your cheese - maybe the brandy too?",
             "nextCardsID": [
                 "BifröstShore13"
             ]
@@ -2117,7 +2110,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "“Pana, what do you make of this?” a man with an unpleasaant grin asks to a man with an unpleasant face.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“You a convict?” Enrique asks as he grabs your hand roughly and flips it over to see your wrist. In doing so, you notice a number tattooed on his.<br><br>“Bailiff Claudia! He’s got food! And drink!” One of the others yells out, noticing your lifeboat and supplies. You notice that all of them have numbers tattooed on their own wrists. “There’s a lockbox here too. What’s in it?”<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Enrique. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
+            "addedText": "“Pana, what do you make of this?” a man with an unpleasant face asks to another with an unpleasant grin.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“You a convict?” Pana asks as he grabs your hand roughly and flips it over to see your wrist. In doing so, you notice a number tattooed on his.<br><br>“Bailiff Claudia! He’s got food! And drink!” One of the others yells out, finding your lifeboat and supplies. You notice that all of them have numbers tattooed on their wrists. “There’s a lockbox here too. What’s in it?”<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Pana. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -2142,7 +2135,7 @@
         {
             "cardID": "BifröstShore16DreamB",
             "cardText": "dream",
-            "addedText": "You dream of a parrot with an eye bigger than the moon, staring at you, seeing more than it sees.<br><br>You dream you are a stone statue, carried to the top of a pyramid by labourers.<br><br>You dream of a jaguar in the night baring its teeth and leaning in to get a good sniff of you.",
+            "addedText": "You dream of a parrot with an eye bigger than the moon, staring at you, seeing more than is there.<br><br>You dream you are a stone statue, carried to the top of a pyramid by labourers.<br><br>You dream of a jaguar in the night baring its teeth and leaning in to get a good sniff of you.",
             "nextCardsID": [
                 "BifröstShore17"
             ]
@@ -2152,7 +2145,7 @@
             "locationName": "?",
             "locationDescription": "Inside a bunkhouse",
             "cardText": "Wake up",
-            "addedText": "“Awake now, are you?” A voice asks. You groggily look around the room and see that you are in a small cabin. It seems to be a different time of day than when you met the convicts on the beach - possibly even a different day altogether.<br><br>“The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages over the spots on your legs, arms, and torso where you were scraped by the rocks.<br><br>“Mind tellin me a bit about yourself over some dinner?” he asks, pushing a plate of veggies and fruit toward you.",
+            "addedText": "“Awake now, are you?” A voice asks. You groggily look around the room and see that you are in a small cabin. It seems to be a different time of day than when you met the convicts on the beach - possibly even a different day altogether.<br><br>“The name’s Quo, and I’m the Warder here. Welcome to Bifröst Prison Camp, property of Her Majesty’s Royal Empire. No, don’t worry, even though this is a prison camp, you’re in good hands. My fellas were surprised to find you out on the beach, and you certainly needed a nice long rest to get healthy.” You realize that you are not wearing the nightgown that you had on when the Medusa sank, and that you have bandages on your legs, arms, and torso where you were scraped by the rocks.<br><br>“Mind tellin me a bit about yourself over some dinner?” he asks, pushing a plate of veggies and fruit toward you.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 50},
@@ -2168,13 +2161,9 @@
             "locationName": "Bifröst Prison Camp, your quarters",
             "locationDescription": "A plain, but comfortable bunkhouse which could house four, but you have it all to yourself.",
             "cardText": "EAT!",
-            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you actually don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage the day after we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. Sorry, that brandy and cheese you got became property of the Queen, went to support her Imperial Prison camps. Them’s the rules for when we find salvage that’s consumable, or raw materials. Not like yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” This jacket, found in the Medusa's lifeboat, is certainly not your own. It has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
+            "addedText": "You tell him a little bit about your situation, but you are guarded. You don’t explain too much, partly because you don’t know where you stand here, and partly because you honestly don’t know much about what led to the wrecking of the Medusa.<br><br>“Well, isn’t that sumthin? And you don’t know how the ship went down? We didn’t find any other survivors. I had some folks check the wreckage where we found you, and they couldn’t find much other than some raw materials that we can salvage as construction supplies. Sorry, that brandy and cheese you got became property of the Queen, went to support her Imperial Prison camps. Them’s the rules for when we find salvage that’s consumable, or raw materials. Don’t worry about yer box there…” he gestures off to the lockbox that you found in the wreckage, now sitting contently on your bedside table. It appears to still be intact.<br><br>“We figured it must be yours, since the symbol on it matches the one on yer jacket.” This jacket, found in the Medusa's lifeboat, is certainly not your own. It has a symbol embossed above the left breast pocket. This symbol matches perfectly with the one on the lockbox.",
             "setScore": [
                 {"setName": "sack of cheese",
-                "setQuantity": 0},
-                {"setName": "crate of water bottles",
-                "setQuantity": 0},
-                {"setName": "oar",
                 "setQuantity": 0},
                 {"setName": "bottle of fine brandy",
                 "setQuantity": 0},
@@ -2188,7 +2177,7 @@
         {
             "cardID": "BifröstShore19",
             "cardText": "check your lockbox",
-            "addedText": "“Don’t worry, no one here would have any reason to take it. I mean, yeah, we got theives here, but not a man nor woman on this island is allowed to own property ‘til they’ve finished their sentences. Most people here are good folk. I know, I know, you might not want to believe that at first - convicts, all of ‘em. Why I myself am a convict too, and I run the place. The guards don't make themselves seen much around here, but they're always watchin. We were all sentenced to Transportation, so we’re here workin for Her Majesty. It’s her great plan to remove the less desirable elements from society - from her society - and send us over here to the New World. Personally, I don’t mind. I didn’t care much for the Olden Worlde, meself.”<br><br>“You probably wanna head to someplace more interestin than our humble little island, I imagine, like New Atlantis. You know much about this part of the New World?”",
+            "addedText": "“Don’t worry, no one here would have any reason to take it. I mean, yeah, we got theives here, but not a man nor woman on this island is allowed to own property ‘til they’ve finished their sentences. Most people here are good folk. I know, I know, you might not want to believe that at first - convicts, all of ‘em. Why I myself am a convict too, and I run the place. The guards don't make themselves seen much around here, but they're always watchin. We were all sentenced to Transportation, so we’re here workin for Her Majesty. It’s her great plan to remove the less desirable elements from decent society, and send us over here to the New World. Personally, I don’t mind. I didn’t care much for the Olden Worlde, myself.”<br><br>“You probably wanna head to someplace more interestin than our humble little island, I imagine, like New Atlantis. You know much about this part of the New World?”",
             "nextCardsID": [
                 "BifröstShore20"
             ]
@@ -2196,7 +2185,7 @@
         {
             "cardID": "BifröstShore20",
             "cardText": "No. What's New Atlantis?",
-            "addedText": "“Well, you’ll probably want to be headin to X, on the island of New Atlantis. I know - strange name for a city. They had to name it that since no one could ever agree on who owned it. The Royal Empire says their colony of Mayfair was there first. But right across the harbour, those Norse zealots from Valhalla established their colony of Njordheim. Then for the past century or two the island changed hands between Mayfair rulin Njordheim for one decade, then Njordheim rulin Mayfair for the next. It was all based on who was gettin beaten up on back in the Olden Worlde, the Royal Empire versus Valhalla.”<br><br>“This ‘ere camp, Bifröst, is kinda like X in that way. It was started by Valhalla as a prison camp. That’s why we got the Norse name and all. But the Royals won the last big war, and Valhalla had to give up a bunch of their territories here in the New World. Of course, the Royals just wanted this place for our resources. Some of the old fellas here were Norse Transports, from back in the day, but most of us were Transported here by Her Majesty.”",
+            "addedText": "“Well, you’ll probably want to be headin to X, on the island of New Atlantis. I know - strange name for a city. They had to name it that since no one could ever agree on who owned it. The Royal Empire says their colony of Mayfair was there first. But right across the harbour, those Norse zealots from Valhalla established their colony of Njordheim. Then for the past century or two the island changed hands between Mayfair ruling Njordheim for one decade, then Njordheim ruling Mayfair for the next. It was all based on who was gettin beaten up on back in the Olden Worlde, the Royal Empire versus Valhalla.”<br><br>“This ‘ere camp, Bifröst, is kinda like X in that way. It was started by Valhalla as a prison camp. That’s why we got the Norse name and all. But the Royals won the last big war, and Valhalla had to give up a bunch of their territories here in the New World. Of course, the Royals just wanted this place for our resources. Some of the old fellas here were Norse Transports, from back in the day, but most of us were Transported here by Her Majesty.”",
             "nextCardsID": [
                 "BifröstShore21"
             ]
@@ -2204,7 +2193,7 @@
         {
             "cardID": "BifröstShore21",
             "cardText": "Where are you from?",
-            "addedText": "“I'm Imperial myself, born and raised there, so you know where my loyalties lie, but in truth no one knows who set up their colony on the island of New Atlantis first. Both cities grew large, takin up both sides of the bay, and then the cliffside between. They grew into each other, and trade with each other, and intermingle so much that they operate more like one giant city now. Some still call the whole big mess Njordheim or Mayfair, but that’s mostly just old-school Valhallans, or Imperials. Most folks don’t want to ruffle those feathers, and just keep referrin to the city the way it had always been marked on maps - with the letter X. In fact, in the last War of Piety, even though the Empire and Valhalla were on opposin sides, X stayed out of the fightin.”",
+            "addedText": "“I'm Imperial myself, born and raised just outside of London, so you know where my loyalties lie, but in truth no one knows who set up their colony on the island of New Atlantis first. Both cities grew large, takin up both sides of the bay, and then the cliffside between. They grew into each other, and traded with each other, and intermingled so much that they operate more like one giant city now. Some still call the whole big mess Njordheim or Mayfair, but that’s mostly just old-timers. Most folks don’t want to ruffle those feathers, and just keep referrin to the city the way it had always been marked on maps - with the letter X. In fact, in the last War of Piety, even though the Empire and Valhalla were on opposin sides, X stayed out of the fightin.”",
             "nextCardsID": [
                 "BifröstShore22"
             ]
@@ -2221,9 +2210,9 @@
             "cardID": "BifröstShore23",
             "cardText": "It’s a deal.",
             "addedText": "“Good to hear. No shame in an honest day’s work. Chores are about done for the day though. Dinner’ll be served soon. Up for a game of Life or Death?”",
-            "rewards": [
-                {"rewardName": "day until the Humboldt arrives",
-                "rewardQuantity": 3}
+            "setScore": [
+                {"setName": "day until the Humboldt arrives",
+                "setQuantity": 3}
             ],
             "openQuest": {"questID": "GoToNewAtlantis", "questTitle": "Travel to New Atlantis", "questDescription": "The city of X, on the island of New Atlantis seems to be the hub of civilization in this part of the New World. In order to go there though, you'll need to find some way of getting off of the Bifröst Island Prison Camp"},
             "nextCardsID": [
@@ -2232,13 +2221,13 @@
         },
         {
             "cardID": "BifröstShore24",
-            "cardText": "It’s got to be better than it sounds.",
+            "cardText": "Life or Death?",
             "addedText": "Resolute Warder Quo leaves for a moment and returns with a rough square board consisting of a 8 x 8 grid of light and dark wooden tiles. He takes pieces out of a small wooden box and arranges them on the board.<br><br>“Ever played chess? Well this is nuthin like that; this is Life or Death.” Quo explains the movements that each piece can make - it sounds a lot like chess.<br><br>“Now pay attention, cuz this'll help you here in the New World. There are five main strategies that you can use in this game. Just like in yer own life too. They’re called Brawn, Hand, Heart, Eye, and Voice. You’re gonna start off with no skills with all of these strategies, but you can improve them with practice. Lemme show you,” Quo says, pushing a red piece forward.<br><br>“Let’s say I move my Soldier forward like this. You can take my Soldier out using one of your Vikings. This is what we’d call a Brawn move - just go in and smash. Brawn values quantity over quality. Brawn overwhelms the enemy with sheer power and numbers.",
-            "rewards": [
-                {"rewardName": "Your Life or Death piece",
-                "rewardQuantity": 16},
-                {"rewardName": "Quo’s Life or Death piece",
-                "rewardQuantity": 16}
+            "setScore": [
+                {"setName": "Your Life or Death piece",
+                "setQuantity": 16},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 16}
             ],
             "nextCardsID": [
                 "BifröstShore25"
@@ -2247,7 +2236,7 @@
         {
             "cardID": "BifröstShore25",
             "cardText": "Ask about Brawn",
-            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of Brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. Brawn just isn’t flexible, but when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
+            "addedText": "You want examples of Brawn? Just look at the Royal Empire’s Navy, or Odin’s Armada from Valhalla. They just try to stampede over everyone else. Even the Post and the New Foundland Company use a lot of Brawn in how they handle the banking and trading here in the New World. They all rely on strength and power. Now, the downfall of Brawn is that it isn’t flexible. Once Brawn commits to a course, there ain’t no turnin back, even if you realize it’s the wrong course. But when power is needed, Brawn gets the job done. Vikings are one of the Brawniest pieces in the game - choose one of your Vikings to take out my Soldier.”",
             "cardStyle": "brawnCardStyle",
             "nextCardsID": [
                 "BifröstShore26"
@@ -2290,7 +2279,7 @@
         {
             "cardID": "BifröstShore27a",
             "cardText": "Ask about Hand",
-            "addedText": " Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a spy. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflagin with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now, note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
+            "addedText": " Hand is sorta the opposite strategy of Brawn. Hand is flexible, nimble, dexterous, like an acrobat or a spy. Hand strategy turns your opponent’s power against themselves. Animals are a great example of Hand. Look at an octopod camouflaging with the coral in order to catch it’s prey, or a cat stealthily stalkin its prey. Hand is smart, and also sneaky. Some folks don’t rightfully trust Hand - and with good reason. Hand can be the strategy of the intelligent - it can also be the strategy of thieves.”<br><br>“Now, note that this time you’ll have two options. It’ll be easier to take out my Gladiator and Viking if you sacrifice your blue Cat, but if you play your next few moves right, your Dog can take them both out and still be safe himself. The Dog is riskier than the Cat, but usually with greater risk comes greater reward if you win. Greater loss if you lose though.”",
             "cardStyle": "handCardStyle",
             "nextCardsID": [
                 "BifröstShore28a",
@@ -2362,7 +2351,7 @@
         {
             "cardID": "BifröstShore30",
             "cardText": "Ask about Heart",
-            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the fleets from the Empire and Valhalla came in here centuries ago with all their ideas of conquest, all those New World natives were able to kick their behinds to the Olden Worlde! They went with their gut, their culture that they’d been developin for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Heart - it can be foolhardy and blind to logic.”",
+            "addedText": "“A lot of them native folks who been livin around here since before the Olden Worlde discovered the New - they’re all Heart. They’re steadfast in their traditions. Those Amazon warrior women, they come into this world knowin how to fight; the Sirens are masters of the sea; the Vulcans know more about machinery than anyone, and the Cursed - well you don’t want to go up against the Cursed. That’s why when the explorers from the Empire and Valhalla came here centuries ago with all their ideas of conquest, all these New World natives were able to kick their behinds back to the Olden Worlde! They went with their gut, their culture that they’d been developing for millennia. Heart is all about emotion and tradition. Some say it can be the most powerful strategy, but you gotta be careful with Heart - it can be foolhardy and blind to logic.”",
             "cardStyle": "heartCardStyle",
             "nextCardsID": [
                 "BifröstShore31a",
@@ -2428,7 +2417,7 @@
         {
             "cardID": "BifröstShore32",
             "cardText": "Keep playing",
-            "addedText": "“You pick up these strategies well, but now I got somethin a little different for you to try,” Resolute Warder Quo says after a few more moves. “I want you to try an Eye strategy.”<br><br>“Eye is all about bein watchful and observant. The Eye pauses to look for weak points that can be exploited and predicts the future by evaluatin the present. Some would say that an Eye strategy is too passive - too inactive, and it lacks the power or flexibility to obtain benefit in the short-term; the Eye’s strategy is long-term. There are times when that’s appropriate, and times when it’s not.”",
+            "addedText": "“You pick up these strategies well, but now I got somethin a little different for you to try,” Resolute Warder Quo says after a few more moves. “I want you to try an Eye strategy.”<br><br>“Eye is all about bein watchful and observant. The Eye pauses to look for weak points that can be exploited and predicts the future by evaluatin the present. Some would say that an Eye strategy is too passive, too inactive, and it lacks the power or flexibility to obtain benefit in the short-term. But the Eye’s strategy is long-term. There are times when that’s appropriate, and times when it’s not.”",
             "nextCardsID": [
                 "BifröstShore33"
             ]
@@ -2436,7 +2425,7 @@
         {
             "cardID": "BifröstShore33",
             "cardText": "Ask about Eye",
-            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ Imperial galleon, that shows skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
+            "addedText": "Anyone who uses the Eye strategy is a corkscrew thinker - they think outside the box. When the Privateers or Thor’s Vikings are able to use a tiny sloop to capture a big ol’ New Foundland galleon, that shows skill with Eye. They’ve gotta be creative to take on a big enemy with big resources, but they do. The scientists of the Pneumatic Institute would definitely be believers of the Eye strategy. They observe, learn, invent. Not to mention the followers of the Animate. Those witches claim to be able to talk to the dead and see lost treasures.”<br><br>“Now, I’ve got a couple good strategies that I set up in the last couple of moves. You can block me though, if you use your Eye skill, observe the board, and try to figure out how to stop me in my tracks.”",
             "cardStyle": "eyeCardStyle",
             "nextCardsID": [
                 "BifröstShore34"
@@ -2469,7 +2458,7 @@
         {
             "cardID": "BifröstShore35",
             "cardText": "Keep playing",
-            "addedText": "“There’s just one more strategy that that this game relies on: Voice. It’s what you’d think it is. The ability to communicate well, in such a way that you can convince people of your point of view. Some would say that Voice is a sneakier skill, since it can be used to confuse or manipulate folks. But if someone’s gonna force me to see things their way, I’d rather they try an’ convince me with Voice than bash me on the head with Brawn!”",
+            "addedText": "“There’s just one more strategy that that this game relies on: Voice. It’s what you’d think it is. The ability to communicate well, in such a way that you can convince people of your point of view. Some would say that Voice is a sneakier skill, since it can be used to confuse or manipulate folks. But if someone’s gonna force me to see things their way, I’d rather they try and convince me with Voice than bash me on the head with Brawn!”",
             "nextCardsID": [
                 "BifröstShore36"
             ]
@@ -2477,7 +2466,7 @@
         {
             "cardID": "BifröstShore36",
             "cardText": "Ask about Voice",
-            "addedText": "“Of course, the Gladiators use Voice a lot. But watch it if you go to their gamblin houses - their Voice skill will rob you of all your money! The Sisters of Freya too. Through the confessions they receive, they’ve gained quite a lot of information about the sins of New Atlantans - and I hear they put that knowledge to good use. The medics workin for the Salt Hearts of course use the Voice strategy too, to learn and train in how to fix people up. You know who really uses a Voice strategy a lot - too much maybe, is those subversive Librarians! It’s ironic that you can’t shush a Librarian once they get started…”<br><br>“Voice strategies aren’t always verbal though. Try to use Voice here to mislead me. At some point in the next few moves, try to throw me off. Make a move that implies a you’re gonna use one strategy, when you actually plan to use another, in order to convince me to misstep.”",
+            "addedText": "“Of course, the Gladiators use Voice a lot. But watch it if you go to their gamblin houses - their Voice skill will rob you of all your money! The Sisters of Freya too. Through the confessions they receive, they’ve gained quite a lot of information about the sins of New Atlantics - and I hear they put that knowledge to good use. The medics workin for the Sawbones of course use the Voice strategy too, to learn and train in how to fix people up. You know who really uses a Voice strategy a lot - too much maybe, is those subversive Librarians! It’s ironic that you can’t shush a Librarian once they get started…”<br><br>“Voice strategies aren’t always verbal though. Try to use Voice here to mislead me. At some point in the next few moves, try to throw me off. Make a move that implies a you’re gonna use one strategy, when you actually plan to use another, in order to convince me to misstep.”",
             "cardStyle": "voiceCardStyle",
             "nextCardsID": [
                 "BifröstShore37"
@@ -2510,7 +2499,7 @@
         {
             "cardID": "BifröstShore38",
             "cardText": "keep playing",
-            "addedText": "“Very well, you’ve shown a decent understandin of the five major strategies of this game. Brawn represents strength & power, Hand represents adaptability & nimbleness, Heart represents emotion & tradition, Eye represents observation & watchfulness, and Voice represents persuasion & communication. ”<br><br>“You know what, I’ve got a little somethin special for you as a prize if you can beat me. Let’s finish this game.”",
+            "addedText": "“Very well, you’ve shown a decent understandin of the five major strategies of this game. Brawn represents strength & power, Hand represents adaptability & nimbleness, Heart represents emotion & tradition, Eye represents observation & watchfulness, and Voice represents persuasion & communication. ”<br><br>“I’ve got a little somethin special for you as a prize if you can beat me. Let’s finish this game.”",
             "nextCardsID": [
                 "BifröstShore39"
                 ]
@@ -2574,7 +2563,7 @@
             ],
             "randomTerms": ["Viking,Gladiator", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Brawn",
-            "challengeRoll": 4,
+            "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -2642,7 +2631,7 @@
             ],
             "randomTerms": ["Cat,Wraith", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Hand",
-            "challengeRoll": 4,
+            "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -2698,7 +2687,7 @@
             ],
             "randomTerms": ["Soldier,Dog", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Heart",
-            "challengeRoll": 4,
+            "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -2754,7 +2743,7 @@
             ],
             "randomTerms": ["Gladiator,Librarian", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Eye",
-            "challengeRoll": 4,
+            "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -2810,7 +2799,7 @@
             ],
             "randomTerms": ["Viking,Gladiator,Cat,Wraith,Soldier,Dog,Gladiator,Librarian", "Mermaid,Monk", "Viking,Cat,Wraith,Soldier,Dog,Gladiator,Librarian,Mermaid,Monk"],
             "challengeStat": "Voice",
-            "challengeRoll": 4,
+            "challengeRoll": 5,
             "challengeSuccessRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -2978,8 +2967,8 @@
         },
         {
             "cardID": "BifröstShore41Brawn",
-            "cardText": "Choose Brawn. I like to solve a situation directly by relying on my might.",
-            "addedText": "“Brawn, I appreciate that. Might makes right. You’ll find like-minded folks if you seek out the Olden Worlde powers and the folks who turn the wheels of commerce when you make your way to New Atlantis. Here take this. It’ll help you out whenever your Brawn is put to the test.”",
+            "cardText": "Choose Brawn. I like to solve situations directly by relying on my might.",
+            "addedText": "“Brawn, I appreciate that. Might makes right. You’ll find like-minded folks if you seek out the Olden Worlde powers and the folks who turn the wheels of commerce when you make your way to New Atlantis. Here take this extra die. Now you'l have two dice to roll whenever your Brawn is put to the test.”",
             "cardStyle": "brawnCardStyle",
             "rewards": [
                 {"rewardName": "Brawn",
@@ -2991,8 +2980,8 @@
         },
         {
             "cardID": "BifröstShore41Hand",
-            "cardText": "Choose Hand. I like to solve a situation indirectly by relying on my finesse.",
-            "addedText": "“Hand, I understand that. Quality over quantity. You’d be surprised how helpful the animals of New Atlantis can be when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Hand is put to the test.”",
+            "cardText": "Choose Hand. I like to solve situations indirectly by relying on my finesse.",
+            "addedText": "“Hand, I understand that. Quality over quantity. You’d be surprised how helpful the animals of New Atlantis can be when you’ve made your way to New Atlantis. Here take this extra die. Now you'l have two dice to roll whenever your Hand is put to the test.”",
             "cardStyle": "handCardStyle",
             "rewards": [
                 {"rewardName": "Hand",
@@ -3004,8 +2993,8 @@
         },
         {
             "cardID": "BifröstShore41Heart",
-            "cardText": "Choose Heart. I like to solve a situation honorably by relying on what I know to be true in my heart.",
-            "addedText": "“Heart, I admire that. Emotions make us human, after all. You’d be surprised how helpful the locals of the New Worlde can be for someone like you who follows your heart, and who respects their traditions. Here take this. It’ll help you out whenever your Heart is put to the test.”",
+            "cardText": "Choose Heart. I like to solve situations honorably by relying on what I know to be true in my heart.",
+            "addedText": "“Heart, I admire that. Emotions make us human, after all. You’d be surprised how helpful the locals of the New World can be for someone like you who follows your heart, and who respects their traditions. Here take this extra die. Now you'l have two dice to roll whenever your Heart is put to the test.”",
             "cardStyle": "heartCardStyle",
             "rewards": [
                 {"rewardName": "Heart",
@@ -3017,8 +3006,8 @@
         },
         {
             "cardID": "BifröstShore41Eye",
-            "cardText": "Choose Eye. I like to solve a situation uniquely, through thought and observation.",
-            "addedText": "“Eye, I respect that. You’re a corkscrew thinker. New Atlantis is full of renegades and rebels of various sorts who like to think outside the box. Some are friendly, some are not; all of them are … unique. Here take this. It’ll help you out whenever your Eye is put to the test.”",
+            "cardText": "Choose Eye. I like to solve situations uniquely, through thought and observation.",
+            "addedText": "“Eye, I respect that. You’re a corkscrew thinker. New Atlantis is full of renegades and rebels of various sorts who like to think outside the box. Some are friendly, some are not; all of them are … unique. Here take this extra die. Now you'l have two dice to roll whenever your Eye is put to the test.”",
             "cardStyle": "eyeCardStyle",
             "rewards": [
                 {"rewardName": "Eye",
@@ -3030,8 +3019,8 @@
         },
         {
             "cardID": "BifröstShore41Voice",
-            "cardText": "Choose Voice. I like to solve a situation subtly by relying on my powers of persuasion.",
-            "addedText": "“Voice, I’m not surprised by that. The pen is mightier than the sword, after all. There are many in New Atlantis who seek to make social change in the New Worlde, but by many different means. You should look them up when you’ve made your way to New Atlantis. Here take this. It’ll help you out whenever your Voice is put to the test.”",
+            "cardText": "Choose Voice. I like to solve situations subtly by relying on my powers of persuasion.",
+            "addedText": "“Voice, I’m not surprised by that. The pen is mightier than the sword, after all. There are many in New Atlantis who seek to make social change in the New World, but by many different means. You should look them up when you’ve made your way to New Atlantis. Here take this extra die. Now you'l have two dice to roll whenever your Voice is put to the test.”",
             "cardStyle": "voiceCardStyle",
             "rewards": [
                 {"rewardName": "Voice",
@@ -3044,7 +3033,7 @@
         {
             "cardID": "BifröstShore42",
             "cardText": "continue",
-            "addedText": "As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, probably due to the fact that you haven’t eaten in days. Out of the corner of your eye, you see your lockbox. Or at least, you now think of it as yours. After all, it’s more yours than anyone else’s since the original owner of this lockbox and matching jacket must have perished in the shipwreck.",
+            "addedText": "As Resolute Convict Quo gets up and leaves the room, another convict comes in with a tray of food for you. The stew tastes delicious, not just because you haven’t eaten in days. Out of the corner of your eye, you see your lockbox. Or at least, you now think of it as yours. After all, it’s more yours than anyone else’s since the original owner of this lockbox and matching jacket must have perished in the shipwreck.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": 5},
@@ -3152,7 +3141,7 @@
         {
             "cardID": "BifröstShore44Mechanism",
             "cardText": "Inspect the locking mechanism",
-            "addedText": "The dials are sturdy and don’t offer any hints as to what the code is. There are three tiny scratches - one above each dial. They must indicate the home position of the dial. You notice it is strange that whereas all three dials look identical, the scratches above them each look slightly different, This seems odd on a lockbox of such high craftsmanship.",
+            "addedText": "The dials are sturdy and don’t offer any hints as to what the code is. There are three tiny scratches - one above each dial. They must indicate the home position of the dial. Whereas all three dials look identical, the scratches above them each look slightly different, This seems odd on a lockbox of such high craftsmanship.",
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": "=",
@@ -3171,7 +3160,7 @@
         {
             "cardID": "BifröstShore44Jacket",
             "cardText": "Inspect your jacket",
-            "addedText": "The symbol on the jacket and text above it certainly match those of the lockbox, only in less detail on the leather, indicating that whoever owned this jacket probably also owned this lockbox too… until you stole it… accidentally, of course.<br><br>The jacket has several pockets.",
+            "addedText": "There is a symbol on the jacket and text above it, which clearly match those of the lockbox, only in less detail on the leather, indicating that whoever owned this jacket must have also owned this lockbox too… until you stole it… accidentally, of course.<br><br>The jacket has several pockets.",
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": "=",
@@ -3190,7 +3179,7 @@
         {
             "cardID": "BifröstShore44Pocket",
             "cardText": "Inspect the jacket pockets",
-            "addedText": "Upon turning out the pockets, you find an assortment of useful items. There are some coins of different currencies, as well as an envelope. The coins are all ones you recognize originating in the Olden Worlde, from the Royal Empire and Valhalla, as well as stamps for the Poste, and some paper currency for the New Foundland Company, the corporation that controls much of the trade and exploration of the New World.",
+            "addedText": "Upon turning out the pockets, you find an assortment of useful items. There are some coins of different currencies, as well as an envelope bearing the same symbol as the jacket and lockbox. The coins are all ones you recognize originating in the Olden Worlde, from the Royal Empire and Valhalla, as well as stamps for the Poste, and some paper currency for the New Foundland Company, the corporation that controls much of the trade and exploration of the New World.",
             "rewards": [
                 {"rewardName": "wing-symbol envelope",
                 "rewardQuantity": 1},
@@ -3271,7 +3260,7 @@
         {
             "cardID": "BifröstShore45Front",
             "cardText": "Inspect the lockbox using the lens",
-            "addedText": "The fact that this lockbox bears resemblance to a book is not the only unique thing about it. The foreign text decorating the front is just as illegible with or without the lens. The symbol with three bird wings arranged in a triangle is featured on the front. Looking through the lens, you can now make out the letters above the triangle. They spell out the word “VOYNICH”. You put down the lens, and you can now clearly see the letters spelling out VOYNICH clearly.",
+            "addedText": "The fact that this lockbox bears resemblance to a book is not its only unique aspect. The foreign text decorating the front is just as illegible with or without the lens. The symbol with three bird wings arranged in a triangle is featured on the front. Looking through the lens, you can now make out the letters above the triangle. They spell out the word “VOYNICH”. You put down the lens, and you can now clearly see the letters spelling out VOYNICH clearly.<br><br>You could swear that you weren't able to read the word Voynich just a moment ago.",
             "reqs": [
                 {"reqName": "wing-symbol lens",
                 "reqRule": ">=",
@@ -3334,7 +3323,7 @@
         {
             "cardID": "BifröstShore46",
             "cardText": "Open the lockbox",
-            "addedText": "You feel a chill of nervous anticipation course through your body as you lift the lid, encountering no resistance. Inside the book-shaped lockbox, you find: a book! This real book is much less ornate than its container. It has a non-descript black cover. There are no markings in any language on the cover or spine.",
+            "addedText": "You feel a chill of nervous anticipation as you lift the lid, encountering no resistance. Inside the book-shaped lockbox, you find: a book! This real book is much less ornate than its container. It has a non-descript black cover. There are no markings in any language on the cover or spine.",
             "nextCardsID": [
                 "BifröstShore47"
             ]
@@ -3342,7 +3331,7 @@
         {
             "cardID": "BifröstShore47",
             "cardText": "Read the book",
-            "addedText": "The first pages of the book are hand-written notes. They are also written in an unfamiliar language, but this appears to be different than the language on the lockbox. There are seven pages of notes, followed by one blank page, followed by one more paragraph on the next page. The arrangement of the entries suggests the book was used as some sort of handwritten journal. It must have been shared by two different individuals, since that last separate paragraph is written in a clearly different handwriting than the first seven pages. Although it all appears to be in the same language, the first seven pages seem somehow more foreign than that one last paragraph.",
+            "addedText": "The first pages of the book are hand-written notes. They are also written in an unfamiliar language, but this appears to be different than the language on the lockbox. There are seven pages of notes, followed by three pages of what appear to be just scribbling, then some blank pages, and finally one more lonely paragraph. The arrangement of the entries suggests the book was used as some sort of handwritten journal. It must have been shared by two different individuals, since that last separate paragraph is written in a clearly different handwriting than the first seven pages. Although it all appears to be in the same language, the first seven pages seem somehow more foreign than that one last paragraph.",
             "rewards": [
                 {"rewardName": "mysterious journal",
                 "rewardQuantity": 1}
@@ -3355,7 +3344,7 @@
         {
             "cardID": "BifröstShore48",
             "cardText": "Read more of the mysterious journal",
-            "addedText": "Whoever recorded their thoughts in this journal must have only begun so recently, as there are many blank pages that follow until halfway through. From there on, each page of the book has one single character along the right side of the page. It resembles an address book, having a page for all the A’s, then one for all the B’s, etc. But each page in the address section of this mysterious journal is blank. Perhaps the book’s old owner didn’t have many friends? Who on the Medusa owned this book, and were they one of the two authors? Are these languages from the local peoples of the New World, or from some darker corners of the Olden Worlde? Whatever the case, a curiosity wells up from within you. Resolute Warder Quo talked a lot about the metropolis of Capitol X, on New Atlantis Island. Perhaps someone there can help you to make sense of this mystery, or at least purchase it from you.",
+            "addedText": "Whoever recorded their thoughts in this journal must have only begun so recently, as there are many blank pages that follow until halfway through. From there on, each page of the book has one single character along the right side of the page. It resembles an address book, having a page for all the A’s, then one for all the B’s, etc. But each page in the address section of this mysterious journal is blank. Perhaps the book’s old owner didn’t have many friends? <br><br>Which of the Medusa’s passengers owned this book, and were they one of the two authors? Are these languages from the local peoples of the New World, or from some darker corners of the Olden Worlde? It certainly doesn't seem to be a European language, so perhaps it's from Africa or Asia? Whatever the case, a curiosity wells up from within you. Resolute Warder Quo talked a lot about the metropolis called X, on New Atlantis Island. Perhaps someone there can help you to make sense of this mystery, or at least pay you a few pounds for it.",
             "openQuest": {"questID": "NewAtlantis", "questTitle": "Voyage to New Atlantis", "questDescription": "It is impossible to read anything in the mysterious journal that you found. Perhaps there is someone in New Atlantis who can be of help?"},
             "nextCardsID": [
                 "BifröstShore49read",
@@ -3365,7 +3354,7 @@
         {
             "cardID": "BifröstShore49read",
             "cardText": "Investigate the book more",
-            "addedText": "Upon flipping through the pages, you can discern nothing else about the book. Of the hundreds of pages most are blank except for the first seven, written in one hand, and the last paragraph written by a different author. Taking a closer look at that last paragraph, you notice a spot where a line ends, probably representing two separate paragraphs rather than just one. The first seven pages are as inscrutable as before, but these last two paragraphs seem oddly familiar. It can’t be a language from the New World. It must be something that you came across before. Maybe in a museum, or in some foreign work of art? It’s nothing from the major Olden Worlde tongues, nothing Norse, not even a precursor to any of those. But you can’t shake the idea that you’ve seen something like it before.",
+            "addedText": "Upon flipping through the pages, you can discern nothing else about the journal. Of the hundreds of pages most are blank except for the first ten, written in one hand, and the last paragraph written by a different author. Taking a closer look at that last paragraph, realize there are actually two separate paragraphs there rather than just one. The first ten pages are as inscrutable as before, but these last two paragraphs seem oddly familiar. It can’t be a language from the New World. It must be something that you have come across before. Maybe in a museum, or in some foreign work of art? It’s nothing from the major Olden Worlde tongues, nothing Norse, not even a precursor to any of those. But you can’t shake the idea that you’ve seen something like it before.",
             "nextCardsID": [
                 "BifröstShore50sleep"
             ]
@@ -3373,9 +3362,13 @@
         {
             "cardID": "BifröstShore50sleep",
             "cardText": "Sleep",
-            "addedText": "You replace the book in the lockbox - this is an island of thieves after all, even if Quo thinks they are all trustworthy. Although your mind has plenty to occupy it, your exhausted body quickly allows you to fall asleep.",
+            "addedText": "You replace the journal in the lockbox - this is an island of thieves after all, even if Quo thinks they are all trustworthy. Although your mind has plenty to occupy it, your exhausted body quickly allows you to fall asleep.",
             "nextCardsID": [
                 "BifröstShore51"
+            ],
+            "setScore": [
+                {"setName": "Voynich code",
+                "setQuantity": 0}
             ]
         },
         {
@@ -3389,7 +3382,7 @@
         {
             "cardID": "BifröstShore52",
             "cardText": "Wake up",
-            "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you get up and open the door to see a man standing at your door.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the rec yard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that has been set out for you on a chair and head to the door.",
+            "addedText": "You wake up to a banging sound. After your dreams return to the haze from whence they came, you get up and open the door to see a man standing there.<br><br>“Mornin, newbie. Resolute Warder Quo says you should join us at mess and then you’ll be on duty with the rest of us today.” You rub the sleep from your eyes as you process what he is saying. “Mess is on the other side of the rec yard,” he adds pointing with his thumb and then dashing off on his own.<br><br>You check your room, and your lockbox seems to be in order, as are your other possessions. You dress in a fresh pair of prison clothes that have been set out for you on a chair and head to the door.",
             "rewards": [
                 {"rewardName": "prison uniform",
                 "rewardQuantity": 1}
@@ -3405,10 +3398,10 @@
         {
             "cardID": "BifröstShore53",
             "cardText": "Leave your quarters",
-            "addedText": "Since you've still got a couple days until the HMNS Humboldt arrives, you may as well lend a hand. Besides, this could be a good chance for you to learn more about the New Worlde. You step out your front door to finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
-            "rewards": [
-                {"rewardName": "day until the Humboldt arrives",
-                "rewardQuantity": -1}
+            "addedText": "Since you've still got a couple days until the HMNS Humboldt arrives, you may as well lend a hand. Besides, this could be a good chance for you to learn more about the New World. You step out your front door to finally get a better view of what a New World prison looks like, and it actually doesn’t look all that bad.",
+            "setScore": [
+                {"setName": "day until the Humboldt arrives",
+                "setQuantity": 2}
             ],
             "nextCardsID": [
                 "BifröstCamp01RecYard"
@@ -3419,7 +3412,7 @@
             "cardText": "Enter the central rec yard",
             "locationName": "Bifröst Prison Camp, rec yard",
             "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
-            "firstText": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard, walled in by jungle trees, except for one part that is walled in by an actual wall. You can see the ocean through an open gate in the wall. It appears as though a couple of areas are set up for specific games, but no one is there right now. There is a camp office here and you can see a guard tower up on a nearby cliff. ",
+            "firstText": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard, walled in by jungle trees, except for one part that is walled in by an actual wall. You can see the ocean through an open gate in the wall. It appears as though a couple of areas are set up for specific games, but no one is there right now. There is a camp office here and you can see a guard tower built up on top of a gigantic tree. ",
             "addedText": "Not many inmates are hanging out in the rec yard, since they are finishing up their breakfast at the mess hall area and heading up to the burn hill to start work.",
             "nextCardsID": [
                 "BifröstCamp01Quarters",
@@ -3486,7 +3479,7 @@
             "cardText": "Go to the wall",
             "locationName": "Bifröst Prison Camp, wall",
             "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
-            "firstText": "A stone wall barricades just one side of the prison camp. In the center of the wall is a large gate, swung wide open. It looks as though it is rarely ever closed. Through the gate, stone steps can be seen leading down to the beach and an ocean pier where boats can dock. ",
+            "firstText": "A stone wall barricades just one side of the prison camp. In the center of the wall is a large gate, swung wide open. It looks as though it is rarely ever closed. Through the gate, stone steps can be seen leading down to the beach and an ocean pier where boats can dock. Eight large stone warehouses are spread out along the wall. ",
             "addedText": "Since nature provides the barriers of the raw jungle and sea, this wall is probably more for keeping people out than for keeping people in.",
             "nextCardsID": [
                 "BifröstCamp01RecYard",
@@ -3499,7 +3492,7 @@
             "cardText": "Go down to the pier",
             "locationName": "Bifröst Prison Camp, pier",
             "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
-            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. A boy, perhaps eight years old, is picking through rocks on the shore. Surely he is too young to be a convict? Perhaps not. <br><br>“Hi! You’re the shipwreck survivor, aren’t you? I'm Seneca, and I have to apologize, but I’m very busy.” The boy goes back to rooting through the rocks",
+            "firstText": "Today the sea gently laps against the lone stone pier that serves as the only entrance or exit to Bifröst Island. A boy, perhaps eight years old, is picking through rocks on the shore. Surely he is too young to be a convict? Perhaps not. <br><br>“Hi! You’re the shipwreck survivor, aren’t you? I'm Seneca, and I have to apologize, but I’m very busy.” The boy goes back to rooting through the rocks. ",
             "addedText": "As always, there are no boats at this pier - just Diligent Youth Seneca rooting around in the rocks.",
             "nextCardsID": [
                 "BifröstCamp01Wall",
@@ -3509,7 +3502,7 @@
         {
             "cardID": "BifröstCamp01PierSeneca",
             "cardText": "Ask Seneca if he needs help",
-            "addedText": "“Thanks, but I'm the only one who can get these sea snails out of their shells,” he says as he holds up a slimy little creature. “Kind Nurse Polito needs them for one of her medicines.” You ask if snails are a common medical treatment in the New Worlde. <br><br> “No, but we've had to make do since the re-supply ships stopped coming, and we had to put together a big package of medical supplies for Absent Bailiff Derby.” You ask why he refers to Bailiff Derby as Absent. “Well, he got some medical supplies, and some other supplies, and now he isn't here!”",
+            "addedText": "“Thanks, but I'm the only one who can get these sea snails out of their shells,” he says as he holds up a slimy little creature. Caring Nurse Polito needs them for one of her medicines.” You ask if snails are a common medical treatment in the New World. <br><br> “No, but we've had to make do since the re-supply ships stopped coming, and we had to put together a big package of medical supplies for Absent Bailiff Derby.” You ask why he refers to Bailiff Derby as Absent. “Well, he got some medical supplies, and some other supplies, and now he isn't here!”",
             "cardStyle": "displayActionCardStyle",
             "rewards": [
                 {"rewardName": "Derby mystery",
@@ -3553,7 +3546,7 @@
             "locationName": "Bifröst Prison Camp, burn hill",
             "locationDescription": "There is a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire",
             "firstText": "The burn hill is exactly what it sounds like. At the top of the hill, there is a depression housing a smouldering pile of white ashes and glowing embers remaining from the previous day’s trashfire. ",
-            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled as ‘creches’.",
+            "addedText": "From the firepit, there is a well-worn path back to the rest of the camp, and another leading off into the jungle with a sign labeled ‘creches’.",
             "nextCardsID": [
                 "BifröstCamp01Mess",
                 "BifröstCamp01JungleCreches",
@@ -3567,9 +3560,9 @@
         {
             "cardID": "BifröstCamp01JungleCreches",
             "cardText": "Walk through the jungle to the creches",
-            "locationName": "Bifröst Prison Camp, nesting creches",
-            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
-            "firstText": "After a long uphill walk, you emerge from the trees and climb a small hill. You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Covert Convict Siobhan says as she emerges from the trees. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flyin around in the wild.”<br><br>",
+            "locationName": "Bifröst Prison Camp, jungle",
+            "locationDescription": "The dense jungle foliage would be nearly impossible to traverse if not for the occasional well-worn paths.",
+            "firstText": "After a long uphill walk, you emerge from the trees and climb another hill. You can hear them through the trees before you can see them: rows upon rows of nests and aviaries. Before you is the wealth of Bifröst Island - the reason why the Royal Empire built this prison work camp here. The entire plateau of the mesa is awash in a rainbow of colored feathers: neon yellow, hot pink, deep violet, blood red. Some cages are home to juvenile birds, while others house dozens of eggs.<br><br>“Flamingos don’t look like much when they’re young, but full grown adults can produce hundreds of feathers a week,” Covert Convict Siobhan says as she emerges from the trees. “And you know how much those feathers go for back in the Olden Worlde? The birds don’t do well in captivity though, so we just take care of em while they’re young and fragile so that we can have lots of productive adults flying around in the wild.”<br><br>",
             "addedText": "“Feel free to pick some candlenuts here if you want a snack,” Covert Convict Siobhan says as she stands between rows of colorful aviaries and picks a few nuts off the nearest tree. “And of course we convicts aren’t allowed any currency, but just between you and me candlenuts serve as a sort of informal currency around here.”",
             "nextCardsID": [
                 "BifröstCamp01BurnHill",
@@ -3579,6 +3572,7 @@
         {
             "cardID": "BifröstCamp01PickCandlenuts",
             "cardText": "Pick candlenuts",
+            "cardStyle": "displayActionCardStyle",
             "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but there are always dense near the mesa that the creches are built upon. ",
             "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
             "rewards": [
@@ -3591,7 +3585,7 @@
             "reqs": [
                 {"reqName": "Action",
                 "reqRule": ">=",
-                "reqQuantity": 5}
+                "reqQuantity": 1}
             ],
             "nextCardsID": [
                 "BifröstCamp01BurnHill",
@@ -3601,7 +3595,7 @@
         {
             "cardID": "BifröstCamp01WorkDay2",
             "cardText": "Ready to work",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, breakfast’s over,” Resolute Warder Quo announces. “I’d like you all to meet our new friend, who will be helpin us out with our chores today,” Quo says, gesturing to you. “Now, let’s get to work!” He turns to you. “Since you’ve only got two days here before the Humboldt arrives to pick up our cargo, I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn a little about how things work around here.”",
+            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, breakfast’s over,” Resolute Warder Quo announces. “I’d like you all to meet our new friend, who will be helpin us out with our chores today,” Quo says, gesturing to you. “Now, let’s get to work!” He turns to you. “Since you’ve only got two days here before the Humboldt arrives to pick up our cargo, I’ll let you choose which duty you wanna help out with. It’ll help you develop your skills and learn a little about how things work around here.”",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
@@ -3650,7 +3644,7 @@
         {
             "cardID": "BifröstCamp01WorkDay0",
             "cardText": "Ready to LEAVE",
-            "addedText": "Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
+            "addedText": "You spot Warder Quo at the Burn Hill, handing out work assignments as usual.<br><br>“Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
@@ -3669,7 +3663,7 @@
         {
             "cardID": "BifröstCamp01WorkDay0a",
             "cardText": "You’re certain it’s coming today though?",
-            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
+            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, possibly even staying overnight, so no worries about it leaving without you.”",
             "nextCardsID": [
                 "BifröstCampLabour01",
                 "BifröstCampFishing01",
@@ -3682,7 +3676,7 @@
         {
             "cardID": "BifröstCamp01WorkDay-1",
             "cardText": "REALLY READY TO LEAVE",
-            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
+            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. <br><br>“You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
@@ -3701,7 +3695,7 @@
         {
             "cardID": "BifröstCamp01WorkDay-1a",
             "cardText": "I’m supposed to be leaving today",
-            "addedText": "You explain your situation to Claudia that you were supposed to have left already for New Atlantis on The Humboldt. <br><br> “Well, no ships have arrived lately, so unless the dolphins are taking you, you’re stuck here a little while longer. Now pick a chore, if you’re still eating our food and sleeping in our storage shed, then you’ve gotta help out with the chores.”",
+            "addedText": "You explain your situation to Claudia that you were supposed to have left already for New Atlantis on The Humboldt. <br><br> “Well, no ships have arrived lately, so unless the dolphins are taking you, you’re stuck here a little while longer. Now pick a chore, if you’re still eating our food and sleeping in our spare bunk, then you’ve gotta help out with the chores. Don’t worry about the Humboldt; it’ll get here when it gets here.”",
             "nextCardsID": [
                 "BifröstCampLabour01",
                 "BifröstCampFishing01",
@@ -3738,6 +3732,8 @@
         {
             "cardID": "BifröstCampLabour01",
             "cardText": "Perform manual labour",
+            "locationName": "Bifröst Prison Camp, jungle",
+            "locationDescription": "The dense jungle foliage would be nearly impossible to traverse if not for the occasional well-worn paths.",
             "addedText": "“Yer with me today then, noob.” Impulsive Gaoler Pana gestures to you and you follow him to a large stack of crates",
             "cardStyle": "brawnCardStyle",
             "reqs": [
@@ -3944,12 +3940,15 @@
             ],
             "nextCardsID": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ]
         },
         {
             "cardID": "BifröstCampFishing01",
             "cardText": "Go fishing",
+            "locationName": "Bifröst Prison Camp, shore",
+            "locationDescription": "Other than the beach by the pier, the shores of Bifröst are rocky and difficult to navigate by boat. Further out though, coral reefs provide lagoons that are home to many species of oceanic life.",
             "addedText": "“You’ve probably noticed by now that here on Bifröst, we don’t keep no livestock,” says a weathered old convict named Rainer. He wears a permanent frown. “So if you want meat for dinner tonight the only way to get that is from the sea. And we humans gotta share the catch with the flamingo chicks, so we got some work to do today.”<br><br>Grumpy convict Rainer escorts you and a dozen other inmates to the pier. Four of them haul a small skiff down the shore to go fishing on the reef. Rainer hands you a fishing pole and begins by teaching you their technique for fishing off the pier.",
             "cardStyle": "handCardStyle",
             "reqs": [
@@ -4226,12 +4225,15 @@
             ],
             "nextCardsID": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ]
         },
         {
             "cardID": "BifröstCampCreches01",
             "cardText": "Care for chicks in the creches",
+            "locationName": "Bifröst Prison Camp, nesting creches",
+            "locationDescription": "A large mesa rising up out of the jungle features a large pond surrounded by countless rows of nests and aviaries.",
             "addedText": "“... snakes, geckos, tarantulas, dragons, oh, and not to mention other birds, like albatrosses, ospreys, gulls, and sea eagles. They’ll kill one in a heartbeat. Earthquakes knock down any poorly constructed creches, crushing them dead. Rainstorms will freeze them dead. Too much sun will bake their brains and kill them. Strong winds trigger the traps and knock debris onto the eggs. Even fungus. There’s a fungus here that will grow on the shells - it looks like nothing harmless - while it pierces the shell and eats the unborn chick inside.” Pessimistic Convict Astrid needs to use all the fingers on both hands, and then some, as she lists off all of the potential hazards to the flamingo chicks that you are going to help protect today.",
             "cardStyle": "heartCardStyle",
             "reqs": [
@@ -4251,7 +4253,7 @@
         {
             "cardID": "BifröstCampCreches02",
             "cardText": "“Wait, dragons?”",
-            "addedText": "“Oh don’t worry, not those kind of dragons. Atlas dragons. Not the mythical things as big as a warehouse, breathing fire, of course. They’re basically just large iguanas, named by some explorer with an overactive imagination, I suppose. From an egg’s perspective, they’re dragon-sized though. And they love visiting our creches for a meal if they can.” Pessimistic Convict Astrid and you are part of a small group of inmates who are tasked with caring for the flamingo eggs and chicks today.<br><br>After a long uphill walk, you emerge from the trees and see the steep-sided walls of the mesa where the creches are located.",
+            "addedText": "“Oh don’t worry, not those kind of dragons. Atlas dragons. Not the mythical things as big as a warehouse, breathing fire, of course. What we have here are basically just large iguanas, named by some explorer with an overactive imagination, I suppose. From an egg’s perspective, they’re dragon-sized though. And they love visiting our creches for a meal if they can.” Pessimistic Convict Astrid and you are part of a small group of inmates who are tasked with caring for the flamingo eggs and chicks today.<br><br>After a long uphill walk, you emerge from the trees and see the steep-sided walls of the mesa where the creches are located.",
             "nextCardsID": [
                 "BifröstCampCreches03"
             ]
@@ -4276,7 +4278,7 @@
             "challengeSuccessCards": [
                 "BifröstCampCreches05"
             ],
-            "challengeSuccessText": "“You can’t just throw a handful in each creche, creche, you have to feed them by hand, like a mother bird would. Being high up on a mesa allows us to keep away most predators, but if any scavenger birds come, smack ‘em with a stick.” Pessimistic Convict Astrid hands you a bag of small dead crustaceans, while she picks up a bag of seeds and nuts for herself. Flamingo chicks look like small ducklings, covered in fluffy white down - nothing at all like their adult counterparts. The birds take a liking to you and are soon, quite literally, eating out of the palm of your hand. ",
+            "challengeSuccessText": "“You can’t just throw a handful in each creche, you have to feed them by hand, like a mother bird would. Being high up on a mesa allows us to keep away most predators, but if any scavenger birds come, smack ‘em with a stick.” Pessimistic Convict Astrid hands you a bag of small dead crustaceans, while she picks up a bag of seeds and nuts for herself. Flamingo chicks look like small ducklings, covered in fluffy white down - nowhere near as ostentatious as their adult counterparts. The birds take a liking to you and are soon, quite literally, eating out of the palm of your hand. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1}
@@ -4289,7 +4291,7 @@
         {
             "cardID": "BifröstCampCreches05",
             "cardText": "“Can’t I feed them seeds?”",
-            "addedText": "“You stick to your smelly fish,” says Astrid. “They need variety in their diet or their colors end up dull. Only brightly colored feathers are worth anything at market.” Astrid looks around warily. “Plus, if the guards notice you doing anything that will lower the price of our feathers, you’ll get in deep trouble.” You look around, but for the life of you, you see no guards. In fact, in the couple of days you’ve been here, you can’t remember seeing a single guard in this prison colony, only senior convicts like Resolute Warder Quo.",
+            "addedText": "“You stick to the smelly fish,” says Astrid. “They need variety in their diet or their colors end up dull. Only brightly colored feathers are worth anything at market.” Astrid looks around warily. “Plus, if the guards notice you doing anything that will lower the price of our feathers, you’ll get in deep trouble.” You look around, but for the life of you, you see no guards. In fact, in the couple of days you’ve been here, you can’t remember seeing a single guard in this prison colony, only senior convicts like Resolute Warder Quo.",
             "rewards": [
                 {"rewardName": "Guards mystery",
                 "rewardQuantity": 1}
@@ -4301,7 +4303,7 @@
         {
             "cardID": "BifröstCampCreches06",
             "cardText": "Continue feeding",
-            "addedText": "After some time, you are distracted by an inmate waving his arms at you.<br><br> “Hey! You got a runaway!” he yells, running over to you. “He hopped over the edge down into those rocks!” You and Astrid run off in that direction.",
+            "addedText": "After a great deal o time spent feeding, you are distracted by an inmate waving his arms at you.<br><br> “Hey! You got a runaway!” he yells, running over to you. “He hopped over the edge down into those rocks!” You and Astrid run off in that direction.",
             "nextCardsID": [
                 "BifröstCampCreches07",
                 "BifröstCampCreches08"
@@ -4384,7 +4386,7 @@
         {
             "cardID": "BifröstCampCreches10",
             "cardText": "Lunch time",
-            "addedText": "Sweaty and sunburt, you and most of the other prisoners sit go down from the mesa top into the shade of the some trees to grab a quick lunch break. Most of them are already sitting in groups. Not knowing much of the social dynamics in this prison camp, you decide not to rock any boats, and sit down beside the one woman who is sitting alone. You notice she is scratching a rock with a piece of charcoal, writing out words and wiping then off, so you ask what she is writing. “Oh, it’s nothing, just some, well, I feel silly saying this, but you’re an outsider so maybe you can give me some advice,” she says, clearly quite flustered. “There’s another inmate here, Cameron. Have you met? No, probably not. Anyway, Cameron recently seeing another woman here, Celeste, but the rumor is they’re on the outs now, and, well, I’ve always fancied Cameron, so… I was writing, or trying to write a… um… a little bit of a love letter, a poem really. Oh dear, I’m really not much of a writer though. I don’t suppose you are?”",
+            "addedText": "Sweaty and sunburt, you and most of the other prisoners go down from the mesa top into the shade of the some trees to grab a quick lunch break. Most of them are already sitting in groups. Not knowing much of the social dynamics in this prison camp, you decide not to rock any boats and sit down beside the one woman who is alone. You notice she is scratching a rock with a piece of charcoal, writing out words and wiping then off. You introduce yourself, and ask what she is writing. “I'm Rhea. This? Oh, it’s nothing, just some, well, I feel silly saying this, but you’re an outsider so maybe you can give me some advice,” she says, clearly quite flustered. “There’s another inmate here, Cameron. Have you met? No, probably not. Rumor is that Cameron and Celeste, are on the outs now, and, well, I’ve always fancied Cameron, so… I was writing, or trying to write a… um… a little bit of a love letter, a poem really. Oh dear, I’m really not much of a writer though. I don’t suppose you are?”",
             "nextCardsID": [
                 "BifröstCampCreches11a",
                 "BifröstCampCreches11b"
@@ -4402,7 +4404,7 @@
             "challengeSuccessCards": [
                 "BifröstCampCreches12"
             ],
-            "challengeSuccessText": "You agree to help Forlorn Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. It’s still cheesy, but sweet. As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. ",
+            "challengeSuccessText": "You agree to help Enamoured Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. It’s still cheesy, but sweet. As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 2}
@@ -4410,12 +4412,12 @@
             "challengeFailCards": [
                 "BifröstCampCreches12"
             ],
-            "challengeFailText": "You agree to help Forlorn Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. “Hmmm, I thank you for your suggestions, but I don’t know if that ending really fits Cameron’s, er, personality…” As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. "
+            "challengeFailText": "You agree to help Enamoured Convict Rhea, and upon hearing what she has written so far, it is clear that she needs all the help she can get. You suggest a couple of flowery metaphors she can add to her poem. “Hmmm, I thank you for your suggestions, but I don’t know if that ending really fits Cameron’s, er, personality…” As Astrid announced the end of the lunch break, everyone gets up to head back to the creches, but you hang back to see Rhea approach a woman who is cleaning up the lunch area. You can’t hear the quiet conversation between Rhea and Cameron, but you can see Rhea’s nervousness as she reads the poem. Cameron brings her hand to her chest and blushes after hearing the poem. “Ladies, let’s get back to work!” Astrid commands. Rhea and Cameron start heading back to the mesa, a beaming smile on Rhea’s face. "
         },
         {
             "cardID": "BifröstCampCreches11b",
             "cardText": "Stay out of it",
-            "addedText": "You know your strengths and weaknesses, and writing poetry definitely falls into the latter category. Forlorn Convict Rhea seems a little disappointed, but she understands. A thought occurs to you though: usually in this game we call life, the riskier an option is, the more rewards are, even if you fail. Choosing an option with no risk at all will often lead to disappointing results.",
+            "addedText": "You know your strengths and weaknesses, and writing poetry definitely falls into the latter category. Enamoured Convict Rhea seems a little disappointed, but she understands. A thought occurs to you though: usually in this game we call life, the riskier an option is, the more rewards are, even if you fail. Choosing an option with no risk at all will often lead to disappointing results.",
             "rewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": -1}
@@ -4427,7 +4429,7 @@
         {
             "cardID": "BifröstCampCreches12",
             "cardText": "Repair creches",
-            "addedText": "Astrid assigns you and a couple of young men to search through the trees at the foot of the mesa for reeds to use in repairing traps that have been damaged by weather. Your focus on the foliage is broken though, when you hear a cry of “Dragon! Dragon! Help!” coming from the lip of the mesa. You rush over to see a convict on the ground, his leg bleeding. Directly in front of him is a lizard, larger than an iguana, closer in length to a small crocodile, but with a narrower jaw. You can see it has plenty of large teeth, as it opens its mouth and tries to intimidate you, letting out a violent hissing noise. It works.<br><br> “There are those Atlas dragons I told you about,” Pessimistic Convict Astrid says, responding to the calls of the injured man. “I thought you said it wasn’t real dragon!” you say, pointing at the 10-foot-long monster. “Well, it doesn’t breathe fire.” Astrid bends down and picks up a branch, never taking her eyes from the beast. “You take it from the left, I’ll take the right.”",
+            "addedText": "Astrid assigns you and a couple of young men to search through the trees at the foot of the mesa for reeds to use in repairing traps that have been damaged by weather. Your focus on the foliage is broken though, when you hear a cry of “Dragon! Dragon! Help!” coming from the lip of the mesa. You rush over to see a convict on the ground, his leg bleeding. Directly in front of him is a lizard, much larger than an iguana, closer in size to a crocodile, but with a narrower jaw. You can see it has plenty of large teeth, as it opens its mouth and tries to intimidate you, letting out a violent hissing noise. It works.<br><br> “There are those Atlas dragons I told you about,” Pessimistic Convict Astrid says, responding to the calls of the injured man. “I thought you said it wasn’t a real dragon!” you say, pointing at the 10-foot-long monster. “Well, it doesn’t breathe fire.” Astrid bends down and picks up a branch, never taking her eyes from the beast. “You take it from the left, I’ll take the right.”",
             "nextCardsID": [
                 "BifröstCampCreches13",
                 "BifröstCampCreches14"
@@ -4447,7 +4449,7 @@
             "challengeSuccessCards": [
                 "BifröstCampCreches15"
             ],
-            "challengeSuccessText": "You crouch down and scurry off to the left, rounding a large boulder. You find an old tree branch about the length and size of your arm, although you’d prefer to be more than arm’s length from this creature. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and charge forward, bringing the branch down hard on the beast’s hind foot. The dragon’s hiss becomes higher pitched as it rotates, hisses at you and flees over the edge of the mesa wall. “Nice work,” Astrid congratulates you, kneeling down to check out the ground. “A souvenir,” she says, handing you an ominous two-inch-long claw. ",
+            "challengeSuccessText": "You crouch down and scurry off to the left, rounding a large boulder. You find an old tree branch about the length and size of your arm, although you’d prefer to be much more than an arm’s length from this creature. The predator’s menacing head darts back and forth between you and Astrid, occasionally lingering on the injured convict who is trying to drag himself away. Astrid leaps up and roars at the Atlas dragon, who hisses back. You take advantage of the distraction and charge forward, bringing the branch down hard on the beast’s hind foot. The dragon’s hiss becomes higher pitched as it rotates, hisses at you and flees over the edge of the mesa wall. “Nice work,” Astrid congratulates you, kneeling down to check out the ground. “A souvenir,” she says, handing you an ominous two-inch-long claw. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 3},
@@ -4486,7 +4488,7 @@
         {
             "cardID": "BifröstCampCreches15",
             "cardText": "A hard day’s work done",
-            "addedText": "As the sun begins to hang low in the sky, a night watch crew comes in to watch over the creches. You and the other convicts put away your tools and march back to the Burn Hill for a well-deserved dinner. Pessimistic Convict Astrid comes over and slaps you on the back. “I saw you do some good work out there today, newbie, and the guards said you seemed to be pulling your weight too. Thanks for the help today.” That’s strange; all day you don’t remember seeing a single guard.",
+            "addedText": "As the sun begins to hang low in the sky, a night watch crew comes in to watch over the creches. You and the other convicts put away your tools and march back to the Burn Hill for a well-deserved dinner. Pessimistic Convict Astrid comes over and slaps you on the back. “You weren’t nearly as useless out there today as I expected you to be, newbie, and the guards said you seemed to be pulling your weight too. Thanks for the help today.” That’s strange; all day you don’t remember seeing a single guard.",
             "rewards": [
                 {"rewardName": "Astrid’s esteem",
                 "rewardQuantity": 1},
@@ -4496,6 +4498,7 @@
             ],
             "nextCardsID": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ]
         },
@@ -4503,6 +4506,8 @@
         {
             "cardID": "BifröstCampSalvage01",
             "cardText": "Salvage wreckage of the Medusa",
+            "locationName": "Bifröst Prison Camp, shore",
+            "locationDescription": "Other than the beach by the pier, the shores of Bifröst are rocky and difficult to navigate by boat. Further out though, coral reefs provide lagoons that are home to many species of oceanic life.",
             "addedText": "“We start our survey here. It’s low tide, so check all the tidal pools,” Headmost Bailiff Claudia declares. You’ve been trekking through the jungle for twenty minutes to a new section of coastline that hasn’t been searched yet for wreckage of the Medusa. This area doesn’t have the same huge black rocks as the part where you washed ashore. This area seems more eroded by the sea.",
             "cardStyle": "eyeCardStyle",
             "reqs": [
@@ -4725,7 +4730,7 @@
         {
             "cardID": "BifröstCampSalvage13",
             "cardText": "Claudia pulls you aside",
-            "addedText": "On the march back to the prison camp, Headmost Bailiff Claudia pulls you aside <br><br> “There are some odd facts about this shipwreck,” she starts. “The same storm that hit the Medusa that night also swept through Bifröst. A ship that large should be able to weather such a minor storm. One survivor, one corpse, that mysterious book. Yes, I know about your book. Resolute Warder Quo and I share much - information, secrets, beds.” Claudia looks you up and down, as if trying to decide whether or not she can trust you. “There are strange things going on in the New Worlde these days. And the Empire tells us nothing. If you remember anything else of import about the Medusa, Quo and I would be very interested to know more.”",
+            "addedText": "On the march back to the prison camp, Headmost Bailiff Claudia pulls you aside <br><br> “There are some odd facts about this shipwreck,” she starts. “The same storm that hit the Medusa that night also swept through Bifröst. A ship that large should be able to weather such a minor storm. One survivor, one corpse, that mysterious book. Yes, I know about your book. Resolute Warder Quo and I share much - information, secrets, beds.” Claudia looks you up and down, as if trying to decide whether or not she can trust you. “There are strange things going on in the New World these days. And the Empire tells us nothing. If you remember anything else of import about the Medusa, Quo and I would be very interested to know more.”",
             "rewards": [
                 {"rewardName": "Quo’s Mistress mystery",
                 "rewardQuantity": 1},
@@ -4735,6 +4740,7 @@
             ],
             "nextCardsID": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ]
         },
@@ -4956,9 +4962,10 @@
             ],
             "challengeSuccessCards": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ],
-            "challengeSuccessText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You make some very strong points, reminding her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are good points,” Siobhan replies. “I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. ",
+            "challengeSuccessText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You make some very strong points, reminding her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are good points,” Siobhan replies. “I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always, there is not a guard to be seen. ",
             "challengeFailRewards": [
                 {"rewardName": "Bifröst Convicts",
                 "rewardQuantity": 1},
@@ -4970,9 +4977,10 @@
             ],
             "challengeFailCards": [
                 "BifröstCamp02BurnHill",
+                "BifröstCamp02BurnHillday0",
                 "BifröstCampPandemonium01"
             ],
-            "challengeFailText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You probably shouldn’t have mentioned that. But you recover, and remind her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are reasonable points,” Siobhan replies. “I suppose I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always - there is not a guard to be seen. "
+            "challengeFailText": "You vehemently deny being an agent of the Queen, although that is what a snoop would probably do too. You probably shouldn’t have mentioned that. But you recover, and remind her that you were nearly dead when you were found shipwrecked, and that you have had no access to any important strategic information about the island or economic information about the feather trade. “Yes, those are reasonable points,” Siobhan replies. “I suppose I trust you anyways, and besides, if you’re up to something the guards will spot it.” <br><br> Once again, you look around. As always, there is not a guard to be seen. "
         },
 
         {
@@ -4985,7 +4993,8 @@
             "reqs": [
                 {"reqName": "day until the Humboldt arrives",
                 "reqRule": "=",
-                "reqQuantity": -1}
+                "reqQuantity": -1,
+                "reqHidden": true}
             ],
             "nextCardsID": [
                 "BifröstCampPandemonium02Brawn",
@@ -5331,7 +5340,7 @@
             "cardID": "BifröstCamp03JungleCreches",
             "cardText": "Walk through the jungle to the creches",
             "locationName": "Bifröst Prison Camp, nesting creches",
-            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
+            "locationDescription": "A large mesa rising up out of the jungle features a large pond surrounded by countless rows of nests and aviaries.",
             "addedText": "You start to walk to ward the jungle creches, but you realize that the sound of the ringing bell is coming from the other direction, so you head back",
             "nextCardsID": [
                 "BifröstCamp03BurnHill"
@@ -5358,7 +5367,7 @@
         {
             "cardID": "BifröstInvasion01",
             "cardText": "continue",
-            "addedText": "“New Atlantis has revolted against the Empire.” Gasps reverberate through the assembled crowd.<br><br> “All of New Atlantis?” cries out one inmate.<br><br> “Yes, the entire island of New Atlantis has come together in traitorous revolution - the farms, the mines, the city of course. Alas, many other island colonies have joined the revolution too, dozens of them. By now, maybe all of them. But, since New Atlantis is by far the most populous and wealthiest of the island colonies here in the New Worlde, they are referring to all of the rebelling islands together as the Nation of New Atlantis, governed by revolutionaries in the city of Capitol X” <br><br> “How could this happen?” someone in the crowd cries out.",
+            "addedText": "“New Atlantis has revolted against the Empire.” Gasps reverberate through the assembled crowd.<br><br> “All of New Atlantis?” cries out one inmate.<br><br> “Yes, the entire island of New Atlantis has come together in traitorous revolution - the farms, the mines, the city of course. Alas, many other island colonies have joined the revolution too, dozens of them. By now, maybe all of them. But, since New Atlantis is by far the most populous and wealthiest of the island colonies here in the New World, they are referring to all of the rebelling islands together as the Nation of New Atlantis, governed by revolutionaries in the city of Capitol X” <br><br> “How could this happen?” someone in the crowd cries out.",
             "nextCardsID": [
                 "BifröstInvasion02"
             ]
@@ -5366,7 +5375,7 @@
         {
             "cardID": "BifröstInvasion02",
             "cardText": "continue",
-            "addedText": "“Many suspected something like this would be coming. The New Worlde is rich in resources, and New Atlantis has been growing, especially through their trade with the locals. Why, Capitol X probably rivals London or Trondheim by now in terms of population and wealth.” <br><br> “But New Atlantis had no military!”",
+            "addedText": "“Many suspected something like this would be coming. The New World is rich in resources, and New Atlantis has been growing, especially through their trade with the locals. Why, Capitol X probably rivals London or Trondheim by now in terms of population and wealth.” <br><br> “But New Atlantis had no military!”",
             "nextCardsID": [
                 "BifröstInvasion03"
             ]
@@ -5390,7 +5399,7 @@
         {
             "cardID": "BifröstInvasion05",
             "cardText": "continue",
-            "addedText": "“No, no, unfortunately we are not free,” Quo explains. “New Atlantis has not completely removed the Royal Empire or Valhalla from the New Worlde. After their revolution victories, New Atlantis reached certain agreements with the Olden Worlde powers. The Empire is able to keep certain forts, as well as any colonies who wish to declare their allegiance to the Queen, as well as...” Quo pauses “their prison colonies.”<br><br> “And what about all the other groups? The guards? The Post? The local tribes?”",
+            "addedText": "“No, no, unfortunately we are not free,” Quo explains. “New Atlantis has not completely removed the Royal Empire or Valhalla from the New World. After their revolution victories, New Atlantis reached certain agreements with the Olden Worlde powers. The Empire is able to keep certain forts, as well as any colonies who wish to declare their allegiance to the Queen, as well as...” Quo pauses “their prison colonies.”<br><br> “And what about all the other groups? The guards? The Post? The local tribes?”",
             "nextCardsID": [
                 "BifröstInvasion06"
             ]
@@ -5605,7 +5614,7 @@
         {
             "cardID": "BifröstInvasion24",
             "cardText": "Widow Violet?",
-            "addedText": "You turn to an inmate beside you who you recognize from yesterday’s work duty. “Widow Violet? I’ve found that most individuals here in the New Worlde have three names - a descriptor, a title and a given name, like Resolute Warder Quo, Headmost Bailiff Claudia, even Dread Kommandør Skaarhart. Is Widow her descriptor or title?” <br><br> “Really? At a time like this? Don’t you think we have more to worry about?”",
+            "addedText": "You turn to an inmate beside you who you recognize from yesterday’s work duty. “Widow Violet? I’ve found that most individuals here in the New World have three names - a descriptor, a title and a given name, like Resolute Warder Quo, Headmost Bailiff Claudia, even Dread Kommandør Skaarhart. Is Widow her descriptor or title?” <br><br> “Really? At a time like this? Don’t you think we have more to worry about?”",
             "nextCardsID": [
                 "BifröstInvasion25"
             ]
@@ -5649,7 +5658,7 @@
         {
             "cardID": "BifröstInvasion29",
             "cardText": "continue",
-            "addedText": "Two women lead the group. One is strikingly tall, gorgeous, and outfit in a gleaming metal breastplate and helmet. She looks like a valkyrie warrior from Norse legend. The other is much more subdued. She is much smaller, and wears a plain hooded robe of a deep plum color. As they approach the gate, she pulls back the hood of her cloak to reveal a pale beautiful face framed by black locks of hair. Quo’s face is ashen “I just hope we can get through this without anyone dying.” <br><br> “These are two of the deadliest women in the New Worlde,” says Claudia. “Before the end of the day, someone will die.”",
+            "addedText": "Two women lead the group. One is strikingly tall, gorgeous, and outfit in a gleaming metal breastplate and helmet. She looks like a valkyrie warrior from Norse legend. The other is much more subdued. She is much smaller, and wears a plain hooded robe of a deep plum color. As they approach the gate, she pulls back the hood of her cloak to reveal a pale beautiful face framed by black locks of hair. Quo’s face is ashen “I just hope we can get through this without anyone dying.” <br><br> “These are two of the deadliest women in the New World,” says Claudia. “Before the end of the day, someone will die.”",
             "nextCardsID": [
                 "BifröstInvasion30"
             ]
@@ -5873,8 +5882,8 @@
             "cardText": "Enter the central rec yard",
             "locationName": "Bifröst Prison Camp, rec yard",
             "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard. There are a couple of gaming areas set up.",
-            "firstText": "The rec area is lively at this time of day. Although this is a prison, it is the most comfortable prison you have ever seen in your life - certainly better than anything back in the Olden Worlde. The prisoners gather in small groups to talk or play games. Two convicts are engaged in obviously flirty conversation, while another is shooing her two children off to bed.",
-            "addedText": "After a long day of hard labour, a few convicts have set up some set up a court for playing Smarts, while others are gathered around a table engaged in armwrestling.",
+            "firstText": "The rec area is lively at this time of day. Although this is a prison, it is the most comfortable prison you have ever seen in your life - certainly better than anything back in the Olden Worlde. The prisoners gather in small groups to talk or play games. Two convicts are engaged in obviously flirty conversation, while another is shooing her two children off to bed. ",
+            "addedText": "After a long day of hard labour, a few convicts have set up a court for playing Smarts, while others are gathered around a table engaged in armwrestling.",
             "nextCardsID": [
                 "BifröstCamp02Quarters",
                 "BifröstCamp02Office",
@@ -5939,7 +5948,7 @@
             "cardID": "BifröstCamp02RecYardSmarts",
             "cardText": "Check out the game of Small Darts",
             "cardStyle": "handCardStyle",
-            "firstText": "“You never played Smarts before?” a convict asks you. “I’m Rebecca. Small darts is a game of finesse, not strength,” she says, tossing a weighted dart into the air and watching as it comes to land right in the middle of a series of concentric circles drawn in chalk onto a bare patch of the rec field. <br><br>",
+            "firstText": "“You never played Smarts before?” a convict asks you. “I’m Rebecca. Small darts is a game of finesse, not strength,” she says, tossing a weighted dart into the air and watching as it lands right in the middle of a series of concentric circles drawn in chalk onto a bare patch of the rec field. <br><br>",
             "addedText": "“It’ll cost 10 candlenuts to play Small Darts. We draw straws to randomize the teams, and then you get 20 back if your team wins,“ a convict whose name you do not know tells you. “Care to join my team for the next round?”",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
@@ -6005,19 +6014,20 @@
             "cardText": "Go to the camp office",
             "locationName": "Bifröst Prison Camp, office",
             "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a makeshift hospital.",
-            "firstText": "You hear the aound of painful yelling as you enter the prison camp’s small office that serves as a hospital.<br><br>“Now you lay down and rest here for a few minutes, so I can check for swelling,” Kind Nurse Polito says to a young convict laying on a bed. She then turns to you “Dislocated a shoulder while working on the construction of the new bunkhouse. I’m glad to see you’re all in one piece though,” she says, inspecting you. “If you're all done with your work duty for the day, I’ve got work you could help me with here.” ",
-            "addedText": "The hospital is surprisingly busy in the evening. Several injured inmates lie in beds resting, attended to by Kind Nurse Polito, who could use a hand.",
+            "firstText": "You hear the aound of painful yelling as you enter the prison camp’s small office that serves as a hospital.<br><br>“Now you lay down and rest here for a few minutes, so I can check for swelling,” Caring Nurse Polito says to a young convict laying on a bed. She then turns to you “Dislocated a shoulder while working on the construction of the new bunkhouse. I’m glad to see you’re all in one piece though,” she says, inspecting you. “If you're all done with your work duty for the day, I’ve got work you could help me with here.” ",
+            "addedText": "The hospital is surprisingly busy in the evening. Several injured inmates lie in beds resting, attended to by Caring Nurse Polito, who could use a hand.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
                 "BifröstCamp05QuoOffice",
-                "BifröstCamp02OfficePolito"
+                "BifröstCamp02OfficePolito",
+                "BifröstCamp02Politoday0"
             ]
         },
         {
             "cardID": "BifröstCamp02OfficePolito",
             "cardText": "Help Nurse Polito",
             "cardStyle": "heartCardStyle",
-            "firstText": "No one here is in critical condition, but we had a fire a couple days before you arrived. A few folks were in the process of building a new bunkhouse, but the wind picked up and knocked it over before they had fixed everything into place. Probably was the same storm that caused your shipwreck, in fact. The whole building collapsed on a few workers and their lantern, and so we’ve got a few more injuries to take care of than we normally do. We don’t have a wealth of supplies here, but we do what we can here to treat their burns. ",
+            "firstText": "No one here is in critical condition, but we had a fire a couple days before you arrived. A few folks were in the process of building a new bunkhouse, but the wind picked up and knocked it over before they had fixed everything into place. Probably was the same storm that caused your shipwreck, in fact. The whole building collapsed on a few workers and their lantern, and so we’ve got more injuries to take care of than we normally do. We don’t have a wealth of supplies here, but we do what we can here to treat their burns. ",
             "addedText": "If you’ve got a moment, I could use a hand re-applying some of the older bandages.",
             "nextCardsID": [
                 "BifröstCamp02RecYard",
@@ -6046,12 +6056,12 @@
                 "BifröstCamp02RecYard",
                 "BifröstCamp02OfficePolitoHeart"
             ],
-            "challengeSuccessText": "“My my, you seem to have some natural gift for this kind of thing!” Kind Nurse Polito says. “You should consider joining the Sawbones when you get off this rock. Here’s a little something for your trouble.”",
+            "challengeSuccessText": "“My my, you seem to have some natural gift for this kind of thing!” Caring Nurse Polito says. “You should consider joining the Sawbones when you get off this rock. Here’s a little something for your trouble.”",
             "challengeFailRewards": [
               {"rewardName": "Bifröst Convicts",
-              "rewardQuantity": 2},
+              "rewardQuantity": 1},
               {"rewardName": "candlenut",
-              "rewardQuantity": 2},
+              "rewardQuantity": 1},
               {"rewardName": "Action",
               "rewardQuantity": -1}
             ],
@@ -6059,7 +6069,7 @@
               "BifröstCamp02RecYard",
               "BifröstCamp02OfficePolitoHeart"
             ],
-            "challengeFailText": "“That’s a little loose, so I might have to re-apply this one, but it’s quite a good job for someone with no medical training,” Kind Nurse Polito says. “Here’s a little something for your trouble.”"
+            "challengeFailText": "“That’s a little loose, so I might have to re-apply this one, but it’s quite a good job for someone with no medical training,” Caring Nurse Polito says. “Here’s a little something for your trouble.”"
         },
         {
             "cardID": "BifröstCamp02Wall",
@@ -6069,6 +6079,7 @@
             "firstText": "The strong stone wall defends the only accessible harbour space on Bifröst Island. ",
             "addedText": "Through the large open gate, you see the sea glittering like a million diamonds from the reflections of the stars.",
             "nextCardsID": [
+                "BifröstCamp02Wallday0",
                 "BifröstCamp02RecYard",
                 "BifröstCamp02Pier",
                 "BifröstCamp05Warehouses"
@@ -6083,6 +6094,7 @@
             "addedText": "As always, there are no boats at this pier - just Diligent Youth Seneca rooting around in the rocks.",
             "nextCardsID": [
                 "BifröstCamp02Wall",
+                "BifröstCamp02Senecaday0",
                 "BifröstCamp02PierSeneca"
             ]
         },
@@ -6090,8 +6102,8 @@
             "cardID": "BifröstCamp02PierSeneca",
             "cardText": "Help Seneca catch shellfish",
             "cardStyle": "eyeCardStyle",
-            "firstText": "“If you’re all done with your work for the day, I could use a hand here. The survival of the entire camp depends upon it,” the Seneca says, putting a shell in one pile. “You see, if the shells open easily, that means they’re dead. If someone eats those, they could get sick and die, but Nurse Polito can still grind them up for poultices,” “The ones that don’t want to open up easily are still good to eat, so put them over in this pile.” It takes some effort, to find them in the dark, but they only come out of the sand in the evening when it’s cool. ” ",
-            "addedText": "In times like this, we need all the supplies we can get, so you could lend me a hand.",
+            "firstText": "“If you’re all done with your work for the day, I could use a hand here. The survival of the entire camp depends upon it,” the Seneca says, putting a shell in one pile. “You see, if the shells open easily, that means they’re dead. If someone eats those, they could get sick and die, but Nurse Polito can still grind them up for poultices,” “The ones that don’t want to open up easily are still good to eat, so put them over in this pile.” It takes some effort to find them in the dark, but they only come out of the sand in the evening when it’s cool. ",
+            "addedText": "“In times like this, we need all the supplies we can get, so you could lend me a hand.”",
             "nextCardsID": [
                 "BifröstCamp02Pier",
                 "BifröstCamp02PierSenecaEye"
@@ -6122,9 +6134,9 @@
             "challengeSuccessText": "“Thanks for all that help! Diligent Youth Seneca says, looking down at the piles of live and dead mussels you have gathered. “Here’s a reward for helping our food and medical supplies last longer.”",
             "challengeFailRewards": [
               {"rewardName": "Bifröst Convicts",
-              "rewardQuantity": 2},
+              "rewardQuantity": 1},
               {"rewardName": "candlenut",
-              "rewardQuantity": 2},
+              "rewardQuantity": 1},
               {"rewardName": "Action",
               "rewardQuantity": -1}
             ],
@@ -6132,7 +6144,7 @@
                 "BifröstCamp02Wall",
                 "BifröstCamp02PierSenecaEye"
             ],
-            "challengeFailText": "“You missed a few,” Diligent Youth Seneca says, reaching down into the piles of live mussels you have gathered, and opening a few up easily. “A couple of these are dead. You have to sort them out. Still, I suppose you deserve a bit of a reward for helping our food and medical supplies last a little longer”"
+            "challengeFailText": "“You missed a few,” Diligent Youth Seneca says, reaching down into the piles of live mussels you have gathered, and opening a few up easily. “A couple of these are dead. You have to sort them out. Still, I suppose you deserve a bit of a reward for helping our food and medical supplies last a little longer.”"
         },
         {
             "cardID": "BifröstCamp02Mess",
@@ -6160,7 +6172,7 @@
         },
         {
             "cardID": "BifröstCamp02MessGambleVoice",
-            "cardText": "Play Smarts",
+            "cardText": "Play Greenqueen",
             "reqs": [
                 {"reqName": "Action",
                 "reqRule": ">",
@@ -6205,6 +6217,13 @@
             "locationDescription": "The small depression at the top of the hill houses a blazing fire into which the camp's waste is being disposed of.",
             "firstText": "There is much less bustle around the fire at this time of evening. The convicts have all eaten and now have time for recreation or retiring early for the night. ",
             "addedText": "From the brightly burning fire, there is a well-worn path back to the rest of the camp, and another leading off into the dark jungle with a sign labeled as ‘creches’.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "day until the Humboldt arrives",
+                "reqRule": ">",
+                "reqQuantity": -1,
+                "reqHidden": true}
+            ],
             "nextCardsID": [
                 "BifröstCamp02Mess",
                 "BifröstCamp02JungleCreches"
@@ -6214,9 +6233,9 @@
             "cardID": "BifröstCamp02JungleCreches",
             "cardText": "Walk through the jungle to the creches",
             "locationName": "Bifröst Prison Camp, nesting creches",
-            "locationDescription": "A large clearing in the jungle features a large pond surrounded by countless rows of nests and aviaries.",
-            "firstText": "As you walk, the sun sets and immediately the mood of the jungle changes. You walk through the trees, listening to the multitude of sounds that are quite different from those of the daytime. With such dense foliage, there is little light, but you manage to follow the path to the jungle creches. It is dark here, but a convict who is on duty gurading the eggs has a torch lit. The mesa clearing allows enough moonlight in for you to barely see that there are candlenuts to pick. There is a dark path through the jungle leading back to the burn hill. ",
-            "addedText": "The mesa clearing allows enough moonlight in for you to barely see that there are candlenuts to pick.",
+            "locationDescription": "A large mesa rising up out of the jungle features a large pond surrounded by countless rows of nests and aviaries.",
+            "firstText": "As you walk, the sun sets and immediately the mood of the jungle changes. You walk through the trees, listening to the multitude of sounds that are quite different from those of the daytime. With such dense foliage there is little light, but you manage to follow the path to the jungle creches. It is dark here, but a convict who is on duty gurading the eggs has a torch lit. ",
+            "addedText": "There is a dark path through the jungle leading back to the burn hill. The mesa clearing allows enough moonlight in for you to barely see that there are candlenuts to pick.",
             "nextCardsID": [
                 "BifröstCamp02BurnHill",
                 "BifröstCamp02PickCandlenuts"
@@ -6225,6 +6244,7 @@
         {
             "cardID": "BifröstCamp02PickCandlenuts",
             "cardText": "Pick candlenuts",
+            "cardStyle": "displayActionCardStyle",
             "firstText": "Candlenuts are one of the many food resources that are plentiful here on Bifröst Island. They grow on vines in many areas of the jungle, but they are always dense near the mesa that the creches are built upon. ",
             "addedText": "It doesn't take long to harvest several candlenuts - for use strictly as food, of course, not as currency.",
             "rewards": [
@@ -6255,124 +6275,9 @@
 
 
         {
-            "cardID": "BifröstCamp01WorkDay2",
-            "cardText": "Ready to work",
-            "addedText": "Inmates are gathered around, finishing the last of their breakfast when Resolute Warder Quo steps up in front of the smouldering remnants of last night's fire.<br><br>“Ok, boys and girls, breakfast’s over,” Resolute Warder Quo announces. “I’d like you all to meet our new friend, who will be helpin us out with our chores today,” Quo says, gesturing to you. “Now, let’s get to work!” He turns to you. “Since you’ve only got two days here before the Humboldt arrives to pick up our cargo, I’ll let you pick which duty you want to help out with. It’ll help you develop your skills and learn a little about how things work around here.”",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "day until the Humboldt arrives",
-                "reqRule": "=",
-                "reqQuantity": 2,
-                "reqHidden": true}
-            ],
-            "nextCardsID": [
-                "BifröstCampLabour01",
-                "BifröstCampFishing01",
-                "BifröstCampCreches01",
-                "BifröstCampSalvage01",
-                "BifröstCampFlamingos01",
-                "BifröstCamp01NotReadyToWork"
-            ]
-        },
-
-        {
-            "cardID": "BifröstCamp01WorkDay1",
-            "cardText": "Ready to work",
-            "addedText": "You have just enjoyed a simple but filling breakfast.<br><br>“Sunny weather today, boys and girls, let’s get to work in case it becomes an afternoon shower,” Resolute Warder Quo announces, then he turns to you. “Rule here is, all the junior convicts gotta switch up their chores each day. It stops fights over duties and keeps folks fresh. So, you’ll have to pick a different task today. Your choice.”",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "day until the Humboldt arrives",
-                "reqRule": "=",
-                "reqQuantity": 1,
-                "reqHidden": true}
-            ],
-            "nextCardsID": [
-                "BifröstCampLabour01",
-                "BifröstCampFishing01",
-                "BifröstCampCreches01",
-                "BifröstCampSalvage01",
-                "BifröstCampFlamingos01",
-                "BifröstCamp01NotReadyToWork"
-            ]
-        },
-        {
-            "cardID": "BifröstCamp01WorkDay0",
-            "cardText": "Ready to LEAVE",
-            "addedText": "Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "day until the Humboldt arrives",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true}
-            ],
-            "nextCardsID": [
-                "BifröstCamp01WorkDay0a"
-            ]
-        },
-        {
-            "cardID": "BifröstCamp01WorkDay0a",
-            "cardText": "You’re certain it’s coming today though?",
-            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
-            "nextCardsID": [
-                "BifröstCampLabour01",
-                "BifröstCampFishing01",
-                "BifröstCampCreches01",
-                "BifröstCampSalvage01",
-                "BifröstCampFlamingos01",
-                "BifröstCamp01NotReadyToWork"
-            ]
-        },
-        {
-            "cardID": "BifröstCamp01WorkDay-1",
-            "cardText": "REALLY READY TO LEAVE",
-            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true},
-                {"reqName": "day until the Humboldt arrives",
-                "reqRule": "=",
-                "reqQuantity": -1,
-                "reqHidden": true}
-            ],
-            "nextCardsID": [
-                "BifröstCamp01WorkDay-1a"
-            ]
-        },
-        {
-            "cardID": "BifröstCamp01WorkDay-1a",
-            "cardText": "I’m supposed to be leaving today",
-            "addedText": "You explain your situation to Claudia that you were supposed to have left already for New Atlantis on The Humboldt. <br><br> “Well, no ships have arrived lately, so unless the dolphins are taking you, you’re stuck here a little while longer. Now pick a chore, if you’re still eating our food and sleeping in our storage shed, then you’ve gotta help out with the chores.”",
-            "nextCardsID": [
-                "BifröstCampLabour01",
-                "BifröstCampFishing01",
-                "BifröstCampCreches01",
-                "BifröstCampSalvage01",
-                "BifröstCampFlamingos01",
-                "BifröstCamp01NotReadyToWork"
-            ]
-        },
-
-
-        {
             "cardID": "BifröstCamp02Bedtime2",
             "cardText": "Done for the day",
-            "addedText": "You lay down on your bed, going over what you have learned about this New Worlde, when you hear a knock on on door.",
+            "addedText": "You lay down on your bed, going over what you have learned about this New World, when you hear a knock on your door.",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
@@ -6391,7 +6296,7 @@
         {
             "cardID": "BifröstCamp02Bedtime2a",
             "cardText": "Come in",
-            "addedText": "“G’devening, newbie,” Quo says, entering your quarters when you open the door for him. Hope you didn’t get too tuckered out from your work day. Now you have an idea what it’s like to be in prison - stay in school!” You chuckle lightly to play along. “Actually, it ain’t nearly so bad here as bein in prison back in the Olden Worlde. We got food, nice weather, and the only walls are the seas around us. Us Transportation convicts got free time too. Care for another game of Life or Death?”",
+            "addedText": "“G’devening, rookie,” Quo says, entering your quarters when you open the door for him. “Hope you didn’t get too tuckered out from your work day. Now you have an idea what it’s like to be in prison - stay in school!” You chuckle lightly to play along. “Actually, it ain’t nearly so bad here as bein in prison back in the Olden Worlde. We got food, nice weather, and the only walls are the seas around us. Us Transportation convicts’ve got free time too. Care for another game of Life or Death?”",
             "nextCardsID": [
                 "BifröstCamp02Bedtime2b",
                 "BifröstCamp02Bedtime2c"
@@ -6417,11 +6322,11 @@
             "cardID": "BifröstCamp02Bedtime2d",
             "cardText": "Life or Death",
             "addedText": "Quo sets up the board like last time. “Remember what I taught you last night. Brawn represents strength & power, Hand represents adaptability & nimbleness, Heart represents emotion & tradition, Eye represents observation & watchfulness, and Voice represents persuasion & communication. Play to your strengths.”",
-            "rewards": [
-                {"rewardName": "Your Life or Death piece",
-                "rewardQuantity": 16},
-                {"rewardName": "Quo’s Life or Death piece",
-                "rewardQuantity": 16}
+            "setScore": [
+                {"setName": "Your Life or Death piece",
+                "setQuantity": 16},
+                {"setName": "Quo’s Life or Death piece",
+                "setQuantity": 16}
             ],
             "nextCardsID": [
                 "BifröstShore39"
@@ -6483,27 +6388,50 @@
           },
           {
                 "cardID": "BifröstCamp02Bedtime2f",
-                "cardText": "Go to bed",
-                "addedText": "Between the phsyical labour of the day, the mental workout of playing against Quo, and not to mention the fact that you are still in recovery after your shipwreck, you are exhausted.",
+                "cardText": "Go to sleep",
+                "addedText": "Between the physical labour of the day, the mental workout of playing against Quo, and not to mention the fact that you are still in recovery after your shipwreck, you are exhausted. You fall asleep quickly.",
                 "nextCardsID": [
                     "BifröstCamp02Bedtime2g"
                 ]
           },
           {
-                "cardID": "BifröstCamp02Bedtime2f",
-                "cardText": "Sleep",
-                "addedText": ".",
+                "cardID": "BifröstCamp02Bedtime2g",
+                "cardText": "Dream",
+                "addedText": "You dream of a man who turns his head and becomes a woman.<br><br>You dream of wings growing out from your back.<br><br>You dream of dozens of arms pulling you down beneath the surface of the water.",
                 "nextCardsID": [
-                    "BifröstCamp02Morning1"
+                    "BifröstCamp01Morning2"
                 ]
             },
 
-
+            {
+                "cardID": "BifröstCamp01Morning2",
+                "cardText": "Wake up",
+                "addedText": "You wake up to the first rays of the sun coming in through cracks in the wall of your quarters. Your muscles feel sore from yesterday’s hard work, but it’s a good kind of sore.",
+                "setScore": [
+                    {"setName": "time of day",
+                    "setQuantity": 0}
+                ],
+                "nextCardsID": [
+                    "BifröstShore53a"
+                ]
+            },
+            {
+                "cardID": "BifröstShore53a",
+                "cardText": "Leave your quarters",
+                "addedText": "May as well go get some breakfast and earn your keep again.",
+                "setScore": [
+                    {"setName": "day until the Humboldt arrives",
+                    "setQuantity": 1}
+                ],
+                "nextCardsID": [
+                    "BifröstCamp01RecYard"
+                ]
+            },
 
         {
             "cardID": "BifröstCamp02Bedtime1",
-            "cardText": "Ready to LEAVE",
-            "addedText": "“Sorry friend, the Humboldt isn’t here yet, but it’s still early,” Quo says, anticipating your question.",
+            "cardText": "Done for the day",
+            "addedText": "You lay down on your bed, excited that this will be your last night here on Bifröst Island, and tomorrow you’ll be able to get on a ship that will take you to civilization, or whatever passes for it in this part of the world. You wonder if Quo will be by again for another game of Life or Death, when there is a knock on the door.",
             "hiddenIfReqsFail": true,
             "reqs": [
                 {"reqName": "time of day",
@@ -6516,48 +6444,210 @@
                 "reqHidden": true}
             ],
             "nextCardsID": [
-                "BifröstCamp01WorkDay0a"
+                "BifröstCamp02Bedtime1a"
             ]
         },
         {
             "cardID": "BifröstCamp02Bedtime1a",
-            "cardText": "You’re certain it’s coming today though?",
-            "addedText": "“Yes, yes, it should be here right on schedule, in the late afternoon. You may as well help us out with chores again. When it comes, it’ll be here loading and unloading for a while, staying overnight, so no worries about it leaving without you.”",
+            "cardText": "“Come in”",
+            "addedText": "“Come in,” you say, but it is not Quo who enters. A young convict who you vagely recognize is at your door. <br><br>“Sorry, Resolute Warder Quo just wanted me to pass along a message to you that he won’t be able to play Life or Death with you tonight. He has administrative work to do tonight, you know, paperwork.”",
             "nextCardsID": [
-                "BifröstCampLabour01",
-                "BifröstCampFishing01",
-                "BifröstCampCreches01",
-                "BifröstCampSalvage01",
-                "BifröstCampFlamingos01",
-                "BifröstCamp01NotReadyToWork"
+                "BifröstCamp02Bedtime1b"
             ]
         },
         {
-            "cardID": "BifröstCamp02Bedtime0",
-            "cardText": "REALLY READY TO LEAVE",
-            "addedText": "You look around the burn hill, but Quo is nowhere to be seen. “You, newbie,” Headmost Bailiff Claudia barks at you. “Which chore do you want today?”",
-            "hiddenIfReqsFail": true,
-            "reqs": [
-                {"reqName": "time of day",
-                "reqRule": "=",
-                "reqQuantity": 3,
-                "reqHidden": true},
-                {"reqName": "day until the Humboldt arrives",
-                "reqRule": "=",
-                "reqQuantity": 0,
-                "reqHidden": true}
-            ],
+            "cardID": "BifröstCamp02Bedtime1b",
+            "cardText": "Ask if it has to do with the Humboldt",
+            "addedText": "Does this have to do with the Humboldt?” you ask.<br><br>“No. Er, yes? Well, maybe? I don’t really know about these or those sorts of… matters.” the young convict stammers nervously.<br><br>“Is the Humboldt actually coming tomorrow?” you ask pointedly.<br><br>“Ummm… I really don’t know about schedules and such things…”<br><br>“Well when was the last time a ship actually came here?”<br><br>“Maybe a month ago? Maybe two? Or three? I lose track of the days, so I’m not sure. Maybe ask Quo tomorrow?”",
             "nextCardsID": [
-                "BifröstCamp01WorkDay-1a"
+                "BifröstCamp02Bedtime1c"
             ]
         },
+        {
+              "cardID": "BifröstCamp02Bedtime1c",
+              "cardText": "Go to sleep",
+              "addedText": "The young convict nervously slinks out of the room. You feel disconcerted that something here is not as it seems. You will certainly have some questions for Warder Quo tomorrow.",
+              "nextCardsID": [
+                  "BifröstCamp02Bedtime1d"
+              ]
+        },
+        {
+              "cardID": "BifröstCamp02Bedtime1d",
+              "cardText": "Dream",
+              "addedText": "You dream of opening your lockbox and finding your journal missing.<br><br>You dream of stepping out the door of your cabin on the Medusa only to find the ship deserted.<br><br>You dream of dozens of spiders walking on your body, trapped in a web.",
+              "nextCardsID": [
+                  "BifröstCamp01Morning1"
+              ]
+          },
+
+          {
+              "cardID": "BifröstCamp01Morning1",
+              "cardText": "Wake up",
+              "addedText": "You wake up to the pandemonium of some sort of tropical birds. Parrots perhaps. For the first time in a while, you’re starting to feel slightly at home here. You caution yourself not to get too comfortable though, your ticket out of this prison camp should be here today: the HMNS Humboldt.",
+              "setScore": [
+                  {"setName": "time of day",
+                  "setQuantity": 0}
+              ],
+              "nextCardsID": [
+                  "BifröstShore53b"
+              ]
+          },
+          {
+              "cardID": "BifröstShore53b",
+              "cardText": "Leave your quarters",
+              "addedText": "Time to go see if your ride is here.",
+              "setScore": [
+                  {"setName": "day until the Humboldt arrives",
+                  "setQuantity": 0}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp01RecYard"
+              ]
+          },
+
+          {
+              "cardID": "BifröstCamp02BurnHillday0",
+              "cardText": "Walk through the trees to the burn hill",
+              "locationName": "Bifröst Prison Camp, burn hill",
+              "locationDescription": "The small depression at the top of the hill houses a blazing fire into which the camp's waste is being disposed of.",
+              "addedText": "There seem to be fewer convicts hanging around the fire tonight. Certainly Quo is not here. From the brightly burning fire, there is a well-worn path back to the rest of the camp, and another leading off into the dark jungle with a sign labeled as ‘creches’.",
+              "reqs": [
+                  {"reqName": "day until the Humboldt arrives",
+                  "reqRule": "<",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp02Mess",
+                  "BifröstCamp02JungleCreches",
+                  "BifröstCamp02BurnHillday0a"
+              ]
+          },
+          {
+                "cardID": "BifröstCamp02BurnHillday0a",
+                "cardText": "Ask about the Humboldt",
+                "addedText": "You go up to a group of convicts who you recognize from yesterday’s work duty, and ask them if the Humboldt has arrived yet. They reply that they haven't seen any ship in months, and nothing so far today. Maybe you need to go check down by the pier.",
+                "nextCardsID": [
+                    "BifröstCamp02Mess",
+                    "BifröstCamp02JungleCreches"
+                ]
+          },
+          {
+                "cardID": "BifröstCamp02Wallday0",
+                "cardText": "Ask about the Humboldt",
+                "addedText": "You can see that the pier is as empty as it always is. A convict is loading boxes of preserved flamingo eggs into a warehouse by the main gate. You ask him if there is any news about the Humboldt.<br><br>“Oh, was it supposed to arrive today? It's been so long that I clear forgot.” He gazes down the stairs to the pier. “Still no boat.”",
+                "reqs": [
+                    {"reqName": "day until the Humboldt arrives",
+                    "reqRule": "<",
+                    "reqQuantity": 1,
+                    "reqHidden": true}
+                ],
+                "nextCardsID": [
+                    "BifröstCamp02RecYard",
+                    "BifröstCamp02Pier",
+                    "BifröstCamp05Warehouses"
+                ]
+          },
+          {
+                "cardID": "BifröstCamp02Senecaday0",
+                "cardText": "Ask Seneca about the Humboldt",
+                "addedText": "“The Humboldt? No, I’m down here nearly all day, so I’d know if there had been any ships.” Seneca says, gesturing at the open pier.",
+                "reqs": [
+                    {"reqName": "day until the Humboldt arrives",
+                    "reqRule": "<",
+                    "reqQuantity": 1,
+                    "reqHidden": true}
+                ],
+                "nextCardsID": [
+                    "BifröstCamp02Wall",
+                    "BifröstCamp02PierSeneca"
+                ]
+          },
+          {
+                "cardID": "BifröstCamp02Politoday0",
+                "cardText": "Ask Polito about the Humboldt",
+                "addedText": "“No, I’m sorry, I haven’t heard anything about any ships coming in. I’d say you could ask the Warder, but he hasn’t been in his office all day,” Nurse Polito says, gesturing at Quo’s locked office door.",
+                "reqs": [
+                    {"reqName": "day until the Humboldt arrives",
+                    "reqRule": "<",
+                    "reqQuantity": 1,
+                    "reqHidden": true}
+                ],
+                "nextCardsID": [
+                    "BifröstCamp02RecYard",
+                    "BifröstCamp05QuoOffice",
+                    "BifröstCamp02OfficePolito"
+                ]
+          },
+
+          {
+              "cardID": "BifröstCamp02Bedtime0",
+              "cardText": "Done for the day",
+              "addedText": "You get up from your cot and pace your room restlessly for a minute. You can't help but be apprehensive about the fact that you should currently be on a ship sailing to New Atlantis, not stuck here on this prison island. ",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "time of day",
+                  "reqRule": "=",
+                  "reqQuantity": 3,
+                  "reqHidden": true},
+                  {"reqName": "day until the Humboldt arrives",
+                  "reqRule": "=",
+                  "reqQuantity": 0,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp02Bedtime0a"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp02Bedtime0a",
+              "cardText": "A knock on the door?",
+              "addedText": "Was that a knock on your door? No, there is no one there. It must have been some sound from another one of the barracks. Warder Quo certainly seems to have made himself scarce lately. Come to think of it, you haven’t seen him anywhere in the camp today, not since breakfast this morning. You also haven’t seen any sign of the Humboldt either. For the first time, you seriously wonder just how long you may be stuck here in this prison camp. You really can't think of anything to do, other than to just get some sleep.",
+              "nextCardsID": [
+                  "BifröstCamp02Bedtime0b"
+              ]
+          },
+
+          {
+                "cardID": "BifröstCamp02Bedtime0b",
+                "cardText": "Dream",
+                "addedText": "You dream, strangely, of nothing.",
+                "nextCardsID": [
+                    "BifröstCamp01Morning0"
+                ]
+            },
+
+            {
+                "cardID": "BifröstCamp01Morning0",
+                "cardText": "Wake up",
+                "addedText": "You wake up before the sun. Your body must be anxious to leave this island already.",
+                "setScore": [
+                    {"setName": "time of day",
+                    "setQuantity": 0}
+                ],
+                "nextCardsID": [
+                    "BifröstShore53c"
+                ]
+            },
+            {
+                "cardID": "BifröstShore53c",
+                "cardText": "Leave your quarters",
+                "addedText": "There had better be a ship or some answers coming today.",
+                "setScore": [
+                    {"setName": "day until the Humboldt arrives",
+                    "setQuantity": -1}
+                ],
+                "nextCardsID": [
+                    "BifröstCamp01RecYard"
+                ]
+            },
 
 
 
 
         {
             "cardID": "BifröstCamp05QuoOffice",
-            "cardText": "Go to Quo's office",
+            "cardText": "Go to Quo’s office",
             "locationName": "Bifröst Prison Camp, office",
             "locationDescription": "Quo’s own office.",
             "reqs": [
@@ -6576,7 +6666,7 @@
             "locationName": "Bifröst Prison Camp, warehouses",
             "locationDescription": "A series of large wooden warehouses, built up against the prison wall.",
             "reqs": [
-                {"reqName": "Quo’s key",
+                {"reqName": "warehouse key",
                 "reqRule": "=",
                 "reqQuantity": 1}
             ],
