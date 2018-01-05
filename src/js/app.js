@@ -86,11 +86,11 @@ var player = {
 //beginning of Life or Death game
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
-    activeCard: 'BifröstShore52',
+//    activeCard: 'BifröstShore52',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
 //whenever
-//        activeCard: 'BifröstShore41Choose',
+        activeCard: 'BifröstShore41Choose',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -170,19 +170,43 @@ ScoreType.prototype.correctName = function(amount){
 ScoreType.prototype.getLevel = function(){
     var exp = this.experience,
     level = 1;
-    for (level = 1; level <= exp; level += 1) {
-        exp -= level;
+    //positive levels
+    if (exp > 0) {
+      for (level = 1; level <= exp; level += 1) {
+          exp -= level;
+      }
+      level -= 1;
     }
-    return (level - 1);
+    //negative levels
+    else {
+      exp *= -1;
+      for (level = 1; level <= exp; level += 1) {
+          exp -= level;
+      }
+      level -= 1;
+      level *= -1;
+    }
+    return (level);
 };
 
 ScoreType.prototype.getNextExp = function(){
     var exp = 0,
-    nextLevel = this.quantity,
+    nextLevel = 0,
     level = 1;
+    //process experience needed to reach next level for positive levels
     nextLevel = this.quantity + 2;
-    for (level = 1; level < (nextLevel); level += 1) {
-        exp += level;
+    if (nextLevel > 0) {
+      for (level = 1; level < (nextLevel); level += 1) {
+          exp += level;
+      }
+    }
+    //process experienced needed to reach next level for negative levels
+    else {
+      nextLevel = (-1 * this.quantity) + 2;
+      for (level = 1; level < (nextLevel); level += 1) {
+          exp += level;
+      }
+      exp *= -1;
     }
     return exp;
 };
@@ -200,12 +224,6 @@ ScoreType.prototype.increment = function(amount) {
         }
     }
 };
-
-/*ScoreType.prototype.checkIfDiceChanged = function(amount) {
-    if (this.getLevel() = 100 && amount >= (this.getNextExp()-this.quantity)) {
-        return 'You won an extra die.';
-    }
-};*/
 
 //decrement the quantity of a stat. All stats can go below zero except for PlayerStat and Collectible.
 ScoreType.prototype.decrement = function(amount) {
@@ -263,7 +281,8 @@ function PlayerStat(inputName, quantity, maxQuantity, minQuantity, leveled, icon
     //since dice can be rolled for PlayerStats, the number of dice is needed
     this.diceQuantity = 1;
     //PlayerStats can be leveled up
-    this.experience = this.getNextExp() - this.quantity;
+    //this.experience = this.getNextExp() - this.quantity;
+    this.experience = this.quantity;
     this.leveled = leveled;
     //set the threshold at 100 for earning new dice
     if ((this.inputName !== "Health") && (this.inputName !== "Mind") && (this.inputName !== "Action")) {
@@ -273,12 +292,13 @@ function PlayerStat(inputName, quantity, maxQuantity, minQuantity, leveled, icon
 PlayerStat.prototype = new ScoreType();
 
 //Reputations are ScoreType objects that indicate a faction's relationship with the player. They can go negative.
-function Reputation(inputName, quantity, maxQuantity, minQuantity, icon){
+function Reputation(inputName, quantity, hidden, maxQuantity, minQuantity, icon){
     ScoreType.call(this);
     this.inputName = inputName;
     this.singularName = inputName[0];
     this.pluralName = inputName[0];
     this.quantity = quantity;
+    this.hidden = hidden;
     this.maxQuantity = maxQuantity;
     this.minQuantity = 0;
     if (minQuantity !== 0) {
@@ -294,12 +314,13 @@ function Reputation(inputName, quantity, maxQuantity, minQuantity, icon){
 Reputation.prototype = new ScoreType();
 
 //Progresses are ScoreType objects that are a generic catch-all, indicating the progress the player has made in some aspect. The player is made aware of these. They start at zero, and generally simply increment when moving through a story.
-function Progress(inputName, quantity, maxQuantity, minQuantity, leveled, icon){
+function Progress(inputName, quantity, hidden, maxQuantity, minQuantity, leveled, icon){
     var level = 0;
     ScoreType.call(this);
     //by unless a pluralized name has been specified, assume that the pluralName to be singularName + s
     this.inputName = inputName;
     this.setNames();
+    this.hidden = hidden;
     this.quantity = 0;
     if (quantity >= 0) {
         this.quantity = quantity;
@@ -368,7 +389,7 @@ Collectible.prototype.updateInventory = function() {
     var inventoryList = '<b><u>Inventory</u></b><br>';
 
     stats.score.forEach(function (item) {
-        if (item.quantity > 0 && item instanceof Collectible) {
+        if (item.quantity != 0 && item instanceof Collectible) {
             inventoryList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
         }
     });
@@ -376,11 +397,11 @@ Collectible.prototype.updateInventory = function() {
 };
 
 //list the reputation DELETE? IS THIS NEEDED?
-Progress.prototype.updateReputation = function() {
-    var reputationList = '<b><u>Progress</u></b><br>';
+/*Progress.prototype.updateReputation = function() {
+    var reputationList = '<b><u>AProgress</u></b><br>';
 
     stats.score.forEach(function (item) {
-        if ((item.quantity > 0 ) && (item instanceof Progress || item instanceof Reputation)) {
+        if ((item.quantity != 0 ) && (item instanceof Progress || item instanceof Reputation)) {
             if (item.leveled) {
                 reputationList += `• LVL ${item.quantity} ${item.correctName(item.quantity)} (${item.experience} of ${item.nextExp}) <br>`;
             } else {
@@ -389,16 +410,19 @@ Progress.prototype.updateReputation = function() {
         }
     });
     reputationDisplay.innerHTML = reputationList;
-};
+};*/
 
 //list the progress
 Reputation.prototype.updateReputation = function() {
     var reputationList = '<b><u>Progress</u></b><br>';
 
     stats.score.forEach(function (item) {
-        if ((item.quantity > 0 ) && (item instanceof Progress || item instanceof Reputation)) {
+        if ((item.quantity != 0 ) && (item instanceof Progress || item instanceof Reputation)) {
             if (item.leveled) {
                 reputationList += `• LVL ${item.quantity} ${item.correctName(item.quantity)} (${item.experience} of ${item.nextExp}) <br>`;
+            } else if (item.hidden) {
+                //the following line is for troubleshooting to see the hidden quantities in italics
+                //reputationList += `<em>• ${item.quantity} ${item.correctName(item.quantity)}<br></em>`;
             } else {
                 reputationList += `• ${item.quantity} ${item.correctName(item.quantity)}<br>`;
             }
@@ -550,17 +574,18 @@ PlayerStat.prototype.rollCompare= function(opponent) {
 
 PlayerStat.prototype.applySkills = function() {
     var levelMatrix = this.getLevel(),
-    level = levelMatrix[0],
+    //level = levelMatrix[0],
+    level = this.getLevel(),
     bonus = 0,
     index = 0;
 
-    for (level; level >= 100; level -= 100) {
+    /*for (level; level >= 100; level -= 100) {
         bonus += 1;
-    }
+    }is this for multipe dice?*/
     if (Math.floor(Math.random() * 100) < level) {
         bonus += 1;
     }
-
+    //bonus = 1;
     if (bonus > 0) {
         return {'bonusAmount': bonus, 'bonusText': `<span class=styleBonus>Your ${this.singularName} skill increased your dice roll from ${player.activeDice[0]} to ${player.activeDice[0]+bonus}. </span>`};
     } else {
@@ -583,11 +608,11 @@ var stats = {
             me.score.push(myItem);
         });
         data.reputation.forEach(function (item) {
-            var myItem = new Reputation(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item.icon);
+            var myItem = new Reputation(item.inputName, item.quantity, item. hidden, item.maxQuantity, item.minQuantity, item.icon);
             me.score.push(myItem);
         });
         data.progress.forEach(function (item) {
-            var myItem = new Progress(item.inputName, item.quantity, item.maxQuantity, item.minQuantity, item. leveled, item.icon);
+            var myItem = new Progress(item.inputName, item.quantity, item.hidden, item.maxQuantity, item.minQuantity, item. leveled, item.icon);
             me.score.push(myItem);
         });
         data.hiddenProgress.forEach(function (item) {
@@ -622,6 +647,9 @@ PlayableCard.prototype.processRewards = function(totalArray){
     rewardIndex,
     numOfRewards,
     costArray = [],
+    setScoreArray = [],
+    //setIndex = 0,
+    //numOfSetRewards = this.setScore.length,
     costList = '',
     setList = '',
     processedName = '',
@@ -650,15 +678,23 @@ PlayableCard.prototype.processRewards = function(totalArray){
         //create an array of only the positive rewards
         if (processedQuantity > 0) {
             stats.getScore(processedName).increment(processedQuantity);
-            rewardArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
+            if (stats.getScore(processedName).hidden) {
+              //add nothing to the reward array if this reward is hidden
+            } else {
+              rewardArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
+            }
         //create an array of only the negative costs
         } else if (processedQuantity < 0) {
             stats.getScore(processedName).decrement(processedQuantity);
-            costArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
+            if (stats.getScore(processedName).hidden) {
+              //add nothing to the reward array if this reward is hidden
+            } else {
+              costArray.push({"rewardName": processedName, "rewardQuantity": processedQuantity});
+            }
         }
     }
 
-    //actually process the rewards
+    //process the text of the rewards
     numOfRewards = rewardArray.length;
     if (numOfRewards > 0) {
         rewardList = `<span class=styleReward>↑You gained `;
@@ -676,6 +712,13 @@ PlayableCard.prototype.processRewards = function(totalArray){
             if ((stats.getScore(rewardArray[rewardIndex].rewardName) instanceof PlayerStat) && (rewardArray[rewardIndex].rewardQuantity === 1)) {
                 rewardList += ' point';
             }
+            // finally, show the total amount you have in brackets
+            if (stats.getScore(rewardArray[rewardIndex].rewardName).leveled) {
+              rewardList += ` (LVL ${stats.getScore(rewardArray[rewardIndex].rewardName).quantity})`;
+            }
+            else {
+              rewardList += ` (${stats.getScore(rewardArray[rewardIndex].rewardName).quantity})`;
+            }            // add appropriate commas, spaces, and periods.
             if (rewardIndex < numOfRewards - 2) {
                 rewardList += ', ';
             }
@@ -692,7 +735,31 @@ PlayableCard.prototype.processRewards = function(totalArray){
     if (numOfRewards > 0) {
         costList = `<span class=styleCost>↓You lost `;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
+            // this section for losing material contains Math.abs, because it must say that it is losing the positive number
             costList += `${Math.abs(costArray[rewardIndex].rewardQuantity)} ${stats.getScore(costArray[rewardIndex].rewardName).correctName(Math.abs(costArray[rewardIndex].rewardQuantity))}`;
+            // add the word "reputation" in if you are gaining reputation
+            if (stats.getScore(costArray[rewardIndex].rewardName) instanceof Reputation) {
+                costList += ' reputation';
+            }
+            // add the word "points" in if you are gaining stat points
+            if ((stats.getScore(costArray[rewardIndex].rewardName) instanceof PlayerStat) && (costArray[rewardIndex].rewardQuantity !== 1)) {
+                costList += ' points';
+            }
+            // add the word "point" in if you are gaining one stat point
+            if ((stats.getScore(costArray[rewardIndex].rewardName) instanceof PlayerStat) && (costArray[rewardIndex].rewardQuantity === 1)) {
+                costList += ' point';
+            }
+            // finally, show the total amount you have in brackets
+            if (stats.getScore(costArray[rewardIndex].rewardName).leveled) {
+              //  show the level the player has
+              costList += ` (LVL ${stats.getScore(costArray[rewardIndex].rewardName).quantity})`;
+              //  show the total experience the player has (for testing purposes)
+              //  costList += ` (exp ${stats.getScore(costArray[rewardIndex].rewardName).experience})`;
+            }
+            else {
+              costList += ` (${stats.getScore(costArray[rewardIndex].rewardName).quantity})`;
+            }
+            // add appropriate commas, spaces, and periods.
             if (rewardIndex < numOfRewards - 2) {
                 costList += ', ';
             }
@@ -704,13 +771,27 @@ PlayableCard.prototype.processRewards = function(totalArray){
             }
         }
     }
-
+    //set scores to certain values
     if (this.setScore !== undefined) {
         numOfRewards = this.setScore.length;
-        setList = `<span class=styleChallenge>→You now have `;
         for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
             stats.getScore(this.setScore[rewardIndex].setName).quantity = this.setScore[rewardIndex].setQuantity;
-            setList += `${this.setScore[rewardIndex].setQuantity} ${stats.getScore(this.setScore[rewardIndex].setName).correctName(this.setScore[rewardIndex].setQuantity)}`;
+            //create an array to report the set rewards
+            if (stats.getScore(this.setScore[rewardIndex].setName).hidden) {
+              //add nothing to the reward array if this reward is hidden
+            } else {
+              setScoreArray.push({"setName": this.setScore[rewardIndex].setName, "setQuantity": this.setScore[rewardIndex].setQuantity});
+            }
+        }
+    }
+
+
+    //setScoreArray = this.setScore.filter(hidden === false);
+    numOfRewards = setScoreArray.length;
+    if (numOfRewards > 0) {
+        setList = `<span class=styleChallenge>→You now have `;
+        for (rewardIndex = 0; rewardIndex < numOfRewards; rewardIndex += 1) {
+            setList += `${setScoreArray[rewardIndex].setQuantity} ${stats.getScore(setScoreArray[rewardIndex].setName).correctName(setScoreArray[rewardIndex].setQuantity)}`;
             if (rewardIndex < numOfRewards - 2) {
                 setList += ', ';
             }

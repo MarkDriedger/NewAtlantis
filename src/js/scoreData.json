@@ -23,7 +23,7 @@
         {"inputName": ["Vulcans"], "quantity": 0, "icon": ""},
         {"inputName": ["Sirens"], "quantity": 0, "icon": ""},
         {"inputName": ["Amazons"], "quantity": 0, "icon": ""},
-        {"inputName": ["Vikings"], "quantity": 0, "icon": ""},
+        {"inputName": ["Vikings"], "quantity": 0, "minQuantity": -100, "icon": ""},
         {"inputName": ["Privateers"], "quantity": 0, "icon": ""},
         {"inputName": ["Animate"], "quantity": 0, "icon": ""},
         {"inputName": ["Pneumatic Institute"], "quantity": 0, "icon": ""},
@@ -37,7 +37,7 @@
 
     "progress": [
         {"inputName": ["minute until The Medusa sinks", "minutes until The Medusa sinks"]},
-        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "quantity": 3, "maxQuantity": 10, "minQuantity": -10},
+        {"inputName": ["day until the Humboldt arrives", "days until the Humboldt arrives"], "quantity": 0, "maxQuantity": 10, "minQuantity": -10},
         {"inputName": ["Voynich character"]},
         {"inputName": ["Voynich code", "Voynich code"]},
         {"inputName": ["nautical progress"], "leveled": true},
@@ -97,7 +97,7 @@
         {"inputName": ["candlenut"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},
         {"inputName": ["Quo’s key"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
         {"inputName": ["warehouse key"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""},
-        {"inputName": ["pug"], "quantity": 0, "marketValue": 1000, "buff": "", "icon": ""},
+        {"inputName": ["pug"], "quantity": 0, "minQuantity": -100, "marketValue": 1000, "buff": "", "icon": ""},
         {"inputName": ["passport"], "quantity": 0, "marketValue": 10, "buff": "", "icon": ""},
         {"inputName": ["travel jacket"], "quantity": 0, "marketValue": 20, "buff": "", "icon": ""},
         {"inputName": ["Royal shilling"], "quantity": 0, "marketValue": 1, "buff": "", "icon": ""},

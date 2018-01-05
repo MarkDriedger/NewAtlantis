@@ -84,6 +84,32 @@
             ]
         },
         {
+            "cardID": "MedusaUpTest",
+            "cardText": "Test levels going up",
+            "addedText": "Test level increments - for testing purposes only",
+            "rewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+              "MedusaUpTest",
+              "MedusaDownTest"
+            ]
+        },
+        {
+            "cardID": "MedusaDownTest",
+            "cardText": "Test levels going down",
+            "addedText": "Test level decrements - for testing purposes only",
+            "rewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+              "MedusaUpTest",
+              "MedusaDownTest"
+            ]
+        },
+        {
             "cardID": "Medusa2",
             "cardText": "Search for the Lantern",
             "challengeStat": "Eye",
@@ -95,15 +121,13 @@
                 "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
-                "Medusa3",
-                "Medusa4"
+                "Medusa2"
             ],
             "challengeSuccessText": "<em>[Now you have a 1% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 2 points of experience. When you reach 3 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
-                "Medusa3",
-                "Medusa4"
+               "Medusa2"
             ],
             "challengeFailText": "<em>[Oh well, at least now you have a 2% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 4 points of experience. When you reach 5 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
             "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops.",
@@ -125,7 +149,9 @@
                 {"rewardName": "passport",
                 "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
-                "rewardQuantity": -1}
+                "rewardQuantity": -1},
+                {"rewardName": "Vikings",
+                "rewardQuantity": 10}
             ],
             "nextCardsID": [
                 "Medusa5"
@@ -2110,7 +2136,7 @@
         {
             "cardID": "BifröstShore15",
             "cardText": "Too exhausted to flee",
-            "addedText": "“Pana, what do you make of this?” a man with an unpleasant face asks to another with an unpleasant grin.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“You a convict?” Pana asks as he grabs your hand roughly and flips it over to see your wrist. In doing so, you notice a number tattooed on his.<br><br>“Bailiff Claudia! He’s got food! And drink!” One of the others yells out, finding your lifeboat and supplies. You notice that all of them have numbers tattooed on their wrists. “There’s a lockbox here too. What’s in it?”<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Convict Pana. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
+            "addedText": "“Pana, what do you make of this?” a man with an unpleasant face asks to another with an unpleasant grin.<br><br>“Who are you, and how did you get here?” asks the woman who you heard speak before. Based on the wreckage around you and the haggard state of your clothing, you would think the second part of the answer should be obvious. You explain to them the basics that you know about the Medusa’s shipwreck.<br><br>“You a convict?” Pana asks as he grabs your hand roughly and flips it over to see your wrist. In doing so, you notice a number tattooed on his.<br><br>“Bailiff Claudia! He’s got food! And drink!” One of the others yells out, finding your lifeboat and supplies. You notice that all of them have numbers tattooed on their wrists. “There’s a lockbox here too. What’s in it?”<br><br>“You want Good Conduct?” Headmost Bailiff Claudia says cutting off Impulsive Gaoler Pana. “This could be an Snoop.”<br><br>“Well? Are you a Snoop?” Pana asks you.",
             "nextCardsID": [
                 "BifröstShore16"
             ]
@@ -3135,7 +3161,8 @@
             "cardText": "Inspect the spine of the box",
             "addedText": "Since the lockbox resembles a book, it has a spine. The same unfamiliar script appears here as on the rest of the box. The hinges must be on the inside of the lockbox, and there do not seem to be any visible weaknesses or seams that you can exploit to pry the box open. Besides, you certainly don’t want to force it open and risk damaging whatever is inside of it.",
             "nextCardsID": [
-                "BifröstShore43"
+                "BifröstShore43",
+                "Medusa2"
             ]
         },
         {
