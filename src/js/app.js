@@ -86,11 +86,11 @@ var player = {
 //beginning of Life or Death game
 //    activeCard: 'BifröstShore23',
 //end of Life or Death game
-//    activeCard: 'BifröstShore52',
+//    activeCard: 'BifröstShore41Choose',
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
 //whenever
-        activeCard: 'BifröstShore41Choose',
+        activeCard: 'BifröstInvasion44',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
@@ -579,9 +579,14 @@ PlayerStat.prototype.applySkills = function() {
     bonus = 0,
     index = 0;
 
+    //give a guaranteed +1 bonus for each 100 levels you have
     /*for (level; level >= 100; level -= 100) {
         bonus += 1;
-    }is this for multipe dice?*/
+    }*/
+    //remove each 100 levels. Calculate bonus on the rest
+    for (level; level >= 100; level -= 100) {
+    }
+
     if (Math.floor(Math.random() * 100) < level) {
         bonus += 1;
     }

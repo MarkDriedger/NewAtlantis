@@ -24,7 +24,7 @@
         {"inputName": ["Sirens"], "quantity": 0, "icon": ""},
         {"inputName": ["Amazons"], "quantity": 0, "icon": ""},
         {"inputName": ["Vikings"], "quantity": 0, "minQuantity": -100, "icon": ""},
-        {"inputName": ["Privateers"], "quantity": 0, "icon": ""},
+        {"inputName": ["Pirates"], "quantity": 0, "icon": ""},
         {"inputName": ["Animate"], "quantity": 0, "icon": ""},
         {"inputName": ["Pneumatic Institute"], "quantity": 0, "icon": ""},
         {"inputName": ["Librarians"], "quantity": 0, "icon": ""},
@@ -69,9 +69,9 @@
         {"inputName": ["Siobhan’s esteem", "Siobhan’s esteem"]},
         {"inputName": ["Bifröst chose eye", "Bifröst chose eye"], "hidden": true},
         {"inputName": ["Bifröst chose voice", "Bifröst chose voice"], "hidden": true},
-        {"inputName": ["Tordenvær inspected", "Tordenvær inspected"]},
-        {"inputName": ["Seneca talked", "Seneca talked"]},
-        {"inputName": ["Polito talked", "Polito talked"]},
+        {"inputName": ["Tordenvær inspected", "Tordenvær inspected"], "hidden": true},
+        {"inputName": ["Seneca talked", "Seneca talked"], "hidden": true},
+        {"inputName": ["Polito talked", "Polito talked"], "hidden": true},
         {"inputName": ["LOD Brawn Option", "LOD Brawn Option"], "hidden": true},
         {"inputName": ["LOD Hand Option", "LOD Hand Option"], "hidden": true},
         {"inputName": ["LOD Heart Option", "LOD Heart Option"], "hidden": true},
@@ -81,8 +81,8 @@
 
 
 
-
-        {"inputName": ["big stick", "big sticks"]}
+        {"inputName": ["Pirates choice", "Pirates choice"], "hidden": true},
+        {"inputName": ["Vikings choice", "Vikings choice"], "hidden": true}
     ],
 
     "hiddenProgress": [
@@ -149,6 +149,7 @@
         {"inputName": ["silver wedding band"], "quantity": 0, "marketValue": 250, "buff": "", "icon": ""},
         {"inputName": ["jade amulet"], "quantity": 0, "marketValue": 325, "buff": "", "icon": ""},
         {"inputName": ["shake snake fang"], "quantity": 0, "marketValue": 620, "buff": "", "icon": ""},
-        {"inputName": ["dragon claw"], "quantity": 0, "marketValue": 585, "buff": "", "icon": ""}
+        {"inputName": ["dragon claw"], "quantity": 0, "marketValue": 585, "buff": "", "icon": ""},
+        {"inputName": ["big stick", "big sticks"], "quantity": 0, "marketValue": 0, "buff": "", "icon": ""}
     ]
 }

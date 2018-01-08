@@ -40,36 +40,9 @@
             "cardID": "Medusa0",
             "locationName": "?",
             "locationDescription": "",
-            "addedText": "You dream of darkness<br><br>You dream of screams<br><br>You dream of the cold<br><br><br><br><em>[draw a card to play]</em>",
+            "addedText": "You dream of darkness.<br><br>You dream of screams.<br><br>You dream of the cold.<br><br><br><br><em>[draw a card below to play]</em>",
             "nextCardsID": [
-                "Medusa1",
-                "MedusaA"
-            ]
-        },
-        {
-            "cardID": "MedusaA",
-            "locationName": "A",
-            "locationDescription": "AA",
-            "cardText": "MedusaA",
-            "addedText": "MedusaA",
-            "reqs": [
-                {"reqName": "Royal shilling",
-                "reqRule": "=",
-                "reqQuantity": 10}
-            ],
-            "hiddenIfReqsFail": true,
-            "nextCardsID": [
-                "Medusa2"
-            ]
-        },
-        {
-            "cardID": "MedusaB",
-            "locationName": "B",
-            "locationDescription": "BB",
-            "cardText": "MedusaB",
-            "addedText": "MedusaB",
-            "nextCardsID": [
-                "Medusa2"
+                "Medusa1"
             ]
         },
         {
@@ -77,8 +50,8 @@
             "locationName": "The Medusa",
             "locationDescription": "Inside a choatic cabin",
             "backColor": "red",
-            "cardText": "Wake Up",
-            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. In addition, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, your mind hones in on one thought: there was a lantern near your bunk.<br><br><em>[You will only succeed if you you have a good Eye. You need to roll a 4 or higher to find the lantern]</em>",
+            "cardText": "Wake up",
+            "addedText": "You realize that you are not dreaming. You have woken up. The darkness, the cold, the screams - they are all real. Also, gravity doesn’t seem to be working properly.<br><br>You can’t see anything in the pitch black, and it is hard to get your bearings in this commotion. But amidst the shouting, one memory solidifies in your mind: you had a lantern nearby.<br><br><em>[Pick the card below “Roll: 4 Eye” means that you will roll a 6-sided die for your Eye skill. You need to roll a 4 or higher to succeed and find the lantern]</em>",
             "nextCardsID": [
                 "Medusa2"
             ]
@@ -111,7 +84,7 @@
         },
         {
             "cardID": "Medusa2",
-            "cardText": "Search for the Lantern",
+            "cardText": "Search for your lantern",
             "challengeStat": "Eye",
             "challengeRoll": 4,
             "challengeSuccessRewards": [
@@ -121,16 +94,18 @@
                 "rewardQuantity": 1}
             ],
             "challengeSuccessCards": [
-                "Medusa2"
+              "Medusa3",
+              "Medusa4"
             ],
-            "challengeSuccessText": "<em>[Now you have a 1% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 2 points of experience. When you reach 3 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
+            "challengeSuccessText": "<em>[Your Levels to the side show your skills. Your Eye skill is now level 1, meaning that next time you do an Eye challenge you have a 1% chance of receiving a bonus. Also your Eye gained 2 points of experience. When you reach 3 points, your bonus will increase even more.]</em><br><br>You grope around in the darkness in the general area where you think the lantern was. Your fingers make contact with the still-warm metal, and you open the shutter. Your light helps another passenger get their own lantern working too. Now you can shed some light on what’s going on. ",
             "challengeFailRewards": [
             ],
             "challengeFailCards": [
-               "Medusa2"
+              "Medusa3",
+              "Medusa4"
             ],
-            "challengeFailText": "<em>[Oh well, at least now you have a 2% better chance of receiving a bonus the next time you rely on your Eye. Also your Eye gained 4 points of experience. When you reach 5 points, your bonus will increase even more]</em><br><br>You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
-            "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most appropriate name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops.",
+            "challengeFailText": "<em>[Your Levels to the side show your skills. Your Eye skill is now level 2, meaning that next time you do an Eye challenge you have a 2% chance of receiving a bonus. Also your Eye gained 4 points of experience. When you reach 6 points, your bonus will increase even more.]</em><br><br>You grope around in the darkness in the general area where you think the lantern was, but you can’t seem to find anything there. Someone else finds their own lantern and illuminates the scene before you. ",
+            "addedText": "<br><br>You are in a wooden room, surrounded by other panicking souls wearing their nightclothes. The floor and all of the walls around you are crooked. Water is pooling up in the lowest corner of the room.<br><br>“We’re sinking! The ship is sinking!” Someone cries out. You remember now, you're halfway across the ocean on board the Medusa. Perhaps not the most auspicious name for a vessel?<br><br>“Remain calm!” orders a middle-aged man who thinks he has control over the situation. The deck and walls do not agree. They groan and tilt even more. Several of the bunks come unbolted from the floor, and slide across the room. <br><br>There is only one door to this cabin. It is free of water - for the time being. At this rate, the Medusa isn’t going to stay afloat much longer. You give it 10 minutes tops.<br><br>[Sometimes you have options for what to do. Since these cards are grey, neither of them requires a dice roll or skill]",
             "setScore": [
                 {"setName": "minute until The Medusa sinks",
                 "setQuantity": 10}
@@ -149,9 +124,7 @@
                 {"rewardName": "passport",
                 "rewardQuantity": 1},
                 {"rewardName": "minute until The Medusa sinks",
-                "rewardQuantity": -1},
-                {"rewardName": "Vikings",
-                "rewardQuantity": 10}
+                "rewardQuantity": -1}
             ],
             "nextCardsID": [
                 "Medusa5"
@@ -183,7 +156,7 @@
             "challengeSuccessCards": [
                 "Medusa6"
             ],
-            "challengeSuccessText": "You find a path over some toppled wardrobes that brings you directly to the door. Several others follow your route over the debris. ",
+            "challengeSuccessText": "You find a path over some toppled wardrobes that leads you to the door. Several others gratefully follow your route over the debris. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
@@ -223,8 +196,8 @@
             "challengeFailCards": [
                 "Medusa7"
             ],
-            "challengeFailText": "Your shoulder is displaced more easily than the door. You step back to take another run at it, when the door bursts open inward, propelled by a large man in a green nightgown. ",
-            "addedText": "“My paintings! My paintings! Where are my masterpieces!” the man in the green nightgown yells, shoving past people to get into the room."
+            "challengeFailText": "This door is stronger than your shoulder is. You step back to take another run at it, when the door bursts open inward, propelled by a large man in a green nightgown. ",
+            "addedText": "“My paintings! My paintings! Where are my masterpieces!” the man in the green nightgown shrieks, shoving past people to get into the room."
         },
         {
             "cardID": "Medusa7",
@@ -240,7 +213,7 @@
             "challengeSuccessCards": [
                 "Medusa8"
             ],
-            "challengeSuccessText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Seeing the water filling the room, he realizes that his safety is more important than his valuables. ",
+            "challengeSuccessText": "You tell the man that he’s as good as dead if he comes in to look for his paintings. Seeing the water filling the room, he realizes that his safety is more important than his valuables. ",
             "challengeFailRewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -5},
@@ -250,7 +223,7 @@
             "challengeFailCards": [
                 "Medusa8"
             ],
-            "challengeFailText": "You tell the man that he’s as good as dead if he goes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his possessions. ",
+            "challengeFailText": "You tell the man that he’s as good as dead if he comes in to look for his paintings. Your words have no effect, as he shoves you violently out of his way and runs to the back of the cabin, searching for his possessions. ",
             "addedText": "<br><br>There are two children here in this cabin - they really should be the first to escape."
         },
         {
@@ -285,7 +258,7 @@
                 "Medusa10"
             ],
             "challengeFailText": "Using your words as much your own body, you try to hold back the crowd so that the children can leave. But several men and women barge through, shoving you to the floor and pushing their way out first. ",
-            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying their best, but they cannot take command of the flailing rigging. A large wave hits the ship and a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see three lifeboats are already in the ocean, two of which are still upright. There is only one more lifeboat you can see, and it is very quickly filling up with people."
+            "addedText": "Following the children out the door, you rush along a short hall and up a ladder. The scene outside the ship’s cabin is one of pandemonium. The night sky is a churning mass of dark clouds. The Medusa is assaulted by wind and rain. The crewmembers who have remained at their posts are trying their best, but they cannot take command of the flailing rigging. A large wave hits the ship and a broken fragment of a mast sweeps into the mainsail, tearing through the fabric. Ominous creaking sounds are coming from somewhere - possibly everywhere.<br><br>You can see several lifeboats are already in the ocean, some of which are still upright. There is only one more lifeboat you can see, and it is very quickly filling up with people."
         },
         {
             "cardID": "Medusa9",
@@ -303,7 +276,7 @@
         {
             "cardID": "Medusa10",
             "cardText": "Hurry to the nearest lifeboat",
-            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their comrades and then they’ll be on the lifeboat too, leaving you and the other passengers behind. How will you attempt to get on the boat?",
+            "addedText": "There are three men in crew uniforms standing in front of the lifeboat. They brandish sabres. “The lifeboat is for children and the elderly only!” one yells. “The ship is still safe. It is leaning, but will remain afloat! All others must remain on board to wait for help to come!”<br><br>There are no children or elderly nearby, and many of the crewmembers already seem to be in lifeboats. You suspect that these three are just waiting for some of their comrades and then they’ll be on the lifeboat too, leaving you and the other passengers behind. How will you attempt to get on the boat?<br><br><em>[Sometimes you may choose which skill to use to solve a problem. Make this choice based up on your personality, but remember that some of your skills are higher than others. A skill that is LVL 2 has a 2% chance that your dice roll will be increased.]</em>",
             "rewards": [
                 {"rewardName": "minute until The Medusa sinks",
                 "rewardQuantity": -1}
@@ -517,7 +490,7 @@
             "cardID": "Medusa20",
             "cardText": "Uh oh",
             "locationDescription": "The cold ocean pulls downwards on your wet clothing as the wind blows saltwater into your eyes",
-            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it is a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like paper. The masts and sails are thrust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by a few lifeboats, some upright. But there is no Medusa to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
+            "addedText": "You see it coming. The previous waves were nothing compared to this one. It looms beyond the Medusa. Maybe it is a trick of your imagination, but it almost seems to stand still and gather its strength before lightning illuminates the sky and the wave begins its assault on the ship. The hull of the poor Medusa folds like paper. The masts and sails are thrust into the sea. The wave engulfs you next, and when you come up for air again, you are surrounded by wreckage. But there is no Medusa to be seen. The cold water is slowing you down physically and mentally. You remember little else for the next several hours.",
             "rewards": [
                 {"rewardName": "Health",
                 "rewardQuantity": -20},
@@ -537,8 +510,9 @@
         {
             "cardID": "Medusa21",
             "cardText": "???",
+            "locationName": "?",
             "locationDescription": "?",
-            "addedText": "You dream of darkness again<br><BR>You dream of screams again<br><br>You dream of the cold again.",
+            "addedText": "You dream of darkness again.<br><br>You dream of screams again.<br><br>You dream of the cold again.",
             "nextCardsID": [
                 "Medusa22"
             ]
@@ -2049,7 +2023,7 @@
                 "reqQuantity": 1},
                 {"reqName": "Mind",
                 "reqRule": ">",
-                "reqQuantity": 5}
+                "reqQuantity": 10}
             ],
             "challengeSuccessRewards": [
             ],
@@ -3161,8 +3135,7 @@
             "cardText": "Inspect the spine of the box",
             "addedText": "Since the lockbox resembles a book, it has a spine. The same unfamiliar script appears here as on the rest of the box. The hinges must be on the inside of the lockbox, and there do not seem to be any visible weaknesses or seams that you can exploit to pry the box open. Besides, you certainly don’t want to force it open and risk damaging whatever is inside of it.",
             "nextCardsID": [
-                "BifröstShore43",
-                "Medusa2"
+                "BifröstShore43"
             ]
         },
         {
@@ -5866,13 +5839,74 @@
             "cardText": "continue",
             "addedText": "A couple of Pirates grab you and hold you upright, since you cannot rise on your own with your hands and feet bound. <br><br> “Ringmaster Zardolo,” Skaarhart states, standing right in front of you. Her bloodied sword, still in her hand. “Quite possibly the wealthiest man in New Atlantis.” She locks eyes with you. “Are you really his cousin?”",
             "nextCardsID": [
-                "BifröstInvasion46"
+              "BifröstInvasion46a",
+              "BifröstInvasion46b",
+              "BifröstInvasion46c"
             ]
         },
         {
-            "cardID": "BifröstInvasion46",
-            "cardText": "continue",
-            "addedText": "texthere",
+            "cardID": "BifröstInvasion46a",
+            "cardText": "Try a small lie",
+            "challengeStat": "Voice",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 2},
+                {"rewardName": "Pirates",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion47"
+            ],
+            "challengeSuccessText": "You explain to her that you are a distant cousin, by marriage, but that you have fond memories of spending time with Zardolo as a child and that he will surely pay a tidy ransom to have you returned safely. <br><br>“You are a good liar,” Skaarhart says. “Not a great liar, but you’ve certainly got some guts, lying to us.” Don’t you think, Widow?” Skaarhart looks over your shoulder. You realize that the Widow Violet is nowhere in your field of view. ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1},
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion47"
+            ],
+            "challengeFailText": "You explain to her that you are a distant cousin, by marriage, but that you have fond memories of spending time with Zardolo as a child and that he will surely pay a tidy ransom to have you returned safely. <br><br>“You are a bad liar,” Skaarhart says. “But you’ve really got some guts, lying to us.” Don’t you think, Widow?” Skaarhart looks over your shoulder. You realize that the Widow Violet is nowhere in your field of view. "
+        },
+
+        {
+            "cardID": "BifröstInvasion46b",
+            "cardText": "Try a big lie",
+            "challengeStat": "Voice",
+            "challengeRoll": 5,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 4},
+                {"rewardName": "Pirates",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion47"
+            ],
+            "challengeSuccessText": "You explain to her that you are a very close cousin, that you and Zardolo have been fast friends ever since childhood, and that he will surely pay a king’s ransom to have you returned safely. <br><br>“You are a very ambitious liar,” Skaarhart says. “Not a great liar, but you’ve certainly got some guts, lying to us.” Don’t you think, Widow?” Skaarhart looks over your shoulder. You realize that the Widow Violet is nowhere in your field of view. ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -2},
+              {"rewardName": "Pirates",
+              "rewardQuantity": -2}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion47"
+            ],
+            "challengeFailText": "You explain to her that you are a very close cousin, that you and Zardolo have been fast friends ever since childhood, and that he will surely pay a king’s ransom to have you returned safely. <br><br>“You are a bad liar,” Skaarhart says. “But you’ve really got some guts, lying to us.” Don’t you think, Widow?” Skaarhart looks over your shoulder. You realize that the Widow Violet is nowhere in your field of view. "
+        },
+        {
+            "cardID": "BifröstInvasion46c",
+            "cardText": "Tell the truth",
+            "addedText": "You explain to her that you have never even heard of Zardolo or the Gladiators. <br><br>“Well, you certainly are more honest than Quo,” Skaarhart says. “But you probably should have lied. I see no reason to keep you alive. Don’t you think, Widow?” Skaarhart looks over your shoulder. You realize that the Widow Violet  is nowhere in your field of view.",
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 1},
+                {"rewardName": "Pirates",
+                "rewardQuantity": 1}
+            ],
             "nextCardsID": [
                 "BifröstInvasion47"
             ]
@@ -5880,27 +5914,877 @@
         {
             "cardID": "BifröstInvasion47",
             "cardText": "continue",
-            "addedText": "texthere",
+            "addedText": "You hear the sound of a metal blade behind you and feel pressure on your back. But this is followed by the sound of ropes being sliced, and your hands are soon free followed by your knees. Skaarhart immediately grabs your hands and turns both of your wrists out. “No transportation tattoo anyway. This isn’t one of Quo’s convicts.” <br><br> “This <em>cousin</em> may still be worth something,” Violet says, walking around in front of you. The two Pirates holding your arms let go. “Well, <em>cousin</em>, what value do you hold that would warrant us keeping you alive?”",
+            "nextCardsID": [
+              "BifröstInvasionPiratesHand",
+              "BifröstInvasionVikingBrawn",
+              "BifröstInvasionPiratesEye",
+              "BifröstInvasionVikingsEye"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand",
+            "cardText": "Impress the Pirates with Hand skill",
+            "cardStyle": "handCardStyle",
+            "addedText": "You address Violet, and tell her that at sea, it is useful to have someone nimble and quick. You propose a demonstration of your Hand skill. <br><br> “Interesting. Let’s see what happens if I pit you against my greenest recruit, Santiago.” A young Pirate nervously steps forward as Violet calls for her dartboard from the ship. Some Pirates and Vikings start placing wagers on who will win. The dartboard is set up on a tree, about fifty paces from the gate, and a line is drawn in the dirt. <br><br> “Beat Santiago if you have any worth to us at all. First throw is yours. No practicing,” Violet says. She removes a well-balanced blade from an elaborately carved wooden box and hands it to you.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand1"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand1",
+            "cardText": "Throw the knife",
+            "challengeStat": "Hand",
+            "challengeRoll": 2,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesHand2"
+            ],
+            "challengeSuccessText": "You aren’t that far from the target so you should be able to do this, but your hands are sweating with nervousness. You wind up, lunge forward, and release the blade. You feel relief as you hear the thud of the knife impacting the target and sticking in. It isn’t in the bullseye, but it isn’t too far off. ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesHand2"
+            ],
+            "challengeFailText": "You aren’t that far from the target so you should be able to do this, but your hands are sweating with nervousness. You wind up, lunge forward, and release the blade. You feel relief as you hear the thud of the knife impacting the target, but your stomach quickly turns, as the blade bounces back, and lands on the ground. The Pirate and Viking onlookers find this to be far funnier than you do. "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand2",
+            "cardText": "continue",
+            "addedText": "Rookie Recruit Santiago still gets a turn though. There certainly is room for him to do better than you. He looks almost as nervous as you feel. As he winds up, you suspect from his body posture that he does not have experience throwing knives. This is confirmed when he misses the target completely, sending the knife sailing through the air into the forest behind the target tree. The onlookers bellow out in deep laughter until Violet brings her face near to Santiago’s.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand3"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand3",
+            "cardText": "continue",
+            "addedText": "“That knife,” she says softly “is worth much more than you are. Find it, before my next blade finds you.” The Widow Violet addresses you now. “The first round is yours. For the second, you shall have a tougher challenge. First Mate?” A large, muscular Pirate steps forward from the crowd of onlookers, and it is only upon removal of her helmet that it is clear she is a woman. She has a vicious battle scar across her left cheek, indicating that she has had a little more experience with a blade than Santiago has.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand4"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand4",
+            "cardText": "continue",
+            "addedText": "“Remove the target,” Violet commands her Pirates. “For round two, you will aim for where the target <em>was</em>.” Sure enough, there is a mark left on the the tree from where the target had been attached. But this will be difficult; the tree is narrower than the target was, and if you don’t hit the tree dead on, the knife will surely ricochet off the tough bark.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand5"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand5",
+            "cardText": "continue",
+            "addedText": "“Claire, why don’t you go first this time?” She hands her first mate a sharp blade. As she makes her throw, Rookie Recruit Santiago bursts through the underbrush with the knife in his hand, barely avoiding being hit by Claire’s throw, which makes a deep thud as it penetrates the bark.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand6"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand6",
+            "cardText": "continue",
+            "addedText": "“Close, but not quite,” says the Widow Violet. <br><br> “I was distracted,” Vicious First Mate Claire says, glaring at Santiago as he hands Violet’s knife back to her. <br><br> “But, I don’t mind letting you here have a little advantage. Go ahead,” Violet gestures to you.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand7"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand7",
+            "cardText": "Throw the knife",
+            "challengeStat": "Hand",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesHand8"
+            ],
+            "challengeSuccessText": "You take your throw, aiming for the faint mark on the tree. Instead through, your knife sails through the air and hits Clair’s blade. Both knifes fall to the ground. The crowd murmurs. “I don’t know if that was Hand skill, or luck,” Violet says, “but let’s see how you do in round three.” Violet picks up a throwing knife. “This time, your opponent will be me.” ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesHand8"
+            ],
+            "challengeFailText": "You take your throw, aiming for the faint mark on the tree. Your knife seems to heading toward the target, but it cannot penetrate the tough bark of the tree, and it clatters down to the ground. “Promising,” Violet says, “but not quite successful. One win and one loss. Let’s see how you do in round three.” Violet picks up a throwing knife. “This time, your opponent will be me.” "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand8",
+            "cardText": "continue",
+            "addedText": "Violet goes to the tree and stands with her back against it. “Affix the target here,” she points above her, and a couple of Pirates attach the target so it is right above her head. “You do the same,” she says, walking back to the throwing line, “on that tree beside mine.” You are wary about her plans, but you follow regardless. You stand with your back to the tree Violet indicated, and the Pirates place the target to the tree right above your head. When they finish, you step forward. “No, no. Just stay right there. I’ll go first this time, if you don’t mind.” The Pirates grab your arms, holding you back against the tree.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand9"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand9",
+            "cardText": "continue",
+            "addedText": "“No, no,” Violet commands. “A restrained target is no fun.” The two pirates let go of your arms. “My new friend, if you want to demonstrate your Hand skill to me, you must remain completely still, free of any restraints. You must trust me. Any movement might distract me, and… I might miss.”",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand10"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand10",
+            "cardText": "Stand perfectly still",
+            "challengeStat": "Hand",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesHand11"
+            ],
+            "challengeSuccessText": "Your forehead is dripping with sweat and it isn’t even very hot today. You stare into the eyes of the Widow Violet, determined to remain completely calm. She tosses the blade deftly from one hand to another. Then the moment comes. She winds back, throws the blade. You stand firm, unflinching. It comes at you fast, but something seems off with her aim. You feel it impact your skull and you slump down to the ground. ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesHand11"
+            ],
+            "challengeFailText": "Your forehead is dripping with sweat and it isn’t even very hot today. You stare into the eyes of the Widow Violet, determined to remain completely calm. She tosses the blade deftly from one hand to another. Then the moment comes. She winds back, throws the blade. You try to stand firm, but you can’t help it. You flinch. The knife comes at you fast, but something seems off with her aim. You feel it impact your skull and you slump down to the ground. "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand11",
+            "cardText": "continue",
+            "addedText": "You aren’t dead. Or even hurt really, other than a slight throbbing sensation on your forehead. Both the Pirates and Vikings burst out in laughter, pointing at you. No, they’re pointing at something on the ground. A stick. A small stick about the size of a throwing knife. The stick that the Widow Violet just threw at your forehead. She walks forward to you and bends down to you, holding out her hand. You take it and she pulls you up to her and give you a deep kiss.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesHand12"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesHand12",
+            "cardText": "continue",
+            "addedText": "“You’re made of tough stuff,” the Widow Violet says, smiling as she pulls her lips away from yours. “Welcome to the Pirate crew of the Humboldt.” You put a hand to your throat, to check that it is intact, unlike the last recipient of the Widow’s kiss. <br><br> “Fine, the ransom’s yours, whatever you can get,” Skaarhart joins in amidst the laughing. “But I get an extra 5% of the Bifröst loot.”",
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 5},
+                {"rewardName": "Pirates choice",
+                "rewardQuantity": 1}
+            ],
             "nextCardsID": [
                 "BifröstInvasion48"
             ]
         },
+
+        {
+            "cardID": "BifröstInvasionVikingBrawn",
+            "cardText": "Impress the Vikings with Brawn skill",
+            "cardStyle": "brawnCardStyle",
+            "addedText": "You address Violet, and tell her that at sea, it is useful to have someone nimble and quick. You propose a demonstration of your Hand skill. <br><br> “Interesting. Let’s see what happens if I pit you against my greenest recruit, Santiago.” A young Pirate nervously steps forward as Violet calls for her dartboard from the ship. Some Pirates and Vikings start placing wagers on who will win. The dartboard is set up on a tree, about fifty paces from the gate, and a line is drawn in the dirt. <br><br> “Beat Santiago if you have any worth to us at all. First throw is yours. No practicing,” Violet says. She removes a well-balanced blade from an elaborately carved wooden box and hands it to you.",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn1"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn1",
+            "cardText": "Armwrestle Vainö",
+            "challengeStat": "Brawn",
+            "challengeRoll": 2,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingBrawn2"
+            ],
+            "challengeSuccessText": "You and Vainö place your hands together and rest your elbows on the bare metal of the cannon. Skaarhart says “Eitt, tvau, prjú”, which you assume is a countdown (or count-up?), and the competition begins. Vainö is young, but even a young Viking is tough. The armwrestling starts off fairly evenly matched. Your forearm wavers for a moment, but regain control and you begin to overpower your opponent. Vainö tries for one last push against you, but uses up all of his remaining strength, and his arm collapses. ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingBrawn2"
+            ],
+            "challengeFailText": "You and Vainö place your hands together and rest your elbows on the bare metal of the cannon. Skaarhart says “Eitt, tvau, prjú”, which you assume is a countdown (or count-up?), and the competition begins. Vainö is young, but even a young Viking is tough. The armwrestling starts off fairly evenly matched. His forearm wavers for a moment, but he regains control and your opponent begins to overpower you. You try for one last push against Vainö, but it uses up all of your remaining strength, and your arm collapses. "
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn2",
+            "cardText": "continue",
+            "addedText": "“That was all well and good,” Skaarhart interrupts the noisy onlookers after your match with Green Drang Vainö, “but that’s not how real Vikings wrestle. Let’s see how well you do with glima!” The Vikings erupt in cheers.",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn3"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn3",
+            "cardText": "continue",
+            "addedText": "While a couple of Vikings trace out a large circle on the ground, another explains to you that glima is wrestling. You must stay in the ring, you must only take clockwise steps, and the winner is the one who is left standing while the other is on the ground - this means you cannot merely tackle your opponent to the ground, or if you do, you must be able to stand back up and keep your opponent down. Vainö has removed his shirt, and reaches out to you to shake your hand.",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn4"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn4",
+            "cardText": "continue",
+            "addedText": "You address Violet, and tell her that at sea, it is useful to have someone nimble and quick. You propose a demonstration of your Hand skill. <br><br> “Interesting. Let’s see what happens if I pit you against my greenest recruit, Santiago.” A young Pirate nervously steps forward as Violet calls for her dartboard from the ship. Some Pirates and Vikings start placing wagers on who will win. The dartboard is set up on a tree, about fifty paces from the gate, and a line is drawn in the dirt. <br><br> “Beat Santiago if you have any worth to us at all. First throw is yours. No practicing,” Violet says. She removes a well-balanced blade from an elaborately carved wooden box and hands it to you.",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn5"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasionVikingBrawn5",
+            "cardText": "Wrestle Vainö",
+            "challengeStat": "Brawn",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingBrawn6"
+            ],
+            "challengeSuccessText": "Green Drang Vainö grabs your bicep and you both struggle for a while until the crowd’s cheers abruptly switch to jeers. Vainö lets go of you and steps back. From the reaction of the crowd, you understand that your opponent made a counter-clockwise move - it’s a good thing they called it out since in the heat of the moment, you had completely forgotten that was against the rules. When you two take your places again and continue, you take advantage of your opponent’s frazzled state, dodge a lunge he makes, and push him down when he is off balance. You stamp your foot down on his chest, just to make sure he stays horizontal. ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingBrawn6"
+            ],
+            "challengeFailText": "Green Drang Vainö’s grabs your bicep and you both struggle for a while until the crowd’s cheers abruptly switch to jeers. Vainö lets go of you and steps back. From the reaction of the crowd, you realize that you made a counter-clockwise move - in the heat of the moment, you had completely forgotten that was against the rules. When you two take your places again and continue, your opponent takes advantage of your lack of understanding of the rules. You lunge, but he dodges. It seems like Vainö might not be so green after all, since he takes advantage of you being off balance and shoves you down to the ground. "
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn6",
+            "cardText": "continue",
+            "addedText": "“That was just to help you get a hang of the rules, of course,” Dread Kommandør Skaarhart says, over the cheering crowd. “If you want to come with me and my crew, then you’ve got to glima wrestle against <em>me</em>.”",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn7"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn7",
+            "cardText": "continue",
+            "addedText": "Oh dear. This woman didn’t get the description of Dread for no reason. The same muscles that decapitated that convict just minutes ago, are now going to be turned against you. At least this time she doesn’t have a weapon.",
+            "nextCardsID": [
+                "BifröstInvasionVikingBrawn8"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasionVikingBrawn8",
+            "cardText": "Wrestle Skaarhart",
+            "challengeStat": "Brawn",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingBrawn9"
+            ],
+            "challengeSuccessText": "Skaarhart has removed much of her armor in order to more comfortably attempt to crust you. Undeniably, this will be a much harder fight than Vainö. She extends a hand to you, and you grasp her forearm, correctly this time, and the fight begins. Immediately she shoves you, hard. You are sent back and accidentally step outside the ring. That isn’t the end of the match though. You and Skaarhart let go of each other, and re-start in the middle of the ring. This time she uses a technique to pull you in even closer to her. You back away, and she lets go of one side of you. She uses your momentum to spin you around and knock you down. The wind is knocked out of you, but you are kneeling, so you stand back up, only to have your left shoulder pulled across the right side of your body in a way that threatens to disjoint your shoulder. You go down all the way this time. The crowd’s cheers declare a moderately easy victory for Skaarhart ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingBrawn9"
+            ],
+            "challengeFailText": "Skaarhart has removed much of her armor in order to more comfortably attempt to crust you. Undeniably, this will be a much harder fight than Vainö. She extends a hand to you, and you grasp her forearm, correctly this time, and the fight begins. Immediately she shoves you, hard. You are sent back and accidentally step outside the ring. That isn’t the end of the match though. You and Skaarhart let go of each other, and re-start in the middle of the ring. This time she uses a technique to pull you in even closer to her. You back away, and she lets go of one side of you. She uses your momentum to spin you around and knock you down flat on the ground. The wind is knocked out of you, and you are down for the second or so for the crowd to declare an extremely easy victory for Skaarhart. "
+        },
+        {
+            "cardID": "BifröstInvasionVikingBrawn9",
+            "cardText": "continue",
+            "addedText": "“My son is young,” Dread Kommandør Skaarhart says, extending down a hand to help you up, “just a Kinder. But he could probably beat you.” The crowd laughs, VIkings and Pirates alike. “But you accepted my challenge and gave it your best attempt. That is all Thor demands of us. Welcome to the crew of the Tordenvær.” <br><br> “Fine, the ransom’s yours, whatever you can get,” the Widow Violet says, smiling. “But I get an extra 5% of the Bifröst loot.”",
+            "rewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 5},
+                {"rewardName": "Vikings choice",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion48"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasionPiratesEye",
+            "cardText": "Impress the Pirates with Eye skill",
+            "cardStyle": "eyeCardStyle",
+            "addedText": "You address the Widow Violet, entreating to her that a keen intellect is crucial to surviving the wide array of perils faced at sea. Someone who can think outside of the box and solve problems is invaluable in an emergency. You propose a demonstration of your Eye skill through a game of Life or Death.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye1"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye1",
+            "cardText": "continue",
+            "addedText": "“You think you can beat me in Life or Death?” Violet says, laughing. “Are you trying to impress me or bore me? There’s no satisfaction in seeing a frigate blow apart a fishing boat. Let’s find you another fishing boat.” She looks around at her crew. “Come Santiago,” she says to a nervous young Pirate. “Test our new friend.”",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye2"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye2",
+            "cardText": "continue",
+            "addedText": "“I have a set you can borrow,” says Dread Kommader Skaarhart. <br><br> “I have my own set,” responds Violet, mildly insulted at the implication that she would need to ask a Viking for a favour. A few minutes later, a Pirate returns from the Humboldt with a red and black lacquer case. The beauty of this set is contrasted by the plainness of the tree stump it is set upon; and there is certainly no comparison between Warder Quo’s basic Life or Death set and the Widow Violet’s ornate one. Rookie Recruit Santiago looks nearly as worried as you are.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye3"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye3",
+            "cardText": "continue",
+            "addedText": "“You won’t play an entire game - no time for that. Narwhal and unicorn ivory, if you’re wondering,” Violet says, indicating the exquisite white and rose colored game pieces. You don’t even know which color is from the narwhal, and which is form the unicorn, but decide it is probably best not to ask. “Santiago will just set up three strategic situations, and we’ll see how you handle them. Go ahead Santiago, give him an easy one to start.” The young man starts to sweat, almost as if he is being evaluated more even than you are.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye4"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye4",
+            "cardText": "continue",
+            "addedText": "“Ah, the Peacemaker” Violet says, looking down at the board. “Can you determine the optimal strategy?” You look at the layout, and recognize it as one that Quo thankfully showed you when you played against him. This was the textbook case he gave you for Eye strategy. Now can you remember how to defend against it?",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye5"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye5",
+            "cardText": "Play against Santiago",
+            "challengeStat": "Eye",
+            "challengeRoll": 2,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesEye6"
+            ],
+            "challengeSuccessText": "You choose to defend with your Viking piece - ironic, given the situation. But it’s the right move, you have effectively blocked Santiago’s attack. “Well done,” Violet says. You feel some relief. Santiago is still sweating. “Let’s give you something challenging now.” ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesEye6"
+            ],
+            "challengeFailText": "You choose to defend with your Pirate piece, fitting, given the situation. But after you make the move, you see the grin widen on Santiago’s face. He reaches forward and takes your Pirate with his Cat, now leaving your Gladiator defenceless. “Well done Recruit,” she says to Santiago, who is noticeably sweating less now. “As for you, is there even any point in going on? You insist that you just need another chance to prove yourself. “Very well, but this time Santiago’s going to give you quite a challenging one.” "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye6",
+            "cardText": "continue",
+            "addedText": "Santiago chooses a new arrangement of the pieces on the board. “The Drowned,” is all that he says.<br><br> “Interesting choice, Recruit.” The eyes of dozens of Pirates and Vikings are upon you, but you know that the Widow Violet’s are the only that really matter. The pieces are arranged in a similar way to something that Quo taught you, but one piece is different: it’s a Mermaid, but when you played with Quo, that square was occupied by a Queen. This will affect your strategy.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye7"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye7",
+            "cardText": "Play against Santiago",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesEye8"
+            ],
+            "challengeSuccessText": "You try a strategy similar to the one you learned from Quo, but modified to take advantage of the Mermaid piece’s movement capabilities. In just two moves you take your opponent’s Librarian piece from the board. “I thought that would have stumped you,” Santiago says, somewhat dejectedly.” <br><br> “I thought you would have given your opponent something more challenging,” the Widow Violet says, disapprovingly. ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesEye8"
+            ],
+            "challengeFailText": "You try a strategy similar to the one you learned from Quo, but the Mermaid piece’s movement capabilities change things more than you took into account. Your opponent’s Librarian piece takes your Mermaid from the board, and threatens two others on the next move. “I knew that would stump you,” Santiago says, smirking.” <br><br> “You won that round Santiago, but I wanted you to give your opponent something actually challenging,” the Widow Violet says, disapprovingly. "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye8",
+            "cardText": "continue",
+            "addedText": "The blood drains from Rookie Recruit Santiago’s face as the Widow Violet leans down to his ear. But his eyebrows perk up. “Really? Okay.” He quickly begins rearranging the pieces on the board into a complex setup. “Careful, the value of this set is worth many times the value of your life,” Violet says gently to Santiago. “Three Cats and a Mistress,” he says proudly when he is complete. Damn. You have never seen this layout before. The name isn’t much help, as there is no piece called the Mistress, and there aren’t even three Cat pieces in an entire set of Life or Death. You’ll be hard pressed to solve this puzzle.",
+            "nextCardsID": [
+                "BifröstInvasionPiratesEye9"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye9",
+            "cardText": "Play against Santiago",
+            "challengeStat": "Eye",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionPiratesEye10"
+            ],
+            "challengeSuccessText": "You are just beginning to give up hope that success against the Three Cats and a Mistress strategy is even possible, when you come to the realization that success actually <em>is</em> impossible! Violet must have instructed Santiago to give you a scenario that there is actually no solution to. You announce your conclusion hesitantly. <br><br> “Very good, I thought you were going to try something futile with the Queen or one of the Wraiths there. I’m impressed that you saw through that.” ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionPiratesEye10"
+            ],
+            "challengeFailText": "You are beginning to think that perhaps success against the Three Cats and a Mistress strategy is impossible, when an idea comes to mind. You move your Queen forward, taking one of Santiago’s Wraiths. It is an extremely risky plan, but it does the most possible damage to his position. Santiago counterattacks well though, taking one piece per turn on the next four turns until it is clear that you have lost. <br><br> “I suspected you would try that,” Violet says. “The truth is, there was no strategy you could have used to win that scenario. I just wanted to see if you would realize that. You didn’t, but at least you took out as many of Santiago’s pieces as you could on your way down. "
+        },
+        {
+            "cardID": "BifröstInvasionPiratesEye10",
+            "cardText": "continue",
+            "addedText": "“I can tell that certainly you are not in my league, but I’m reassured that there was some basic level of intelligence demonstrated by your level of play,” the Widow Violet says, leaning in to you and placing her lips upon yours. She smiles as she pulls her lips away from yours. “Welcome to the Pirate crew of the Humboldt.” You put a hand to your throat, to check that it is intact, unlike the last recipient of the Widow’s kiss. <br><br> “Fine, the ransom’s yours, whatever you can get,” Skaarhart joins in amidst the laughing. “But I get an extra 5% of the Bifröst loot.”",
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 5},
+                {"rewardName": "Pirates choice",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion48"
+            ]
+        },
+
+        {
+            "cardID": "BifröstInvasionVikingsEye",
+            "cardText": "Impress the Vikings with Eye skill",
+            "cardStyle": "eyeCardStyle",
+            "addedText": "You address Dread Kommandør Skaarhart, entreating to her that a keen intellect is crucial to surviving the wide array of perils faced at sea. Someone who can think outside of the box and solve problems is invaluable in an emergency. You propose a demonstration of your Eye skill through a game of Life or Death.",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye1"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye1",
+            "cardText": "continue",
+            "addedText": "“You think your puny mind can beat me in Life or Death?” Skaarhart says, laughing. “Are you trying to impress me or bore me? There’s no satisfaction in seeing a shark fight a minnow. Let’s find you another minnow.” She looks around at her crew. “Come Drang,” she says to a nervous young Viking. “Vainö, test our new friend.”",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye2"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye2",
+            "cardText": "continue",
+            "addedText": "“I have a set you can borrow,” says the Widow Violet. <br><br> “I have my own set,” responds Skaarhart, mildly insulted at the implication that she would need to ask a Pirate for a favour. A few minutes later, a Viking returns from the Tordenvær with a hefty metal case inlaid with gold. The beauty of this set is contrasted by the plainness of the tree stump it is set upon; and there is certainly no comparison between Warder Quo’s basic Life or Death set and Skaarhart’s ornate one. Green Drang Vainö looks nearly as worried as you are.",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye3"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye3",
+            "cardText": "continue",
+            "addedText": "“You won’t play an entire game - no time for that. Gold and silver mixed with powdered diamonds, if you’re wondering,” Skaarhart says, indicating both colors of the glittering game pieces. “Vainö will just set up three strategic situations, and we’ll see how you handle them. Go ahead Vainö, give him an easy one to start.” The young man starts to sweat, almost as if he is being evaluated more even than you are.",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye4"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye4",
+            "cardText": "continue",
+            "addedText": "“Ah, the Bribed Diplomat strategy” Skaarhart says, looking down at the board. “Can you determine the optimal defence?” You look at the layout, and recognize it as one that Quo thankfully showed you when you played against him. This was the textbook case he gave you for Eye strategy. Now can you remember how to defend against it?",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye5"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye5",
+            "cardText": "Play against Vainö",
+            "challengeStat": "Eye",
+            "challengeRoll": 2,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingsEye6"
+            ],
+            "challengeSuccessText": "You choose to defend with your Pirate piece - ironic, given the situation. But it’s the right move, you have effectively blocked Vainö’s attack. “Well done,” Skaarhart says. You feel some relief. Vainö is still sweating. “Let’s give you something challenging now.” ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingsEye6"
+            ],
+            "challengeFailText": "You choose to defend with your Viking piece, fitting, given the situation. But after you make the move, you see the grin widen on Vainö’s face. He reaches forward and takes your Viking with his Dog, now leaving your Gladiator defenceless. “Well done Drang,” she says to Vainö, who is sweating slightly less now. “As for you, is there even any point in going on? You insist that you just need another chance to prove yourself. “Very well, but this time Vainö’s going to give you one that is actually a challenge.” "
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye6",
+            "cardText": "continue",
+            "addedText": "Vainö chooses a new arrangement of the pieces on the board. “The Rescue,” is all that he says.<br><br> “Interesting choice, Drang.” The eyes of dozens of Pirates and Vikings are upon you, but you know that Dread Kommandør Skaarhart’s are the only that really matter. The pieces are arranged in a similar way to something that Quo taught you, but one piece is different: it’s a Wraith, but when you played with Quo, that square was occupied by a Queen. This will affect your strategy.",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye7"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye7",
+            "cardText": "Play against Vainö",
+            "challengeStat": "Eye",
+            "challengeRoll": 4,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 3}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingsEye8"
+            ],
+            "challengeSuccessText": "You try a strategy similar to the one you learned from Quo, but modified to take advantage of the Wraith piece’s movement capabilities. In just two moves you take your opponent’s Librarian piece from the board. “I thought that would have stumped you,” Vainö says, somewhat dejectedly.” <br><br> “I thought you would have given your opponent something more challenging,” Dread Kommandør Skaarhart says, disapprovingly. ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingsEye8"
+            ],
+            "challengeFailText": "You try a strategy similar to the one you learned from Quo, but the Wraith piece’s movement capabilities change things more than you took into account. Your opponent’s Librarian piece takes your Wraith from the board, and threatens two others on the next move. “I knew that would stump you,” Vainö says, smirking.” <br><br> “You won that round Vainö, but I had been hoping you would give your opponent something that was actually challenging,” Skaarhart says, disapprovingly. "
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye8",
+            "cardText": "continue",
+            "addedText": "The blood drains from Green Drang Vainö’s face as Dread Kommandør Skaarhart pulls him up out of his seat. But his eyebrows perk up as she whispers something in his ear. “Really? Okay.” He sits back down and quickly begins rearranging the pieces on the board into a complex setup. “Careful, I could buy your life many times over with the value of this set,” Skaarhart says sternly to Vainö. “Three Wicked Librarians,” he says proudly when he is complete. Damn. You have never seen this layout before. The name isn’t much help, as there aren’t even three Librarian pieces in an entire set of Life or Death. You’ll be hard pressed to solve this puzzle.",
+            "nextCardsID": [
+                "BifröstInvasionVikingsEye9"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye9",
+            "cardText": "Play against Vainö",
+            "challengeStat": "Eye",
+            "challengeRoll": 6,
+            "challengeSuccessRewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 4}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasionVikingsEye10"
+            ],
+            "challengeSuccessText": "You are just beginning to give up hope that success against the Three Wicked Librarians strategy is possible, when you come to the realization that success actually <em>is</em> impossible! Skaarhart must have instructed Vainö to give you a scenario that there is actually no solution to. You announce your conclusion proudly. <br><br> “Very good, I thought you were going to try something futile with the Queen or one of the Mermaids there. I’m impressed that you saw through that.” ",
+            "challengeFailRewards": [
+              {"rewardName": "Vikings",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasionVikingsEye10"
+            ],
+            "challengeFailText": "You are beginning to think that perhaps success against the Three Wicked Librarians strategy is impossible, when an idea comes to mind. You move your Queen forward, taking one of Vainö’s Mermaids. It is an extremely risky plan, but it does the most possible damage to his position. Vainö counterattacks well though, taking one piece per turn on the next four turns until it is clear that you have lost. <br><br> “I suspected you would try that,” Skaarhart says. “The truth is, there was no strategy you could have used to win that scenario. I just wanted to see if you would realize that. You didn’t, but at least you took out as many of Vainö’s pieces as you could on your way down. "
+        },
+        {
+            "cardID": "BifröstInvasionVikingsEye10",
+            "cardText": "continue",
+            "addedText": "“I can tell that I certainly would still wipe the floor with you, but I’m reassured that there was some basic level of intelligence demonstrated by your level of play,” Dread Kommandør Skaarhart says, leaning in to you and holding out her arm to you. She grips your forearm and you return the Viking handshake. “Welcome to the Viking crew of the Tordenvær.” <br><br> “Fine, the ransom’s yours, whatever you can get,” the Widow Violet says, smiling. “But I get an extra 5% of the Bifröst loot.”",
+            "rewards": [
+                {"rewardName": "Vikings",
+                "rewardQuantity": 5},
+                {"rewardName": "Vikings choice",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+                "BifröstInvasion48"
+            ]
+        },
+
         {
             "cardID": "BifröstInvasion48",
             "cardText": "continue",
-            "addedText": "texthere",
+            "addedText": "“Speaking of the loot... Quo, we sorted the ransom! Now open up that gate!” Skaarhart yells out at the wall.",
             "nextCardsID": [
-                "BifröstInvasion49"
+              "BifröstInvasion49"
             ]
         },
         {
             "cardID": "BifröstInvasion49",
             "cardText": "continue",
-            "addedText": "texthere",
+            "addedText": "There is no response from Quo.",
             "nextCardsID": [
-                "BifröstInvasion50"
+              "BifröstInvasion50"
             ]
         },
+        {
+            "cardID": "BifröstInvasion50",
+            "cardText": "continue",
+            "addedText": "“Damn you, Quo! You open that gate, right now!” <br><br> There is still no response at all from behind the gate. In fact, there are no sounds heard at all from behind the gate.",
+            "nextCardsID": [
+              "BifröstInvasion51"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion51",
+            "cardText": "continue",
+            "addedText": "“Quo, you rasshøl.” Skaarhart curses. “Fire the cannon! Blast that gate to pieces!” She then turns to you, grabbing your shirt. “You. Were you in on this little distraction?” <br><br> “Bind those hands,” Violet says, looking at you suspiciously. <br><br> Your brief moment of popularity among your new crew is quickly over as your arms are tied behind your back. The Vikings aim their cannon at the large, solid gate door, and partially bury it in a small pit to absorb the force of the cannon’s recoil.",
+            "nextCardsID": [
+              "BifröstInvasion52"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion52",
+            "cardText": "Take cover",
+            "addedText": "Even hidden behind a large rocky outcropping, the cannon’s blast is nearly deafening. After the splinters and chips of rock have fallen from the air, you stand up to see the gaping hole that used to be the main gate. Vikings and Pirates advance cautiously with swords and pistols drawn.",
+            "nextCardsID": [
+              "BifröstInvasion53"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion53",
+            "cardText": "continue",
+            "addedText": "“They’ve buggered off,” a large Viking says as you all walk through the ruined gate into the prison camp’s central rec yard. “You, what are the prison camp’s emergency plans?” he says, pointing a crossbow at you. You insist that you’ve only been here a few days, and you have no idea what their plans are. <br><br>“Santiago, climb the guard tower. See if they’re waiting in ambush or if they’ve left,” the Widow Violet orders. “You go first,” she orders you, “in case the tower is trapped.”",
+            "nextCardsID": [
+              "BifröstInvasion54"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion54",
+            "cardText": "continue",
+            "addedText": "Santiago gestures to you and you start climbing the exposed ladder. In truth, the guard tower, is less of a tower, and more of a treehouse, featuring a small shack at the top of a very long ladder, affixed to the tallest tree on the northern edge of the rec yard. You have seen this guard station many times over the past few days, but you’ve never seen anyone use it, and with this rickety ladder, it doesn’t seem like the kind of place that anyone goes to regularly. Thankfully there are no booby traps set on the rungs of the ladder, as you climb up the tower. <br><br> “Bloody hell, I never liked heights.” Santiago says, climbing up right behind you.",
+            "nextCardsID": [
+              "BifröstInvasion55"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion55",
+            "cardText": "continue",
+            "addedText": "You reach the top of the ladder. A particular odour hits your nose when you push open a hatch in the floor of the tower. “What do you see?” Violet calls from down below. The small treehouse certainly looks abandoned. It provides cover from the elements, and excellent viewpoints of all the areas of the prison camp near the rec yard. But there certainly are no guards here, just a bunch of bird droppings. A few parrots are sitting nearby on the tree’s higher branches; one flies away when you climb into the guard station.",
+            "nextCardsID": [
+              "BifröstInvasion56a",
+              "BifröstInvasion56b"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion56a",
+            "cardText": "“Where are the guards?”",
+            "addedText": "“Where are the guards?” you ask Rookie Recruit Santiago once he has pulled himself up through the trap door. Santiago looks at you with his head cocked to the side. “Seriously? You don’t know about the guards? Your guards are right here.” Santiago steps over to one of the tree-house’s many wide open shutters. <br><br> “I’ve got a message for Her Majesty, the Queen,” Santiago yells at the parrots. He then loosens his belt, pulls his pants down and waves his ruder extremities at the birds. “Tell her she can kiss my New Atlantic arse!”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Guards mystery",
+                "reqRule": "<",
+                "reqQuantity": 3
+                }
+            ],
+            "nextCardsID": [
+              "BifröstInvasion57"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion56b",
+            "cardText": "“Where are the guards?”",
+            "addedText": "“Oh, I get it!”. “Wait, are the guards all birds?” you ask Rookie Recruit Santiago once he has pulled himself up through the trap door. Santiago looks at you with his head cocked to the side. “Seriously? No one ever told you about the guards? Well, it’s good you got it worked out on your own.” Santiago steps over to one of the tree-house’s many wide open shutters. <br><br> “I’ve got a message for Her Majesty, the Queen,” Santiago yells at the parrots. He then loosens his belt, pulls his pants down and waves his ruder extremities at the birds. “Tell her she can kiss my New Atlantic arse!”",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Guards mystery",
+                "reqRule": ">=",
+                "reqQuantity": 3
+                }
+            ],
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 1}
+            ],
+            "nextCardsID": [
+              "BifröstInvasion57"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion57",
+            "cardText": "continue",
+            "addedText": "The largest parrot sitting on the branch cocks its head to one side. “Her Majesty, the Queen does not respond to taunts, especially not from juveniles such as yourself,” the parrot says in perfect English. <br><br> “Well, Her Majesty, the Queen doesn’t have a lot of say in the matter, now does she?” Santiago responds “Not after we sunk half her bloody navy.”",
+            "nextCardsID": [
+              "BifröstInvasion58"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion58",
+            "cardText": "continue",
+            "addedText": "“It is true that in the region of the New Worlde, the fortunes of you Privateers are on the rise, while those of the Royal Empire have been set back,” continues the parrot. “But this is temporary. The Royal Empire has stood for centuries, and it is only a matter of time until they resume their place of prominence here and re-assert their control over New Atlantis.” <br><br> “Oh bugger off, you squawker,” Santiago replies, raising his crossbow toward the bird. He fires an ineffective shot that merely prompts the birds to scatter to different trees, still watching you though.",
+            "nextCardsID": [
+              "BifröstInvasion59"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion59",
+            "cardText": "continue",
+            "addedText": "“No convict ever told you that the whole time you were here, the squawkers were watching you?” Santiago asks you while searching around the guard station for anything useful. “People call them the Pandemonium - probably on account of the awful racket when you’ve got a bunch of them together. The Empire realized long ago that it was way too costly in manpower to have actual people guarding their inmates - much cheaper to pay a bunch of birds to watch prisoners instead. Probably the only time a human soldier would set foot on this island was if there were riots, but that barely ever happened. The Empire really had it down to a science when it came to figuring out the cheapest way of squeezing every penny from the colonies and camps in the New Worlde.”",
+            "nextCardsID": [
+              "BifröstInvasion60"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion60",
+            "cardText": "continue",
+            "addedText": "“Look, there those bastards go,” Santiago says, pointing off into the distance. In the trees far away, you can vaguely see figures walking away through the jungle, possibly off to the creches. It’s hard to tell, but one looked like it might be Quo. “Now help me search for anything useful.”",
+            "nextCardsID": [
+              "BifröstInvasion61"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion61",
+            "cardText": "Search the guard station",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 2}
+            ],
+            "challengeSuccessCards": [
+                "BifröstInvasion62"
+            ],
+            "challengeSuccessText": "You come across a desk with various papers in it: letters from The Empire, contracts for goods, and a ledger book. “Thanks for that, Santiago says, grabbing the book out of your hands. “Good. This confirms what what we learned from that escaped convict, Derby. The Empire has been so busy fighting us, they haven’t offloaded their goods from Bifröst. This place is a goldmine of valuable bird products. We want the feathers - they sell for high value at market. The Vikings on the other hand, want the eggs. Preserved flamingo eggs last for a long time at sea, and the Vikings like to go sell the eggs to island colonies who had bad crops. ",
+            "challengeFailRewards": [
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion62"
+            ],
+            "challengeFailText": "You find a great deal of bird food, but not much else. Santiago has more luck though. He comes across a desk with various papers in it: letters from The Empire, contracts for goods, and a ledger book. “Good. This confirms what what we learned from that escaped convict, Derby. The Empire has been so busy fighting us, they haven’t offloaded their goods from Bifröst. This place is a goldmine of valuable bird products. We want the feathers - they sell for high value at market. The Vikings on the other hand, want the eggs. Preserved flamingo eggs last for a long time at sea, and the Vikings like to go sell the eggs to island colonies who had bad crops. "
+        },
+        {
+            "cardID": "BifröstInvasion62",
+            "cardText": "continue",
+            "addedText": "“Recruit, you find anything yet, or did the featherheads kick your arse?” a voice yells down from below. <br><br> “I got a full list of all the goods there in those warehouses!” Santiago yells back. <br><br> “I don’t suppose you found the warehouse keys up there, did you? Or do we have to smash every door?”",
+            "nextCardsID": [
+              "BifröstInvasion63"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion63",
+            "cardText": "Search for keys",
+            "challengeStat": "Eye",
+            "challengeRoll": 3,
+            "challengeSuccessRewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 3},
+                {"rewardName": "warehouse key",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s key",
+                "rewardQuantity": 1}
+            ],
+            "challengeSuccessCards": [
+              "BifröstInvasion64a",
+              "BifröstInvasion64b"
+            ],
+            "challengeSuccessText": "While you search, Santiago reads through the ledger. Hidden behind some bird bedding, you find a ring of keys, numbered, matching the numbers of the warehouses. “Excellent, little cousin. You might not be so useless after all. Say, I don’t suppose you know which goods are in which warehouse, do you?” ",
+            "challengeFailRewards": [
+              {"rewardName": "Pirates",
+              "rewardQuantity": -1}
+            ],
+            "challengeFailCards": [
+                "BifröstInvasion63"
+            ],
+            "challengeFailText": "You search, but other than bird beds, feather grooming tools, and water bowls, you can’t find any keys. "
+        },
+        {
+            "cardID": "BifröstInvasion64a",
+            "cardText": "Tell Santiago about Warehouse #2",
+            "addedText": "“You’re interested in feathers right?” You continue explaining to Santiago that warehouses #3, #4, and #5 are full of feathers, whereas the Vikings would be interested in warehouses #1 & #6, which are full of preserved eggs. <br><br> “What about warehouse #2?” he asks you. <br><br> “I suspect that one, fittingly enough, is where they store all the guano,” you reply. <br><br> “Guano... For explosives… Hmmm, follow me,” Rookie Recruit Santiago says as he takes the keys from you, hops down through the trap door, and starts climbing back down the ladder.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Warehouse #2 mystery",
+                "reqRule": ">=",
+                "reqQuantity": 3
+                }
+            ],
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 2},
+                {"rewardName": "warehouse key",
+                "rewardQuantity": -1},
+                {"rewardName": "Quo’s key",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+              "BifröstInvasion65"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion64b",
+            "cardText": "Tell Santiago about Warehouse #2",
+            "addedText": "“You’re interested in feathers right?” You continue explaining to Santiago that warehouses #3, #4, and #5 are full of feathers, whereas the Vikings would be interested in warehouses #1 & #6, which are full of preserved eggs. <br><br> “What about warehouse #2?” he asks you. <br><br> “I don’t know,” you reply. <br><br> “It says here in this ledger that there’s over two thousand pounds of guano stored someplace here. Can you think of anywhere else it could possibly be stored?” <br><br> “No, I can’t think of anywhere else other than warehouse #2.” <br><br>“Guano... For explosives… Hmmm, follow me,” Rookie Recruit Santiago says as he takes the keys from you, hops down through the trap door, and starts climbing back down the ladder.",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Warehouse #2 mystery",
+                "reqRule": "<",
+                "reqQuantity": 3
+                }
+            ],
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 1},
+                {"rewardName": "warehouse key",
+                "rewardQuantity": -1},
+                {"rewardName": "Quo’s key",
+                "rewardQuantity": -1}
+            ],
+            "nextCardsID": [
+              "BifröstInvasion65"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion65",
+            "cardText": "continue",
+            "addedText": "You feel relief to back on firm ground. You see Santiago talking speaking in hushed tones to Widow Violet. <br><br> “Well, did you figure out where the eggs are?” Dread Kommandør Skaarhart asks, not to you, but to the Widow Violet, and Rookie Recruit Santiago. <br><br> “Kommandør, here you go,” Violet says, handing a key to the Viking “The eggs are all stored in warehouse #2.” Santiago gives you a glare, indicating that you should stay silent, and not correct the Widow.",
+            "nextCardsID": [
+              "BifröstInvasion66"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion66",
+            "cardText": "Stay silent",
+            "addedText": "“What, only one warehouse of eggs?” Skaarhart asks “Is the rest all feathers? That isn’t a fair division of the loot.” <br><br> “Have no fear, you determine how many eggs there are, I’ll take an equal value of feathers, and we’ll split the remainder of the feathers accordingly. We need to know how many eggs are actually here though.”",
+            "nextCardsID": [
+              "BifröstInvasion67"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion67",
+            "cardText": "continue",
+            "addedText": "Skaarhart swipes the key from Violet’s hand, clearly not happy at the prospect of taking home a cargo of mostly feathers when she wanted a cargo of only eggs. <br><br> “Crew, follow me,” Skaarhart barks at her Vikings as they march off to warehouse #2. Once their backs are turned, Violet shares whispers with a few other Pirates. <br><br> “Our feathers are in warehouse #1!” she says loudly. She gives her crew a silent nod and pulls a small metal cylinder out of her pocket. You notice other Pirates doing the same. Something that you do not understand is going on here, but it seems to have nothing to do with you, so you hang back from the group a little bit. One Pirate pulls out a crossbow subtly. Up ahead, the Vikings have successfully unlocked warehouse #2 and are all filing inside in search of eggs. ",
+            "nextCardsID": [
+              "BifröstInvasion68"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion68",
+            "cardText": "continue",
+            "addedText": "“Fire now,” the Widow Violet says urgently, as half a dozen of her Privateers ready small crossbows and fire at the open door of warehouse #2. As the bolts fly through the air, they give off a shower of sparks, and you realize that these are specially designed incendiaries.",
+            "nextCardsID": [
+              "BifröstInvasion69"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion69",
+            "cardText": "continue",
+            "addedText": "Several sparking bolts zip into the open doorway of the warehouse and the sparks quickly ignite an open barrel of processed, highly combustible guano. Immediately the area around the warehouse’s only door is engulfed in flame. The Pirates fire more incendiary crossbow bolts into the doorway, and more barrels catch ablaze. The trapped Vikings have no chance. Within less than 30 seconds a large store of the guano must have been ignited. The entire building shakes and the roof burst upwards as blast of flame sends it flying off into the rec yard.",
+            "nextCardsID": [
+              "BifröstInvasion70"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion70",
+            "cardText": "continue",
+            "addedText": "“Signal the Humboldt!” orders Violet. A Pirate pulls out a brass horn and blows a pattern of 4 blasts of differing lengths, repeating it several times. The Pirates all run back to the wall, but by the time that they reach the gate, they hear a horn pattern coming back to them from the ship. “Excellent, our skeleton crew has taken out the few Vikings who remained on their ship.”",
+            "nextCardsID": [
+              "BifröstInvasion71"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion70",
+            "cardText": "continue",
+            "addedText": "The Widow Violet looks to you. “I owe you some thanks. It appears that all the eggs, all the feathers, and the Tordenvær itself are now mine. Maybe it’s just the high of victory, but I’d like to cut you in for a full share of our booty from this venture.” You thank her profusely. “My Privateers, we have accomplished a great coup today! And thanks to the help of our <em> cousin.”",
+            "nextCardsID": [
+              "BifröstInvasion71"
+            ]
+        },
+        {
+            "cardID": "BifröstInvasion71",
+            "cardText": "continue",
+            "addedText": "test",
+            "nextCardsID": [
+              "BifröstInvasion71"
+            ]
+        },
+
+
+
+
+
 
 
 
@@ -6540,10 +7424,11 @@
               "locationName": "Bifröst Prison Camp, burn hill",
               "locationDescription": "The small depression at the top of the hill houses a blazing fire into which the camp's waste is being disposed of.",
               "addedText": "There seem to be fewer convicts hanging around the fire tonight. Certainly Quo is not here. From the brightly burning fire, there is a well-worn path back to the rest of the camp, and another leading off into the dark jungle with a sign labeled as ‘creches’.",
+              "hiddenIfReqsFail": true,
               "reqs": [
                   {"reqName": "day until the Humboldt arrives",
-                  "reqRule": "<",
-                  "reqQuantity": 1,
+                  "reqRule": "=",
+                  "reqQuantity": 0,
                   "reqHidden": true}
               ],
               "nextCardsID": [
