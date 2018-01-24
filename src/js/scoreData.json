@@ -77,6 +77,9 @@
         {"inputName": ["LOD Heart Option", "LOD Heart Option"], "hidden": true},
         {"inputName": ["LOD Eye Option", "LOD Eye Option"], "hidden": true},
         {"inputName": ["LOD Voice Option", "LOD Voice Option"], "hidden": true},
+        {"inputName": ["guard on duty", "guards on duty"], "hidden": true},
+        {"inputName": ["Quo cabinet opened", "Quo cabinet opened"], "hidden": true},
+        {"inputName": ["impossible", "impossible"], "hidden": true},
 
 
 

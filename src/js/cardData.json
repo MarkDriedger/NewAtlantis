@@ -3484,7 +3484,7 @@
             "nextCardsID": [
                 "BifröstCamp01RecYard",
                 "BifröstCamp01Pier",
-                "BifröstCamp05Warehouses"
+                "BifröstCamp02warehouses"
             ]
         },
         {
@@ -7037,9 +7037,17 @@
         {
             "cardID": "BifröstInvasion72",
             "cardText": "continue",
-            "addedText": "test",
+            "addedText": "You wander away from the group slowly, but they do not seem to care. You think about how you are responsible, at least partly, for all of the death that occured today. Did you make the right choice? You survived. The inmates survived. Probably. Bifröst certainly looks different though with no inmates relaxing after a hard day’s work, and with smoke still emmanating out of the warehouse. You find yourself walking back to the rec yard.",
+            "rewards": [
+                {"rewardName": "Pirates",
+                "rewardQuantity": 5},
+                {"rewardName": "Pirates choice",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo’s key",
+                "rewardQuantity": 1}
+            ],
             "nextCardsID": [
-              "BifröstInvasion73"
+              "BifröstCamp05RecYard"
             ]
         },
 
@@ -7257,7 +7265,7 @@
                 "BifröstCamp02Wallday0",
                 "BifröstCamp02RecYard",
                 "BifröstCamp02Pier",
-                "BifröstCamp05Warehouses"
+                "BifröstCamp02warehouses"
             ]
         },
         {
@@ -7721,7 +7729,7 @@
                 "nextCardsID": [
                     "BifröstCamp02RecYard",
                     "BifröstCamp02Pier",
-                    "BifröstCamp05Warehouses"
+                    "BifröstCamp02warehouses"
                 ]
           },
           {
@@ -7785,38 +7793,324 @@
           },
 
           {
-                "cardID": "BifröstCamp02Bedtime0b",
-                "cardText": "Dream",
-                "addedText": "You dream, strangely, of nothing.",
-                "nextCardsID": [
-                    "BifröstCamp01Morning0"
-                ]
-            },
+              "cardID": "BifröstCamp02Bedtime0b",
+              "cardText": "Dream",
+              "addedText": "You dream, strangely, of nothing.",
+              "nextCardsID": [
+                  "BifröstCamp01Morning0"
+              ]
+          },
 
-            {
-                "cardID": "BifröstCamp01Morning0",
-                "cardText": "Wake up",
-                "addedText": "You wake up before the sun. Your body must be anxious to leave this island already.",
-                "setScore": [
-                    {"setName": "time of day",
-                    "setQuantity": 0}
-                ],
+          {
+              "cardID": "BifröstCamp01Morning0",
+              "cardText": "Wake up",
+              "addedText": "You wake up before the sun. Your body must be anxious to leave this island already.",
+              "setScore": [
+                  {"setName": "time of day",
+                  "setQuantity": 0}
+              ],
+              "nextCardsID": [
+                  "BifröstShore53c"
+              ]
+          },
+          {
+              "cardID": "BifröstShore53c",
+              "cardText": "Leave your quarters",
+              "addedText": "There had better be a ship or some answers coming today.",
+              "setScore": [
+                  {"setName": "day until the Humboldt arrives",
+                  "setQuantity": -1}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp01RecYard"
+              ]
+          },
+
+
+
+
+          {
+              "cardID": "BifröstCamp05RecYard",
+              "cardText": "Enter the central rec yard",
+              "locationName": "Bifröst Prison Camp, rec yard",
+              "locationDescription": "The centre of the Bifröst prison camp is dominated by a moderately sized recreational yard.",
+              "addedText": "The rec area is usually lively at this time of day, but it is largely abandoned since the inmates fled.",
+              "nextCardsID": [
+                  "BifröstCamp05Quarters",
+                  "BifröstCamp05Office",
+                  "BifröstCamp05WallVikings",
+                  "BifröstCamp05WallPirates",
+                  "BifröstCamp05MessVikings",
+                  "BifröstCamp05MessPirates"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Quarters",
+              "cardText": "Return to your quarters",
+              "locationName": "Bifröst Prison Camp, your quarters",
+              "locationDescription": "A plain, but comfortable bunkhouse which could house four inmates, but you have it all to yourself. ",
+              "firstText": "It has been a trying day, and one that will long stay with you. It isn’t easy to forget that you had a hand in the death of dozens of men and women - not innocents, mind you, but still. ",
+              "addedText": "You recline on your prison bunk. One more night, and you will finally be off this rock.",
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05Bedtime"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Office",
+              "cardText": "Go to the camp office",
+              "locationName": "Bifröst Prison Camp, office",
+              "locationDescription": "There are a few tables, chairs, and cabinets here, as you would expect in an office, but the majority of the room has been repurposed into a makeshift hospital.",
+              "addedText": "The office looks like a hurricane went through. In their rush to flee the camp, the inmates must have taken every medical supply that they could carry - every patient too. The door to Quo's office still appears to be intact.",
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05QuoOffice"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05WallPirates",
+              "cardText": "Go to the wall",
+              "locationName": "Bifröst Prison Camp, wall",
+              "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
+              "firstText": "The wall looks quite different from when you were last here. While it is mostly still intact, the gate has been reduced to rubble, and warehuose #2 is nothing but a smouldering pile of ash. ",
+              "addedText": "Pirates are carting away the valuables from the intact warehouses through the large open hole in the wall, down to the Humboldt and Tordenvær docked at the pier.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Pirates choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05PierPirates",
+                  "BifröstCamp05WarehousesPirates"
+              ]
+          },
+
+          {
+              "cardID": "BifröstCamp05WallVikings",
+              "cardText": "Go to the wall",
+              "locationName": "Bifröst Prison Camp, wall",
+              "locationDescription": "A stone wall barricades just one side of the prison camp. Through the gate, stone steps lead down to the beach and an ocean pier",
+              "firstText": "The wall looks quite different from when you were last here. While it is mostly still intact, the gate has been reduced to rubble, and warehuose #2 is nothing but a smouldering pile of ash. ",
+              "addedText": "Vikings are carting away the valuables from the intact warehouses through the large open hole in the wall, down to the Humboldt and Tordenvær docked at the pier.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Vikings choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05PierVikings",
+                  "BifröstCamp05WarehousesVikings"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05PierPirates",
+              "cardText": "Go down to the pier",
+              "locationName": "Bifröst Prison Camp, pier",
+              "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
+              "firstText": "The Humboldt and Tordenvær loom large over the Bifröst pier. ",
+              "addedText": "Pirates are carrying crates of valuable feathers and eggs from the warehouses down to the pier. There is so much loot that their own ship is full, and they are now loading up the Tordenvær too.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Pirates choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                "BifröstCamp05WallPirates"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05PierVikings",
+              "cardText": "Go down to the pier",
+              "locationName": "Bifröst Prison Camp, pier",
+              "locationDescription": "A lone stone pier juts out into the ocean, serving as the only entrance or exit to Bifröst Island",
+              "firstText": "The Humboldt and Tordenvær loom large over the Bifröst pier. ",
+              "addedText": "Vikings are carrying crates of valuable feathers and eggs from the warehouses down to the pier. There is so much loot that their own ship is full, and they are now loading up the Humboldt too.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Vikings choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                "BifröstCamp05WallVikings"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05MessPirates",
+              "cardText": "Go to the mess",
+              "locationName": "Bifröst Prison Camp, mess",
+              "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
+              "firstText": "The path leads through the trees form here to the Burn Hill. This must have been the route taken by the inmates when they ran away. ",
+              "addedText": "The mess is deserted. Dishes lying on the ground show how quickly the inmates fled into the jungle. A pair of Pirates stand guarding the path to the Burn Hill, on guard for any signs of the inmates returning to camp.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Pirates choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05BurnHill"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05MessVikings",
+              "cardText": "Go to the mess",
+              "locationName": "Bifröst Prison Camp, mess",
+              "locationDescription": "Several rows of tables provide space for the hundred or so inmates here on Bifröst Island to eat.",
+              "firstText": "The path leads through the trees form here to the Burn Hill. This must have been the route taken by the inmates when they ran away. ",
+              "addedText": "The mess is deserted. Dishes lying on the ground show how quickly the inmates fled into the jungle. A pair of Vikings stand guarding the path to the Burn Hill, on guard for any signs of the inmates returning to camp.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Vikings choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05RecYard",
+                  "BifröstCamp05BurnHill"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05BurnHill",
+              "cardText": "Walk through the trees to the burn hill",
+              "locationName": "Bifröst Prison Camp, burn hill",
+              "locationDescription": "The small depression at the top of the hill houses a blazing fire into which the camp's waste is being disposed of.",
+              "addedText": "You should not be able to be here.",
+              "reqs": [
+                  {"reqName": "impossible",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05Mess"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05WarehousesPirates",
+              "cardText": "Enter the warehouses",
+              "locationName": "Bifröst Prison Camp, warehouses",
+              "locationDescription": "A series of large wooden warehouses, built up against the prison wall.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Pirates choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "firstText": "Little remains of warehouse #2. Processed flamingo guano must burn well. ",
+              "addedText": "On the remaining warehouse walls, the Pirates have scrawled defamatory slurs about Vikings, the Bifröst inmates, the Pandemonium, and one particularly graphic depiction of Her Royal Majesty. Now they are hard at work clearing out the warehouses. Although they are grateful for your help in destroying the Vikings, they still do not trust you with their loot, so no point in trying to help them.",
+              "nextCardsID": [
+                "BifröstCamp05WallPirates"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05WarehousesVikings",
+              "cardText": "Enter the warehouses",
+              "locationName": "Bifröst Prison Camp, warehouses",
+              "locationDescription": "A series of large wooden warehouses, built up against the prison wall.",
+              "hiddenIfReqsFail": true,
+              "reqs": [
+                  {"reqName": "Vikings choice",
+                  "reqRule": "=",
+                  "reqQuantity": 1,
+                  "reqHidden": true}
+              ],
+              "firstText": "Little remains of warehouse #2. Processed flamingo guano must burn well. You see several fires burning in front of the doors of the remaining warehouses. One of the Vikings explains to you that these are offerings to Thor to thatnk him for delivering this victory to them. ",
+              "addedText": "Some of the burning offerings to Thor here are more pungent than others, but none of them are particularly pleasant. The Vikings are working on clearing out the warehouses. Although they are grateful for your help in destroying the Pirates, they still do not trust you with their loot, so no point in trying to help them.",
+              "nextCardsID": [
+                "BifröstCamp05WallVikings"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Bedtime",
+              "cardText": "Last sleep on Bifröst",
+              "addedText": "You sleep.",
+              "nextCardsID": [
+                  "BifröstCamp05Bedtime2a"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Bedtime2a",
+              "cardText": "Come in",
+              "addedText": "“G’devening, rookie,” Quo says, entering your quarters when you open the door for him. “Hope you didn’t get too tuckered out from your work day. Now you have an idea what it’s like to be in prison - stay in school!” You chuckle lightly to play along. “Actually, it ain’t nearly so bad here as bein in prison back in the Olden Worlde. We got food, nice weather, and the only walls are the seas around us. Us Transportation convicts’ve got free time too. Care for another game of Life or Death?”",
+              "nextCardsID": [
+                  "BifröstCamp05Bedtime2b",
+                  "BifröstCamp05Bedtime2c"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Bedtime2b",
+              "cardText": "Sure",
+              "addedText": "“Great, I’ll let you go first. And tomorrow I’ll start piling up a big sack of candlenuts for you - if you can beat me. Now keep in mind, you’ve got that extra lucky dice I gave you yesterday, so don’t be afraid to use it when you can. Also, you’ve probably built up some skills while you were out workin, so let’s see if you learned much of anythin.”",
+              "nextCardsID": [
+                  "BifröstCamp05Bedtime2d"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Bedtime2c",
+              "cardText": "Not particularly",
+              "addedText": "“I’ll make it worth your while. Strictly speaking, I’m not supposed to let ya leave here with anything, but candlenuts are nutritious and plentiful here. Beat me tonight and I’ll give you a whole sack of them when you set sail on the Humboldt the day after tomorrow. Now keep in mind, you’ve got that extra lucky dice I gave you yesterday, so don’t be afraid to use it when you can. Also, you’ve probably built up some skills while you were out workin, so let’s see if you learned much of anythin.”",
+              "nextCardsID": [
+                  "BifröstCamp05Bedtime2d"
+              ]
+          },
+          {
+              "cardID": "BifröstCamp05Bedtime2d",
+              "cardText": "Life or Death",
+              "addedText": "Quo sets up the board like last time. “Remember what I taught you last night. Brawn represents strength & power, Hand represents adaptability & nimbleness, Heart represents emotion & tradition, Eye represents observation & watchfulness, and Voice represents persuasion & communication. Play to your strengths.”",
+              "setScore": [
+                  {"setName": "Your Life or Death piece",
+                  "setQuantity": 16},
+                  {"setName": "Quo’s Life or Death piece",
+                  "setQuantity": 16}
+              ],
+              "nextCardsID": [
+                  "BifröstCamp05Bedtime2f"
+              ]
+          },
+          {
+                "cardID": "BifröstCamp05Bedtime2f",
+                "cardText": "Go to sleep",
+                "addedText": "Between the physical labour of the day, the mental workout of playing against Quo, and not to mention the fact that you are still in recovery after your shipwreck, you are exhausted. You fall asleep quickly.",
                 "nextCardsID": [
-                    "BifröstShore53c"
+                    "BifröstCamp05Bedtime2g"
                 ]
-            },
-            {
-                "cardID": "BifröstShore53c",
-                "cardText": "Leave your quarters",
-                "addedText": "There had better be a ship or some answers coming today.",
-                "setScore": [
-                    {"setName": "day until the Humboldt arrives",
-                    "setQuantity": -1}
-                ],
+          },
+          {
+                "cardID": "BifröstCamp05Bedtime2g",
+                "cardText": "Dream",
+                "addedText": "You dream of a man who turns his head and becomes a woman.<br><br>You dream of wings growing out from your back.<br><br>You dream of dozens of arms pulling you down beneath the surface of the water.",
                 "nextCardsID": [
-                    "BifröstCamp01RecYard"
+                    "BifröstCamp05Morning"
                 ]
-            },
+          },
+
+          {
+              "cardID": "BifröstCamp05Morning",
+              "cardText": "Wake up",
+              "addedText": "You wake up to the first rays of the sun coming in through cracks in the wall of your quarters. Your muscles feel sore from yesterday’s hard work, but it’s a good kind of sore.",
+              "setScore": [
+                  {"setName": "time of day",
+                  "setQuantity": 0}
+              ],
+              "nextCardsID": [
+                  "BifröstShore53a"
+              ]
+          },
+
 
 
 
@@ -7824,20 +8118,48 @@
         {
             "cardID": "BifröstCamp05QuoOffice",
             "cardText": "Go to Quo’s office",
-            "locationName": "Bifröst Prison Camp, office",
-            "locationDescription": "Quo’s own office.",
+            "locationName": "Bifröst Prison Camp, Quo’s office",
+            "locationDescription": "Quo’s own office is littered with crates and stacks of paper.",
             "reqs": [
                 {"reqName": "Quo’s key",
                 "reqRule": "=",
                 "reqQuantity": 1}
             ],
-            "addedText": "You shouldn’t be here yet.",
+            "firstText": "Quo’s own office is littered with crates and stacks of paper. He didn't even have a desk; the central feature of the room is a table that he obviously did most of his work at. You are thankful that he never asked you to do any bookeeping for him as only fire could manage this maelstrom of documents. ",
+            "addedText": "There doesn't seem to be much of interest here other than a locked cabinet.",
             "nextCardsID": [
-                "BifröstCamp01Office"
+                "BifröstCamp05Office",
+                "BifröstCamp05QuoCabinet"
             ]
         },
         {
-            "cardID": "BifröstCamp05Warehouses",
+            "cardID": "BifröstCamp05QuoCabinet",
+            "cardText": "Try Quo's key in the cabinet",
+            "hiddenIfReqsFail": true,
+            "reqs": [
+                {"reqName": "Quo cabinet opened",
+                "reqRule": "=",
+                "reqQuantity": 0}
+            ],
+            "rewards": [
+                {"rewardName": "Royal sterling",
+                "rewardQuantity": 6},
+                {"rewardName": "Valhallan pennigar",
+                "rewardQuantity": 320},
+                {"rewardName": "hacksilver",
+                "rewardQuantity": 25},
+                {"rewardName": "bottle of fine brandy",
+                "rewardQuantity": 1},
+                {"rewardName": "Quo cabinet opened",
+                "rewardQuantity": 1}
+            ],
+            "addedText": "Jackpot! You see several things that must have been confiscated from inmates. There are several types of coins, one of your bottles of brandy that you recognize from the Medusa lifeboat, and a note written by Quo. You read it:<br><br>“So sorry about offering you up as bait on the wall, but I’m sure it’s worked out for the best. This is all for you. I hope it helps you out in New Atlantis. - Warder Quo”",
+            "nextCardsID": [
+                "BifröstCamp05Office"
+            ]
+        },
+        {
+            "cardID": "BifröstCamp02Warehouses",
             "cardText": "Enter the warehouses",
             "locationName": "Bifröst Prison Camp, warehouses",
             "locationDescription": "A series of large wooden warehouses, built up against the prison wall.",

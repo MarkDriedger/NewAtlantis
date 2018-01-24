@@ -90,7 +90,7 @@ var player = {
 //end of beginning of work day
 //    activeCard: 'BifröstCamp01BurnHill',
 //whenever
-        activeCard: 'BifröstInvasion44',
+        activeCard: 'BifröstInvasionViking71',
     activeCardsShown: [],
     activeDice: [],
     alive: true,
